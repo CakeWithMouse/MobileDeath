@@ -104,3 +104,39 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Local assistant files and scratch work
+.codex/
+.agents/
+AGENTS.md
+AGENTS.local.md
+.codex-tmp/
+
+# Server dependencies and local configuration
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Unity project lives in UnityPart
+/UnityPart/[Ll]ibrary/
+/UnityPart/[Tt]emp/
+/UnityPart/[Oo]bj/
+/UnityPart/[Bb]uild/
+/UnityPart/[Bb]uilds/
+/UnityPart/[Ll]ogs/
+/UnityPart/[Uu]ser[Ss]ettings/
+/UnityPart/[Mm]emoryCaptures/
+/UnityPart/[Rr]ecordings/
+/UnityPart/[Aa]ssets/Plugins/Editor/JetBrains*
+/UnityPart/ServerData
+/UnityPart/[Aa]ssets/StreamingAssets/aa*
+/UnityPart/[Aa]ssets/AddressableAssetsData/link.xml*
+/UnityPart/[Aa]ssets/Addressables_Temp*
+/UnityPart/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/UnityPart/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/UnityPart/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/UnityPart/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/UnityPart/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+/UnityPart/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+/UnityPart/[Aa]ssets/[Ss]ceneDependencyCache*

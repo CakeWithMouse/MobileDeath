@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "localhost (Edge)",
+      "type": "edge",
+      "request": "launch",
+      //"url": "http://localhost:3005/login?Email=Dima",
+      //"url": "http://localhost:3005/login?Login=Dima&Password=1273",
+      //"url": "http://localhost:3005/info/GetChamps?Token=2",
+      //"url": "http://localhost:3005/info/GetTeamsByChamp/?idChamp=1",
+      //"url": "http://localhost:3005/info/GetTeam/?idTeam=1",
+      //"url": "http://localhost:3005/info/GetCriterias",
+      //"url": "http://localhost:3005/Htmls/main.html",
+      //"url": "http://localhost:3005/info/GetUser/?token=1",
+      "url": "http://localhost:3005/User/GetResultsByChamp",
+      //"url": "http://localhost:3005/info/GetMarks/?IdUser=1&IdTeam=1&IdChampionate=2",'/Users/EndMark'
+      //"url": "http://localhost:3005/Users/GetUsers",
+      //"url": "http://localhost:3005/Users/Delete/?ID=3",
+      "webRoot": "${workspaceFolder}\\public"
+    },
+    {
+      "name": "localhost (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3005/l",
+      "webRoot": "${workspaceFolder}\\public"
+    },
+    {
+      "name": "Launch Bim",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/bin",
+      "program": "${workspaceFolder}/bin/www",
+      "stopOnEntry": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Node and Browser",
+      "configurations": [
+        "Launch Bim",
+        "localhost (Edge)"
+      ]
+    }
+  ]
+}
