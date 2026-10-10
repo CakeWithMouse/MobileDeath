@@ -1,2 +1,0 @@
-# Bim
- For Bim champ
