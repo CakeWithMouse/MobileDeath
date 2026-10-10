@@ -1,23 +1,23 @@
 {
-  "name": "bim",
-  "version": "0.0.0",
+  "name": "mobiledeath-server",
+  "version": "0.1.0",
   "private": true,
+  "description": "JSON authentication API for the MobileDeath Unity client",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js",
+    "test": "node --test",
+    "db:setup": "node scripts/database.js setup",
+    "db:start": "node scripts/database.js start",
+    "db:stop": "node scripts/database.js stop",
+    "db:status": "node scripts/database.js status",
+    "db:backup": "node scripts/database.js backup",
+    "db:migrate": "node scripts/database.js migrate"
   },
   "dependencies": {
-    "connect-redis": "^7.1.1",
-    "cookie-parser": "~1.4.4",
-    "cors": "^2.8.5",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "express-fileupload": "^1.5.0",
-    "express-session": "^1.18.0",
-    "http-errors": "~1.6.3",
-    "mariadb": "^3.3.0",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11",
-    "redis": "^4.6.13",
-    "xlsx": "^0.18.5"
+    "express": "^4.21.2",
+    "mariadb": "^3.5.4"
   }
 }
