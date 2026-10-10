@@ -18,7 +18,10 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
   app.use(express.json({ limit: '16kb' }));
 
   const fail = (res, status, code, message) => res.status(status).json({ error: { code, message } });
-  const publicUser = (user) => ({ id: user.id, login: user.login });
+  // MariaDB returns DECIMAL as a string, preserving monetary precision.
+  const publicUser = (user) => ({
+    id: user.id, login: user.login, email: user.email, phone: user.phone, balance: user.balance
+  });
 
   function credentials(req, res, next) {
     if (!req.is('application/json')) {
@@ -31,6 +34,29 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
         'Login: 3-32 Latin letters, digits or underscores; password: 8-128 characters');
     }
     req.credentials = { login: login.toLowerCase(), password };
+    next();
+  }
+
+  function registrationProfile(req, res, next) {
+    const { email, phone, balance } = req.body;
+    if (balance !== undefined) {
+      return fail(res, 400, 'BALANCE_READ_ONLY', 'Balance cannot be set during registration');
+    }
+    const normalizedEmail = typeof email === 'string' ? email.trim().toLowerCase() : '';
+    if (normalizedEmail.length > 254 || !/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/.test(normalizedEmail) ||
+        normalizedEmail.split('@')[0].length > 64 || normalizedEmail.startsWith('.') ||
+        normalizedEmail.includes('..') || normalizedEmail.includes('.@')) {
+      return fail(res, 400, 'INVALID_EMAIL', 'A valid email address is required');
+    }
+    let normalizedPhone = null;
+    if (phone !== undefined && phone !== null && phone !== '') {
+      if (typeof phone !== 'string') return fail(res, 400, 'INVALID_PHONE', 'Phone must be a string');
+      normalizedPhone = phone.trim().replace(/[ ()-]/g, '');
+      if (!/^\+?[1-9][0-9]{6,14}$/.test(normalizedPhone)) {
+        return fail(res, 400, 'INVALID_PHONE', 'Phone must contain 7-15 digits, optionally prefixed with +');
+      }
+    }
+    req.profile = { email: normalizedEmail, phone: normalizedPhone };
     next();
   }
 
@@ -48,15 +74,15 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
   // Liveness only: deliberately does not query the database.
   app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-  app.post('/auth/register', credentials, asyncRoute(async (req, res) => {
+  app.post('/auth/register', credentials, registrationProfile, asyncRoute(async (req, res) => {
     const { login, password } = req.credentials;
     const passwordHash = await hashPassword(password);
     try {
-      const user = await store.createUser(login, passwordHash);
+      const user = await store.createUser(login, passwordHash, req.profile.email, req.profile.phone);
       res.status(201).json({ user: publicUser(user) });
     } catch (error) {
       if (error.code === 'ER_DUP_ENTRY') {
-        return fail(res, 409, 'LOGIN_TAKEN', 'Login is already registered');
+        return fail(res, 409, 'USER_ALREADY_EXISTS', 'Login or email is already registered');
       }
       throw error;
     }

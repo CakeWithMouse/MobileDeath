@@ -4,9 +4,13 @@ CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     login VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
     password_hash VARCHAR(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+    email VARCHAR(254) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+    phone VARCHAR(16) CHARACTER SET ascii COLLATE ascii_bin NULL,
+    balance DECIMAL(12,2) NOT NULL DEFAULT 0.00 CHECK (balance >= 0),
     created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     PRIMARY KEY (id),
-    UNIQUE KEY uq_users_login (login)
+    UNIQUE KEY uq_users_login (login),
+    UNIQUE KEY uq_users_email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE sessions (

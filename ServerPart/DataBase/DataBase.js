@@ -4,15 +4,16 @@ const mariadb = require('mariadb');
 
 function createStore(pool) {
   return {
-    async createUser(login, passwordHash) {
+    async createUser(login, passwordHash, email, phone) {
       const result = await pool.query(
-        'INSERT INTO users (login, password_hash) VALUES (?, ?)', [login, passwordHash]
+        'INSERT INTO users (login, password_hash, email, phone) VALUES (?, ?, ?, ?)',
+        [login, passwordHash, email, phone]
       );
-      return { id: Number(result.insertId), login };
+      return { id: Number(result.insertId), login, email, phone, balance: '0.00' };
     },
     async findUserByLogin(login) {
       const rows = await pool.query(
-        'SELECT id, login, password_hash FROM users WHERE login = ?', [login]
+        'SELECT id, login, password_hash, email, phone, balance FROM users WHERE login = ?', [login]
       );
       return rows[0];
     },
@@ -24,7 +25,7 @@ function createStore(pool) {
     },
     async findUserByToken(tokenHash) {
       const rows = await pool.query(
-        `SELECT u.id, u.login FROM sessions s JOIN users u ON u.id = s.user_id
+        `SELECT u.id, u.login, u.email, u.phone, u.balance FROM sessions s JOIN users u ON u.id = s.user_id
          WHERE s.token_hash = ? AND s.expires_at > UTC_TIMESTAMP(3)`, [tokenHash]
       );
       return rows[0];

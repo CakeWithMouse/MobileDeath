@@ -14,9 +14,9 @@ function memoryStore() {
   const sessions = new Map();
   return {
     users, sessions,
-    async createUser(login, password_hash) {
-      if (users.has(login)) throw Object.assign(new Error('duplicate'), { code: 'ER_DUP_ENTRY' });
-      const user = { id: users.size + 1, login, password_hash };
+    async createUser(login, password_hash, email, phone) {
+      if (users.has(login) || [...users.values()].some(user => user.email === email)) throw Object.assign(new Error('duplicate'), { code: 'ER_DUP_ENTRY' });
+      const user = { id: users.size + 1, login, password_hash, email, phone, balance: '0.00' };
       users.set(login, user);
       return user;
     },
@@ -54,13 +54,13 @@ async function fixture(t, store = memoryStore()) {
   return { store, request };
 }
 
-const credentials = { login: 'Player_1', password: 'example-password-123' };
+const credentials = { login: 'Player_1', password: 'example-password-123', email: 'player@example.com' };
 
 test('registration, login, user isolation, expiry and logout over HTTP', async t => {
   const { request, store } = await fixture(t);
   const registered = await request('/auth/register', { method: 'POST', body: credentials });
   assert.equal(registered.status, 201);
-  assert.deepEqual(registered.data, { user: { id: 1, login: 'player_1' } });
+  assert.deepEqual(registered.data, { user: { id: 1, login: 'player_1', email: credentials.email, phone: null, balance: '0.00' } });
   assert.notEqual(store.users.get('player_1').password_hash, credentials.password);
   assert.equal((await request('/auth/register', { method: 'POST', body: credentials })).status, 409);
   assert.equal((await request('/auth/login', { method: 'POST', body: { ...credentials, password: 'wrong-password' } })).status, 401);
@@ -77,8 +77,8 @@ test('registration, login, user isolation, expiry and logout over HTTP', async t
   assert.equal((await request('/auth/me')).status, 401);
   assert.equal((await request('/auth/me', { token: '0'.repeat(64) })).status, 401);
   assert.equal((await request('/auth/me', { token: 'malformed' })).status, 401);
-  await request('/auth/register', { method: 'POST', body: { ...credentials, login: 'other' } });
-  const second = await request('/auth/login', { method: 'POST', body: { ...credentials, login: 'other' } });
+  await request('/auth/register', { method: 'POST', body: { ...credentials, login: 'other', email: 'other@example.com' } });
+  const second = await request('/auth/login', { method: 'POST', body: { ...credentials, login: 'other', email: 'other@example.com' } });
   const parallel = await Promise.all([
     request('/auth/me?ID=2', { token }), request('/auth/me', { token: second.data.token })
   ]);
@@ -142,7 +142,7 @@ test('SQL store binds untrusted values rather than interpolating them', async ()
   } });
   const hostile = "test' OR 1=1 --";
   const expiry = new Date();
-  assert.deepEqual(await store.createUser(hostile, 'hash'), { id: 1, login: hostile });
+  assert.deepEqual(await store.createUser(hostile, 'hash', 'test@example.com', null), { id: 1, login: hostile, email: 'test@example.com', phone: null, balance: '0.00' });
   await store.findUserByLogin(hostile);
   await store.createSession(1, hostile, expiry);
   await store.findUserByToken(hostile);
@@ -152,4 +152,32 @@ test('SQL store binds untrusted values rather than interpolating them', async ()
     assert.equal((sql.match(/\?/g) || []).length, values.length);
     assert.ok(values.includes(hostile));
   }
+});
+
+
+test('registration requires email, normalizes contact fields and protects balance', async t => {
+  const { request, store } = await fixture(t);
+  const register = body => request('/auth/register', { method: 'POST', body });
+  assert.equal((await register({ login: 'first', password: credentials.password })).status, 400);
+  for (const email of ['bad', 'a@b', '.a@example.com', 'a..b@example.com', 'a@-bad.com', 42]) {
+    assert.equal((await register({ ...credentials, email })).status, 400);
+  }
+  for (const phone of [1234567, 'abc', '+123', '+1234567890123456']) {
+    assert.equal((await register({ ...credentials, phone })).status, 400);
+  }
+  const blocked = await register({ ...credentials, balance: '100.00' });
+  assert.equal(blocked.status, 400);
+  assert.equal(blocked.data.error.code, 'BALANCE_READ_ONLY');
+  assert.equal(store.users.size, 0);
+  const created = await register({ ...credentials, email: ' Player@Example.COM ', phone: '+7 (999) 123-45-67' });
+  assert.equal(created.status, 201);
+  assert.deepEqual(created.data.user, { id: 1, login: 'player_1', email: 'player@example.com', phone: '+79991234567', balance: '0.00' });
+  assert.equal((await register({ ...credentials, login: 'another' })).status, 409);
+  const login = await request('/auth/login', { method: 'POST', body: { login: credentials.login, password: credentials.password } });
+  assert.equal(login.status, 200);
+  assert.deepEqual(login.data.user, created.data.user);
+  assert.deepEqual((await request('/auth/me', { token: login.data.token })).data.user, created.data.user);
+  assert.equal('password' in created.data.user, false);
+  assert.equal('password_hash' in created.data.user, false);
+  assert.equal((await register({ ...credentials, login: 'no_phone', email: 'no_phone@example.com', phone: null })).data.user.phone, null);
 });
