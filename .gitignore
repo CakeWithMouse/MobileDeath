@@ -143,3 +143,26 @@ node_modules/
 
 # Local database runtime, data, credentials and backups
 /.local/
+
+# Unity project nested in UnityPart/PancakeCooker
+/UnityPart/PancakeCooker/[Ll]ibrary/
+/UnityPart/PancakeCooker/[Tt]emp/
+/UnityPart/PancakeCooker/[Oo]bj/
+/UnityPart/PancakeCooker/[Bb]uild/
+/UnityPart/PancakeCooker/[Bb]uilds/
+/UnityPart/PancakeCooker/[Ll]ogs/
+/UnityPart/PancakeCooker/[Uu]ser[Ss]ettings/
+/UnityPart/PancakeCooker/[Mm]emoryCaptures/
+/UnityPart/PancakeCooker/[Rr]ecordings/
+/UnityPart/PancakeCooker/[Aa]ssets/Plugins/Editor/JetBrains*
+/UnityPart/PancakeCooker/ServerData
+/UnityPart/PancakeCooker/[Aa]ssets/StreamingAssets/aa*
+/UnityPart/PancakeCooker/[Aa]ssets/AddressableAssetsData/link.xml*
+/UnityPart/PancakeCooker/[Aa]ssets/Addressables_Temp*
+/UnityPart/PancakeCooker/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/UnityPart/PancakeCooker/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/UnityPart/PancakeCooker/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/UnityPart/PancakeCooker/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/UnityPart/PancakeCooker/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+/UnityPart/PancakeCooker/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+/UnityPart/PancakeCooker/[Aa]ssets/[Ss]ceneDependencyCache*
