@@ -102,7 +102,14 @@ namespace Blinopek.Bootstrap
         }
         private IEnumerator Run()
         {
-            Resume(); yield return Shot("01-counter"); Click("AcceptOrder"); yield return Shot("02-kitchen");
+            View.Controller.SetPause(PauseReason.Focus | PauseReason.Background, false);
+            Check(GameObject.Find("Facade") != null && View.Controller.Paused, "Game opens at the facade with the shift paused");
+            yield return Shot("00-facade");
+            Click("FacadeShop"); yield return Shot("00-facade-shop"); Click("CloseShop");
+            Check(GameObject.Find("Facade") != null && View.Controller.Paused, "Closing shop returns to the paused facade");
+            Click("ContinueShift");
+            Check(!View.Controller.Paused && GameObject.Find("Facade") == null, "Facade play starts the shift");
+            yield return Shot("01-counter"); Click("AcceptOrder"); yield return Shot("02-kitchen");
             yield return VerifyGestureAudio();
             Paint("PanSurface"); Check(View.Session.Pancake.Batter.Percent >= 90, "Pointer strokes cover the pan");
             Click("FinishBatter"); yield return VerifyAudio(); View.Command(ActionKind.Tick, 200); yield return Shot("03-burnt-lesson");
@@ -123,12 +130,21 @@ namespace Blinopek.Bootstrap
             yield return Shot("07-served");
             View.Command(ActionKind.Tick, View.Session.Rules.dayTicks); View.Refresh();
             Check(View.Session.Phase == DayPhase.Result && View.Controller.Profile.day == 2, "Day settles and advances"); yield return Shot("08-results");
-            Click("Shop"); yield return Shot("09-shop");
+            var completedSession = View.Session;
+            Click("ReturnToFacade");
+            Check(View.Session == completedSession && View.Session.Phase == DayPhase.Result && View.Controller.Paused, "Result returns to facade without starting another shift");
+            yield return Shot("08-facade-after-results");
+            Click("FacadeShop"); yield return Shot("09-shop");
             Click("BuyIngredient1"); Check(View.Controller.Profile.Owns(Ingredient.Jam), "Shop unlock persists");
             Click("BuyIngredient3"); Click("UpgradeTab"); Click("BuyScraper");
-            Click("CloseShop"); Click("NextDay");
+            Click("CloseShop"); Click("ContinueShift");
             Check(View.Session.StartProfile.Owns(Ingredient.Jam) && View.Session.StartProfile.day == 2, "Next shift receives purchases");
             Click("RecipeBook"); int beforePause = View.Session.ElapsedTicks;
+            var names = View.GetComponentsInChildren<Text>();
+            Check(Array.Exists(names, t => t.name == "RecipeName" && t.text == "Сладкий\nтреугольник") && Array.Exists(names, t => t.name == "RecipeName" && t.text == "Грибной\nконверт"), "First recipe spread has recipe names");
+            yield return Shot("recipes-first"); Click("NextRecipe");
+            Check(Array.Exists(View.GetComponentsInChildren<Text>(), t => t.name == "RecipeName" && t.text == "Сладкая\nтрубочка"), "Second recipe spread has a recipe name");
+            yield return Shot("recipes-second");
             Check(View.Controller.Paused && !View.Command(ActionKind.Tick, 20) && View.Session.ElapsedTicks == beforePause, "Recipe book pauses the real view controller");
             Click("CloseBook"); Check(!View.Controller.Paused, "Recipe book closes without leaving a pause");
             Click("AcceptOrder"); yield return null; Canvas.ForceUpdateCanvases();

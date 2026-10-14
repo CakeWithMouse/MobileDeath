@@ -676,28 +676,6 @@
       "children": []
     },
     {
-      "type": "control",
-      "asset": null,
-      "source": null,
-      "style": {
-        "position": "absolute",
-        "border": "0",
-        "background": "transparent",
-        "padding": "0",
-        "cursor": "pointer",
-        "z-index": "80",
-        "left": "202px",
-        "top": "696px",
-        "width": "100px",
-        "height": "110px"
-      },
-      "attributes": {
-        "aria-label": "shop"
-      },
-      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/upgrade-visitors.png\">",
-      "children": []
-    },
-    {
       "type": "layer",
       "asset": "ui/button-cream.png",
       "source": null,
@@ -750,63 +728,7 @@
       "attributes": {
         "aria-label": "facade"
       },
-      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/arrow-right.svg\">",
-      "children": []
-    },
-    {
-      "type": "layer",
-      "asset": "ui/button-cream.png",
-      "source": null,
-      "style": {
-        "position": "absolute",
-        "pointer-events": "none",
-        "left": "39px",
-        "top": "795px",
-        "width": "112px",
-        "height": "78px",
-        "z-index": "65",
-        "opacity": "1",
-        "transform": "rotate(0deg)"
-      },
-      "attributes": {},
-      "html": "",
-      "children": [
-        {
-          "type": "img",
-          "asset": null,
-          "source": "../ui/button-cream.png",
-          "style": {
-            "left": "-4.552338530066815px",
-            "top": "-10.408360128617362px",
-            "width": "121.10467706013364px",
-            "height": "101.45016077170418px"
-          },
-          "attributes": {},
-          "html": "",
-          "children": []
-        }
-      ]
-    },
-    {
-      "type": "control",
-      "asset": null,
-      "source": null,
-      "style": {
-        "position": "absolute",
-        "border": "0",
-        "background": "transparent",
-        "padding": "0",
-        "cursor": "pointer",
-        "z-index": "80",
-        "left": "59px",
-        "top": "807px",
-        "width": "72px",
-        "height": "54px"
-      },
-      "attributes": {
-        "aria-label": "kitchen"
-      },
-      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/undo.svg\">",
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/home.svg\">",
       "children": []
     }
   ]

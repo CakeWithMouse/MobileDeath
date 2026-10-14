@@ -360,6 +360,46 @@
       ]
     },
     {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.26",
+        "left": "260px",
+        "top": "162px",
+        "width": "420px",
+        "font-size": "34px",
+        "font-family": "Serif",
+        "text-align": "center"
+      },
+      "attributes": {},
+      "html": "Сладкий<br>треугольник",
+      "children": []
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.26",
+        "left": "880px",
+        "top": "162px",
+        "width": "420px",
+        "font-size": "34px",
+        "font-family": "Serif",
+        "text-align": "center"
+      },
+      "attributes": {},
+      "html": "Грибной<br>конверт",
+      "children": []
+    },
+    {
       "type": "layer",
       "asset": "kitchen/fold-triangle.png",
       "source": null,
@@ -502,10 +542,10 @@
       "style": {
         "position": "absolute",
         "pointer-events": "none",
-        "left": "599px",
-        "top": "190.21573033707864px",
-        "width": "64px",
-        "height": "63.5685393258427px",
+        "left": "688px",
+        "top": "188.16179775280898px",
+        "width": "48px",
+        "height": "47.67640449438203px",
         "z-index": "49",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -518,10 +558,10 @@
           "asset": null,
           "source": "../ui/rating-star.png",
           "style": {
-            "left": "-12.943820224719103px",
-            "top": "-13.591011235955058px",
-            "width": "90.17528089887641px",
-            "height": "90.17528089887641px"
+            "left": "-9.707865168539326px",
+            "top": "-10.193258426966292px",
+            "width": "67.63146067415731px",
+            "height": "67.63146067415731px"
           },
           "attributes": {},
           "html": "",
@@ -672,10 +712,10 @@
       "style": {
         "position": "absolute",
         "pointer-events": "none",
-        "left": "1192px",
-        "top": "194px",
-        "width": "67px",
-        "height": "67px",
+        "left": "1302px",
+        "top": "188px",
+        "width": "48px",
+        "height": "48px",
         "z-index": "55",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -690,8 +730,8 @@
           "style": {
             "left": "0px",
             "top": "0px",
-            "width": "67px",
-            "height": "67px"
+            "width": "48px",
+            "height": "48px"
           },
           "attributes": {},
           "html": "",

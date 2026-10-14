@@ -26,13 +26,14 @@ public static class CookingAnimationValidation
     public static void Run()
     {
         output = Environment.GetEnvironmentVariable("BLINOPEK_ANIMATION_OUTPUT"); Directory.CreateDirectory(output);
+        checks.Clear(); File.Delete(Path.Combine(output, "PASSED.txt")); File.Delete(Path.Combine(output, "FAILED.txt"));
         try
         {
             art = ScriptableObject.CreateInstance<GameContent>();
             string root = Environment.GetEnvironmentVariable("BLINOPEK_ANIMATION_ART");
             string bounds = File.ReadAllText(Path.Combine(root, "screens/asset-bounds.js"));
             var entries = new List<Artwork>();
-            foreach (string name in new[] { "batter-raw", "pancake-ready", "pancake-burnt", "filling-butter", "filling-jam", "filling-honey", "filling-curd", "filling-mushrooms", "plate", "pan-base" })
+            foreach (string name in new[] { "batter-raw", "pancake-ready", "pancake-burnt", "filling-butter", "filling-jam", "filling-honey", "filling-curd", "filling-mushrooms", "plate", "pan-base", "fold-half", "fold-triangle", "fold-envelope-partial", "fold-envelope", "fold-roll-partial", "fold-roll", "fold-incorrect" })
             {
                 string key = "kitchen/" + name + ".png";
                 var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false); texture.LoadImage(File.ReadAllBytes(Path.Combine(root, key))); texture.name = name;
@@ -46,10 +47,12 @@ public static class CookingAnimationValidation
             art.bodyFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"); art.titleFont = art.bodyFont;
             using (var atlas = new CookingAtlas(art))
             {
+                Check(atlas.HasFoldArt, "All Figma fold poses are present in the runtime atlas");
                 SetupCanvas(atlas);
                 RenderCooking();
                 RenderFold(Fold.Triangle, false); RenderFold(Fold.Envelope, false); RenderFold(Fold.Roll, false);
                 RenderFold(Fold.Triangle, true);
+                VerifyReferencePoses();
                 VerifyGeometry();
                 VerifyFragmentedSurface();
                 VerifyViewLifecycle();
@@ -125,7 +128,8 @@ public static class CookingAnimationValidation
             int dy = direction == Direction.Up ? 600 : direction == Direction.Down ? -600 : 0;
             Check(s.Execute(new GameCommand(ActionKind.FoldGesture, dx, dy)), folder + " gesture accepted");
             Check(motion.Folding, folder + " transition starts without snapping");
-            for (int i = 0; i < 16; i++) { Advance(motion, .05f); Frame(motion, folder, frame++); }
+            for (int i = 0; i < 24; i++) { Advance(motion, .05f); Frame(motion, folder, frame++); }
+            Check(graphic.UsesAuthoredFolds, folder + " checkpoint uses the authored Figma pose");
         }
         Check(!motion.Folding && p.Batter.Count == originalCoverage, folder + " animation finishes and preserves coverage");
         Check(p.HeatA == (burnt ? 190 : 108) && p.HeatB == 110 && p.Fillings[1] != null, folder + " heat and filling survive folding");
@@ -142,6 +146,42 @@ public static class CookingAnimationValidation
         var motion = new CookingMotion(p); p.Folds.Add(Direction.Right); Advance(motion, .2f); float partial = motion.FoldPosition;
         motion.Advance(0); Check(motion.FoldPosition == partial, "Paused animation holds its exact pose");
         Advance(motion, 1); Check(!motion.Folding, "Animation resumes and reaches the next fold");
+    }
+    private static void VerifyReferencePoses()
+    {
+        dish.gameObject.SetActive(false); effects.gameObject.SetActive(false);
+        var size = graphic.rectTransform.sizeDelta;
+        graphic.rectTransform.sizeDelta = new Vector2(380, 300); graphic.rectTransform.anchoredPosition = new Vector2(-240, 0);
+        var reference = Element<RawImage>(graphic.transform.parent, "Figma source", Vector2.one);
+        reference.raycastTarget = false; reference.rectTransform.anchoredPosition = new Vector2(240, 0);
+        var folds = new[] { Fold.Triangle, Fold.Envelope, Fold.Roll, Fold.Triangle, Fold.Envelope, Fold.Roll };
+        var counts = new[] { 1, 2, 1, 2, 4, 3 };
+        var poses = new[] { FoldPose.Half, FoldPose.EnvelopeSides, FoldPose.RollStart, FoldPose.Triangle, FoldPose.Envelope, FoldPose.Roll };
+        for (int test = 0; test < folds.Length; test++)
+        {
+            var s = Session(); var p = s.Pancake;
+            s.Execute(new GameCommand(ActionKind.FinishBatter)); s.Execute(new GameCommand(ActionKind.Tick, art.balance.readyTicks));
+            s.Execute(new GameCommand(ActionKind.Flip)); s.Execute(new GameCommand(ActionKind.Tick, art.balance.readyTicks)); s.Execute(new GameCommand(ActionKind.MoveToPlate));
+            s.Execute(new GameCommand(ActionKind.BeginFold, (int)folds[test]));
+            var directions = Recipes.Gestures(folds[test]);
+            for (int i = 0; i < counts[test]; i++)
+            {
+                int dx = directions[i] == Direction.Right ? 600 : directions[i] == Direction.Left ? -600 : 0;
+                int dy = directions[i] == Direction.Up ? 600 : directions[i] == Direction.Down ? -600 : 0;
+                Check(s.Execute(new GameCommand(ActionKind.FoldGesture, dx, dy)), "Reference pose gesture accepted");
+            }
+            Check(CookingFoldArt.Pose(p, counts[test]) == poses[test], "Correct Figma pose selected: " + poses[test]);
+            string key = CookingFoldArt.Keys[CookingFoldArt.ArtIndex(poses[test])];
+            reference.texture = art.Find("kitchen/" + key + ".png"); reference.uvRect = art.Uv(reference.texture);
+            float aspect = reference.texture.width * reference.uvRect.width / (reference.texture.height * reference.uvRect.height);
+            var placement = CookingFoldArt.Placement(poses[test], aspect, graphic.rectTransform.sizeDelta);
+            reference.rectTransform.sizeDelta = Vector2.Scale(placement.size, graphic.rectTransform.sizeDelta);
+            title.text = "Слева — Unity, справа — PNG из Figma";
+            Frame(new CookingMotion(p), "reference-" + key, 0);
+        }
+        UnityEngine.Object.DestroyImmediate(reference.gameObject);
+        graphic.rectTransform.sizeDelta = size; graphic.rectTransform.anchoredPosition = Vector2.zero;
+        dish.gameObject.SetActive(true); effects.gameObject.SetActive(true);
     }
     private sealed class MemoryStore : Blinopek.Application.IGameStore
     { public Blinopek.Application.SavedGame Data; public Blinopek.Application.SavedGame Load() => Data; public void Save(Blinopek.Application.SavedGame value) { Data = value; } }
@@ -172,9 +212,10 @@ public static class CookingAnimationValidation
         var controller = new Blinopek.Application.GameController(store, new Blinopek.Infrastructure.LocalDevelopmentGateway(), art.balance);
         var go = new GameObject("View lifecycle validation"); var view = go.AddComponent<GameView>(); view.Initialize(controller, art);
         Check(view.Session != null, "GameView initializes with animated surfaces");
-        view.Command(ActionKind.Accept);
+        typeof(GameView).GetMethod("PlayFromFacade", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+        Check(view.Command(ActionKind.Accept), "View accepts an order after entering from the facade");
         typeof(GameView).GetMethod("SwitchKitchen", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, new object[] { true });
-        view.Command(ActionKind.BeginStroke, -1, 500, 500); view.Command(ActionKind.EndStroke);
+        Check(view.Command(ActionKind.BeginStroke, -1, 500, 500), "View starts batter after entering the kitchen"); view.Command(ActionKind.EndStroke);
         view.Session.Pancake.Batter.Stamp(500, 500, 500);
         view.Command(ActionKind.FinishBatter); view.Command(ActionKind.Tick, 100); view.Command(ActionKind.Flip); view.Command(ActionKind.Tick, 100); view.Command(ActionKind.MoveToPlate);
         view.Command(ActionKind.BeginFold, 0); view.Refresh();

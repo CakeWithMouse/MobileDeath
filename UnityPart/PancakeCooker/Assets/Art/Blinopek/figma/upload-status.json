@@ -197,5 +197,49 @@
       "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1626&t=mTKwcp7omrwPgrLL-0",
       "checked": true
     }
-  ]
+  ],
+  "last_update_utc": "2026-10-14T13:39:12.515255+00:00",
+  "last_update": {
+    "visitor_eye_states": 24,
+    "eye_reference": "codex-clipboard-16a79158-baf1-4955-a8bc-d2ef65f962a7.png",
+    "updated_screens": [
+      "counter",
+      "shop",
+      "reviews"
+    ],
+    "updated_boards": [
+      "Блинопёк — Посетители",
+      "Блинопёк — Окружение 03"
+    ],
+    "existing_frame_ids_preserved": true,
+    "temporary_imports_removed": true,
+    "checks": [
+      "all 24 eye edits decoded as RGBA",
+      "9 layered exports reference original PNG bytes",
+      "24 visitors remain in 8 rows and 3 columns",
+      "screen group remains 5200×3100 at1900,900",
+      "visitors frame remains1360×3620 at12000,0",
+      "Figma screen group and visitors board visually verified after reload"
+    ]
+  },
+  "pending_local_menu_revision": {
+    "date": "2026-10-14",
+    "screens": [
+      "facade",
+      "recipes",
+      "day",
+      "shop"
+    ],
+    "changes": [
+      "Recipe names",
+      "Facade shop button",
+      "Level -> result -> facade navigation"
+    ],
+    "figma_synced": false,
+    "reason": "User stopped Computer Use with Escape; the Figma document was not edited.",
+    "sources": [
+      "screens/screens.js",
+      "figma/layered/manifest.json"
+    ]
+  }
 }

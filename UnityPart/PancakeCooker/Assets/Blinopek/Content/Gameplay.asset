@@ -1211,4 +1211,20 @@ MonoBehaviour:
       y: 0.000000000
       width: 0.883789062
       height: 0.971354167
+  - key: ui/glyphs/shop.png
+    texture: {fileID: 2800000, guid: f2f80cbf23035b2e8879ca4dc899ec3d, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+  - key: ui/glyphs/home.png
+    texture: {fileID: 2800000, guid: 3ab50b5536af5004a8035a9cf4213d8c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
   audio: {fileID: 11400000, guid: 2773a8a06d0977643a5124ef3d9e1d4a, type: 2}

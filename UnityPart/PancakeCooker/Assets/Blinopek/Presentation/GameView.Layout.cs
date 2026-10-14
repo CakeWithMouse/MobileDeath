@@ -56,6 +56,22 @@ namespace Blinopek.Presentation
         }
         private void OpenBook() { book.SetActive(true); controller.SetPause(PauseReason.RecipeBook, true); Audio.PlayUi(SoundCue.BookOpen); }
         private void CloseBook() { book.SetActive(false); controller.SetPause(PauseReason.RecipeBook, false); Audio.PlayUi(SoundCue.BookClose); }
+        private void OpenShop() { shop.transform.SetAsLastSibling(); shop.SetActive(true); dirty = true; }
+        private void ShowFacade()
+        {
+            controller.SetPause(PauseReason.Menu, true);
+            ReleasePointer(); HidePortionGhost();
+            atFacade = true; facade.SetActive(true); shop.SetActive(false); pausePanel.SetActive(false);
+            Audio.PlayUi(SoundCue.Back); dirty = true;
+        }
+        private void PlayFromFacade()
+        {
+            if (controller.StorageBlocked) return;
+            if (Session == null || Session.Phase == DayPhase.Result) StartNextDay();
+            if (Session == null || Session.Phase == DayPhase.Result) return;
+            atFacade = false; facade.SetActive(false); shop.SetActive(false);
+            controller.SetPause(PauseReason.Menu, false); dirty = true;
+        }
 
         private void Build()
         {
@@ -203,8 +219,7 @@ namespace Blinopek.Presentation
             Art("ProfitCoin", results.transform, "ui/coin-pancake.png", 561, 660, 92, 86);
             profitText = Label("Profit", results.transform, "", 700, 657, 410, 82, 50);
             resultText = Label("ResultMessage", results.transform, "", 425, 750, 760, 36, 22); resultText.alignment = TextAnchor.MiddleCenter;
-            openShop = IconButton("Shop", results.transform, "ui/upgrade-visitors.png", 202, 696, 100, 110, () => { shop.SetActive(true); dirty = true; }, false);
-            nextDay = IconButton("NextDay", results.transform, "ui/glyphs/arrow-right.png", 1320, 707, 142, 95, StartNextDay);
+            IconButton("ReturnToFacade", results.transform, "ui/glyphs/home.png", 1320, 707, 142, 95, ShowFacade);
             results.SetActive(false);
         }
         private void SelectShopPage(int page) { for (int i = 0; i < shopPages.Count; i++) shopPages[i].SetActive(i == page); dirty = true; }
@@ -263,6 +278,7 @@ namespace Blinopek.Presentation
         {
             book = Modal("RecipeBookPanel"); Art("OpenBook", book.transform, "ui/recipe-book-open.png", 142, 100, 1320, 716, false);
             string[] shapes = { "triangle", "envelope", "roll" };
+            string[] names = { "Сладкий\nтреугольник", "Грибной\nконверт", "Сладкая\nтрубочка" };
             for (int page = 0; page < 2; page++)
             {
                 var group = Rect("RecipePage" + page, book.transform, 0, 0, 1600, 900).gameObject; recipePages.Add(group);
@@ -271,7 +287,7 @@ namespace Blinopek.Presentation
                     int shape = page * 2 + side; int x = 260 + side * 620;
                     if (shape > 2)
                     { Label("CookingHelp", group.transform, "Намажьте тесто на круг.\nНачните жарку.\nПереверните готовую сторону.\nПеренесите блин на тарелку.\nДобавьте начинку из заказа.\nВыберите форму и сложите.", x, 245, 420, 330, 28); continue; }
-                    var title = Label("ShapeName", group.transform, Recipes.FoldName((Fold)shape), x, 185, 420, 50, 32, Ink, true); title.alignment = TextAnchor.MiddleCenter;
+                    var title = Label("RecipeName", group.transform, names[shape], x, 150, 420, 104, 34, Ink, true); title.alignment = TextAnchor.MiddleCenter;
                     Art("Fold", group.transform, "kitchen/fold-" + shapes[shape] + ".png", x + 18, 267, 363, 230);
                     var gesture = Label("Gestures", group.transform, shape == 0 ? "↑   →" : shape == 1 ? "→   ←   ↓   ↑" : "↓   ↓   ↓", x, 510, 420, 55, 34); gesture.alignment = TextAnchor.MiddleCenter;
                     Picture("Filling1", group.transform, art.containers[shape == 1 ? 4 : 0], x + 30, 576, 130, 118);
@@ -287,7 +303,8 @@ namespace Blinopek.Presentation
         private void BuildFacade()
         {
             facade = Group("Facade"); Art("FacadeArt", facade.transform, "decor/facade_base.png", 0, 0, 1600, 900, false);
-            IconButton("ContinueShift", facade.transform, "ui/glyphs/play.png", 698, 744, 205, 100, () => { atFacade = false; facade.SetActive(false); controller.SetPause(PauseReason.Menu, false); });
+            IconButton("ContinueShift", facade.transform, "ui/glyphs/play.png", 698, 744, 205, 100, PlayFromFacade);
+            IconButton("FacadeShop", facade.transform, "ui/glyphs/shop.png", 940, 744, 120, 100, OpenShop);
             facade.SetActive(false);
         }
         private void BuildPause()
@@ -297,7 +314,7 @@ namespace Blinopek.Presentation
             IconButton("Resume", pausePanel.transform, "ui/glyphs/play.png", 510, 250, 139, 114, () => { controller.SetPause(PauseReason.Menu, false); Audio.PlayUi(SoundCue.Back); });
             var sound = IconButton("Sound", pausePanel.transform, "ui/settings-speaker.png", 730, 250, 139, 114, () => { Audio.SetMuted(!Audio.Muted); Audio.PlayUi(SoundCue.Toggle); });
             soundIcon = sound.transform.Find("Icon").GetComponent<RawImage>();
-            IconButton("ExitToFacade", pausePanel.transform, "ui/glyphs/exit.png", 950, 250, 139, 114, () => { controller.Save(); atFacade = true; facade.SetActive(true); pausePanel.SetActive(false); Audio.PlayUi(SoundCue.Back); });
+            IconButton("ExitToFacade", pausePanel.transform, "ui/glyphs/exit.png", 950, 250, 139, 114, ShowFacade);
             Label("ResumeHelp", pausePanel.transform, "Продолжить", 490, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
             Label("SoundHelp", pausePanel.transform, "Звук", 710, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
             Label("ExitHelp", pausePanel.transform, "К фасаду", 930, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;

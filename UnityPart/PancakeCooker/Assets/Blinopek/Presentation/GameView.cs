@@ -24,7 +24,7 @@ namespace Blinopek.Presentation
         private Text heatA, heatB;
         private Image patienceBar, heatBarA, heatBarB;
         private RawImage visitor, ghost;
-        private Button accept, clarify, nextGuest, finishBatter, flip, move, remove, discard, finishFold, nextDay, toKitchen, openShop;
+        private Button accept, clarify, nextGuest, finishBatter, flip, move, remove, discard, finishFold, toKitchen;
         private readonly List<Button> foldButtons = new List<Button>();
         private readonly List<Image> ingredientCards = new List<Image>();
         private readonly List<Text> ingredientLabels = new List<Text>();
@@ -57,6 +57,7 @@ namespace Blinopek.Presentation
             Audio = gameObject.AddComponent<GameAudio>(); Audio.Initialize(game, content.audio);
             Build(); audioUiReady = true; controller.Changed += Invalidate;
             if (Session == null && !controller.StorageBlocked) controller.StartDay(Environment.TickCount);
+            ShowFacade();
             Refresh();
         }
         private void Invalidate() { dirty = true; }
@@ -187,8 +188,8 @@ namespace Blinopek.Presentation
             if (finishing == null) previousPhase = o.Phase;
             bool showingResult = s.Phase == DayPhase.Result && finishing == null;
             Audio.SetContext(showKitchen, atFacade);
-            kitchen.SetActive(showKitchen && !showingResult); counter.SetActive(!showKitchen && !showingResult);
-            results.SetActive(showingResult);
+            kitchen.SetActive(showKitchen && !showingResult && !atFacade); counter.SetActive(!showKitchen && !showingResult && !atFacade);
+            results.SetActive(showingResult && !atFacade);
             pausePanel.SetActive((controller.Pauses & PauseReason.Menu) != 0 && !atFacade);
             orderHud.SetActive(showKitchen && s.Phase != DayPhase.Result && !atFacade);
             if (!orderHud.activeSelf) orderDetails.SetActive(false);
@@ -254,8 +255,6 @@ namespace Blinopek.Presentation
                 for (int i = 0; i < amounts.Length; i++) resultRows[i].text = (amounts[i] > 0 ? "+" : "") + Money(amounts[i]);
                 profitText.text = (l.Profit > 0 ? "+" : "") + Money(l.Profit);
                 resultText.text = s.Success ? "Смена завершена" : "Повторите день с прежним запасом";
-                nextDay.transform.Find("Icon").GetComponent<RawImage>().texture = art.Find(s.Success ? "ui/glyphs/arrow-right.png" : "ui/glyphs/undo.png");
-                openShop.interactable = s.Success;
             }
             if (shop.activeSelf) { shopBalance.text = Money(controller.Profile.coins) + " монет · " + controller.Profile.honey + " мёда"; foreach (var update in shopRefreshers) update(); }
             storage.text = controller.StorageError ?? "";

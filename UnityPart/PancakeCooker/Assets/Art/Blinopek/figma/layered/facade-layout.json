@@ -96,6 +96,62 @@
       "children": []
     },
     {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "940px",
+        "top": "744px",
+        "width": "120.00000000000001px",
+        "height": "100px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-4.877505567928731px",
+            "top": "-13.344051446945338px",
+            "width": "129.75501113585747px",
+            "height": "130.06430868167203px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "960px",
+        "top": "756px",
+        "width": "80px",
+        "height": "76px"
+      },
+      "attributes": {
+        "aria-label": "shop"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/shop.svg\">",
+      "children": []
+    },
+    {
       "type": "control",
       "asset": null,
       "source": null,

@@ -42,3 +42,10 @@ facade_base.png — петербургский фасад с высокими о
 kitchen/shadows — 9 контактных теней SVG + прозрачные PNG для Unity.
 Тени входят в группы предметов, в фон не впечатываются.
 Спецификация интеграции: screens/UNITY_HANDOFF.txt.
+
+
+Revision 8: eye style, tray and prices
+24 visitor PNGs updated using built-in image_gen. Archive: archive/visitors-before-eye-style. Prompt set: visitors/eye-style-prompts.txt. QA and paths: visitors/eye-style-manifest.json.
+Shallow horizontal serving tray: decor/service_delivery.png; prompt: decor/service_delivery.perspective.prompt.txt.
+Counter, shop and reviews local previews and native layered Figma contents updated. Shop prices sit within footers; action icons are below cards. Review avatar scale uses visible bounds. Existing Figma frame IDs preserved; save verified after reload.
+Close-up review: screens/visitors.html; Figma proof: figma/visitors-table-proof.jpg.

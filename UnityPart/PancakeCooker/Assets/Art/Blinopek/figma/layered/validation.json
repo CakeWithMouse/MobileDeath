@@ -7,7 +7,7 @@
       "key": "facade",
       "xml_valid": true,
       "viewbox": "1600x900",
-      "images": 4,
+      "images": 6,
       "all_pngs_identical_to_originals": true,
       "no_screen_png_used": true
     },
@@ -47,7 +47,7 @@
       "key": "day",
       "xml_valid": true,
       "viewbox": "1600x900",
-      "images": 19,
+      "images": 16,
       "all_pngs_identical_to_originals": true,
       "no_screen_png_used": true
     },

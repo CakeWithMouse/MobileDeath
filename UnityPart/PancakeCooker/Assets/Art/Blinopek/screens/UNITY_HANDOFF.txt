@@ -59,3 +59,17 @@ Revision 8 — visitors, serving tray and shop prices
 All 24 visitor PNGs have natural almond eyes from the new reference; identities and three reactions are preserved. Source canvas dimensions may differ. Use updated asset-bounds.js or per-screen layout JSON for visible silhouette placement. Existing .meta files and GUIDs were preserved.
 Counter: decor/service_delivery.png replaced by a shallow horizontal tray; visible box [1065,748,350,100] in 1600×900 coordinates. Object owns kitchen/shadows/tray.svg.
 Shop: prices moved to footer center (coin y571, text y568); purchase/state icons y666 with size50. See shop-layout.json for exact positions.
+
+Review avatar cropping: use visible bounds rather than full PNG canvas. Circle110px; scale=110/(visibleHeight*0.42); image left=55-visibleCenterX*scale, top=-bboxTop*scale-4. Exact native image/clip positions are exported in reviews-layout.json and reviews.svg.
+
+2026-10-14 — recipe names and main menu cycle
+Recipe names are separate PT Serif text layers: Сладкий треугольник,
+Грибной конверт; the Unity second spread also includes Сладкая трубочка.
+Facade: shop glyph on a cream button, [940,744,120,100], beside play.
+Cycle: level -> result -> facade. The home button on the result returns to
+the facade; only facade play starts the next day or retries the failed day.
+Shop opens from and closes to the facade. Existing purchases are applied
+when the next shift starts. An unfinished shift resumes without resetting.
+Sources, layered SVG/JSON and PNG previews are updated locally. This revision
+has NOT been applied to the open Figma document: Computer Use was stopped
+by the user. Earlier Figma upload proofs do not confirm this revision.

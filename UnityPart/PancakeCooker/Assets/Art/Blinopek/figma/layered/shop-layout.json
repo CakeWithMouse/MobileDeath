@@ -1494,7 +1494,7 @@
         "height": "55px"
       },
       "attributes": {
-        "aria-label": "counter"
+        "aria-label": "facade"
       },
       "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/arrow-left.svg\">",
       "children": []

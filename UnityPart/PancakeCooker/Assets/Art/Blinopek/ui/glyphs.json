@@ -93,5 +93,15 @@
     "id": "focus-hole",
     "file": "glyphs/focus-hole.svg",
     "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "shop",
+    "file": "glyphs/shop.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "home",
+    "file": "glyphs/home.svg",
+    "method": "native vector UI geometry, no texture filter"
   }
 ]

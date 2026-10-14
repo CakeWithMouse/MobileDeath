@@ -6,10 +6,19 @@ using UnityEngine.UI;
 namespace Blinopek.Presentation
 {
     [RequireComponent(typeof(CanvasRenderer))]
-    public sealed class PancakeGraphic : MaskableGraphic
+    public sealed partial class PancakeGraphic : MaskableGraphic
     {
         private struct Patch { public Rect Uv; public float Depth, Facing; public int Fillings; }
-        private struct Quad { public Rect Uv, Tile, Source; public Color Tint; public bool Shadow; }
+        private struct Quad
+        {
+            public Rect Uv, Tile, Source, Placement;
+            public Color Tint;
+            public bool Shadow, Authored, MappedFilling, Incoming;
+            public FoldPose Pose;
+            public Direction Direction;
+            public float Warp;
+            public int Layer;
+        }
         private readonly List<Patch> patches = new List<Patch>(4096);
         private readonly List<Quad> quads = new List<Quad>(8192);
         private readonly List<PancakeMeshPage> pages = new List<PancakeMeshPage>();
@@ -60,6 +69,7 @@ namespace Blinopek.Presentation
         private void RebuildSurface()
         {
             patches.Clear(); quads.Clear(); var state = motion.State;
+            if (atlas.HasFoldArt && motion.FoldPosition > 0) { RebuildAuthoredFolds(); return; }
             const int size = CoverageMask.Size;
             for (int y = 0; y < size; y++)
             {
@@ -120,6 +130,7 @@ namespace Blinopek.Presentation
         }
         private void AddVertex(VertexHelper vh, Quad q, float x, float y)
         {
+            if (q.Authored) { AddAuthoredVertex(vh, q, x, y); return; }
             var p = Vertex(new Vector2(x, y)).Position; var rect = rectTransform.rect;
             float screenY = p.y + p.z * .85f;
             if (q.Shadow)

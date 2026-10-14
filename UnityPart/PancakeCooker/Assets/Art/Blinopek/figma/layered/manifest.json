@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "layered_screen_layouts",
   "source": "screens/screens.js",
-  "source_sha256": "a1b9303d2b6e25d1c4c14c7f866f0ad87ead05b208c21d3d1b07fac5f0ea1035",
+  "source_sha256": "6ae5058808ab03e68b0b0e3db4b905e1b5e331734ccb07d6840eda31013b7b58",
   "bounds_sha256": "893b11b668814d2ff8c79076b5cdcd6b7d10e98ed1a1ed4851b212d95a89bf02",
   "notes": [
     "Original PNG files are embedded separately; no flattened screen PNG is used.",
@@ -17,11 +17,11 @@
       "file": "figma/layered/facade.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 10820006,
+      "bytes": 13791152,
       "layer_counts": {
-        "groups": 4,
-        "asset_groups": 2,
-        "image_layers": 4,
+        "groups": 6,
+        "asset_groups": 3,
+        "image_layers": 6,
         "text_layers": 0,
         "vector_shapes": 0,
         "shadow_groups": 0,
@@ -32,6 +32,7 @@
         "decor/facade_base.png",
         "ui/button-cream.png",
         "ui/glyphs/play.png",
+        "ui/glyphs/shop.png",
         "ui/settings-speaker.png"
       ]
     },
@@ -143,12 +144,12 @@
       "file": "figma/layered/recipes.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 49610220,
+      "bytes": 49610971,
       "layer_counts": {
-        "groups": 27,
+        "groups": 29,
         "asset_groups": 23,
         "image_layers": 26,
-        "text_layers": 0,
+        "text_layers": 2,
         "vector_shapes": 1,
         "shadow_groups": 0,
         "shadow_ellipses": 0,
@@ -185,7 +186,7 @@
       "file": "figma/layered/shop.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 97459403,
+      "bytes": 97459399,
       "layer_counts": {
         "groups": 50,
         "asset_groups": 38,
@@ -229,11 +230,11 @@
       "file": "figma/layered/day.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 45524080,
+      "bytes": 39381675,
       "layer_counts": {
-        "groups": 30,
-        "asset_groups": 16,
-        "image_layers": 19,
+        "groups": 27,
+        "asset_groups": 15,
+        "image_layers": 16,
         "text_layers": 6,
         "vector_shapes": 5,
         "shadow_groups": 0,
@@ -251,14 +252,12 @@
         "ui/button-cream.png",
         "ui/coin-pancake.png",
         "ui/day-sun.png",
-        "ui/glyphs/arrow-right.png",
-        "ui/glyphs/undo.png",
+        "ui/glyphs/home.png",
         "ui/order-plate.png",
         "ui/panel-cream.png",
         "ui/refund-coins.png",
         "ui/repair-stove.png",
-        "ui/tip-coins.png",
-        "ui/upgrade-visitors.png"
+        "ui/tip-coins.png"
       ]
     },
     {
