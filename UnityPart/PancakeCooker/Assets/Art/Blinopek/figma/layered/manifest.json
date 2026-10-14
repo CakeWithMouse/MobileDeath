@@ -5,6 +5,7 @@
   "source_sha256": "6ae5058808ab03e68b0b0e3db4b905e1b5e331734ccb07d6840eda31013b7b58",
   "bounds_sha256": "893b11b668814d2ff8c79076b5cdcd6b7d10e98ed1a1ed4851b212d95a89bf02",
   "notes": [
+    "Historical SVG export metadata: file and bytes describe previous exports, which are now excluded from Git. Use the corresponding *-layout.json files and screens/screens.js for local layouts; editable boards are stored in Figma.",
     "Original PNG files are embedded separately; no flattened screen PNG is used.",
     "Raster glyph siblings retain reliable Figma import; contact shadows remain native vector ellipses inside their item group.",
     "Text remains SVG text. Install PT Sans and PT Serif if the editor does not honor embedded SVG fonts.",

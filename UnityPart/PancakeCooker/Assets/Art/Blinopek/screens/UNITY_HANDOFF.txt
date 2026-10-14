@@ -4,7 +4,7 @@ Figma: https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4
 Размер 1600×900. Начало координат слева сверху.
 Источник раскладки: screens/screens.js, функция kitchenBase().
 Готовая спецификация слоёв: figma/layered/kitchen-layout.json.
-Редактируемый экспорт: figma/layered/kitchen.svg.
+Редактируемый макет: Figma по ссылке выше. Тяжёлые SVG-экспорты досок исключены из репозитория.
 PNG для визуального сравнения: screens/kitchen.png.
 
 art() задаёт прямоугольник ВИДИМОЙ части спрайта. Полные PNG имеют прозрачные
@@ -60,7 +60,7 @@ All 24 visitor PNGs have natural almond eyes from the new reference; identities 
 Counter: decor/service_delivery.png replaced by a shallow horizontal tray; visible box [1065,748,350,100] in 1600×900 coordinates. Object owns kitchen/shadows/tray.svg.
 Shop: prices moved to footer center (coin y571, text y568); purchase/state icons y666 with size50. See shop-layout.json for exact positions.
 
-Review avatar cropping: use visible bounds rather than full PNG canvas. Circle110px; scale=110/(visibleHeight*0.42); image left=55-visibleCenterX*scale, top=-bboxTop*scale-4. Exact native image/clip positions are exported in reviews-layout.json and reviews.svg.
+Review avatar cropping: use visible bounds rather than full PNG canvas. Circle110px; scale=110/(visibleHeight*0.42); image left=55-visibleCenterX*scale, top=-bboxTop*scale-4. Exact native image/clip positions are stored in figma/layered/reviews-layout.json.
 
 2026-10-14 — recipe names and main menu cycle
 Recipe names are separate PT Serif text layers: Сладкий треугольник,
@@ -70,6 +70,7 @@ Cycle: level -> result -> facade. The home button on the result returns to
 the facade; only facade play starts the next day or retries the failed day.
 Shop opens from and closes to the facade. Existing purchases are applied
 when the next shift starts. An unfinished shift resumes without resetting.
-Sources, layered SVG/JSON and PNG previews are updated locally. This revision
+Sources, layer layout JSON and PNG previews are updated locally. Heavy SVG
+board exports have been removed from the repository. This revision
 has NOT been applied to the open Figma document: Computer Use was stopped
 by the user. Earlier Figma upload proofs do not confirm this revision.

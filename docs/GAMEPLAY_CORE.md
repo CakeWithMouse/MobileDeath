@@ -33,7 +33,7 @@
 
 ## Интерфейс по Figma
 
-Компоновка перенесена из [узла 4199:520](https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520). Агент графики подтвердил соответствие локальных `Assets/Art/Blinopek/screens/screens.js`, `screens/asset-bounds.js` и `figma/layered/kitchen.svg` этому узлу. Базовый размер — 1600×900. Код компоновки находится в `GameView.Layout.cs`, обновление игровых значений и состояний — в `GameView.cs`.
+Компоновка перенесена из [узла 4199:520](https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520). Локальные источники компоновки — `Assets/Art/Blinopek/screens/screens.js`, `screens/asset-bounds.js` и `figma/layered/kitchen-layout.json`. Тяжёлые SVG-экспорты досок исключены из репозитория; макеты доступны в Figma. Базовый размер — 1600×900. Код компоновки находится в `GameView.Layout.cs`, обновление игровых значений и состояний — в `GameView.cs`.
 
 - Кухня использует `kitchen-background-crepe-stove.png` с уже встроенной плитой: старые отдельные плита, стол, сковорода и ручка повторно не накладываются.
 - Кувшин, тарелка, поднос, ёмкости начинок и контактные тени — отдельные изображения. Неоткрытая начинка скрывается вместе со своей тенью. Значок помощника зависит от реального состояния профиля.

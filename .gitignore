@@ -115,6 +115,12 @@ AGENTS.md
 AGENTS.local.md
 .codex-tmp/
 
+# Figma board exports embed copies of source PNGs and are stored in Figma.
+/UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/catalog/*.svg
+/UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/catalog/*.svg.meta
+/UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/layered/*.svg
+/UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/layered/*.svg.meta
+
 # Server dependencies and local configuration
 node_modules/
 .env
