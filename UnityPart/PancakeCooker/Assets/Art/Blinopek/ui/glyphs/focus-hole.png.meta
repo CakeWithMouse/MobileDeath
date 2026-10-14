@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 20fa86084365b4144b7c38fb78b37934
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8892539188291301750
+    second: focus-hole_0
+  - first:
+      213: 5465553138468929167
+    second: focus-hole_1
+  - first:
+      213: -8673077766550225098
+    second: focus-hole_2
+  - first:
+      213: -188099039873482049
+    second: focus-hole_3
+  - first:
+      213: 4070905722430521651
+    second: focus-hole_4
+  - first:
+      213: 4565747246033769090
+    second: focus-hole_5
+  - first:
+      213: -2764466900724396291
+    second: focus-hole_6
+  - first:
+      213: -6119628733601955917
+    second: focus-hole_7
+  - first:
+      213: -4414685005940664143
+    second: focus-hole_8
+  - first:
+      213: 2048557095234712230
+    second: focus-hole_9
+  - first:
+      213: 3618833722119867219
+    second: focus-hole_10
+  - first:
+      213: -4600264399866194425
+    second: focus-hole_11
+  - first:
+      213: -6490911833426764284
+    second: focus-hole_12
+  - first:
+      213: -5179041360420234285
+    second: focus-hole_13
+  - first:
+      213: -5545895002656442772
+    second: focus-hole_14
+  - first:
+      213: -9160092463773691449
+    second: focus-hole_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: focus-hole_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 251
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671f75de645a86b70800000000000000
+      internalID: 8892539188291301750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 280
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e36772f9b89db40800000000000000
+      internalID: 5465553138468929167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 291
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f7f6729b903a780800000000000000
+      internalID: -8673077766550225098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 273
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2cfb97becb36df0800000000000000
+      internalID: -188099039873482049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 207
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331839b9f23ce7830800000000000000
+      internalID: 4070905722430521651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 235
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2829f0e0eeacc5f30800000000000000
+      internalID: 4565747246033769090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_6
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 186
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe4ff42004a2a9d0800000000000000
+      internalID: -2764466900724396291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_7
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 154
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfb1680716b21ba0800000000000000
+      internalID: -6119628733601955917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_8
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 133
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8d9a98063ebb2c0800000000000000
+      internalID: -4414685005940664143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_9
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 102
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2329b03dfed6c10800000000000000
+      internalID: 2048557095234712230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 58
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bc82cc81ea83230800000000000000
+      internalID: 3618833722119867219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 84
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706991dc6e39820c0800000000000000
+      internalID: -4600264399866194425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 32
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ed73ce316abe5a0800000000000000
+      internalID: -6490911833426764284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_13
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 25
+        width: 51
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db981b82595028b0800000000000000
+      internalID: -5179041360420234285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_14
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 28
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c667c05e0e50903b0800000000000000
+      internalID: -5545895002656442772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: focus-hole_15
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 47
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1590bbf60d0e080800000000000000
+      internalID: -9160092463773691449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      focus-hole_0: 8892539188291301750
+      focus-hole_1: 5465553138468929167
+      focus-hole_10: 3618833722119867219
+      focus-hole_11: -4600264399866194425
+      focus-hole_12: -6490911833426764284
+      focus-hole_13: -5179041360420234285
+      focus-hole_14: -5545895002656442772
+      focus-hole_15: -9160092463773691449
+      focus-hole_2: -8673077766550225098
+      focus-hole_3: -188099039873482049
+      focus-hole_4: 4070905722430521651
+      focus-hole_5: 4565747246033769090
+      focus-hole_6: -2764466900724396291
+      focus-hole_7: -6119628733601955917
+      focus-hole_8: -4414685005940664143
+      focus-hole_9: 2048557095234712230
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

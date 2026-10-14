@@ -1,0 +1,1024 @@
+{
+  "screen": "counter",
+  "width": 1600,
+  "height": 900,
+  "origin": "top-left",
+  "source": "screens/screens.js",
+  "layers": [
+    {
+      "type": "layer",
+      "asset": "decor/service_background.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "0px",
+        "top": "0px",
+        "width": "1600px",
+        "height": "900px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/service_background.png",
+          "style": {
+            "left": "0px",
+            "top": "0px",
+            "width": "1600px",
+            "height": "900px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/chair_premium.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1025px",
+        "top": "435.9383259911894px",
+        "width": "160px",
+        "height": "236.12334801762117px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/chair_premium.png",
+          "style": {
+            "left": "-25.726872246696036px",
+            "top": "-4.933920704845815px",
+            "width": "198.94273127753306px",
+            "height": "245.46255506607932px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/table_premium.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "866.8403776978417px",
+        "top": "500px",
+        "width": "278.31924460431657px",
+        "height": "247px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/table_premium.png",
+          "style": {
+            "left": "-6.441546762589928px",
+            "top": "-9.773381294964029px",
+            "width": "291.42446043165467px",
+            "height": "266.3246402877698px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/stool_base.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1354.6315401621223px",
+        "top": "580px",
+        "width": "140.73691967575533px",
+        "height": "180px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/stool_base.png",
+          "style": {
+            "left": "-6.234340456890199px",
+            "top": "-2.3876197494473104px",
+            "width": "149.75681650700074px",
+            "height": "184.77523949889462px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/table_base.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1270px",
+        "top": "451.24810892586993px",
+        "width": "270px",
+        "height": "207.5037821482602px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/table_base.png",
+          "style": {
+            "left": "-5.5143721633888045px",
+            "top": "-16.543116490166415px",
+            "width": "280.6202723146747px",
+            "height": "233.8502269288956px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/vase_flowers.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1001.8367346938776px",
+        "top": "391px",
+        "width": "96.3265306122449px",
+        "height": "130px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/vase_flowers.png",
+          "style": {
+            "left": "-7.959183673469388px",
+            "top": "-6.224489795918368px",
+            "width": "115.20408163265306px",
+            "height": "142.14285714285714px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/lamp_brass.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1140px",
+        "top": "-20.748631386861305px",
+        "width": "165px",
+        "height": "205.4972627737226px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/lamp_brass.png",
+          "style": {
+            "left": "-2.5593065693430654px",
+            "top": "-1.5054744525547445px",
+            "width": "169.96806569343065px",
+            "height": "209.7125912408759px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "visitors/student-neutral.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "102.44993324432576px",
+        "top": "191px",
+        "width": "453.1001335113485px",
+        "height": "792px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../visitors/student-neutral.png",
+          "style": {
+            "left": "-48.640854472630174px",
+            "top": "-20.09078771695594px",
+            "width": "541.3938584779706px",
+            "height": "812.0907877169559px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/service_counter.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "-30px",
+        "top": "723px",
+        "width": "1660px",
+        "height": "240px",
+        "z-index": "20",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/service_counter.png",
+          "style": {
+            "left": "-2.300230946882217px",
+            "top": "-145.94594594594597px",
+            "width": "1665.367205542725px",
+            "height": "469.62162162162167px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/service_delivery.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1065.2653927813162px",
+        "top": "748px",
+        "width": "349.4692144373673px",
+        "height": "100px",
+        "z-index": "25",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "contact-shadow",
+          "asset": null,
+          "source": "../kitchen/shadows/tray.svg",
+          "style": {
+            "left": "-27.957537154989385px",
+            "top": "77px",
+            "width": "419.3630573248407px",
+            "height": "29.999999999999996px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        },
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/service_delivery.png",
+          "style": {
+            "left": "-2.9723991507431px",
+            "top": "-57.32484076433121px",
+            "width": "354.9893842887474px",
+            "height": "199.78768577494694px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/pitcher.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1444px",
+        "top": "688.6476569407604px",
+        "width": "112px",
+        "height": "121.70468611847923px",
+        "z-index": "25",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/pitcher.png",
+          "style": {
+            "left": "-4.951370468611848px",
+            "top": "-4.456233421750663px",
+            "width": "119.32802829354554px",
+            "height": "129.23076923076923px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "ui/speech-bubble.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "620px",
+        "top": "145px",
+        "width": "825px",
+        "height": "285px",
+        "z-index": "40",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/speech-bubble.png",
+          "style": {
+            "left": "-18.641826923076923px",
+            "top": "-30.82362728785358px",
+            "width": "861.4903846153845px",
+            "height": "343.3277870216306px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "737px",
+        "top": "199px",
+        "width": "600px",
+        "font-size": "37px",
+        "font-family": "Serif"
+      },
+      "attributes": {},
+      "html": "Мне два блина с вареньем.<br>Сложите треугольником,<br>пожалуйста.",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "856px",
+        "top": "448px",
+        "width": "176px",
+        "height": "86px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-7.153674832962138px",
+            "top": "-11.47588424437299px",
+            "width": "190.30734966592428px",
+            "height": "111.85530546623795px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "876px",
+        "top": "460px",
+        "width": "136px",
+        "height": "62px"
+      },
+      "attributes": {
+        "aria-label": "kitchen"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/check.svg\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1065px",
+        "top": "448px",
+        "width": "176px",
+        "height": "86px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-7.153674832962138px",
+            "top": "-11.47588424437299px",
+            "width": "190.30734966592428px",
+            "height": "111.85530546623795px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "1085px",
+        "top": "460px",
+        "width": "136px",
+        "height": "62px"
+      },
+      "attributes": {
+        "aria-label": "help"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/help.svg\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/patience-track.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "747px",
+        "top": "560px",
+        "width": "580px",
+        "height": "53px",
+        "z-index": "45",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/patience-track.png",
+          "style": {
+            "left": "-23.695121951219512px",
+            "top": "-54.46206896551724px",
+            "width": "627.390243902439px",
+            "height": "162.10689655172413px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "meter",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "height": "15px",
+        "background": "#576f59",
+        "border-radius": "40% 5px 10px 30%",
+        "z-index": "55",
+        "left": "785px",
+        "top": "579px",
+        "width": "400px"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "28px",
+        "top": "770px",
+        "width": "108px",
+        "height": "104px"
+      },
+      "attributes": {
+        "aria-label": "recipes"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/recipe-book-closed.png\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1448px",
+        "top": "795px",
+        "width": "120.00000000000001px",
+        "height": "80px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-4.877505567928731px",
+            "top": "-10.67524115755627px",
+            "width": "129.75501113585747px",
+            "height": "104.05144694533762px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "1468px",
+        "top": "807px",
+        "width": "80px",
+        "height": "56px"
+      },
+      "attributes": {
+        "aria-label": "kitchen"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/arrow-right.svg\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/panel-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "22px",
+        "top": "18px",
+        "width": "325px",
+        "height": "78px",
+        "z-index": "60",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/panel-cream.png",
+          "style": {
+            "left": "-9.005037783375315px",
+            "top": "-47.49026548672566px",
+            "width": "342.19143576826195px",
+            "height": "173.11858407079646px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "ui/day-sun.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "38.13065326633166px",
+        "top": "28px",
+        "width": "43.73869346733668px",
+        "height": "48px",
+        "z-index": "62",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/day-sun.png",
+          "style": {
+            "left": "-3.0552763819095476px",
+            "top": "-1.3668341708542713px",
+            "width": "49.447236180904525px",
+            "height": "51.37688442211056px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "70",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "91px",
+        "top": "37px",
+        "width": "40px",
+        "font-size": "30px"
+      },
+      "attributes": {},
+      "html": "6",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/clock-day.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "147px",
+        "top": "26.69402985074627px",
+        "width": "52px",
+        "height": "51.61194029850746px",
+        "z-index": "62",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/clock-day.png",
+          "style": {
+            "left": "-4.462686567164179px",
+            "top": "-4.317164179104478px",
+            "width": "60.82835820895522px",
+            "height": "60.82835820895522px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "70",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "215px",
+        "top": "37px",
+        "width": "115px",
+        "font-size": "30px"
+      },
+      "attributes": {},
+      "html": "14:35",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/panel-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1040px",
+        "top": "18px",
+        "width": "400px",
+        "height": "78px",
+        "z-index": "60",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/panel-cream.png",
+          "style": {
+            "left": "-11.083123425692696px",
+            "top": "-47.49026548672566px",
+            "width": "421.1586901763224px",
+            "height": "173.11858407079646px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "ui/coin-pancake.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1060.7005899705014px",
+        "top": "29px",
+        "width": "50.59882005899705px",
+        "height": "51px",
+        "z-index": "62",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/coin-pancake.png",
+          "style": {
+            "left": "-5.9174041297935105px",
+            "top": "-6.218289085545723px",
+            "width": "61.68141592920354px",
+            "height": "64.08849557522124px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "70",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "1125px",
+        "top": "37px",
+        "width": "90px",
+        "font-size": "31px"
+      },
+      "attributes": {},
+      "html": "325",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/currency-honey.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1248.5674920127794px",
+        "top": "26px",
+        "width": "41.865015974440894px",
+        "height": "55px",
+        "z-index": "62",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/currency-honey.png",
+          "style": {
+            "left": "-3.997603833865815px",
+            "top": "-3.4265175718849843px",
+            "width": "49.596645367412144px",
+            "height": "61.19408945686901px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "70",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "1310px",
+        "top": "37px",
+        "width": "80px",
+        "font-size": "31px"
+      },
+      "attributes": {},
+      "html": "8",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1462px",
+        "top": "18px",
+        "width": "112px",
+        "height": "78px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-4.552338530066815px",
+            "top": "-10.408360128617362px",
+            "width": "121.10467706013364px",
+            "height": "101.45016077170418px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "1482px",
+        "top": "30px",
+        "width": "72px",
+        "height": "54px"
+      },
+      "attributes": {
+        "aria-label": "pause"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/pause.svg\">",
+      "children": []
+    }
+  ]
+}

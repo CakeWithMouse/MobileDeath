@@ -1,0 +1,97 @@
+[
+  {
+    "id": "arrow-left",
+    "file": "glyphs/arrow-left.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "arrow-right",
+    "file": "glyphs/arrow-right.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "close",
+    "file": "glyphs/close.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "check",
+    "file": "glyphs/check.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "lock",
+    "file": "glyphs/lock.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "pause",
+    "file": "glyphs/pause.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "play",
+    "file": "glyphs/play.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "undo",
+    "file": "glyphs/undo.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "loading",
+    "file": "glyphs/loading.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "selected",
+    "file": "glyphs/selected.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "plus",
+    "file": "glyphs/plus.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "minus",
+    "file": "glyphs/minus.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "help",
+    "file": "glyphs/help.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "mute",
+    "file": "glyphs/mute.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "exit",
+    "file": "glyphs/exit.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "gear",
+    "file": "glyphs/gear.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "hand-drag",
+    "file": "glyphs/hand-drag.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "gesture-line",
+    "file": "glyphs/gesture-line.svg",
+    "method": "native vector UI geometry, no texture filter"
+  },
+  {
+    "id": "focus-hole",
+    "file": "glyphs/focus-hole.svg",
+    "method": "native vector UI geometry, no texture filter"
+  }
+]

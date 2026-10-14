@@ -1,0 +1,552 @@
+[
+  {
+    "file": "assembly-table.png",
+    "size": [
+      1231,
+      1278
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      17,
+      75,
+      1214,
+      1227
+    ]
+  },
+  {
+    "file": "batter-pitcher.png",
+    "size": [
+      1230,
+      1278
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      31,
+      39,
+      1201,
+      1241
+    ]
+  },
+  {
+    "file": "batter-raw.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      47,
+      52,
+      1321,
+      1085
+    ]
+  },
+  {
+    "file": "container-butter.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      92,
+      145,
+      1320,
+      1038
+    ]
+  },
+  {
+    "file": "container-curd.png",
+    "size": [
+      1290,
+      1219
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      116,
+      129,
+      1175,
+      1092
+    ]
+  },
+  {
+    "file": "container-honey.png",
+    "size": [
+      1230,
+      1278
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      153,
+      97,
+      1077,
+      1169
+    ]
+  },
+  {
+    "file": "container-jam.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      77,
+      109,
+      1177,
+      1145
+    ]
+  },
+  {
+    "file": "container-mushrooms.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      132,
+      181,
+      1126,
+      1083
+    ]
+  },
+  {
+    "file": "discard-bowl.png",
+    "size": [
+      1231,
+      1278
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      114,
+      113,
+      1130,
+      1157
+    ]
+  },
+  {
+    "file": "filling-butter.png",
+    "size": [
+      1363,
+      1154
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      115,
+      142,
+      1257,
+      978
+    ]
+  },
+  {
+    "file": "filling-curd.png",
+    "size": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      155,
+      127,
+      1222,
+      1003
+    ]
+  },
+  {
+    "file": "filling-honey.png",
+    "size": [
+      1346,
+      1168
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      76,
+      217,
+      1284,
+      932
+    ]
+  },
+  {
+    "file": "filling-jam.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      86,
+      227,
+      1297,
+      912
+    ]
+  },
+  {
+    "file": "filling-mushrooms.png",
+    "size": [
+      1347,
+      1167
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      171,
+      148,
+      1202,
+      1018
+    ]
+  },
+  {
+    "file": "fold-envelope-partial.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      314,
+      103,
+      1097,
+      1057
+    ]
+  },
+  {
+    "file": "fold-envelope.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      290,
+      350,
+      1119,
+      847
+    ]
+  },
+  {
+    "file": "fold-half.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      34,
+      365,
+      1333,
+      910
+    ]
+  },
+  {
+    "file": "fold-incorrect.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      60,
+      84,
+      1311,
+      1093
+    ]
+  },
+  {
+    "file": "fold-roll-partial.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      35,
+      180,
+      1336,
+      980
+    ]
+  },
+  {
+    "file": "fold-roll.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      99,
+      433,
+      1264,
+      770
+    ]
+  },
+  {
+    "file": "fold-triangle.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      326,
+      213,
+      1111,
+      932
+    ]
+  },
+  {
+    "file": "kitchen-background.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "alpha_range": null,
+    "alpha_visible_bbox": null
+  },
+  {
+    "file": "pan-base.png",
+    "size": [
+      1347,
+      1168
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      75,
+      80,
+      1273,
+      1081
+    ]
+  },
+  {
+    "file": "pan-handle.png",
+    "size": [
+      1346,
+      1168
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      70,
+      109,
+      1293,
+      1082
+    ]
+  },
+  {
+    "file": "pancake-burnt.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      45,
+      54,
+      1326,
+      1083
+    ]
+  },
+  {
+    "file": "pancake-ready.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      47,
+      60,
+      1321,
+      1083
+    ]
+  },
+  {
+    "file": "pancake-undercooked.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      45,
+      54,
+      1321,
+      1086
+    ]
+  },
+  {
+    "file": "plate.png",
+    "size": [
+      1362,
+      1155
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      41,
+      50,
+      1321,
+      1101
+    ]
+  },
+  {
+    "file": "ready-tray.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_visible_bbox": [
+      35,
+      193,
+      1508,
+      875
+    ]
+  },
+  {
+    "file": "scraper.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      67,
+      133,
+      1210,
+      1143
+    ]
+  },
+  {
+    "file": "stove.png",
+    "size": [
+      1129,
+      1393
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_visible_bbox": [
+      39,
+      63,
+      1097,
+      1351
+    ]
+  }
+]

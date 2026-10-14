@@ -1,0 +1,813 @@
+{
+  "screen": "day",
+  "width": 1600,
+  "height": 900,
+  "origin": "top-left",
+  "source": "screens/screens.js",
+  "layers": [
+    {
+      "type": "layer",
+      "asset": "decor/service_background.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "0px",
+        "top": "0px",
+        "width": "1600px",
+        "height": "900px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/service_background.png",
+          "style": {
+            "left": "0px",
+            "top": "0px",
+            "width": "1600px",
+            "height": "900px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/chair_premium.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1025px",
+        "top": "435.9383259911894px",
+        "width": "160px",
+        "height": "236.12334801762117px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/chair_premium.png",
+          "style": {
+            "left": "-25.726872246696036px",
+            "top": "-4.933920704845815px",
+            "width": "198.94273127753306px",
+            "height": "245.46255506607932px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/table_premium.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "866.8403776978417px",
+        "top": "500px",
+        "width": "278.31924460431657px",
+        "height": "247px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/table_premium.png",
+          "style": {
+            "left": "-6.441546762589928px",
+            "top": "-9.773381294964029px",
+            "width": "291.42446043165467px",
+            "height": "266.3246402877698px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/stool_base.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1354.6315401621223px",
+        "top": "580px",
+        "width": "140.73691967575533px",
+        "height": "180px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/stool_base.png",
+          "style": {
+            "left": "-6.234340456890199px",
+            "top": "-2.3876197494473104px",
+            "width": "149.75681650700074px",
+            "height": "184.77523949889462px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/table_base.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1270px",
+        "top": "451.24810892586993px",
+        "width": "270px",
+        "height": "207.5037821482602px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/table_base.png",
+          "style": {
+            "left": "-5.5143721633888045px",
+            "top": "-16.543116490166415px",
+            "width": "280.6202723146747px",
+            "height": "233.8502269288956px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/vase_flowers.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1001.8367346938776px",
+        "top": "391px",
+        "width": "96.3265306122449px",
+        "height": "130px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/vase_flowers.png",
+          "style": {
+            "left": "-7.959183673469388px",
+            "top": "-6.224489795918368px",
+            "width": "115.20408163265306px",
+            "height": "142.14285714285714px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "decor/lamp_brass.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1140px",
+        "top": "-20.748631386861305px",
+        "width": "165px",
+        "height": "205.4972627737226px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/lamp_brass.png",
+          "style": {
+            "left": "-2.5593065693430654px",
+            "top": "-1.5054744525547445px",
+            "width": "169.96806569343065px",
+            "height": "209.7125912408759px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "dim",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "inset": "0",
+        "background": "#2b352c75",
+        "z-index": "39"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/panel-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "335px",
+        "top": "118px",
+        "width": "930px",
+        "height": "693px",
+        "z-index": "42",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/panel-cream.png",
+          "style": {
+            "left": "-25.768261964735515px",
+            "top": "-421.93274336283184px",
+            "width": "979.1939546599497px",
+            "height": "1538.09203539823px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "ui/day-sun.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "654.107202680067px",
+        "top": "152px",
+        "width": "63.785594639866px",
+        "height": "70px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/day-sun.png",
+          "style": {
+            "left": "-4.455611390284758px",
+            "top": "-1.9932998324958124px",
+            "width": "72.1105527638191px",
+            "height": "74.92462311557789px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "749px",
+        "top": "168px",
+        "width": "100px",
+        "font-size": "47px"
+      },
+      "attributes": {},
+      "html": "6",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/order-plate.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "495px",
+        "top": "262.32369402985074px",
+        "width": "77px",
+        "height": "63.35261194029851px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/order-plate.png",
+          "style": {
+            "left": "-6.751865671641791px",
+            "top": "-12.282649253731343px",
+            "width": "90.07276119402985px",
+            "height": "90.07276119402985px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "900px",
+        "top": "270px",
+        "width": "200px",
+        "font-size": "39px",
+        "text-align": "right"
+      },
+      "attributes": {},
+      "html": "+420",
+      "children": []
+    },
+    {
+      "type": "rule",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "height": "2px",
+        "background": "#8a806657",
+        "z-index": "45",
+        "left": "607px",
+        "top": "318px",
+        "width": "493px"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/tip-coins.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "495px",
+        "top": "356.13351016799294px",
+        "width": "77px",
+        "height": "57.732979664014145px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/tip-coins.png",
+          "style": {
+            "left": "-7.829354553492484px",
+            "top": "-11.165340406719716px",
+            "width": "89.32272325375773px",
+            "height": "81.62953138815207px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "900px",
+        "top": "361px",
+        "width": "200px",
+        "font-size": "39px",
+        "text-align": "right"
+      },
+      "attributes": {},
+      "html": "+65",
+      "children": []
+    },
+    {
+      "type": "rule",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "height": "2px",
+        "background": "#8a806657",
+        "z-index": "45",
+        "left": "607px",
+        "top": "409px",
+        "width": "493px"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/refund-coins.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "495px",
+        "top": "446.3611111111111px",
+        "width": "77px",
+        "height": "59.277777777777786px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/refund-coins.png",
+          "style": {
+            "left": "-9.777777777777779px",
+            "top": "-15.430555555555557px",
+            "width": "95.79166666666667px",
+            "height": "95.79166666666667px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "900px",
+        "top": "452px",
+        "width": "200px",
+        "font-size": "39px",
+        "text-align": "right"
+      },
+      "attributes": {},
+      "html": "−35",
+      "children": []
+    },
+    {
+      "type": "rule",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "height": "2px",
+        "background": "#8a806657",
+        "z-index": "45",
+        "left": "607px",
+        "top": "500px",
+        "width": "493px"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/repair-stove.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "495px",
+        "top": "529.7710686359687px",
+        "width": "77px",
+        "height": "74.45786272806255px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/repair-stove.png",
+          "style": {
+            "left": "-4.883579496090356px",
+            "top": "-4.147697654213727px",
+            "width": "83.8905299739357px",
+            "height": "83.8905299739357px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "900px",
+        "top": "543px",
+        "width": "200px",
+        "font-size": "39px",
+        "text-align": "right"
+      },
+      "attributes": {},
+      "html": "−250",
+      "children": []
+    },
+    {
+      "type": "rule",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "height": "2px",
+        "background": "#8a806657",
+        "z-index": "45",
+        "left": "607px",
+        "top": "591px",
+        "width": "493px"
+      },
+      "attributes": {},
+      "html": "",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/coin-pancake.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "564.338249754179px",
+        "top": "669px",
+        "width": "85.32350049164208px",
+        "height": "86px",
+        "z-index": "49",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/coin-pancake.png",
+          "style": {
+            "left": "-9.978367748279252px",
+            "top": "-10.48574237954769px",
+            "width": "104.0117994100295px",
+            "height": "108.07079646017698px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "z-index": "50",
+        "font": "30px PT",
+        "line-height": "1.35",
+        "left": "727px",
+        "top": "675px",
+        "width": "266px",
+        "font-size": "58px"
+      },
+      "attributes": {},
+      "html": "+200",
+      "children": []
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "202px",
+        "top": "696px",
+        "width": "100px",
+        "height": "110px"
+      },
+      "attributes": {
+        "aria-label": "shop"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/upgrade-visitors.png\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "1320px",
+        "top": "707px",
+        "width": "142px",
+        "height": "95px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-5.771714922048997px",
+            "top": "-12.67684887459807px",
+            "width": "153.543429844098px",
+            "height": "123.56109324758843px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "1340px",
+        "top": "719px",
+        "width": "102px",
+        "height": "71px"
+      },
+      "attributes": {
+        "aria-label": "facade"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/arrow-right.svg\">",
+      "children": []
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "39px",
+        "top": "795px",
+        "width": "112px",
+        "height": "78px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-4.552338530066815px",
+            "top": "-10.408360128617362px",
+            "width": "121.10467706013364px",
+            "height": "101.45016077170418px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "59px",
+        "top": "807px",
+        "width": "72px",
+        "height": "54px"
+      },
+      "attributes": {
+        "aria-label": "kitchen"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/undo.svg\">",
+      "children": []
+    }
+  ]
+}

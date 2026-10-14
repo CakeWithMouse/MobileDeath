@@ -1,0 +1,1601 @@
+fileFormatVersion: 2
+guid: ee5881a7bbb77a24fa1fb5139a1277d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1771384810530242370
+    second: fold-envelope_0
+  - first:
+      213: 407025536156493867
+    second: fold-envelope_1
+  - first:
+      213: 7369828868894409809
+    second: fold-envelope_2
+  - first:
+      213: 3960542232237317029
+    second: fold-envelope_3
+  - first:
+      213: 6235856741644440330
+    second: fold-envelope_4
+  - first:
+      213: 5746870605190187445
+    second: fold-envelope_5
+  - first:
+      213: -2489679053501287705
+    second: fold-envelope_6
+  - first:
+      213: 3955285869198196682
+    second: fold-envelope_7
+  - first:
+      213: 2805221982140178038
+    second: fold-envelope_8
+  - first:
+      213: -2523673790031585048
+    second: fold-envelope_9
+  - first:
+      213: -3769661122477914955
+    second: fold-envelope_10
+  - first:
+      213: 895285274731102526
+    second: fold-envelope_11
+  - first:
+      213: 5764349972168888070
+    second: fold-envelope_12
+  - first:
+      213: -7062921349168011059
+    second: fold-envelope_13
+  - first:
+      213: 445513963321175150
+    second: fold-envelope_14
+  - first:
+      213: -1567800634448262280
+    second: fold-envelope_15
+  - first:
+      213: -1692140861059182925
+    second: fold-envelope_16
+  - first:
+      213: -3815655759126529287
+    second: fold-envelope_17
+  - first:
+      213: 649316497383805490
+    second: fold-envelope_18
+  - first:
+      213: -5508051210768803371
+    second: fold-envelope_19
+  - first:
+      213: -1462583827432210472
+    second: fold-envelope_20
+  - first:
+      213: 2079318647682721876
+    second: fold-envelope_21
+  - first:
+      213: 90005586856849113
+    second: fold-envelope_22
+  - first:
+      213: 7262141649502235066
+    second: fold-envelope_23
+  - first:
+      213: -2973174732926718193
+    second: fold-envelope_24
+  - first:
+      213: -2428850191504832029
+    second: fold-envelope_25
+  - first:
+      213: -2537279895097075895
+    second: fold-envelope_26
+  - first:
+      213: 2499559229937038561
+    second: fold-envelope_27
+  - first:
+      213: -4398538454838826000
+    second: fold-envelope_28
+  - first:
+      213: -868250631038496674
+    second: fold-envelope_29
+  - first:
+      213: 4384350337755530046
+    second: fold-envelope_30
+  - first:
+      213: -7359772998436499852
+    second: fold-envelope_31
+  - first:
+      213: -6288756428691188480
+    second: fold-envelope_32
+  - first:
+      213: -2991473873535932369
+    second: fold-envelope_33
+  - first:
+      213: -1303766700391190255
+    second: fold-envelope_34
+  - first:
+      213: 5069443822563617167
+    second: fold-envelope_35
+  - first:
+      213: -8618749342088931380
+    second: fold-envelope_36
+  - first:
+      213: 1464565550393456522
+    second: fold-envelope_37
+  - first:
+      213: 541493208894397659
+    second: fold-envelope_38
+  - first:
+      213: -6056500037308494602
+    second: fold-envelope_39
+  - first:
+      213: 1043105647450245416
+    second: fold-envelope_40
+  - first:
+      213: 308252645674184230
+    second: fold-envelope_41
+  - first:
+      213: -1446194129095744494
+    second: fold-envelope_42
+  - first:
+      213: -7721829355874200915
+    second: fold-envelope_43
+  - first:
+      213: -1404883300600414053
+    second: fold-envelope_44
+  - first:
+      213: 4022539512032248531
+    second: fold-envelope_45
+  - first:
+      213: -5843865016990816544
+    second: fold-envelope_46
+  - first:
+      213: -8525589614296046762
+    second: fold-envelope_47
+  - first:
+      213: 1472750560718221726
+    second: fold-envelope_48
+  - first:
+      213: -6335991617179401640
+    second: fold-envelope_49
+  - first:
+      213: 8235558375202638005
+    second: fold-envelope_50
+  - first:
+      213: 6260597397015137439
+    second: fold-envelope_51
+  - first:
+      213: -5430787199061692563
+    second: fold-envelope_52
+  - first:
+      213: -5691313268522950042
+    second: fold-envelope_53
+  - first:
+      213: -2739171373087053025
+    second: fold-envelope_54
+  - first:
+      213: -594588537806610532
+    second: fold-envelope_55
+  - first:
+      213: -210362203876578806
+    second: fold-envelope_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fold-envelope_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 300
+        height: 1068
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb082d766e6ca67e0800000000000000
+      internalID: -1771384810530242370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 1009
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28ee11919b06a500800000000000000
+      internalID: 407025536156493867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1082
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154ced92f44e64660800000000000000
+      internalID: 7369828868894409809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1002
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab10762d2ca6f630800000000000000
+      internalID: 3960542232237317029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1038
+        width: 178
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0311f3eaa63a8650800000000000000
+      internalID: 6235856741644440330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_5
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 985
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9ce700e5cf0cf40800000000000000
+      internalID: 5746870605190187445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1018
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2335b7712e27dd0800000000000000
+      internalID: -2489679053501287705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1022
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf3ea2ca8ff3e630800000000000000
+      internalID: 3955285869198196682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_8
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1017
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e1591b7862ee620800000000000000
+      internalID: 2805221982140178038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_9
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 882
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e024381f0c1afcd0800000000000000
+      internalID: -2523673790031585048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1034
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b48a1f7e297fabc0800000000000000
+      internalID: -3769661122477914955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_11
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 881
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e314cf4c631bc6c00800000000000000
+      internalID: 895285274731102526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 941
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fc82442c51fff40800000000000000
+      internalID: 5764349972168888070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_13
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 865
+        width: 51
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8615234767bfd90800000000000000
+      internalID: -7062921349168011059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_14
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1002
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c2c36d698ce2600800000000000000
+      internalID: 445513963321175150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_15
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 841
+        width: 299
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b441921ad0e3ae0800000000000000
+      internalID: -1567800634448262280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_16
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 939
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bec4aa2ade4488e0800000000000000
+      internalID: -1692140861059182925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_17
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 938
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9faf614ad411c0bc0800000000000000
+      internalID: -3815655759126529287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_18
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 951
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232dc550ae5d20900800000000000000
+      internalID: 649316497383805490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_19
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 953
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d917715b987f83b0800000000000000
+      internalID: -5508051210768803371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_20
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 993
+        width: 145
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dffbaf02cbd3bbe0800000000000000
+      internalID: -1462583827432210472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_21
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 897
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45869f91b493bdc10800000000000000
+      internalID: 2079318647682721876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_22
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 943
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de2768ba93cf3100800000000000000
+      internalID: 90005586856849113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_23
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 855
+        width: 108
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9662f8a5f48c460800000000000000
+      internalID: 7262141649502235066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_24
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 943
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f6cbc35592db6d0800000000000000
+      internalID: -2973174732926718193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_25
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 927
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e907b29e9dfa4ed0800000000000000
+      internalID: -2428850191504832029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_26
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 940
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9479ff4e065c9ccd0800000000000000
+      internalID: -2537279895097075895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_27
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1016
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4327b50e730b220800000000000000
+      internalID: 2499559229937038561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_28
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 929
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbaf6c649045f2c0800000000000000
+      internalID: -4398538454838826000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_29
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 929
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5011f8b6aa53f3f0800000000000000
+      internalID: -868250631038496674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_30
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 937
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3348c4276758dc30800000000000000
+      internalID: 4384350337755530046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_31
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 869
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e4ea0a375dcd990800000000000000
+      internalID: -7359772998436499852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_32
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 879
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00558ece859d9b8a0800000000000000
+      internalID: -6288756428691188480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_33
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 877
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28670d8c562c76d0800000000000000
+      internalID: -2991473873535932369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_34
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 458
+        width: 294
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1113339f71718ede0800000000000000
+      internalID: -1303766700391190255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_35
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 953
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89e3bc2c484a5640800000000000000
+      internalID: 5069443822563617167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_36
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 935
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc758a0332d046880800000000000000
+      internalID: -8618749342088931380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_37
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 915
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87f975cb9e235410800000000000000
+      internalID: 1464565550393456522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_38
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 915
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcdf6c5435c38700800000000000000
+      internalID: 541493208894397659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_39
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 915
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc46160e4df2fba0800000000000000
+      internalID: -6056500037308494602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_40
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 284
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829c97b4f0bd97e00800000000000000
+      internalID: 1043105647450245416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_41
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 296
+        width: 175
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62eeb76e522274400800000000000000
+      internalID: 308252645674184230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_42
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 64
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2142ef21a161eebe0800000000000000
+      internalID: -1446194129095744494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_43
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 166
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da25fe2ec1d86d490800000000000000
+      internalID: -7721829355874200915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_44
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 87
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9085dcd41ad08ce0800000000000000
+      internalID: -1404883300600414053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_45
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 87
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2c7a5bf5ee2d730800000000000000
+      internalID: 4022539512032248531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_46
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e62eeaaabb66eea0800000000000000
+      internalID: -5843865016990816544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_47
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 119
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653ef139a650fa980800000000000000
+      internalID: -8525589614296046762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_48
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 168
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91fd5ef4d2407410800000000000000
+      internalID: 1472750560718221726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_49
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 148
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8524b2691390218a0800000000000000
+      internalID: -6335991617179401640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_50
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 143
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b842f855b49a4270800000000000000
+      internalID: 8235558375202638005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_51
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 111
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c82da992c12e650800000000000000
+      internalID: 6260597397015137439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_52
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 165
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f6035e0d7f1a4b0800000000000000
+      internalID: -5430787199061692563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_53
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 87
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662e8347cb46401b0800000000000000
+      internalID: -5691313268522950042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_54
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 49
+        width: 155
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b2a3026228cf9d0800000000000000
+      internalID: -2739171373087053025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_55
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 39
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f948800e89fb7f0800000000000000
+      internalID: -594588537806610532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope_56
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0aa4cba0b4a41df0800000000000000
+      internalID: -210362203876578806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fold-envelope_0: -1771384810530242370
+      fold-envelope_1: 407025536156493867
+      fold-envelope_10: -3769661122477914955
+      fold-envelope_11: 895285274731102526
+      fold-envelope_12: 5764349972168888070
+      fold-envelope_13: -7062921349168011059
+      fold-envelope_14: 445513963321175150
+      fold-envelope_15: -1567800634448262280
+      fold-envelope_16: -1692140861059182925
+      fold-envelope_17: -3815655759126529287
+      fold-envelope_18: 649316497383805490
+      fold-envelope_19: -5508051210768803371
+      fold-envelope_2: 7369828868894409809
+      fold-envelope_20: -1462583827432210472
+      fold-envelope_21: 2079318647682721876
+      fold-envelope_22: 90005586856849113
+      fold-envelope_23: 7262141649502235066
+      fold-envelope_24: -2973174732926718193
+      fold-envelope_25: -2428850191504832029
+      fold-envelope_26: -2537279895097075895
+      fold-envelope_27: 2499559229937038561
+      fold-envelope_28: -4398538454838826000
+      fold-envelope_29: -868250631038496674
+      fold-envelope_3: 3960542232237317029
+      fold-envelope_30: 4384350337755530046
+      fold-envelope_31: -7359772998436499852
+      fold-envelope_32: -6288756428691188480
+      fold-envelope_33: -2991473873535932369
+      fold-envelope_34: -1303766700391190255
+      fold-envelope_35: 5069443822563617167
+      fold-envelope_36: -8618749342088931380
+      fold-envelope_37: 1464565550393456522
+      fold-envelope_38: 541493208894397659
+      fold-envelope_39: -6056500037308494602
+      fold-envelope_4: 6235856741644440330
+      fold-envelope_40: 1043105647450245416
+      fold-envelope_41: 308252645674184230
+      fold-envelope_42: -1446194129095744494
+      fold-envelope_43: -7721829355874200915
+      fold-envelope_44: -1404883300600414053
+      fold-envelope_45: 4022539512032248531
+      fold-envelope_46: -5843865016990816544
+      fold-envelope_47: -8525589614296046762
+      fold-envelope_48: 1472750560718221726
+      fold-envelope_49: -6335991617179401640
+      fold-envelope_5: 5746870605190187445
+      fold-envelope_50: 8235558375202638005
+      fold-envelope_51: 6260597397015137439
+      fold-envelope_52: -5430787199061692563
+      fold-envelope_53: -5691313268522950042
+      fold-envelope_54: -2739171373087053025
+      fold-envelope_55: -594588537806610532
+      fold-envelope_56: -210362203876578806
+      fold-envelope_6: -2489679053501287705
+      fold-envelope_7: 3955285869198196682
+      fold-envelope_8: 2805221982140178038
+      fold-envelope_9: -2523673790031585048
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: d97b17df587a3c84cb92a3baeaa0b707
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6750420497416767714
+    second: upgrade-visitors_0
+  - first:
+      213: -194062832293236369
+    second: upgrade-visitors_1
+  - first:
+      213: -7003976996727382395
+    second: upgrade-visitors_2
+  - first:
+      213: -3903279438097572072
+    second: upgrade-visitors_3
+  - first:
+      213: 7230514918983032339
+    second: upgrade-visitors_4
+  - first:
+      213: 3311292158753730574
+    second: upgrade-visitors_5
+  - first:
+      213: 4124509849339331894
+    second: upgrade-visitors_6
+  - first:
+      213: -807346334626116886
+    second: upgrade-visitors_7
+  - first:
+      213: -1165738689595968583
+    second: upgrade-visitors_8
+  - first:
+      213: -8292796283383315693
+    second: upgrade-visitors_9
+  - first:
+      213: -154605605540612952
+    second: upgrade-visitors_10
+  - first:
+      213: 1265091870576432147
+    second: upgrade-visitors_11
+  - first:
+      213: -5997415600298666781
+    second: upgrade-visitors_12
+  - first:
+      213: -4513299050139031122
+    second: upgrade-visitors_13
+  - first:
+      213: -4875775656993304931
+    second: upgrade-visitors_14
+  - first:
+      213: -2935290076298421846
+    second: upgrade-visitors_15
+  - first:
+      213: -813754179290642749
+    second: upgrade-visitors_16
+  - first:
+      213: -4900146616479051744
+    second: upgrade-visitors_17
+  - first:
+      213: 8513499067865787161
+    second: upgrade-visitors_18
+  - first:
+      213: -7938282819082186544
+    second: upgrade-visitors_19
+  - first:
+      213: 179864914455920859
+    second: upgrade-visitors_20
+  - first:
+      213: -5305423659269138111
+    second: upgrade-visitors_21
+  - first:
+      213: 2611198685322661254
+    second: upgrade-visitors_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: upgrade-visitors_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1042
+        width: 98
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8ca095daf4ead50800000000000000
+      internalID: 6750420497416767714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1198
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f613e09d1ec8e4df0800000000000000
+      internalID: -194062832293236369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_2
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1131
+        width: 252
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e9e07b700ecce90800000000000000
+      internalID: -7003976996727382395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_3
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1206
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f9b111804c4d9c0800000000000000
+      internalID: -3903279438097572072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1184
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e55298203f75460800000000000000
+      internalID: 7230514918983032339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_5
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1186
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e007d06aca214fd20800000000000000
+      internalID: 3311292158753730574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1180
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635887afad33d3930800000000000000
+      internalID: 4124509849339331894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_7
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1194
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea85e149cabbc4f0800000000000000
+      internalID: -807346334626116886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_8
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1186
+        width: 76
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3f3b196d672dfe0800000000000000
+      internalID: -1165738689595968583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_9
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3130246a7b11aec80800000000000000
+      internalID: -8292796283383315693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_10
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1174
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4b779550bbaddf0800000000000000
+      internalID: -154605605540612952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_11
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1126
+        width: 105
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31451f18a528e8110800000000000000
+      internalID: 1265091870576432147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_12
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1202
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4dfc58946e4cca0800000000000000
+      internalID: -5997415600298666781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_13
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1127
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9ea572d6a8d51c0800000000000000
+      internalID: -4513299050139031122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_14
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1188
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9eca687fd3c55cb0800000000000000
+      internalID: -4875775656993304931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1193
+        height: 1128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9d0893a31c347d0800000000000000
+      internalID: -2935290076298421846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_16
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1059
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c644e8a2e6f4b4f0800000000000000
+      internalID: -813754179290642749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_17
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 994
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0201f694d9e2ffbb0800000000000000
+      internalID: -4900146616479051744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 684
+        width: 82
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b62c7bb46062670800000000000000
+      internalID: 8513499067865787161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_19
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 136
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d0150ab5dd85d190800000000000000
+      internalID: -7938282819082186544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_20
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 21
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd083bdcf220f7200800000000000000
+      internalID: 179864914455920859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_21
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 7
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1495f4e8a495f56b0800000000000000
+      internalID: -5305423659269138111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade-visitors_22
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 31
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68dcf9c9e57dc3420800000000000000
+      internalID: 2611198685322661254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      upgrade-visitors_0: 6750420497416767714
+      upgrade-visitors_1: -194062832293236369
+      upgrade-visitors_10: -154605605540612952
+      upgrade-visitors_11: 1265091870576432147
+      upgrade-visitors_12: -5997415600298666781
+      upgrade-visitors_13: -4513299050139031122
+      upgrade-visitors_14: -4875775656993304931
+      upgrade-visitors_15: -2935290076298421846
+      upgrade-visitors_16: -813754179290642749
+      upgrade-visitors_17: -4900146616479051744
+      upgrade-visitors_18: 8513499067865787161
+      upgrade-visitors_19: -7938282819082186544
+      upgrade-visitors_2: -7003976996727382395
+      upgrade-visitors_20: 179864914455920859
+      upgrade-visitors_21: -5305423659269138111
+      upgrade-visitors_22: 2611198685322661254
+      upgrade-visitors_3: -3903279438097572072
+      upgrade-visitors_4: 7230514918983032339
+      upgrade-visitors_5: 3311292158753730574
+      upgrade-visitors_6: 4124509849339331894
+      upgrade-visitors_7: -807346334626116886
+      upgrade-visitors_8: -1165738689595968583
+      upgrade-visitors_9: -8292796283383315693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

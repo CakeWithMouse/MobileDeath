@@ -1,0 +1,320 @@
+{
+  "task": "Eye styling for nurse, elderly woman and elderly man, all 3 emotional states",
+  "tool": "builtin image_gen, transparent_background=true",
+  "eye_reference": "C:/Users/B6EA~1/AppData/Local/Temp/codex-clipboard-16a79158-baf1-4955-a8bc-d2ef65f962a7.png",
+  "painterly_reference": "C:/Users/мистер биба/.codex/skills/blinopek-painterly/references/kitchen-original.png",
+  "backup_directory": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style",
+  "canvas_note": "Changed portrait canvases (1024x1536) to square transparent canvases (1254x1254) to eliminate the visible colored halo. Character proportions and original head-to-thigh crop preserved; downstream layout should use visible bounds.",
+  "qa_notes": [
+    "Visually inspected every source and result.",
+    "Natural modest almond-shaped dark brown eyes, subdued sclera, soft lids and small highlights.",
+    "Age, emotion, eyebrows, nose, mouth, hair, clothing, pose and overall silhouettes retained.",
+    "Previously softened nurse and elderly man's noses retained.",
+    "No feminine lashes or makeup added to elderly man.",
+    "No broad visible colored halo after square transparent cutout generation.",
+    "No .meta files, shared manifests, docs or layouts modified."
+  ],
+  "assets": [
+    {
+      "id": "nurse-neutral",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-neutral.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/nurse-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-neutral.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-7a99dbfd-9d11-4689-8c80-87b64264c8b7.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          294,
+          28,
+          980,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.6618,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "nurse-positive",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-positive.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/nurse-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-positive.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-061ab71a-b6ec-4270-a3ea-08181676bb1b.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          276,
+          14,
+          990,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.6462,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "nurse-negative",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-negative.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/nurse-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-negative.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-415cbb74-8855-431a-adbe-b71bdece0d04.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          274,
+          12,
+          975,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.6454,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-woman-neutral",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-neutral.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-woman-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-neutral.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-0707d8ae-c03c-4c76-8263-d15830df0121.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          218,
+          14,
+          1048,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.5345,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-woman-positive",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-positive.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-woman-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-positive.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-49db56dd-094d-412f-a492-ca9f239c32fd.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          204,
+          18,
+          1064,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.5252,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-woman-negative",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-negative.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-woman-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-woman-negative.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-78995736-e891-4f55-bc82-d57fe5c60842.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          226,
+          18,
+          1049,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.5365,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-man-neutral",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-neutral.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-man-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-neutral.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-6b10978f-f948-4b62-885a-8cc9f8c1e7ad.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          284,
+          27,
+          1003,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.5999,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-man-positive",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-positive.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-man-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-positive.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-7b7dd430-2b52-4b56-bdff-57b31a7a16e5.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          272,
+          9,
+          1010,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.582,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    },
+    {
+      "id": "elder-man-negative",
+      "file": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-negative.png",
+      "backup": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/elder-man-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-negative.eye-style.prompt.txt",
+      "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-840f725c-89a9-4dc9-9a84-6c0de0ea4746.png",
+      "visually_reviewed": true,
+      "qa": {
+        "size": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "visible_bounds_alpha_gt_16": [
+          294,
+          14,
+          1024,
+          1254
+        ],
+        "transparent_pixel_fraction": 0.5903,
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "backup_exists": true
+      }
+    }
+  ],
+  "additional_prompts": [
+    "nurse-neutral.eye-alpha-repair.prompt.txt",
+    "nurse-neutral.eye-alpha-square.prompt.txt"
+  ]
+}

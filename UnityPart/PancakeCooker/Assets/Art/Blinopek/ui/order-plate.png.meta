@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 588ea43dc99d15e4ab63e142df0fd507
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9080811807449672526
+    second: order-plate_0
+  - first:
+      213: 6139497223848047958
+    second: order-plate_1
+  - first:
+      213: 5523027395584320541
+    second: order-plate_2
+  - first:
+      213: 5969886670132473946
+    second: order-plate_3
+  - first:
+      213: -3667260639115197501
+    second: order-plate_4
+  - first:
+      213: 3512385821421772835
+    second: order-plate_5
+  - first:
+      213: -6331125206331124042
+    second: order-plate_6
+  - first:
+      213: 3756524230150129434
+    second: order-plate_7
+  - first:
+      213: 3842075301992439629
+    second: order-plate_8
+  - first:
+      213: -8176297018769417905
+    second: order-plate_9
+  - first:
+      213: -7084512301401777723
+    second: order-plate_10
+  - first:
+      213: -8374815162685602142
+    second: order-plate_11
+  - first:
+      213: 2214633182930994331
+    second: order-plate_12
+  - first:
+      213: 4032908602318414907
+    second: order-plate_13
+  - first:
+      213: 3161407578586276984
+    second: order-plate_14
+  - first:
+      213: 1156141728219955824
+    second: order-plate_15
+  - first:
+      213: 3374150338419588864
+    second: order-plate_16
+  - first:
+      213: 3539830917870024376
+    second: order-plate_17
+  - first:
+      213: 5768723675345013554
+    second: order-plate_18
+  - first:
+      213: -2492658104011025205
+    second: order-plate_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: order-plate_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1241
+        height: 1230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b41ac8f5c97af180800000000000000
+      internalID: -9080811807449672526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_1
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1225
+        width: 78
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655b5f65230e33550800000000000000
+      internalID: 6139497223848047958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1116
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14ed8e672cb5ac40800000000000000
+      internalID: 5523027395584320541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1120
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50f592fb4c49d250800000000000000
+      internalID: 5969886670132473946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 941
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c344c2f0e54b1dc0800000000000000
+      internalID: -3667260639115197501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 355
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320a6ff8b408eb030800000000000000
+      internalID: 3512385821421772835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_6
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 353
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b69c182b235328a0800000000000000
+      internalID: -6331125206331124042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_7
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 168
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a170f3862ead12430800000000000000
+      internalID: 3756524230150129434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_8
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 166
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f9f87812bc15530800000000000000
+      internalID: 3842075301992439629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_9
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 136
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49d92a6e25f78e80800000000000000
+      internalID: -8176297018769417905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 140
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9df04e891cead90800000000000000
+      internalID: -7084512301401777723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_11
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 126
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6c1903bfda6cb80800000000000000
+      internalID: -8374815162685602142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_12
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 128
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9405607525fbbe10800000000000000
+      internalID: 2214633182930994331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_13
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 65
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b346ecca105c7f730800000000000000
+      internalID: 4032908602318414907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_14
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 55
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874ecdf51739fdb20800000000000000
+      internalID: 3161407578586276984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_15
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 49
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0728e8cb6c07b0010800000000000000
+      internalID: 1156141728219955824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_16
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 51
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f73441bd363de20800000000000000
+      internalID: 3374150338419588864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_17
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 39
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b676980771002130800000000000000
+      internalID: 3539830917870024376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_18
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 23
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b43546e9f9e0050800000000000000
+      internalID: 5768723675345013554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: order-plate_19
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 21
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc49ceb39ac486dd0800000000000000
+      internalID: -2492658104011025205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      order-plate_0: -9080811807449672526
+      order-plate_1: 6139497223848047958
+      order-plate_10: -7084512301401777723
+      order-plate_11: -8374815162685602142
+      order-plate_12: 2214633182930994331
+      order-plate_13: 4032908602318414907
+      order-plate_14: 3161407578586276984
+      order-plate_15: 1156141728219955824
+      order-plate_16: 3374150338419588864
+      order-plate_17: 3539830917870024376
+      order-plate_18: 5768723675345013554
+      order-plate_19: -2492658104011025205
+      order-plate_2: 5523027395584320541
+      order-plate_3: 5969886670132473946
+      order-plate_4: -3667260639115197501
+      order-plate_5: 3512385821421772835
+      order-plate_6: -6331125206331124042
+      order-plate_7: 3756524230150129434
+      order-plate_8: 3842075301992439629
+      order-plate_9: -8176297018769417905
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "reference_geometry_not_animation_implementation",
+  "coordinates": "Normalized UV [0,1] of the round unfurled pancake; screen projection is applied after folds.",
+  "source_canvas_px": [
+    1362,
+    1155
+  ],
+  "source_surface_files": {
+    "raw": "batter-raw.png",
+    "undercooked": "pancake-undercooked.png",
+    "ready": "pancake-ready.png",
+    "burnt": "pancake-burnt.png"
+  },
+  "domain": {
+    "center": [
+      0.5,
+      0.5
+    ],
+    "radius": 0.468
+  },
+  "presentation": {
+    "camera_down_degrees": 55,
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "state_fields": {
+    "coverage": "Dynamic per-pancake alpha mask in common UV; transparent holes survive every transform.",
+    "side_a_heat": "Independent stored heat/state for side A.",
+    "side_b_heat": "Independent stored heat/state for side B.",
+    "visible_side": "A or B, changed only after flip.",
+    "fillings": "Per-type spread alpha mask or array of portion UV positions, kept until removal or hidden under folded surface.",
+    "fold_history": "Ordered actual gesture hinge lines and current fold angles, not a snapped success icon."
+  },
+  "ideal_gesture_guides": {
+    "triangle": [
+      {
+        "hinge": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ]
+        ],
+        "moving_half": "v<0.5",
+        "target_angle_degrees": 180
+      },
+      {
+        "hinge": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            1
+          ]
+        ],
+        "moving_half": "u<0.5",
+        "target_angle_degrees": 180
+      }
+    ],
+    "envelope": [
+      {
+        "hinge": [
+          [
+            0.28,
+            0
+          ],
+          [
+            0.28,
+            1
+          ]
+        ],
+        "moving_half": "u<0.28",
+        "target_angle_degrees": 180
+      },
+      {
+        "hinge": [
+          [
+            0.72,
+            0
+          ],
+          [
+            0.72,
+            1
+          ]
+        ],
+        "moving_half": "u>0.72",
+        "target_angle_degrees": 180
+      },
+      {
+        "hinge": [
+          [
+            0,
+            0.73
+          ],
+          [
+            1,
+            0.73
+          ]
+        ],
+        "moving_half": "v>0.73",
+        "target_angle_degrees": 180
+      },
+      {
+        "hinge": [
+          [
+            0,
+            0.27
+          ],
+          [
+            1,
+            0.27
+          ]
+        ],
+        "moving_half": "v<0.27",
+        "target_angle_degrees": 180
+      }
+    ],
+    "roll": {
+      "axis": "u",
+      "starting_edge": "v=1",
+      "direction": "decreasing_v",
+      "method": "Continuous mesh roll from user's gesture extent; partial fraction remains open."
+    }
+  },
+  "error_policy": "Preserve actual gesture hinge and angle, coverage holes, cooking state and fillings. fold-incorrect.png is one authored example, not an exhaustive set of all failures.",
+  "static_form_files": {
+    "triangle": "fold-triangle.png",
+    "envelope": "fold-envelope.png",
+    "roll": "fold-roll.png",
+    "triangle_partial": "fold-half.png",
+    "envelope_partial": "fold-envelope-partial.png",
+    "roll_partial": "fold-roll-partial.png",
+    "error_example": "fold-incorrect.png"
+  },
+  "static_form_usage": "Standalone art for shape previews, recipes and visual targets for a correctly cooked pancake. For gameplay combinations, render the stored surface and layers with mesh deformation; do not replace a burned/holed pancake with the baked golden final-form image.",
+  "guide_usage": "guide-batter-circle.svg and guide-filling-marker.svg are mathematical shapes, projected into each destination surface. Number and placement of portion markers are configurable; no final balance values are assigned."
+}

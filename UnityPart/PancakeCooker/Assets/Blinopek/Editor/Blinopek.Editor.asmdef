@@ -1,0 +1,16 @@
+{
+  "name": "Blinopek.Editor",
+  "rootNamespace": "Blinopek.Editor",
+  "autoReferenced": true,
+  "includePlatforms": [
+    "Editor"
+  ],
+  "noEngineReferences": false,
+  "references": [
+    "Blinopek.Domain",
+    "Blinopek.Application",
+    "Blinopek.Infrastructure",
+    "Blinopek.Presentation",
+    "Blinopek.Bootstrap"
+  ]
+}

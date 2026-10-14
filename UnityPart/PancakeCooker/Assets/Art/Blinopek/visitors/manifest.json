@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "student-neutral",
+    "title_ru": "Студентка — нейтральная",
+    "file": "student-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Студентка / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.23,
+        0.02,
+        0.72,
+        0.31
+      ],
+      "avatar_crop_px_xyxy": [
+        236,
+        31,
+        737,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "student-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "student-positive",
+    "title_ru": "Студентка — довольная",
+    "file": "student-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Студентка / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "student-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.23,
+        0.02,
+        0.72,
+        0.31
+      ],
+      "avatar_crop_px_xyxy": [
+        236,
+        31,
+        737,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "student-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "student-negative",
+    "title_ru": "Студентка — недовольная",
+    "file": "student-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Студентка / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "student-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.23,
+        0.02,
+        0.72,
+        0.31
+      ],
+      "avatar_crop_px_xyxy": [
+        236,
+        31,
+        737,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "student-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "office-neutral",
+    "title_ru": "Офисный сотрудник — нейтральный",
+    "file": "office-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Офисный сотрудник / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "avatar_crop_normalized": [
+        0.29,
+        0.02,
+        0.68,
+        0.31
+      ],
+      "type": "ordinary",
+      "avatar_crop_px_xyxy": [
+        297,
+        31,
+        696,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "office-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "office-positive",
+    "title_ru": "Офисный сотрудник — довольный",
+    "file": "office-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Офисный сотрудник / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "office-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.29,
+        0.02,
+        0.68,
+        0.31
+      ],
+      "avatar_crop_px_xyxy": [
+        297,
+        31,
+        696,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "office-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "office-negative",
+    "title_ru": "Офисный сотрудник — недовольный",
+    "file": "office-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Офисный сотрудник / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "office-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.29,
+        0.02,
+        0.68,
+        0.31
+      ],
+      "avatar_crop_px_xyxy": [
+        297,
+        31,
+        696,
+        476
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "office-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "craftswoman-neutral",
+    "title_ru": "Мастерица — нейтральная",
+    "file": "craftswoman-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Мастерица / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "avatar_crop_normalized": [
+        0.25,
+        0.04,
+        0.7,
+        0.36
+      ],
+      "type": "ordinary",
+      "avatar_crop_px_xyxy": [
+        256,
+        61,
+        717,
+        553
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "craftswoman-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "craftswoman-positive",
+    "title_ru": "Мастерица — довольная",
+    "file": "craftswoman-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Мастерица / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "craftswoman-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.25,
+        0.04,
+        0.7,
+        0.36
+      ],
+      "avatar_crop_px_xyxy": [
+        256,
+        61,
+        717,
+        553
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "craftswoman-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "craftswoman-negative",
+    "title_ru": "Мастерица — недовольная",
+    "file": "craftswoman-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Мастерица / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "craftswoman-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.25,
+        0.04,
+        0.7,
+        0.36
+      ],
+      "avatar_crop_px_xyxy": [
+        256,
+        61,
+        717,
+        553
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "craftswoman-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "nurse-neutral",
+    "title_ru": "Медсестра — нейтральная",
+    "file": "nurse-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Медсестра / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.69,
+        0.33
+      ],
+      "type": "ordinary",
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        707,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "nurse-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "nurse-positive",
+    "title_ru": "Медсестра — довольная",
+    "file": "nurse-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Медсестра / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "nurse-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.69,
+        0.33
+      ],
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        707,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "nurse-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "nurse-negative",
+    "title_ru": "Медсестра — недовольная",
+    "file": "nurse-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Медсестра / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "nurse-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.69,
+        0.33
+      ],
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        707,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "nurse-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-woman-neutral",
+    "title_ru": "Пожилая женщина — нейтральная",
+    "file": "elder-woman-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилая женщина / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "avatar_crop_normalized": [
+        0.23,
+        0.05,
+        0.72,
+        0.37
+      ],
+      "type": "ordinary",
+      "avatar_crop_px_xyxy": [
+        236,
+        77,
+        737,
+        568
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-woman-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-woman-positive",
+    "title_ru": "Пожилая женщина — довольная",
+    "file": "elder-woman-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилая женщина / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "elder-woman-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.23,
+        0.05,
+        0.72,
+        0.37
+      ],
+      "avatar_crop_px_xyxy": [
+        236,
+        77,
+        737,
+        568
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-woman-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-woman-negative",
+    "title_ru": "Пожилая женщина — недовольная",
+    "file": "elder-woman-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилая женщина / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "elder-woman-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.23,
+        0.05,
+        0.72,
+        0.37
+      ],
+      "avatar_crop_px_xyxy": [
+        236,
+        77,
+        737,
+        568
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-woman-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-man-neutral",
+    "title_ru": "Пожилой мужчина — нейтральный",
+    "file": "elder-man-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилой мужчина / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "avatar_crop_normalized": [
+        0.24,
+        0.025,
+        0.65,
+        0.33
+      ],
+      "type": "ordinary",
+      "avatar_crop_px_xyxy": [
+        246,
+        38,
+        666,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-man-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-man-positive",
+    "title_ru": "Пожилой мужчина — довольный",
+    "file": "elder-man-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилой мужчина / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "elder-man-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.24,
+        0.025,
+        0.65,
+        0.33
+      ],
+      "avatar_crop_px_xyxy": [
+        246,
+        38,
+        666,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-man-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "elder-man-negative",
+    "title_ru": "Пожилой мужчина — недовольный",
+    "file": "elder-man-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Пожилой мужчина / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "elder-man-neutral.png",
+      "type": "ordinary",
+      "avatar_crop_normalized": [
+        0.24,
+        0.025,
+        0.65,
+        0.33
+      ],
+      "avatar_crop_px_xyxy": [
+        246,
+        38,
+        666,
+        507
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "elder-man-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1254,
+    "height": 1254,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "florist-neutral",
+    "title_ru": "Цветочница — нейтральная",
+    "file": "florist-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Цветочница / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.2,
+        0.005,
+        0.76,
+        0.34
+      ],
+      "avatar_crop_px_xyxy": [
+        205,
+        8,
+        778,
+        522
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "florist-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "florist-positive",
+    "title_ru": "Цветочница — довольная",
+    "file": "florist-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Цветочница / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "florist-neutral.png",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.2,
+        0.005,
+        0.76,
+        0.34
+      ],
+      "avatar_crop_px_xyxy": [
+        205,
+        8,
+        778,
+        522
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "florist-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "florist-negative",
+    "title_ru": "Цветочница — недовольная",
+    "file": "florist-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Цветочница / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "florist-neutral.png",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.2,
+        0.005,
+        0.76,
+        0.34
+      ],
+      "avatar_crop_px_xyxy": [
+        205,
+        8,
+        778,
+        522
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "florist-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "traveler-neutral",
+    "title_ru": "Путешественник — нейтральный",
+    "file": "traveler-neutral.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Путешественник / Нейтральная реакция"
+    ],
+    "states_or_reuse": {
+      "reaction": "neutral",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.66,
+        0.29
+      ],
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        676,
+        445
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "traveler-neutral.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "traveler-positive",
+    "title_ru": "Путешественник — довольный",
+    "file": "traveler-positive.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Путешественник / positive"
+    ],
+    "states_or_reuse": {
+      "reaction": "positive",
+      "base": "traveler-neutral.png",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.66,
+        0.29
+      ],
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        676,
+        445
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "traveler-positive.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "traveler-negative",
+    "title_ru": "Путешественник — недовольный",
+    "file": "traveler-negative.png",
+    "category": "visitors",
+    "asset_list_coverage": [
+      "Посетители / Путешественник / negative"
+    ],
+    "states_or_reuse": {
+      "reaction": "negative",
+      "base": "traveler-neutral.png",
+      "type": "story",
+      "avatar_crop_normalized": [
+        0.3,
+        0.02,
+        0.66,
+        0.29
+      ],
+      "avatar_crop_px_xyxy": [
+        307,
+        31,
+        676,
+        445
+      ],
+      "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+    },
+    "transparent": true,
+    "version": "v1",
+    "prompt_file": "traveler-negative.prompt.txt",
+    "source_style_reference": "../style/kitchen-original.png",
+    "dimensions_px": [
+      1024,
+      1536
+    ],
+    "alpha_verified": true,
+    "qa": {
+      "reviewed_visual": true,
+      "expressions": "neutral / satisfied / dissatisfied, subdued",
+      "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+    },
+    "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+    "width": 1024,
+    "height": 1536,
+    "color_mode": "RGBA"
+  }
+]

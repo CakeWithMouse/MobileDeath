@@ -1,0 +1,1214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5532b6117906cc4fb5a02b67a629d89, type: 3}
+  m_Name: Gameplay
+  m_EditorClassIdentifier: Blinopek.Presentation::Blinopek.Presentation.GameContent
+  balance:
+    version: core-dev-1
+    dayTicks: 4800
+    readyTicks: 100
+    burnTicks: 180
+    patiencePerPancakeTicks: 2200
+    clarifyPenaltyTicks: 160
+    guestIntervalTicks: 40
+    maxPancakes: 2
+    multiPancakeDay: 2
+    rent: 800
+    basePrice: 1200
+    ingredientPrice: 400
+    batterStampCost: 2
+    spreadStampCost: 2
+    portionCost: 15
+    ingredientUnlockCost: 1800
+    scraperPrice: 200
+    patienceUpgradeCost: 2400
+    helperHoneyPrice: 10
+    startingCoins: 3000
+    startingHoney: 0
+    refundThreshold: 45
+    requiredCoveragePercent: 90
+    spreadCoveragePercent: 72
+    brushRadius: 95
+    strokeSpacing: 35
+    portionTolerance: 140
+    maxPortions: 24
+  bodyFont: {fileID: 12800000, guid: fac5a918ff5f49e43894a67bad0897d8, type: 3}
+  titleFont: {fileID: 12800000, guid: 82119a5cac01d0546a2e0c7ead2165de, type: 3}
+  kitchenBackground: {fileID: 2800000, guid: 087003069da250be8bfa02afbed9db2f, type: 3}
+  counterBackground: {fileID: 2800000, guid: 7aa418e8094e63b45846334f213874ae, type: 3}
+  counter: {fileID: 2800000, guid: 430e31c75e293374190ca97bf189b5ba, type: 3}
+  pan: {fileID: 2800000, guid: d927461035cfd20469ca53e0fa77c010, type: 3}
+  handle: {fileID: 2800000, guid: 6d20fa4306c663e4aadfcca592c503fc, type: 3}
+  plate: {fileID: 2800000, guid: 8e75e1fe11d315644b75afac6e79abb6, type: 3}
+  trash: {fileID: 2800000, guid: 3b4ede0beaf8cd44d9ab95d2e3b191dd, type: 3}
+  tray: {fileID: 2800000, guid: f1c7f74e7729c914785abf7de2520127, type: 3}
+  stove: {fileID: 2800000, guid: 15c7b13d288c9f64c85e442dc5ae0216, type: 3}
+  assemblyTable: {fileID: 2800000, guid: a2e6732cb2d7e374fb8acf8d8a462009, type: 3}
+  raw: {fileID: 2800000, guid: 676e6a3c4ebb6f844a4ba41a562ff0d1, type: 3}
+  ready: {fileID: 2800000, guid: 05e55968423d4ec4aa11419c452c7ce5, type: 3}
+  burnt: {fileID: 2800000, guid: 1aec8cdc7e8e1d246b7aee9a9eb6b62e, type: 3}
+  fillings:
+  - {fileID: 2800000, guid: 5656dbf286232924c9a588a8ddc047ca, type: 3}
+  - {fileID: 2800000, guid: 131b92827b268394984e4aeffcf4d60a, type: 3}
+  - {fileID: 2800000, guid: 908e415d9ef097549b8a9efdb6383787, type: 3}
+  - {fileID: 2800000, guid: 8223f0b457720ca4cb3638dfa9c55a2b, type: 3}
+  - {fileID: 2800000, guid: 3afaf32f555005541aeb51430e2db58c, type: 3}
+  containers:
+  - {fileID: 2800000, guid: faadf8ca26da6044ea8a00a01467add1, type: 3}
+  - {fileID: 2800000, guid: ec91c92a9eb4cf44183d4ace0d06a387, type: 3}
+  - {fileID: 2800000, guid: dac7e5180e2fc874eac1b66cf6cb75c5, type: 3}
+  - {fileID: 2800000, guid: e15043cf03599b04dadab921a949f186, type: 3}
+  - {fileID: 2800000, guid: 1e7371ea86b59734181d6b6e5e1a2842, type: 3}
+  visitors:
+  - {fileID: 2800000, guid: 70e97572c3875a54faeb2c9366fa4723, type: 3}
+  - {fileID: 2800000, guid: 9cc6c15b74e3d1d47b257c287cde2341, type: 3}
+  - {fileID: 2800000, guid: 896d729e49a1d574b8d1658b2a4e027e, type: 3}
+  - {fileID: 2800000, guid: b84e831d8fe8b134cba69fe52b82a098, type: 3}
+  - {fileID: 2800000, guid: 63e813d308667d04ea34c8bc487a0970, type: 3}
+  - {fileID: 2800000, guid: aef0afd9f1b73eb4cb8b06461b6f49a3, type: 3}
+  positiveVisitors:
+  - {fileID: 2800000, guid: 232f5dfa297d75445a10bc71675b5175, type: 3}
+  - {fileID: 2800000, guid: bc00c994b42da89409b581377afaccad, type: 3}
+  - {fileID: 2800000, guid: 084996e9dd8f8f646a8058e0a74b35bc, type: 3}
+  - {fileID: 2800000, guid: ac8da5926acbdab45a860898da80629d, type: 3}
+  - {fileID: 2800000, guid: 105575eef0fcaa14795821e1b408b054, type: 3}
+  - {fileID: 2800000, guid: 4cbb6a0cddab74f4ea4086dd4929ecf1, type: 3}
+  negativeVisitors:
+  - {fileID: 2800000, guid: d8a69dfcebe552a419863657dcbe5cad, type: 3}
+  - {fileID: 2800000, guid: fad0a4fd17d611f4a8bb1f80b3d0baf8, type: 3}
+  - {fileID: 2800000, guid: 86f024cd878ec5641ba6d1c7d2cf12ce, type: 3}
+  - {fileID: 2800000, guid: d8ffb2d50cde3e743a781d8680419578, type: 3}
+  - {fileID: 2800000, guid: 89ce291e102685c4dbbe4b20e771a08d, type: 3}
+  - {fileID: 2800000, guid: 0c03f40f87ff1b3458a2efb38c19edd0, type: 3}
+  pancakeShader: {fileID: 4800000, guid: 868bd327fefe85f478f9bb545a62ca7a, type: 3}
+  artwork:
+  - key: kitchen/assembly-table.png
+    texture: {fileID: 2800000, guid: a2e6732cb2d7e374fb8acf8d8a462009, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.014622258
+      y: 0.040688576
+      width: 0.970755483
+      height: 0.899843505
+  - key: kitchen/batter-pitcher-floral-v2.png
+    texture: {fileID: 2800000, guid: 9391a5d5faca5d74a7e45f9b2a6f7446, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.039872408
+      y: 0.056618820
+      width: 0.944976077
+      height: 0.881977671
+  - key: kitchen/batter-pitcher.png
+    texture: {fileID: 2800000, guid: c96c64c9f4c6535498676c251332d45b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.026016260
+      y: 0.029733959
+      width: 0.950406504
+      height: 0.938967136
+  - key: kitchen/batter-raw.png
+    texture: {fileID: 2800000, guid: 676e6a3c4ebb6f844a4ba41a562ff0d1, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.035242291
+      y: 0.060606061
+      width: 0.933920705
+      height: 0.893506494
+  - key: kitchen/container-butter.png
+    texture: {fileID: 2800000, guid: faadf8ca26da6044ea8a00a01467add1, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.067685590
+      y: 0.094323144
+      width: 0.892285298
+      height: 0.778165939
+  - key: kitchen/container-curd.png
+    texture: {fileID: 2800000, guid: e15043cf03599b04dadab921a949f186, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.090697674
+      y: 0.105004102
+      width: 0.820155039
+      height: 0.788351107
+  - key: kitchen/container-honey.png
+    texture: {fileID: 2800000, guid: dac7e5180e2fc874eac1b66cf6cb75c5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.125203252
+      y: 0.086071987
+      width: 0.749593496
+      height: 0.837245696
+  - key: kitchen/container-jam.png
+    texture: {fileID: 2800000, guid: ec91c92a9eb4cf44183d4ace0d06a387, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.062200957
+      y: 0.087719298
+      width: 0.876395534
+      height: 0.825358852
+  - key: kitchen/container-mushrooms.png
+    texture: {fileID: 2800000, guid: 1e7371ea86b59734181d6b6e5e1a2842, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.106060606
+      y: 0.137161085
+      width: 0.791866029
+      height: 0.717703349
+  - key: kitchen/coverage-domain.png
+    texture: {fileID: 2800000, guid: c50e7d55ee0024544a49638544fa4204, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.060417430
+      y: 0.060417430
+      width: 0.879165141
+      height: 0.879165141
+  - key: kitchen/crepe-stove.png
+    texture: {fileID: 2800000, guid: 3df1e70269395e37ad4cb32dccaa460e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.065544730
+      y: 0.039483130
+      width: 0.877767936
+      height: 0.900933238
+  - key: kitchen/discard-bowl.png
+    texture: {fileID: 2800000, guid: 3b4ede0beaf8cd44d9ab95d2e3b191dd, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.093419984
+      y: 0.095461659
+      width: 0.823720552
+      height: 0.815336463
+  - key: kitchen/filling-butter.png
+    texture: {fileID: 2800000, guid: 5656dbf286232924c9a588a8ddc047ca, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.086573734
+      y: 0.153379549
+      width: 0.834922964
+      height: 0.720103986
+  - key: kitchen/filling-curd.png
+    texture: {fileID: 2800000, guid: 8223f0b457720ca4cb3638dfa9c55a2b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.113537118
+      y: 0.124890830
+      width: 0.775109170
+      height: 0.763318777
+  - key: kitchen/filling-honey.png
+    texture: {fileID: 2800000, guid: 908e415d9ef097549b8a9efdb6383787, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.060178306
+      y: 0.204623288
+      width: 0.893016345
+      height: 0.607876712
+  - key: kitchen/filling-jam.png
+    texture: {fileID: 2800000, guid: 131b92827b268394984e4aeffcf4d60a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.063876652
+      y: 0.211255411
+      width: 0.887665198
+      height: 0.591341991
+  - key: kitchen/filling-mushrooms.png
+    texture: {fileID: 2800000, guid: 3afaf32f555005541aeb51430e2db58c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.127691166
+      y: 0.128534704
+      width: 0.763919822
+      height: 0.743787489
+  - key: kitchen/fold-envelope-partial.png
+    texture: {fileID: 2800000, guid: e5ad8eaf1216f694abf3c3daa89311bb, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.230543319
+      y: 0.085714286
+      width: 0.574155653
+      height: 0.824242424
+  - key: kitchen/fold-envelope.png
+    texture: {fileID: 2800000, guid: ee5881a7bbb77a24fa1fb5139a1277d1, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.213656388
+      y: 0.267532468
+      width: 0.607195301
+      height: 0.428571429
+  - key: kitchen/fold-half.png
+    texture: {fileID: 2800000, guid: a0e2813e944be764499b0d0fab4451f4, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.025697504
+      y: 0.212987013
+      width: 0.952276065
+      height: 0.470129870
+  - key: kitchen/fold-incorrect.png
+    texture: {fileID: 2800000, guid: d9daa96bb3f502642b3bf83c6b3b32eb, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.044052863
+      y: 0.053679654
+      width: 0.918502203
+      height: 0.872727273
+  - key: kitchen/fold-roll-partial.png
+    texture: {fileID: 2800000, guid: b23f92e691a30d24aa34295161a3d2ad, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.026431718
+      y: 0.151515152
+      width: 0.953744493
+      height: 0.691774892
+  - key: kitchen/fold-roll.png
+    texture: {fileID: 2800000, guid: aa75d488285318848b64b1e911af3181, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.073421439
+      y: 0.334199134
+      width: 0.853891336
+      height: 0.290909091
+  - key: kitchen/fold-triangle.png
+    texture: {fileID: 2800000, guid: 07a48b39042872542a0643c78e7b9d0c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.240088106
+      y: 0.193939394
+      width: 0.574889868
+      height: 0.620779221
+  - key: kitchen/guide-batter-circle.png
+    texture: {fileID: 2800000, guid: 8fdcee6af6537dd4397cd54fcd9f8a9b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.057854266
+      y: 0.057488100
+      width: 0.884657635
+      height: 0.885023801
+  - key: kitchen/guide-filling-marker.png
+    texture: {fileID: 2800000, guid: 405f3706220353c40b17225b0571ae63, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.084919473
+      y: 0.084919473
+      width: 0.830161054
+      height: 0.830161054
+  - key: kitchen/kitchen-background-crepe-stove.png
+    texture: {fileID: 2800000, guid: 087003069da250be8bfa02afbed9db2f, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/kitchen-background-fitted-v2.png
+    texture: {fileID: 2800000, guid: 27c92a4bc4e05e2ea9026e362349c516, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/kitchen-background-fitted-v3.png
+    texture: {fileID: 2800000, guid: 3ae60ab5b4f35139bb3e31c0f3e51430, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/kitchen-background-user.png
+    texture: {fileID: 2800000, guid: 5e0184d2f7cb9ee46a5b915aefd62c8c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/kitchen-background.png
+    texture: {fileID: 2800000, guid: 151c93654a8fb39418e213fd5fe30f48, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/pan-base.png
+    texture: {fileID: 2800000, guid: d927461035cfd20469ca53e0fa77c010, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.056421678
+      y: 0.075342466
+      width: 0.887899035
+      height: 0.855308219
+  - key: kitchen/pan-handle.png
+    texture: {fileID: 2800000, guid: 6d20fa4306c663e4aadfcca592c503fc, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.052005944
+      y: 0.073630137
+      width: 0.907875186
+      height: 0.832191781
+  - key: kitchen/pancake-burnt.png
+    texture: {fileID: 2800000, guid: 1aec8cdc7e8e1d246b7aee9a9eb6b62e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.033773862
+      y: 0.062337662
+      width: 0.939794420
+      height: 0.890043290
+  - key: kitchen/pancake-ready.png
+    texture: {fileID: 2800000, guid: 05e55968423d4ec4aa11419c452c7ce5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.035242291
+      y: 0.063203463
+      width: 0.933920705
+      height: 0.883982684
+  - key: kitchen/pancake-undercooked.png
+    texture: {fileID: 2800000, guid: ebd13b02107e6e849a02cffcf6256bf7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.033773862
+      y: 0.060606061
+      width: 0.935389134
+      height: 0.891774892
+  - key: kitchen/plate.png
+    texture: {fileID: 2800000, guid: 8e75e1fe11d315644b75afac6e79abb6, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.030837004
+      y: 0.047619048
+      width: 0.938325991
+      height: 0.908225108
+  - key: kitchen/ready-tray.png
+    texture: {fileID: 2800000, guid: f1c7f74e7729c914785abf7de2520127, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.023437500
+      y: 0.147460938
+      width: 0.957682292
+      height: 0.663085938
+  - key: kitchen/scraper.png
+    texture: {fileID: 2800000, guid: 2c8e4b98df8d3a74bbff51611d6ab0f7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.054226475
+      y: 0.089314195
+      width: 0.909888357
+      height: 0.803827751
+  - key: kitchen/stove.png
+    texture: {fileID: 2800000, guid: 15c7b13d288c9f64c85e442dc5ae0216, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.035429584
+      y: 0.030868629
+      width: 0.935341010
+      height: 0.923187365
+  - key: decor/chair_premium.png
+    texture: {fileID: 2800000, guid: f07213a18a9770a4496aebbf5198f656, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.129317981
+      y: 0.017946877
+      width: 0.804251550
+      height: 0.961952620
+  - key: decor/cloth_check.png
+    texture: {fileID: 2800000, guid: d840c455323861e47ab8aeca6f7f285c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.012578616
+      y: 0.032757052
+      width: 0.974842767
+      height: 0.902638763
+  - key: decor/cloth_linen.png
+    texture: {fileID: 2800000, guid: 3dee1e3d9e977324abe2d09ca343cba3, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.011180992
+      y: 0.030027298
+      width: 0.979035639
+      height: 0.908098271
+  - key: decor/facade_base.png
+    texture: {fileID: 2800000, guid: 885b66048dbed0b4d81989d551e9a6c4, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/facade_green.png
+    texture: {fileID: 2800000, guid: 4b46d1e87faee6347b7775510254c4e4, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/floor_terracotta.png
+    texture: {fileID: 2800000, guid: c8a33ca89d7205741a2e2a89f3212072, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/floor_wood.png
+    texture: {fileID: 2800000, guid: b82116572b5399b41942c349ba5d1537, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/lamp_base.png
+    texture: {fileID: 2800000, guid: 1411e21c821c5994a9face741186f305, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.036315323
+      y: 0.065326633
+      width: 0.923826395
+      height: 0.916726490
+  - key: decor/lamp_brass.png
+    texture: {fileID: 2800000, guid: 6d96d6be795283f4e9b4a1beb93f9f5b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.015057573
+      y: 0.012921752
+      width: 0.970770593
+      height: 0.979899497
+  - key: decor/pitcher.png
+    texture: {fileID: 2800000, guid: 57c15e97463b983498ea73a6e01bd1db, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.041493776
+      y: 0.023754789
+      width: 0.938589212
+      height: 0.941762452
+  - key: decor/plate_cream.png
+    texture: {fileID: 2800000, guid: 06d6d4c46faee1a49b18b103a5b7fd2a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.035839775
+      y: 0.063348416
+      width: 0.932536894
+      height: 0.864253394
+  - key: decor/plate_green.png
+    texture: {fileID: 2800000, guid: 88f6d16f96391fa4581121fe69d6377a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.037245257
+      y: 0.064253394
+      width: 0.929725931
+      height: 0.863348416
+  - key: decor/service_background.png
+    texture: {fileID: 2800000, guid: 7aa418e8094e63b45846334f213874ae, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/service_counter.png
+    texture: {fileID: 2800000, guid: 430e31c75e293374190ca97bf189b5ba, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.001381215
+      y: 0.178176796
+      width: 0.996777164
+      height: 0.511049724
+  - key: decor/service_delivery.png
+    texture: {fileID: 2800000, guid: 5d838bace33dd7c4eaf7fc91f123f25c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.011740331
+      y: 0.063535912
+      width: 0.977900552
+      height: 0.806629834
+  - key: decor/stool_base.png
+    texture: {fileID: 2800000, guid: 9db76eec28ff32b4088ffb1072d497da, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.041629761
+      y: 0.012921752
+      width: 0.939769708
+      height: 0.974156497
+  - key: decor/table_base.png
+    texture: {fileID: 2800000, guid: 45558a3f36e61fc48a8f217f72bfafc7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.019650655
+      y: 0.041921397
+      width: 0.962154294
+      height: 0.887336245
+  - key: decor/table_premium.png
+    texture: {fileID: 2800000, guid: 2e23045283543db40a6884d1bf50afcd, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.022103659
+      y: 0.035863219
+      width: 0.955030488
+      height: 0.927439533
+  - key: decor/vase_flowers.png
+    texture: {fileID: 2800000, guid: 3607ed98311b7e24dbc11e5cacf17c6c, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.069087688
+      y: 0.041636755
+      width: 0.836138175
+      height: 0.914572864
+  - key: decor/wall_botanical.png
+    texture: {fileID: 2800000, guid: 702ba07e3fa7f19479ac205bb911813e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: decor/wall_plaster.png
+    texture: {fileID: 2800000, guid: e5c9fe4b3a8581d418ec79c95124bbe5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/button-cream.png
+    texture: {fileID: 2800000, guid: 6b633b2d9e58d314d9b4391d7eb26385, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.037590113
+      y: 0.128553770
+      width: 0.924819773
+      height: 0.768850433
+  - key: ui/card-frame.png
+    texture: {fileID: 2800000, guid: 987ae10c1c5211b40b2574937616f856, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.039594843
+      y: 0.031077348
+      width: 0.923572744
+      height: 0.937845304
+  - key: ui/clock-day.png
+    texture: {fileID: 2800000, guid: 69cb892ea12e83c4880eed5e4b7bae76, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.073365231
+      y: 0.080542265
+      width: 0.854864434
+      height: 0.848484848
+  - key: ui/coin-pancake.png
+    texture: {fileID: 2800000, guid: 2c8c99221837fe24a848b13d3bedd4d0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.095934959
+      y: 0.107198748
+      width: 0.820325203
+      height: 0.795774648
+  - key: ui/currency-honey.png
+    texture: {fileID: 2800000, guid: 126b58123e4635a4cb6d5198446ffc96, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.080602303
+      y: 0.045226131
+      width: 0.844109832
+      height: 0.898779612
+  - key: ui/day-sun.png
+    texture: {fileID: 2800000, guid: 52cbe3f574212e94d84969d8272d4800, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.061788618
+      y: 0.039123631
+      width: 0.884552846
+      height: 0.934272300
+  - key: ui/helper-badge.png
+    texture: {fileID: 2800000, guid: 7b7f17abff69b7549894fd3c6e5fb442, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.079744817
+      y: 0.081339713
+      width: 0.841307815
+      height: 0.844497608
+  - key: ui/order-plate.png
+    texture: {fileID: 2800000, guid: 588ea43dc99d15e4ab63e142df0fd507, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.074960128
+      y: 0.160287081
+      width: 0.854864434
+      height: 0.703349282
+  - key: ui/panel-cream.png
+    texture: {fileID: 2800000, guid: 141f26c942d78d24183d8487eef4c6a6, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.026315789
+      y: 0.275119617
+      width: 0.949760766
+      height: 0.450558214
+  - key: ui/patience-track.png
+    texture: {fileID: 2800000, guid: 6880545f04f19124d84efdee1fc0d917, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.037767756
+      y: 0.337091319
+      width: 0.924464487
+      height: 0.326944758
+  - key: ui/rating-star.png
+    texture: {fileID: 2800000, guid: 905fa94633acb1e488d1726a5cc81a3d, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.143540670
+      y: 0.144338118
+      width: 0.709728868
+      height: 0.704944179
+  - key: ui/receipt-order.png
+    texture: {fileID: 2800000, guid: 24d54f3f406afa2419e5c2e3391b9ef0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.094774136
+      y: 0.062455133
+      width: 0.826395040
+      height: 0.869346734
+  - key: ui/recipe-book-closed.png
+    texture: {fileID: 2800000, guid: 3f1594f66cd38cb47be6a0463658b5e0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.014171833
+      y: 0.012921752
+      width: 0.971656333
+      height: 0.974874372
+  - key: ui/recipe-book-open.png
+    texture: {fileID: 2800000, guid: 37847fa4ca89bb34f8ab797490b1cea5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.009569378
+      y: 0.182615630
+      width: 0.984848485
+      height: 0.606060606
+  - key: ui/refund-coins.png
+    texture: {fileID: 2800000, guid: 843b303b13f860a4ea25cc3ed70b502e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.102073365
+      y: 0.220095694
+      width: 0.803827751
+      height: 0.618819777
+  - key: ui/repair-stove.png
+    texture: {fileID: 2800000, guid: 382d83140bc6e4e49b558416ada129ab, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.058213716
+      y: 0.062998405
+      width: 0.917862839
+      height: 0.887559809
+  - key: ui/reward-ticket.png
+    texture: {fileID: 2800000, guid: d8f75e8a3b15fc44bb23bd0d0f15f20b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.034290271
+      y: 0.183413078
+      width: 0.953748006
+      height: 0.615629984
+  - key: ui/reward-video.png
+    texture: {fileID: 2800000, guid: 5b1a4cb89879cbc49916670a5f580fd0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.061788618
+      y: 0.092331768
+      width: 0.908943089
+      height: 0.817683881
+  - key: ui/settings-speaker.png
+    texture: {fileID: 2800000, guid: 5c83f01401df49f44b29dd14cedafa66, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.073365231
+      y: 0.079744817
+      width: 0.854066986
+      height: 0.848484848
+  - key: ui/speech-bubble.png
+    texture: {fileID: 2800000, guid: 90cfcc5071c098940a1a6516bbac5c21, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.021639042
+      y: 0.080110497
+      width: 0.957642726
+      height: 0.830110497
+  - key: ui/tab-sage.png
+    texture: {fileID: 2800000, guid: c0f3603555e5f8b4299638695f085ca7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.037990196
+      y: 0.215991693
+      width: 0.924019608
+      height: 0.528556594
+  - key: ui/tip-coins.png
+    texture: {fileID: 2800000, guid: e29e4caa2a32af549b496526b25368a5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.087652439
+      y: 0.155963303
+      width: 0.862042683
+      height: 0.707256047
+  - key: ui/tutorial-hand.png
+    texture: {fileID: 2800000, guid: f050eb55b55951c4397b2f272360478b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.089459699
+      y: 0.048097631
+      width: 0.892825509
+      height: 0.804020101
+  - key: ui/upgrade-guides.png
+    texture: {fileID: 2800000, guid: 6b062b750760d8f4d84a29d7ca0d13a8, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.072567783
+      y: 0.085326954
+      width: 0.860446571
+      height: 0.825358852
+  - key: ui/upgrade-patience.png
+    texture: {fileID: 2800000, guid: 1a4ca64c50cf8fc498d87c5272d2b1d6, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.040683483
+      y: 0.072656250
+      width: 0.929210740
+      height: 0.847656250
+  - key: ui/upgrade-speed.png
+    texture: {fileID: 2800000, guid: 96dd85738b60ed247bc8b1b3b72dfa07, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.059808612
+      y: 0.079744817
+      width: 0.897926635
+      height: 0.840510367
+  - key: ui/upgrade-visitors.png
+    texture: {fileID: 2800000, guid: d97b17df587a3c84cb92a3baeaa0b707, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.100000000
+      y: 0.117370892
+      width: 0.803252033
+      height: 0.750391236
+  - key: ui/glyphs/arrow-left.png
+    texture: {fileID: 2800000, guid: dfef9d503ca69ec49a7b9a04b968db73, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/arrow-right.png
+    texture: {fileID: 2800000, guid: 2ccb74a100ae06e4bb851f40e9583389, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/check.png
+    texture: {fileID: 2800000, guid: b7161b35db84f43499f29cae60fe68e5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/close.png
+    texture: {fileID: 2800000, guid: 38cfa820d818c2b4c951596c3ebab825, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/exit.png
+    texture: {fileID: 2800000, guid: bb916de3f306a4b4383ad75491ab8e12, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/focus-hole.png
+    texture: {fileID: 2800000, guid: 20fa86084365b4144b7c38fb78b37934, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/gear.png
+    texture: {fileID: 2800000, guid: c5d721925c817ed42a699a58e299625a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/gesture-line.png
+    texture: {fileID: 2800000, guid: 95a3f5c8dd15fb746982a12038ac0758, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/hand-drag.png
+    texture: {fileID: 2800000, guid: f03495d0257887d4da901313a757910e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/help.png
+    texture: {fileID: 2800000, guid: db1061d7cb214604985212cf25359348, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/loading.png
+    texture: {fileID: 2800000, guid: bb28f2a0402977644939b92b785a433b, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/lock.png
+    texture: {fileID: 2800000, guid: acfd2de2a1eb5d8418a92b91fbc39674, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/minus.png
+    texture: {fileID: 2800000, guid: 455fa3c9d1a70c74a9f07d4474db23e0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/mute.png
+    texture: {fileID: 2800000, guid: 0648b4f61c5abd446b949e494564c7d3, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/pause.png
+    texture: {fileID: 2800000, guid: e8d54754e27e4b448af3dcb54b9fc61d, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/play.png
+    texture: {fileID: 2800000, guid: 6f9538f149de8684691a1641230b7f07, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/plus.png
+    texture: {fileID: 2800000, guid: 650e426ef00fa564b9d953ad75ef8cb8, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/selected.png
+    texture: {fileID: 2800000, guid: cd6cb7247a37d2346ab79cef964d35c6, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: ui/glyphs/undo.png
+    texture: {fileID: 2800000, guid: 9e6af0676ea804f4ebe54a4724311ad1, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/butter.png
+    texture: {fileID: 2800000, guid: b43c96c6b0c4c804db1b4c5c786298d3, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/curd.png
+    texture: {fileID: 2800000, guid: 846ea581eb348954fb0cdc598d8f72e8, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/fold.png
+    texture: {fileID: 2800000, guid: 42d0478fc0e2b3a49b26f6ebf1220368, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/honey.png
+    texture: {fileID: 2800000, guid: a4e2ff0642190884aa878a84ecf500b5, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/jam.png
+    texture: {fileID: 2800000, guid: 2f59628caca65fe4d9372d3f5ee57b1a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/mushrooms.png
+    texture: {fileID: 2800000, guid: 3c492a98502c4f544a09f567dbe603b0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/pitcher.png
+    texture: {fileID: 2800000, guid: 8f8563016adc7754c9b4823ae5dd0f4a, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/plate.png
+    texture: {fileID: 2800000, guid: 89323c2af21760344a6d501fa1f37c02, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: kitchen/shadows/tray.png
+    texture: {fileID: 2800000, guid: d8b0d6dc27c3fee4f92785f1557961f7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.000000000
+      y: 0.000000000
+      width: 1.000000000
+      height: 1.000000000
+  - key: visitors/craftswoman-negative.png
+    texture: {fileID: 2800000, guid: 86f024cd878ec5641ba6d1c7d2cf12ce, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.071289062
+      y: 0.000000000
+      width: 0.875000000
+      height: 0.955078125
+  - key: visitors/craftswoman-neutral.png
+    texture: {fileID: 2800000, guid: 896d729e49a1d574b8d1658b2a4e027e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.068359375
+      y: 0.000000000
+      width: 0.874023438
+      height: 0.953776042
+  - key: visitors/craftswoman-positive.png
+    texture: {fileID: 2800000, guid: 084996e9dd8f8f646a8058e0a74b35bc, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.070312500
+      y: 0.000000000
+      width: 0.875000000
+      height: 0.959635417
+  - key: visitors/elder-man-negative.png
+    texture: {fileID: 2800000, guid: 0c03f40f87ff1b3458a2efb38c19edd0, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.084960938
+      y: 0.000000000
+      width: 0.843750000
+      height: 0.970703125
+  - key: visitors/elder-man-neutral.png
+    texture: {fileID: 2800000, guid: aef0afd9f1b73eb4cb8b06461b6f49a3, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.083007812
+      y: 0.000000000
+      width: 0.838867188
+      height: 0.964192708
+  - key: visitors/elder-man-positive.png
+    texture: {fileID: 2800000, guid: 4cbb6a0cddab74f4ea4086dd4929ecf1, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.085937500
+      y: 0.000000000
+      width: 0.836914062
+      height: 0.964843750
+  - key: visitors/elder-woman-negative.png
+    texture: {fileID: 2800000, guid: 89ce291e102685c4dbbe4b20e771a08d, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.045898438
+      y: 0.000000000
+      width: 0.925781250
+      height: 0.964843750
+  - key: visitors/elder-woman-neutral.png
+    texture: {fileID: 2800000, guid: 63e813d308667d04ea34c8bc487a0970, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.043945312
+      y: 0.000000000
+      width: 0.924804688
+      height: 0.942708333
+  - key: visitors/elder-woman-positive.png
+    texture: {fileID: 2800000, guid: 105575eef0fcaa14795821e1b408b054, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.043945312
+      y: 0.000000000
+      width: 0.926757812
+      height: 0.951822917
+  - key: visitors/florist-negative.png
+    texture: {fileID: 2800000, guid: eda81110da95ab84fbe9e4d5bb45e5c7, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.063476562
+      y: 0.000000000
+      width: 0.892578125
+      height: 0.995442708
+  - key: visitors/florist-neutral.png
+    texture: {fileID: 2800000, guid: 9a63c7638a01e644f8e7d93658a2fb01, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.064453125
+      y: 0.000000000
+      width: 0.887695312
+      height: 0.994140625
+  - key: visitors/florist-positive.png
+    texture: {fileID: 2800000, guid: 5b1440578842cf8479163d967879929f, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.065429688
+      y: 0.000000000
+      width: 0.889648438
+      height: 0.993489583
+  - key: visitors/nurse-negative.png
+    texture: {fileID: 2800000, guid: d8ffb2d50cde3e743a781d8680419578, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.097656250
+      y: 0.000000000
+      width: 0.831054688
+      height: 0.981770833
+  - key: visitors/nurse-neutral.png
+    texture: {fileID: 2800000, guid: b84e831d8fe8b134cba69fe52b82a098, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.099609375
+      y: 0.000000000
+      width: 0.825195312
+      height: 0.973958333
+  - key: visitors/nurse-positive.png
+    texture: {fileID: 2800000, guid: ac8da5926acbdab45a860898da80629d, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.097656250
+      y: 0.000000000
+      width: 0.832031250
+      height: 0.984375000
+  - key: visitors/office-negative.png
+    texture: {fileID: 2800000, guid: fad0a4fd17d611f4a8bb1f80b3d0baf8, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.064453125
+      y: 0.000000000
+      width: 0.892578125
+      height: 0.977213542
+  - key: visitors/office-neutral.png
+    texture: {fileID: 2800000, guid: 9cc6c15b74e3d1d47b257c287cde2341, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.065429688
+      y: 0.000000000
+      width: 0.889648438
+      height: 0.976562500
+  - key: visitors/office-positive.png
+    texture: {fileID: 2800000, guid: bc00c994b42da89409b581377afaccad, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.066406250
+      y: 0.000000000
+      width: 0.889648438
+      height: 0.975260417
+  - key: visitors/student-negative.png
+    texture: {fileID: 2800000, guid: d8a69dfcebe552a419863657dcbe5cad, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.088867188
+      y: 0.000000000
+      width: 0.839843750
+      height: 0.970052083
+  - key: visitors/student-neutral.png
+    texture: {fileID: 2800000, guid: 70e97572c3875a54faeb2c9366fa4723, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.089843750
+      y: 0.000000000
+      width: 0.835937500
+      height: 0.970052083
+  - key: visitors/student-positive.png
+    texture: {fileID: 2800000, guid: 232f5dfa297d75445a10bc71675b5175, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.088867188
+      y: 0.000000000
+      width: 0.838867188
+      height: 0.971354167
+  - key: visitors/traveler-negative.png
+    texture: {fileID: 2800000, guid: 117fef5e9bb1bec4ba9933f123c4a257, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.067382812
+      y: 0.000000000
+      width: 0.886718750
+      height: 0.979166667
+  - key: visitors/traveler-neutral.png
+    texture: {fileID: 2800000, guid: 152b716dcf962e745b7ee6055d92cd84, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.065429688
+      y: 0.000000000
+      width: 0.884765625
+      height: 0.972005208
+  - key: visitors/traveler-positive.png
+    texture: {fileID: 2800000, guid: a0308a2ebbad317408969f64a1c5863e, type: 3}
+    uv:
+      serializedVersion: 2
+      x: 0.068359375
+      y: 0.000000000
+      width: 0.883789062
+      height: 0.971354167
+  audio: {fileID: 11400000, guid: 2773a8a06d0977643a5124ef3d9e1d4a, type: 2}

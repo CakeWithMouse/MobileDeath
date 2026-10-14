@@ -1,0 +1,201 @@
+{
+  "status": "verified_after_reload",
+  "asset_boards": 14,
+  "asset_images": 126,
+  "layered_screens": 9,
+  "catalog_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1684&t=mTKwcp7omrwPgrLL-0",
+  "screens_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1685&t=mTKwcp7omrwPgrLL-0",
+  "kitchen_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520",
+  "facade_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1626&t=mTKwcp7omrwPgrLL-0",
+  "visitors_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1502&t=mTKwcp7omrwPgrLL-0",
+  "proof": "catalog-proof.jpg",
+  "screens_proof": "screens-layered-proof.jpg",
+  "visitors_proof": "visitors-table-proof.jpg",
+  "placements": [
+    {
+      "name": "Блинопёк — Кухня 01",
+      "x": 8000,
+      "y": 0,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-388&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Кухня 02",
+      "x": 8000,
+      "y": 1100,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-432&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Кухня 03",
+      "x": 8000,
+      "y": 2200,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-212&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Кухня 04",
+      "x": 8000,
+      "y": 3300,
+      "count": 4,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-140&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Окружение 02",
+      "x": 10000,
+      "y": 1100,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-256&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Окружение 03",
+      "x": 10000,
+      "y": 2200,
+      "count": 5,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-183&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Интерфейс 01",
+      "x": 14000,
+      "y": 0,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-300&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Интерфейс 02",
+      "x": 14000,
+      "y": 1100,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-344&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Интерфейс 03",
+      "x": 14000,
+      "y": 2200,
+      "count": 8,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-476&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Интерфейс 04",
+      "x": 14000,
+      "y": 3300,
+      "count": 3,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-121&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Оборудование кухни",
+      "x": 16000,
+      "y": 0,
+      "count": 3,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-164&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Знаки и направляющие",
+      "x": 16000,
+      "y": 2200,
+      "count": 23,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-2&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Посетители",
+      "x": 12000,
+      "y": 0,
+      "count": 24,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1502&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "name": "Блинопёк — Окружение 01",
+      "x": 10000,
+      "y": 0,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1640&t=mTKwcp7omrwPgrLL-0",
+      "checked": true,
+      "count": 8
+    }
+  ],
+  "screen_placements": [
+    {
+      "key": "kitchen",
+      "name": "Блинопёк — Готовка",
+      "x": 5500,
+      "y": 900,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520"
+    },
+    {
+      "key": "counter",
+      "name": "Блинопёк — Стойка",
+      "x": 3700,
+      "y": 900,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-947&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "recipes",
+      "name": "Блинопёк — Книга рецептов",
+      "x": 1900,
+      "y": 2000,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-821&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "shop",
+      "name": "Блинопёк — Магазин",
+      "x": 3700,
+      "y": 2000,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1125&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "day",
+      "name": "Блинопёк — Итог дня",
+      "x": 5500,
+      "y": 2000,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-881&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "reviews",
+      "name": "Блинопёк — Отзывы",
+      "x": 1900,
+      "y": 3100,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1024&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "pause",
+      "name": "Блинопёк — Пауза",
+      "x": 3700,
+      "y": 3100,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1231&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "rewards",
+      "name": "Блинопёк — Награды",
+      "x": 5500,
+      "y": 3100,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-773&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    },
+    {
+      "key": "facade",
+      "name": "Блинопёк — Фасад",
+      "x": 1900,
+      "y": 900,
+      "url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-1626&t=mTKwcp7omrwPgrLL-0",
+      "checked": true
+    }
+  ]
+}

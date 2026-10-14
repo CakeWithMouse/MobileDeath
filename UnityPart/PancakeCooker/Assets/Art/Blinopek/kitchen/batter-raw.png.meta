@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 676e6a3c4ebb6f844a4ba41a562ff0d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5650454463535706874
+    second: batter-raw_0
+  - first:
+      213: 5735413811743333488
+    second: batter-raw_1
+  - first:
+      213: 3942971554489636985
+    second: batter-raw_2
+  - first:
+      213: 6149650685800042335
+    second: batter-raw_3
+  - first:
+      213: 9043855155337974178
+    second: batter-raw_4
+  - first:
+      213: 6372305057442042391
+    second: batter-raw_5
+  - first:
+      213: -7950069797650408094
+    second: batter-raw_6
+  - first:
+      213: 7956518853343748975
+    second: batter-raw_7
+  - first:
+      213: 8547671764263925187
+    second: batter-raw_8
+  - first:
+      213: -8294267773748034243
+    second: batter-raw_9
+  - first:
+      213: -7254021776182626171
+    second: batter-raw_10
+  - first:
+      213: 4513530380988565130
+    second: batter-raw_11
+  - first:
+      213: -5327590226141144701
+    second: batter-raw_12
+  - first:
+      213: 4370169028114604110
+    second: batter-raw_13
+  - first:
+      213: -2863894599901551405
+    second: batter-raw_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: batter-raw_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1362
+        height: 1139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2f09ea5627a6e40800000000000000
+      internalID: 5650454463535706874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1125
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c94d86978489f40800000000000000
+      internalID: 5735413811743333488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_2
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1130
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97813d0fcbf38b630800000000000000
+      internalID: 3942971554489636985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_3
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1139
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f49db67b2f75550800000000000000
+      internalID: 6149650685800042335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_4
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1104
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1510ee85a328d70800000000000000
+      internalID: 9043855155337974178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_5
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1122
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712124510b9fe6850800000000000000
+      internalID: 6372305057442042391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1124
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d5c7be3adaba190800000000000000
+      internalID: -7950069797650408094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1114
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63a04eddbb3b6e60800000000000000
+      internalID: 7956518853343748975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_8
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1001
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5769d9e2e6f9670800000000000000
+      internalID: 8547671764263925187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 5
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3547c99767d4ec80800000000000000
+      internalID: -8294267773748034243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_10
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 125
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588bfa5c0a9845b90800000000000000
+      internalID: -7254021776182626171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_11
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 51
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86c1c1c7f743ae30800000000000000
+      internalID: 4513530380988565130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_12
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 50
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38993068ae89016b0800000000000000
+      internalID: -5327590226141144701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_13
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 46
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e406f21b395f5ac30800000000000000
+      internalID: 4370169028114604110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batter-raw_14
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 29
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d465b2f8076148d0800000000000000
+      internalID: -2863894599901551405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      batter-raw_0: 5650454463535706874
+      batter-raw_1: 5735413811743333488
+      batter-raw_10: -7254021776182626171
+      batter-raw_11: 4513530380988565130
+      batter-raw_12: -5327590226141144701
+      batter-raw_13: 4370169028114604110
+      batter-raw_14: -2863894599901551405
+      batter-raw_2: 3942971554489636985
+      batter-raw_3: 6149650685800042335
+      batter-raw_4: 9043855155337974178
+      batter-raw_5: 6372305057442042391
+      batter-raw_6: -7950069797650408094
+      batter-raw_7: 7956518853343748975
+      batter-raw_8: 8547671764263925187
+      batter-raw_9: -8294267773748034243
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

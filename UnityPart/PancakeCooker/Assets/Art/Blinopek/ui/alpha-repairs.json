@@ -1,0 +1,98 @@
+{
+  "reviewed_original_pngs": 26,
+  "visibly_problematic_pngs": 3,
+  "repairs": [
+    {
+      "file": "panel-cream.png",
+      "action": "removed-background-halo",
+      "tool": "built-in image_gen",
+      "prompt": "Edit target image: extract ONLY the cream rounded rectangular game panel and its thin brown border as a clean transparent PNG sprite. Remove the large diffuse brown background/halo completely. Preserve panel proportions, cream interior, muted pink/mint selected brush strokes, outline, hand-painted style. Center the same rectangle within a SQUARE canvas with generous fully transparent empty space above and below. The panel is opaque, outside shape alpha zero, not a gradient. No drop shadow, glow or solid backdrop. No text.",
+      "reference_files": [
+        "panel-cream.png"
+      ],
+      "visual_review": "Полный видимый силуэт, без фонового облака и текста. Прозрачные поля; края живописные.",
+      "note": "Размер холста изменён на квадратный для сохранения полностью прозрачного окружения объекта; пропорции самого предмета сохранены.",
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "file": "recipe-book-open.png",
+      "action": "removed-background-halo",
+      "tool": "built-in image_gen",
+      "prompt": "Edit target image: extract ONLY the open blank recipe book as a clean transparent PNG sprite. Remove the entire brown diffuse background/halo. Preserve two blank cream pages, green cover edges, spine, slightly imperfect painted shape and colors. Center the unchanged open book in a SQUARE canvas with generous fully transparent empty margin above/below. Opaque book, outside alpha zero. No drop shadow or glowing backdrop, no text or new objects.",
+      "reference_files": [
+        "recipe-book-open.png"
+      ],
+      "visual_review": "Полный видимый силуэт, без фонового облака и текста. Прозрачные поля; края живописные.",
+      "note": "Размер холста изменён на квадратный для сохранения полностью прозрачного окружения объекта; пропорции самого предмета сохранены.",
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "file": "reward-ticket.png",
+      "action": "removed-background-halo",
+      "tool": "built-in image_gen",
+      "prompt": "Edit target image: extract ONLY this ochre ticket with the dark teal crossed-out play symbol as a clean transparent PNG sprite. Remove all diffuse brown background/halo. Preserve ticket notches, angle, thin brown outline, colors and handpainted artwork. Center unchanged ticket in a SQUARE canvas with generous transparent margin above/below. Ticket opaque, everything outside silhouette fully transparent alpha zero. No glow, drop shadow, vignette, solid background or extra text.",
+      "reference_files": [
+        "reward-ticket.png"
+      ],
+      "visual_review": "Полный видимый силуэт, без фонового облака и текста. Прозрачные поля; края живописные.",
+      "note": "Размер холста изменён на квадратный для сохранения полностью прозрачного окружения объекта; пропорции самого предмета сохранены.",
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "file": "tutorial-hand.png",
+      "action": "created",
+      "tool": "built-in image_gen",
+      "prompt": "One isolated calm painted human right hand tutorial pointer for a cozy pancake cooking game, index finger extended toward upper left, other three fingers naturally folded and thumb resting across folded fingers. Anatomically clear five-finger hand, slight three-quarter back-of-hand view, short wrist with small muted sage cuff, no other arm or person. Readable silhouette even small, not white cartoon glove. Match attached original kitchen painting's matte gouache / dry-oil palette and lively selective brushwork: broad quiet warm beige/pink skin planes, sparse short russet strokes at knuckles and fingernail, soft grey-green colored shadows, gently varied edges. No uniform canvas noise, no glitter, no repeated rough pattern, no photoreal glossy skin. Entire hand and wrist visible, padded transparent background, no circle, arrows, radiating lines, labels, words, scenery, drop shadow or halo. PNG with genuine alpha.",
+      "reference_files": [
+        "kitchen-original.png"
+      ],
+      "visual_review": "Полный видимый силуэт, без фонового облака и текста. Прозрачные поля; края живописные.",
+      "note": "T03: указательный палец вытянут к верхнему левому углу; движение и нажатие анимируются кодом.",
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

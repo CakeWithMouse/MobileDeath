@@ -1,0 +1,1601 @@
+fileFormatVersion: 2
+guid: 8fdcee6af6537dd4397cd54fcd9f8a9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8450937046071979844
+    second: guide-batter-circle_0
+  - first:
+      213: -4560604412043226625
+    second: guide-batter-circle_1
+  - first:
+      213: 4613736829451270824
+    second: guide-batter-circle_2
+  - first:
+      213: -2004003421758869511
+    second: guide-batter-circle_3
+  - first:
+      213: 1026582144595108049
+    second: guide-batter-circle_4
+  - first:
+      213: 8327558946441161336
+    second: guide-batter-circle_5
+  - first:
+      213: -369301274726695399
+    second: guide-batter-circle_6
+  - first:
+      213: 2686240533727807015
+    second: guide-batter-circle_7
+  - first:
+      213: -5151017143899085933
+    second: guide-batter-circle_8
+  - first:
+      213: -5242323669570927666
+    second: guide-batter-circle_9
+  - first:
+      213: -3693548094395590788
+    second: guide-batter-circle_10
+  - first:
+      213: 5048310250010266728
+    second: guide-batter-circle_11
+  - first:
+      213: 7161836267682628046
+    second: guide-batter-circle_12
+  - first:
+      213: 5321045234657032759
+    second: guide-batter-circle_13
+  - first:
+      213: -5270455830600045818
+    second: guide-batter-circle_14
+  - first:
+      213: -6030160200270164749
+    second: guide-batter-circle_15
+  - first:
+      213: 3675840713270950618
+    second: guide-batter-circle_16
+  - first:
+      213: -312963076929357962
+    second: guide-batter-circle_17
+  - first:
+      213: 7096773070169023391
+    second: guide-batter-circle_18
+  - first:
+      213: 4707815639647760955
+    second: guide-batter-circle_19
+  - first:
+      213: 9059187324140656490
+    second: guide-batter-circle_20
+  - first:
+      213: -2046525718325113321
+    second: guide-batter-circle_21
+  - first:
+      213: 4992426453116682642
+    second: guide-batter-circle_22
+  - first:
+      213: 1653029757191563737
+    second: guide-batter-circle_23
+  - first:
+      213: 3048012767042366446
+    second: guide-batter-circle_24
+  - first:
+      213: -2929042945862960612
+    second: guide-batter-circle_25
+  - first:
+      213: -2709402207526473603
+    second: guide-batter-circle_26
+  - first:
+      213: -3701551177857760711
+    second: guide-batter-circle_27
+  - first:
+      213: 6084372993560067754
+    second: guide-batter-circle_28
+  - first:
+      213: -3220997348710206637
+    second: guide-batter-circle_29
+  - first:
+      213: -1028401626354946932
+    second: guide-batter-circle_30
+  - first:
+      213: 4897025530470153227
+    second: guide-batter-circle_31
+  - first:
+      213: 7832624644322047189
+    second: guide-batter-circle_32
+  - first:
+      213: 5624813703836419501
+    second: guide-batter-circle_33
+  - first:
+      213: -5233440444337223161
+    second: guide-batter-circle_34
+  - first:
+      213: -1330070933786611176
+    second: guide-batter-circle_35
+  - first:
+      213: -6850108582044447313
+    second: guide-batter-circle_36
+  - first:
+      213: -6552877922161648475
+    second: guide-batter-circle_37
+  - first:
+      213: -147226762660621551
+    second: guide-batter-circle_38
+  - first:
+      213: 6040358557010618641
+    second: guide-batter-circle_39
+  - first:
+      213: 1750345924293790546
+    second: guide-batter-circle_40
+  - first:
+      213: -3446791482078951775
+    second: guide-batter-circle_41
+  - first:
+      213: 7992410999799042808
+    second: guide-batter-circle_42
+  - first:
+      213: -3648192810910094973
+    second: guide-batter-circle_43
+  - first:
+      213: -6499303429843536497
+    second: guide-batter-circle_44
+  - first:
+      213: 3679363644052094941
+    second: guide-batter-circle_45
+  - first:
+      213: 5712363382233084056
+    second: guide-batter-circle_46
+  - first:
+      213: -1297333685898454827
+    second: guide-batter-circle_47
+  - first:
+      213: 7829896261065583377
+    second: guide-batter-circle_48
+  - first:
+      213: 6071701879349854082
+    second: guide-batter-circle_49
+  - first:
+      213: -1425073353978451375
+    second: guide-batter-circle_50
+  - first:
+      213: 8426134440142640378
+    second: guide-batter-circle_51
+  - first:
+      213: -2441443002422850357
+    second: guide-batter-circle_52
+  - first:
+      213: 3597100474085997248
+    second: guide-batter-circle_53
+  - first:
+      213: -3884612197560681599
+    second: guide-batter-circle_54
+  - first:
+      213: -8849438533834550284
+    second: guide-batter-circle_55
+  - first:
+      213: 5431832343199755684
+    second: guide-batter-circle_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: guide-batter-circle_0
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 2520
+        width: 97
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f2f4ae772c74570800000000000000
+      internalID: 8450937046071979844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_1
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 2545
+        width: 98
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1951b437a75b0c0800000000000000
+      internalID: -4560604412043226625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_2
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2555
+        width: 99
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa7496a339470040800000000000000
+      internalID: 4613736829451270824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_3
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 2544
+        width: 98
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff256d61895034e0800000000000000
+      internalID: -2004003421758869511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_4
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 2481
+        width: 95
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0a95d75072f3e00800000000000000
+      internalID: 1026582144595108049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_5
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 2518
+        width: 97
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a60c09dbe619370800000000000000
+      internalID: 8327558946441161336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_6
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 2479
+        width: 95
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ef0d0827affdaf0800000000000000
+      internalID: -369301274726695399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_7
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2428
+        width: 92
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7260a1a7881774520800000000000000
+      internalID: 2686240533727807015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_8
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 2426
+        width: 91
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393a2f9e239e388b0800000000000000
+      internalID: -5151017143899085933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_9
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2363
+        width: 88
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec34a95c5668f37b0800000000000000
+      internalID: -5242323669570927666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_10
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 2360
+        width: 87
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77dab0d391edbcc0800000000000000
+      internalID: -3693548094395590788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_11
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 2286
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c43dfdc633f0640800000000000000
+      internalID: 5048310250010266728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_12
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 2282
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec18bb2f324f36360800000000000000
+      internalID: 7161836267682628046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_13
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 2198
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a7485e27628d940800000000000000
+      internalID: 5321045234657032759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_14
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 2194
+        width: 76
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ba2bc98549bd6b0800000000000000
+      internalID: -5270455830600045818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_15
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 2100
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcc23c3f31905ca0800000000000000
+      internalID: -6030160200270164749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_16
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2096
+        width: 70
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adafe6d37a5330330800000000000000
+      internalID: 3675840713270950618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_17
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1994
+        width: 64
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677ffcb5db128abf0800000000000000
+      internalID: -312963076929357962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_18
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 1989
+        width: 63
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93abfac18dcc7260800000000000000
+      internalID: 7096773070169023391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_19
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1880
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32bb359165855140800000000000000
+      internalID: 4707815639647760955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_20
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 1874
+        width: 56
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a671029afd2b8bd70800000000000000
+      internalID: 9059187324140656490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_21
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1759
+        width: 49
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ec78fb3b74993e0800000000000000
+      internalID: -2046525718325113321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_22
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1753
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29188497869a84540800000000000000
+      internalID: 4992426453116682642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1634
+        width: 40
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9ad885ecdb0f610800000000000000
+      internalID: 1653029757191563737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_24
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 1628
+        width: 39
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb6a6a6677bc4a20800000000000000
+      internalID: 3048012767042366446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_25
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1505
+        width: 32
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a79ff95f2f957d0800000000000000
+      internalID: -2929042945862960612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_26
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1499
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70b9ba1c05466ad0800000000000000
+      internalID: -2709402207526473603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1375
+        width: 23
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9320cddb0d271acc0800000000000000
+      internalID: -3701551177857760711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_28
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 1276
+        width: 22
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaeb0225009007450800000000000000
+      internalID: 6084372993560067754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_29
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1244
+        width: 24
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35337a71af7bc43d0800000000000000
+      internalID: -3220997348710206637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_30
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 1146
+        width: 30
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ceda66b226ab1f0800000000000000
+      internalID: -1028401626354946932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_31
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1115
+        width: 32
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c31bf36cab5f340800000000000000
+      internalID: 4897025530470153227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_32
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 1019
+        width: 39
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d439cf6d9213bc60800000000000000
+      internalID: 7832624644322047189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_33
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 989
+        width: 41
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da54be8134a5f0e40800000000000000
+      internalID: 5624813703836419501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_34
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 896
+        width: 47
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a0e12d4a51f57b0800000000000000
+      internalID: -5233440444337223161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_35
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 867
+        width: 49
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812b3916883aa8de0800000000000000
+      internalID: -1330070933786611176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_36
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 778
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadc26eb9868fe0a0800000000000000
+      internalID: -6850108582044447313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_37
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 751
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac1e099f308f05a0800000000000000
+      internalID: -6552877922161648475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_38
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 667
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113de261a02f4fdf0800000000000000
+      internalID: -147226762660621551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_39
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 642
+        width: 64
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119eb9aba1aa3d350800000000000000
+      internalID: 6040358557010618641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_40
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 565
+        width: 70
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b859b285a7a4810800000000000000
+      internalID: 1750345924293790546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_41
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 541
+        width: 71
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a687dfa8698a20d0800000000000000
+      internalID: -3446791482078951775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_42
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 471
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f252fd657fbaee60800000000000000
+      internalID: 7992410999799042808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_43
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 450
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389e199a7f30f5dc0800000000000000
+      internalID: -3648192810910094973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_44
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 388
+        width: 82
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85b2b027f5ddc5a0800000000000000
+      internalID: -6499303429843536497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_45
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 370
+        width: 83
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf363b7db9bf0330800000000000000
+      internalID: 3679363644052094941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_46
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 317
+        width: 87
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890b3f11b34664f40800000000000000
+      internalID: 5712363382233084056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_47
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 301
+        width: 88
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8dfd0e2e1fefde0800000000000000
+      internalID: -1297333685898454827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_48
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 258
+        width: 91
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b29f43a2169ac60800000000000000
+      internalID: 7829896261065583377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_49
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 245
+        width: 92
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f38b4a0b4034450800000000000000
+      internalID: 6071701879349854082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_50
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 202
+        width: 95
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a6d3db55f193ce0800000000000000
+      internalID: -1425073353978451375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_51
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 212
+        width: 95
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4136631a4afe470800000000000000
+      internalID: 8426134440142640378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_52
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 173
+        width: 97
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc093d46804e1ed0800000000000000
+      internalID: -2441443002422850357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_53
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 158
+        width: 98
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0caf84ba2d77be130800000000000000
+      internalID: 3597100474085997248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_54
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 161
+        width: 99
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bfe32b9c5171ac0800000000000000
+      internalID: -3884612197560681599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_55
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 179
+        width: 97
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f353213a8a703580800000000000000
+      internalID: -8849438533834550284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-batter-circle_56
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 156
+        width: 99
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad26efacbeb16b40800000000000000
+      internalID: 5431832343199755684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      guide-batter-circle_0: 8450937046071979844
+      guide-batter-circle_1: -4560604412043226625
+      guide-batter-circle_10: -3693548094395590788
+      guide-batter-circle_11: 5048310250010266728
+      guide-batter-circle_12: 7161836267682628046
+      guide-batter-circle_13: 5321045234657032759
+      guide-batter-circle_14: -5270455830600045818
+      guide-batter-circle_15: -6030160200270164749
+      guide-batter-circle_16: 3675840713270950618
+      guide-batter-circle_17: -312963076929357962
+      guide-batter-circle_18: 7096773070169023391
+      guide-batter-circle_19: 4707815639647760955
+      guide-batter-circle_2: 4613736829451270824
+      guide-batter-circle_20: 9059187324140656490
+      guide-batter-circle_21: -2046525718325113321
+      guide-batter-circle_22: 4992426453116682642
+      guide-batter-circle_23: 1653029757191563737
+      guide-batter-circle_24: 3048012767042366446
+      guide-batter-circle_25: -2929042945862960612
+      guide-batter-circle_26: -2709402207526473603
+      guide-batter-circle_27: -3701551177857760711
+      guide-batter-circle_28: 6084372993560067754
+      guide-batter-circle_29: -3220997348710206637
+      guide-batter-circle_3: -2004003421758869511
+      guide-batter-circle_30: -1028401626354946932
+      guide-batter-circle_31: 4897025530470153227
+      guide-batter-circle_32: 7832624644322047189
+      guide-batter-circle_33: 5624813703836419501
+      guide-batter-circle_34: -5233440444337223161
+      guide-batter-circle_35: -1330070933786611176
+      guide-batter-circle_36: -6850108582044447313
+      guide-batter-circle_37: -6552877922161648475
+      guide-batter-circle_38: -147226762660621551
+      guide-batter-circle_39: 6040358557010618641
+      guide-batter-circle_4: 1026582144595108049
+      guide-batter-circle_40: 1750345924293790546
+      guide-batter-circle_41: -3446791482078951775
+      guide-batter-circle_42: 7992410999799042808
+      guide-batter-circle_43: -3648192810910094973
+      guide-batter-circle_44: -6499303429843536497
+      guide-batter-circle_45: 3679363644052094941
+      guide-batter-circle_46: 5712363382233084056
+      guide-batter-circle_47: -1297333685898454827
+      guide-batter-circle_48: 7829896261065583377
+      guide-batter-circle_49: 6071701879349854082
+      guide-batter-circle_5: 8327558946441161336
+      guide-batter-circle_50: -1425073353978451375
+      guide-batter-circle_51: 8426134440142640378
+      guide-batter-circle_52: -2441443002422850357
+      guide-batter-circle_53: 3597100474085997248
+      guide-batter-circle_54: -3884612197560681599
+      guide-batter-circle_55: -8849438533834550284
+      guide-batter-circle_56: 5431832343199755684
+      guide-batter-circle_6: -369301274726695399
+      guide-batter-circle_7: 2686240533727807015
+      guide-batter-circle_8: -5151017143899085933
+      guide-batter-circle_9: -5242323669570927666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

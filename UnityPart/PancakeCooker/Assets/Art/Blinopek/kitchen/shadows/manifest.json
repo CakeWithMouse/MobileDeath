@@ -1,0 +1,120 @@
+{
+  "light": "upper-left",
+  "binding": "Child of the prop group; never baked into the kitchen background.",
+  "shadows": [
+    "pitcher",
+    "jam",
+    "honey",
+    "curd",
+    "mushrooms",
+    "butter",
+    "tray",
+    "plate",
+    "fold"
+  ],
+  "png_dimensions": [
+    800,
+    240
+  ],
+  "bindings": [
+    {
+      "asset": "kitchen/batter-pitcher-floral-v2.png",
+      "shadow_png": "kitchen/shadows/pitcher.png",
+      "shadow_svg": "kitchen/shadows/pitcher.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/container-jam.png",
+      "shadow_png": "kitchen/shadows/jam.png",
+      "shadow_svg": "kitchen/shadows/jam.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/container-honey.png",
+      "shadow_png": "kitchen/shadows/honey.png",
+      "shadow_svg": "kitchen/shadows/honey.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/container-curd.png",
+      "shadow_png": "kitchen/shadows/curd.png",
+      "shadow_svg": "kitchen/shadows/curd.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/container-mushrooms.png",
+      "shadow_png": "kitchen/shadows/mushrooms.png",
+      "shadow_svg": "kitchen/shadows/mushrooms.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/container-butter.png",
+      "shadow_png": "kitchen/shadows/butter.png",
+      "shadow_svg": "kitchen/shadows/butter.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/ready-tray.png",
+      "shadow_png": "kitchen/shadows/tray.png",
+      "shadow_svg": "kitchen/shadows/tray.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/plate.png",
+      "shadow_png": "kitchen/shadows/plate.png",
+      "shadow_svg": "kitchen/shadows/plate.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    },
+    {
+      "asset": "kitchen/fold-triangle.png",
+      "shadow_png": "kitchen/shadows/fold.png",
+      "shadow_svg": "kitchen/shadows/fold.svg",
+      "normalized_rect": [
+        -0.08,
+        0.77,
+        1.2,
+        0.3
+      ]
+    }
+  ]
+}

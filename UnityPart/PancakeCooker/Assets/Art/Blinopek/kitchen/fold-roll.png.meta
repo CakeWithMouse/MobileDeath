@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: aa75d488285318848b64b1e911af3181
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2602950992447685820
+    second: fold-roll_0
+  - first:
+      213: 5165368879102501390
+    second: fold-roll_1
+  - first:
+      213: 8559606514501714228
+    second: fold-roll_2
+  - first:
+      213: 1755510991112999665
+    second: fold-roll_3
+  - first:
+      213: -68744973848673524
+    second: fold-roll_4
+  - first:
+      213: 8090594159329327753
+    second: fold-roll_5
+  - first:
+      213: -5842507688192408407
+    second: fold-roll_6
+  - first:
+      213: -707661512221126862
+    second: fold-roll_7
+  - first:
+      213: 7839111505920959986
+    second: fold-roll_8
+  - first:
+      213: -5579859201240654755
+    second: fold-roll_9
+  - first:
+      213: 980595897870235189
+    second: fold-roll_10
+  - first:
+      213: 8028649424197866960
+    second: fold-roll_11
+  - first:
+      213: 424389310493588774
+    second: fold-roll_12
+  - first:
+      213: -4486335769997123928
+    second: fold-roll_13
+  - first:
+      213: -4310108165390031597
+    second: fold-roll_14
+  - first:
+      213: 7446871500878655830
+    second: fold-roll_15
+  - first:
+      213: 763536324288566980
+    second: fold-roll_16
+  - first:
+      213: 7941985436191821492
+    second: fold-roll_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fold-roll_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 1335
+        height: 1071
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bb7670dd570ebd0800000000000000
+      internalID: -2602950992447685820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_1
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 849
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0223c4d0a31fa740800000000000000
+      internalID: 5165368879102501390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_2
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 831
+        width: 62
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4318ef136c4d9c670800000000000000
+      internalID: 8559606514501714228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_3
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 821
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2959002f3dc5810800000000000000
+      internalID: 1755510991112999665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_4
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 823
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0308ad7fc4cb0ff0800000000000000
+      internalID: -68744973848673524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_5
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 817
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98abca8a580974070800000000000000
+      internalID: 8090594159329327753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_6
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 821
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a48dc7663e3beea0800000000000000
+      internalID: -5842507688192408407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 807
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f08de9a91ed26f0800000000000000
+      internalID: -707661512221126862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_8
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 809
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5a819916e1acc60800000000000000
+      internalID: 7839111505920959986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_9
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 797
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c1b5dae9b5092b0800000000000000
+      internalID: -5579859201240654755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_10
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 803
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536b2c016c6cb9d00800000000000000
+      internalID: 980595897870235189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 791
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5557b1d1e7b6f60800000000000000
+      internalID: 8028649424197866960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_12
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 787
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d717254dbb3e500800000000000000
+      internalID: 424389310493588774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_13
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 787
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae513603655db1c0800000000000000
+      internalID: -4486335769997123928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_14
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 777
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315aa62a57b6f24c0800000000000000
+      internalID: -4310108165390031597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_15
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 777
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6513ad1cc2a985760800000000000000
+      internalID: 7446871500878655830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_16
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 248
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6d356dd30a89a00800000000000000
+      internalID: 763536324288566980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-roll_17
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 195
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be0a8ffca9973e60800000000000000
+      internalID: 7941985436191821492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fold-roll_0: -2602950992447685820
+      fold-roll_1: 5165368879102501390
+      fold-roll_10: 980595897870235189
+      fold-roll_11: 8028649424197866960
+      fold-roll_12: 424389310493588774
+      fold-roll_13: -4486335769997123928
+      fold-roll_14: -4310108165390031597
+      fold-roll_15: 7446871500878655830
+      fold-roll_16: 763536324288566980
+      fold-roll_17: 7941985436191821492
+      fold-roll_2: 8559606514501714228
+      fold-roll_3: 1755510991112999665
+      fold-roll_4: -68744973848673524
+      fold-roll_5: 8090594159329327753
+      fold-roll_6: -5842507688192408407
+      fold-roll_7: -707661512221126862
+      fold-roll_8: 7839111505920959986
+      fold-roll_9: -5579859201240654755
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

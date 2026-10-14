@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 131b92827b268394984e4aeffcf4d60a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2945091834651016291
+    second: filling-jam_0
+  - first:
+      213: 116055994797280113
+    second: filling-jam_1
+  - first:
+      213: -8452047636219257601
+    second: filling-jam_2
+  - first:
+      213: 8927819498188370132
+    second: filling-jam_3
+  - first:
+      213: -2665106718479572749
+    second: filling-jam_4
+  - first:
+      213: -466906899776993069
+    second: filling-jam_5
+  - first:
+      213: 436945597086369142
+    second: filling-jam_6
+  - first:
+      213: -7600511876002524321
+    second: filling-jam_7
+  - first:
+      213: 9011177945824941501
+    second: filling-jam_8
+  - first:
+      213: -5578283306400563605
+    second: filling-jam_9
+  - first:
+      213: 227953917534679198
+    second: filling-jam_10
+  - first:
+      213: -4525143510189179817
+    second: filling-jam_11
+  - first:
+      213: -5075307258999267701
+    second: filling-jam_12
+  - first:
+      213: -2090376605588788912
+    second: filling-jam_13
+  - first:
+      213: 7190748005108773640
+    second: filling-jam_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: filling-jam_0
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1062
+        width: 128
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36cf64b7b611fd820800000000000000
+      internalID: 2945091834651016291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_1
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1068
+        width: 273
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b42f7ff405c9100800000000000000
+      internalID: 116055994797280113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_2
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1080
+        width: 240
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc987aa47b44ba80800000000000000
+      internalID: -8452047636219257601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 1323
+        height: 1059
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0f250388cf5eb70800000000000000
+      internalID: 8927819498188370132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1014
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0a4845f83a30bd0800000000000000
+      internalID: -2665106718479572749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_5
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1005
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d80d9ff5a63589f0800000000000000
+      internalID: -466906899776993069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_6
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 980
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675018c94b7501600800000000000000
+      internalID: 436945597086369142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_7
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 967
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f535bbfc7be858690800000000000000
+      internalID: -7600511876002524321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_8
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 957
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5dab439922e0d70800000000000000
+      internalID: 9011177945824941501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_9
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 921
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6eb08943e4f592b0800000000000000
+      internalID: -5578283306400563605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_10
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 213
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9030d751ead92300800000000000000
+      internalID: 227953917534679198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_11
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 226
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c7285e3f57331c0800000000000000
+      internalID: -4525143510189179817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_12
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 238
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e136520f2e099b0800000000000000
+      internalID: -5075307258999267701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 135
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059e7117d8d7df2e0800000000000000
+      internalID: -2090376605588788912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-jam_14
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 129
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8037bd1663baac360800000000000000
+      internalID: 7190748005108773640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      filling-jam_0: 2945091834651016291
+      filling-jam_1: 116055994797280113
+      filling-jam_10: 227953917534679198
+      filling-jam_11: -4525143510189179817
+      filling-jam_12: -5075307258999267701
+      filling-jam_13: -2090376605588788912
+      filling-jam_14: 7190748005108773640
+      filling-jam_2: -8452047636219257601
+      filling-jam_3: 8927819498188370132
+      filling-jam_4: -2665106718479572749
+      filling-jam_5: -466906899776993069
+      filling-jam_6: 436945597086369142
+      filling-jam_7: -7600511876002524321
+      filling-jam_8: 9011177945824941501
+      filling-jam_9: -5578283306400563605
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

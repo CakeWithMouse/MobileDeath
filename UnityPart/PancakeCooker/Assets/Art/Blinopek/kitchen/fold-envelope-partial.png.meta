@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: e5ad8eaf1216f694abf3c3daa89311bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1445247381901173184
+    second: fold-envelope-partial_0
+  - first:
+      213: -8178575426213222578
+    second: fold-envelope-partial_1
+  - first:
+      213: 4799568381953390121
+    second: fold-envelope-partial_2
+  - first:
+      213: 8885130178111320477
+    second: fold-envelope-partial_3
+  - first:
+      213: -8567608055180256372
+    second: fold-envelope-partial_4
+  - first:
+      213: -4528569550511687233
+    second: fold-envelope-partial_5
+  - first:
+      213: -442245119297108900
+    second: fold-envelope-partial_6
+  - first:
+      213: -7108839994056769373
+    second: fold-envelope-partial_7
+  - first:
+      213: -1025081655131317750
+    second: fold-envelope-partial_8
+  - first:
+      213: -663352913365443752
+    second: fold-envelope-partial_9
+  - first:
+      213: 2454089549770990202
+    second: fold-envelope-partial_10
+  - first:
+      213: 5804284956001356027
+    second: fold-envelope-partial_11
+  - first:
+      213: 1991460391543478968
+    second: fold-envelope-partial_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fold-envelope-partial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1323
+        height: 1123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e9735d92371fbe0800000000000000
+      internalID: -1445247381901173184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_1
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1050
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4762d75bfcdf7e80800000000000000
+      internalID: -8178575426213222578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_2
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1054
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9263781a30e7b9240800000000000000
+      internalID: 4799568381953390121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_3
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1002
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91bd6152d25e4b70800000000000000
+      internalID: 8885130178111320477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_4
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 959
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b9430fdddb91980800000000000000
+      internalID: -8567608055180256372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_5
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 945
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9b919bcf94721c0800000000000000
+      internalID: -4528569550511687233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_6
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 851
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5445a83864dcd9f0800000000000000
+      internalID: -442245119297108900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_7
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 587
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0082d80b3585d90800000000000000
+      internalID: -7108839994056769373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 568
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ad0207aad26c1f0800000000000000
+      internalID: -1025081655131317750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 571
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85bd1263a0c4bc6f0800000000000000
+      internalID: -663352913365443752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_10
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 512
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a722915717dae0220800000000000000
+      internalID: 2454089549770990202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_11
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 450
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8ca914a66fc8050800000000000000
+      internalID: 5804284956001356027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-envelope-partial_12
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 320
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba9536cca613ab10800000000000000
+      internalID: 1991460391543478968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fold-envelope-partial_0: -1445247381901173184
+      fold-envelope-partial_1: -8178575426213222578
+      fold-envelope-partial_10: 2454089549770990202
+      fold-envelope-partial_11: 5804284956001356027
+      fold-envelope-partial_12: 1991460391543478968
+      fold-envelope-partial_2: 4799568381953390121
+      fold-envelope-partial_3: 8885130178111320477
+      fold-envelope-partial_4: -8567608055180256372
+      fold-envelope-partial_5: -4528569550511687233
+      fold-envelope-partial_6: -442245119297108900
+      fold-envelope-partial_7: -7108839994056769373
+      fold-envelope-partial_8: -1025081655131317750
+      fold-envelope-partial_9: -663352913365443752
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

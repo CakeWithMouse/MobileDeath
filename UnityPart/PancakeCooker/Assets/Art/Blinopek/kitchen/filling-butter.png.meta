@@ -1,0 +1,1315 @@
+fileFormatVersion: 2
+guid: 5656dbf286232924c9a588a8ddc047ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5463043427500851304
+    second: filling-butter_0
+  - first:
+      213: 2771293075363468916
+    second: filling-butter_1
+  - first:
+      213: 170518786398287610
+    second: filling-butter_2
+  - first:
+      213: -1626201026271019316
+    second: filling-butter_3
+  - first:
+      213: -4802411299140271268
+    second: filling-butter_4
+  - first:
+      213: -8331596439911812935
+    second: filling-butter_5
+  - first:
+      213: 3641754374007332243
+    second: filling-butter_6
+  - first:
+      213: -688339646343635057
+    second: filling-butter_7
+  - first:
+      213: 1050104935446364981
+    second: filling-butter_8
+  - first:
+      213: 751176454164719894
+    second: filling-butter_9
+  - first:
+      213: 4911518751546388953
+    second: filling-butter_10
+  - first:
+      213: 9120017717413281365
+    second: filling-butter_11
+  - first:
+      213: 6791746438008113852
+    second: filling-butter_12
+  - first:
+      213: 4347877830344807788
+    second: filling-butter_13
+  - first:
+      213: 7396336741636604633
+    second: filling-butter_14
+  - first:
+      213: 7037007192530509065
+    second: filling-butter_15
+  - first:
+      213: -7249939013515232999
+    second: filling-butter_16
+  - first:
+      213: 5519962776612087677
+    second: filling-butter_17
+  - first:
+      213: 1528245270726710357
+    second: filling-butter_18
+  - first:
+      213: -3029848718312994889
+    second: filling-butter_19
+  - first:
+      213: -3958951788376877147
+    second: filling-butter_20
+  - first:
+      213: 4287511121809255966
+    second: filling-butter_21
+  - first:
+      213: 6120877821953919662
+    second: filling-butter_22
+  - first:
+      213: 4842930414108262103
+    second: filling-butter_23
+  - first:
+      213: 5881488959954847788
+    second: filling-butter_24
+  - first:
+      213: 8616512625414477320
+    second: filling-butter_25
+  - first:
+      213: 2346675762239794240
+    second: filling-butter_26
+  - first:
+      213: 203069402052469293
+    second: filling-butter_27
+  - first:
+      213: -678806385390870497
+    second: filling-butter_28
+  - first:
+      213: -5534871369647224747
+    second: filling-butter_29
+  - first:
+      213: -6084418842068888506
+    second: filling-butter_30
+  - first:
+      213: 1326615281267745412
+    second: filling-butter_31
+  - first:
+      213: 3172665198396591577
+    second: filling-butter_32
+  - first:
+      213: 8746568699192596108
+    second: filling-butter_33
+  - first:
+      213: 5443975783563679502
+    second: filling-butter_34
+  - first:
+      213: 3513715497186207561
+    second: filling-butter_35
+  - first:
+      213: -8568468013024394117
+    second: filling-butter_36
+  - first:
+      213: 8963061233870161700
+    second: filling-butter_37
+  - first:
+      213: -3336571727916001545
+    second: filling-butter_38
+  - first:
+      213: 7659403334302000804
+    second: filling-butter_39
+  - first:
+      213: -4396843325569542755
+    second: filling-butter_40
+  - first:
+      213: 6099314321086469885
+    second: filling-butter_41
+  - first:
+      213: 674620329168036761
+    second: filling-butter_42
+  - first:
+      213: 1658945006233980209
+    second: filling-butter_43
+  - first:
+      213: 3588374774552625866
+    second: filling-butter_44
+  - first:
+      213: 829360622799807216
+    second: filling-butter_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: filling-butter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1017
+        width: 274
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86088b88d01a0db40800000000000000
+      internalID: 5463043427500851304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_1
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1048
+        width: 202
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4761a8d7e5c957620800000000000000
+      internalID: 2771293075363468916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1129
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6fccaceedcd5200800000000000000
+      internalID: 170518786398287610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1095
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce7db758c29e69e0800000000000000
+      internalID: -1626201026271019316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_4
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1031
+        width: 172
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c530c612e586a5db0800000000000000
+      internalID: -4802411299140271268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_5
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1059
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b0b52b3e29306c80800000000000000
+      internalID: -8331596439911812935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_6
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1059
+        width: 109
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d9eedee4c1a8230800000000000000
+      internalID: 3641754374007332243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_7
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1084
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f9ed61db68276f0800000000000000
+      internalID: -688339646343635057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 1316
+        height: 1050
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5334a2600e8b29e00800000000000000
+      internalID: 1050104935446364981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1049
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61920225107bc6a00800000000000000
+      internalID: 751176454164719894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_10
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1023
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1b79d3848392440800000000000000
+      internalID: 4911518751546388953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_11
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1022
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55effa74bcfc09e70800000000000000
+      internalID: 9120017717413281365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1041
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba8ff1b661214e50800000000000000
+      internalID: 6791746438008113852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_13
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 999
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c659f74c9d3c65c30800000000000000
+      internalID: 4347877830344807788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1031
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d28b6c341115a660800000000000000
+      internalID: 7396336741636604633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_15
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1025
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d56a802c878a160800000000000000
+      internalID: 7037007192530509065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_16
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 999
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919bd2801ea036b90800000000000000
+      internalID: -7249939013515232999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_17
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1009
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77a75936e8da9c40800000000000000
+      internalID: 5519962776612087677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_18
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1017
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554165b0afa653510800000000000000
+      internalID: 1528245270726710357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_19
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 955
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b708cdb4a0d3f5d0800000000000000
+      internalID: -3029848718312994889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_20
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 945
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a716eae25afe09c0800000000000000
+      internalID: -3958951788376877147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 746
+        width: 67
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e2af926ac408b30800000000000000
+      internalID: 4287511121809255966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_22
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 902
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa412303f9b1f450800000000000000
+      internalID: 6120877821953919662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_23
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 730
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7debbdc7d8b853340800000000000000
+      internalID: 4842930414108262103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 581
+        width: 67
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c288d703c0f3f9150800000000000000
+      internalID: 5881488959954847788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 556
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8069f70a490049770800000000000000
+      internalID: 8616512625414477320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_26
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 440
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c625b2c21119020800000000000000
+      internalID: 2346675762239794240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 255
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22a6169b8271d200800000000000000
+      internalID: 203069402052469293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_28
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 151
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10a28f50356496f0800000000000000
+      internalID: -678806385390870497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_29
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 147
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55882b670df2033b0800000000000000
+      internalID: -5534871369647224747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_30
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 151
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6445acdbc4dcf8ba0800000000000000
+      internalID: -6084418842068888506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_31
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 148
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482a191d195196210800000000000000
+      internalID: 1326615281267745412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_32
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 126
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd4cad3032970c20800000000000000
+      internalID: 3172665198396591577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 125
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86dceef3ed026970800000000000000
+      internalID: 8746568699192596108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_34
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 119
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e075429b123ec8b40800000000000000
+      internalID: 5443975783563679502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_35
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 87
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947a193d0a933c030800000000000000
+      internalID: 3513715497186207561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_36
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 99
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7442666dbfa61980800000000000000
+      internalID: -8568468013024394117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_37
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 101
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427c7e034b0336c70800000000000000
+      internalID: 8963061233870161700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_38
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 82
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f694fdf0bd12b1d0800000000000000
+      internalID: -3336571727916001545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_39
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 87
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6638450caab4a60800000000000000
+      internalID: 7659403334302000804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_40
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 31
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9551667a464bf2c0800000000000000
+      internalID: -4396843325569542755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_41
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 30
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6dfc93f0e15a450800000000000000
+      internalID: 6099314321086469885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_42
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 37
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99361567d9bbc5900800000000000000
+      internalID: 674620329168036761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_43
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 39
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d0c7691b1c50710800000000000000
+      internalID: 1658945006233980209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_44
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac28e2e68d77cc130800000000000000
+      internalID: 3588374774552625866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-butter_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 17
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2eda0a71b728b00800000000000000
+      internalID: 829360622799807216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      filling-butter_0: 5463043427500851304
+      filling-butter_1: 2771293075363468916
+      filling-butter_10: 4911518751546388953
+      filling-butter_11: 9120017717413281365
+      filling-butter_12: 6791746438008113852
+      filling-butter_13: 4347877830344807788
+      filling-butter_14: 7396336741636604633
+      filling-butter_15: 7037007192530509065
+      filling-butter_16: -7249939013515232999
+      filling-butter_17: 5519962776612087677
+      filling-butter_18: 1528245270726710357
+      filling-butter_19: -3029848718312994889
+      filling-butter_2: 170518786398287610
+      filling-butter_20: -3958951788376877147
+      filling-butter_21: 4287511121809255966
+      filling-butter_22: 6120877821953919662
+      filling-butter_23: 4842930414108262103
+      filling-butter_24: 5881488959954847788
+      filling-butter_25: 8616512625414477320
+      filling-butter_26: 2346675762239794240
+      filling-butter_27: 203069402052469293
+      filling-butter_28: -678806385390870497
+      filling-butter_29: -5534871369647224747
+      filling-butter_3: -1626201026271019316
+      filling-butter_30: -6084418842068888506
+      filling-butter_31: 1326615281267745412
+      filling-butter_32: 3172665198396591577
+      filling-butter_33: 8746568699192596108
+      filling-butter_34: 5443975783563679502
+      filling-butter_35: 3513715497186207561
+      filling-butter_36: -8568468013024394117
+      filling-butter_37: 8963061233870161700
+      filling-butter_38: -3336571727916001545
+      filling-butter_39: 7659403334302000804
+      filling-butter_4: -4802411299140271268
+      filling-butter_40: -4396843325569542755
+      filling-butter_41: 6099314321086469885
+      filling-butter_42: 674620329168036761
+      filling-butter_43: 1658945006233980209
+      filling-butter_44: 3588374774552625866
+      filling-butter_45: 829360622799807216
+      filling-butter_5: -8331596439911812935
+      filling-butter_6: 3641754374007332243
+      filling-butter_7: -688339646343635057
+      filling-butter_8: 1050104935446364981
+      filling-butter_9: 751176454164719894
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

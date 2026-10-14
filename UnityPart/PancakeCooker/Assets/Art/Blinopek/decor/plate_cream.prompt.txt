@@ -1,0 +1,16 @@
+Use case: stylized-concept.
+Style reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.
+Deliverable: ONE isolated EMPTY broad shallow cream ceramic dinner plate for pancake assembly. Slightly elevated overhead three-quarter view so the oval is wide and shallow, center large flat unobstructed cream with subtle cool reflected shade, narrow gently thick rim with no pattern. Full padded silhouette, transparent background, no food, utensils or surface. Painterly ceramic has large calm matte planes and only selected edge strokes. Output a true alpha PNG cutout, never a painted checkerboard or white background.
+Prioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.
+
+--- ITERATION ---
+
+Precise background extraction. Use input image as edit target: keep ONLY the physical Посуда — кремовая керамика exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.
+
+--- ITERATION ---
+
+A single empty cream ceramic dinner plate, isolated on transparent background. Painted matte gouache domestic object in the attached kitchen painting's style: large smooth calm cream area, a few broad colored strokes along rim, one delicate dark brown edge, no tiny texture everywhere. Seen slightly from above, oval plate entire silhouette. No pattern, no food, no table, no backdrop, no gradient, no shadow or halo beyond the plate. PNG with true transparent background.
+
+--- ITERATION ---
+
+Edit the attached transparent ceramic plate cutout: remove ONLY the green leaf border and replace it with the same cream ceramic paint as the center. Preserve the exact plate shape, viewpoint, wide empty center, rim, palette, quiet painterly brushwork and full transparent background. Plain cream dinner plate with no pattern, no food. Keep empty area outside the plate completely transparent; no shadows or glow outside silhouette.

@@ -1,0 +1,1055 @@
+fileFormatVersion: 2
+guid: 1e7371ea86b59734181d6b6e5e1a2842
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5503511722617875581
+    second: container-mushrooms_0
+  - first:
+      213: 7984416208729656381
+    second: container-mushrooms_1
+  - first:
+      213: 9074276267827800353
+    second: container-mushrooms_2
+  - first:
+      213: 1269426692997286389
+    second: container-mushrooms_3
+  - first:
+      213: 5202554547378957086
+    second: container-mushrooms_4
+  - first:
+      213: -343040224797394068
+    second: container-mushrooms_5
+  - first:
+      213: -2207017594435079783
+    second: container-mushrooms_6
+  - first:
+      213: 5077614437666513929
+    second: container-mushrooms_7
+  - first:
+      213: 8080300034660636297
+    second: container-mushrooms_8
+  - first:
+      213: -6015128510353598939
+    second: container-mushrooms_9
+  - first:
+      213: 8265420094962430362
+    second: container-mushrooms_10
+  - first:
+      213: 6157277529691926495
+    second: container-mushrooms_11
+  - first:
+      213: -6188649344785157636
+    second: container-mushrooms_12
+  - first:
+      213: 5479571009364001004
+    second: container-mushrooms_13
+  - first:
+      213: 8721763421154396842
+    second: container-mushrooms_14
+  - first:
+      213: -8720335746624129540
+    second: container-mushrooms_15
+  - first:
+      213: -7049099531533849900
+    second: container-mushrooms_16
+  - first:
+      213: -1745976137089520295
+    second: container-mushrooms_17
+  - first:
+      213: -2482890878701448466
+    second: container-mushrooms_18
+  - first:
+      213: 6264211012800704459
+    second: container-mushrooms_19
+  - first:
+      213: 1908560831829132532
+    second: container-mushrooms_20
+  - first:
+      213: -4231735080725162777
+    second: container-mushrooms_21
+  - first:
+      213: -2638679083826419199
+    second: container-mushrooms_22
+  - first:
+      213: -2787962380112840576
+    second: container-mushrooms_23
+  - first:
+      213: -5818557451909248665
+    second: container-mushrooms_24
+  - first:
+      213: 3919174852737479580
+    second: container-mushrooms_25
+  - first:
+      213: -2928159241622897133
+    second: container-mushrooms_26
+  - first:
+      213: -7857614833808366307
+    second: container-mushrooms_27
+  - first:
+      213: -3618819151779596843
+    second: container-mushrooms_28
+  - first:
+      213: 1597313455943286410
+    second: container-mushrooms_29
+  - first:
+      213: -2467833604476204591
+    second: container-mushrooms_30
+  - first:
+      213: 1512748843238730788
+    second: container-mushrooms_31
+  - first:
+      213: 8173266561245042183
+    second: container-mushrooms_32
+  - first:
+      213: 3286244977397518574
+    second: container-mushrooms_33
+  - first:
+      213: 4892134975968610955
+    second: container-mushrooms_34
+  - first:
+      213: -8384705223288043731
+    second: container-mushrooms_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: container-mushrooms_0
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1183
+        width: 86
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c26dbb0c6606c40800000000000000
+      internalID: 5503511722617875581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_1
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1188
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cc3341d385ece60800000000000000
+      internalID: 7984416208729656381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_2
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1183
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12922a1203e4eed70800000000000000
+      internalID: 9074276267827800353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_3
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1227
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f980800ad8ed9110800000000000000
+      internalID: 1269426692997286389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_4
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1110
+        width: 164
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bad19ebcf233840800000000000000
+      internalID: 5202554547378957086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_5
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1189
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bf749abb64d3bf0800000000000000
+      internalID: -343040224797394068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1189
+        width: 57
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991f8aee0391f51e0800000000000000
+      internalID: -2207017594435079783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1132
+        width: 96
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904e18fbd6f477640800000000000000
+      internalID: 5077614437666513929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1233
+        height: 1176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986168cf11ef22070800000000000000
+      internalID: 8080300034660636297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_9
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1164
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5269c064d78f58ca0800000000000000
+      internalID: -6015128510353598939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_10
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 1154
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a917c97c8cba4b270800000000000000
+      internalID: 8265420094962430362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_11
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1165
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf28c46a4b037550800000000000000
+      internalID: 6157277529691926495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_12
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1132
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf170a4b5308d1aa0800000000000000
+      internalID: -6188649344785157636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_13
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1124
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce08bae0dc85b0c40800000000000000
+      internalID: 5479571009364001004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_14
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1130
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa47e42f9de90970800000000000000
+      internalID: 8721763421154396842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_15
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 985
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5f35c37d42bf680800000000000000
+      internalID: -8720335746624129540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_16
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 971
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da6d84e2519c2e90800000000000000
+      internalID: -7049099531533849900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_17
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 964
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d687234fb05c7e0800000000000000
+      internalID: -1745976137089520295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_18
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 937
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee251f696effa8dd0800000000000000
+      internalID: -2482890878701448466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_19
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 911
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf63181ab2fee650800000000000000
+      internalID: 6264211012800704459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_20
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 923
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4466de6f19c7a10800000000000000
+      internalID: 1908560831829132532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_21
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 883
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e451d16d5bd545c0800000000000000
+      internalID: -4231735080725162777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_22
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 523
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ae5448a57816bd0800000000000000
+      internalID: -2638679083826419199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_23
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 324
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088b83e8cfa2f49d0800000000000000
+      internalID: -2787962380112840576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_24
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 136
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7694fb553d4504fa0800000000000000
+      internalID: -5818557451909248665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_25
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 131
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93bf0e83c4b36630800000000000000
+      internalID: 3919174852737479580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_26
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 134
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e3a4d0fa61d57d0800000000000000
+      internalID: -2928159241622897133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_27
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 119
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d152309a0f424f290800000000000000
+      internalID: -7857614833808366307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_28
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 51
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5fbcf972f57cdc0800000000000000
+      internalID: -3618819151779596843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_29
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 63
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e7370102cca2610800000000000000
+      internalID: 1597313455943286410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_30
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 71
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d98c60796e70cdd0800000000000000
+      internalID: -2467833604476204591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_31
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 36
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ca0abde0d5ef410800000000000000
+      internalID: 1512748843238730788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_32
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 31
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706d69532a64d6170800000000000000
+      internalID: 8173266561245042183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_33
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 31
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0d0ba45661b9d20800000000000000
+      internalID: 3286244977397518574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_34
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 15
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a8fdb47da54e340800000000000000
+      internalID: 4892134975968610955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-mushrooms_35
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 43
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27cd83060b83ab80800000000000000
+      internalID: -8384705223288043731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      container-mushrooms_0: 5503511722617875581
+      container-mushrooms_1: 7984416208729656381
+      container-mushrooms_10: 8265420094962430362
+      container-mushrooms_11: 6157277529691926495
+      container-mushrooms_12: -6188649344785157636
+      container-mushrooms_13: 5479571009364001004
+      container-mushrooms_14: 8721763421154396842
+      container-mushrooms_15: -8720335746624129540
+      container-mushrooms_16: -7049099531533849900
+      container-mushrooms_17: -1745976137089520295
+      container-mushrooms_18: -2482890878701448466
+      container-mushrooms_19: 6264211012800704459
+      container-mushrooms_2: 9074276267827800353
+      container-mushrooms_20: 1908560831829132532
+      container-mushrooms_21: -4231735080725162777
+      container-mushrooms_22: -2638679083826419199
+      container-mushrooms_23: -2787962380112840576
+      container-mushrooms_24: -5818557451909248665
+      container-mushrooms_25: 3919174852737479580
+      container-mushrooms_26: -2928159241622897133
+      container-mushrooms_27: -7857614833808366307
+      container-mushrooms_28: -3618819151779596843
+      container-mushrooms_29: 1597313455943286410
+      container-mushrooms_3: 1269426692997286389
+      container-mushrooms_30: -2467833604476204591
+      container-mushrooms_31: 1512748843238730788
+      container-mushrooms_32: 8173266561245042183
+      container-mushrooms_33: 3286244977397518574
+      container-mushrooms_34: 4892134975968610955
+      container-mushrooms_35: -8384705223288043731
+      container-mushrooms_4: 5202554547378957086
+      container-mushrooms_5: -343040224797394068
+      container-mushrooms_6: -2207017594435079783
+      container-mushrooms_7: 5077614437666513929
+      container-mushrooms_8: 8080300034660636297
+      container-mushrooms_9: -6015128510353598939
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

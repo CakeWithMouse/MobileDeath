@@ -1,0 +1,382 @@
+{
+  "items": [
+    {
+      "id": "panel-cream",
+      "title_ru": "Кремовая панель",
+      "file": "panel-cream.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Общие элементы: панели",
+        "Пауза и настройки",
+        "Итог дня: панель отчёта",
+        "Результат заказа",
+        "Результат покупки"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "button-cream",
+      "title_ru": "Кнопка кремовая",
+      "file": "button-cream.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Общие элементы: кнопки",
+        "Принятие/уточнение",
+        "Покупка/установка",
+        "Переходы"
+      ],
+      "transparent": true,
+      "width": 1942,
+      "height": 809,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tab-sage",
+      "title_ru": "Вкладка шалфейная",
+      "file": "tab-sage.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Вкладки",
+        "Книга рецептов: категории"
+      ],
+      "transparent": true,
+      "width": 1632,
+      "height": 963,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "card-frame",
+      "title_ru": "Рамка карточки",
+      "file": "card-frame.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Магазин: карточка",
+        "Отзывы: карточка",
+        "Рецепты: карточки",
+        "Донат: наборы"
+      ],
+      "transparent": true,
+      "width": 1086,
+      "height": 1448,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "speech-bubble",
+      "title_ru": "Облако реплики",
+      "file": "speech-bubble.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Стойка и диалог: облако и варианты"
+      ],
+      "transparent": true,
+      "width": 2172,
+      "height": 724,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "patience-track",
+      "title_ru": "Шкала терпения",
+      "file": "patience-track.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Стойка: терпение",
+        "Прогресс готовки",
+        "Ожидание покупки"
+      ],
+      "transparent": true,
+      "width": 1774,
+      "height": 887,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "coin-pancake",
+      "title_ru": "Монета с блином",
+      "file": "coin-pancake.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Валюты: монеты",
+        "Цена",
+        "Прибыль",
+        "Награда"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "currency-honey",
+      "title_ru": "Янтарная капля мёда",
+      "file": "currency-honey.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Валюты: мёд",
+        "Премиальные наборы"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "recipe-book-closed",
+      "title_ru": "Книга рецептов: обложка",
+      "file": "recipe-book-closed.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Книга рецептов: обложка",
+        "Кнопка рецептов"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "recipe-book-open",
+      "title_ru": "Книга рецептов: разворот",
+      "file": "recipe-book-open.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Книга рецептов: страницы"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "receipt-order",
+      "title_ru": "Записка заказа",
+      "file": "receipt-order.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Заказ: доступ к тексту",
+        "Итог дня: строки",
+        "Отзывы"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "helper-badge",
+      "title_ru": "Значок помощника начинки",
+      "file": "helper-badge.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "5 помощников: общий знак автоматизации"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "clock-day",
+      "title_ru": "Игровые часы",
+      "file": "clock-day.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Время дня",
+        "Продление дня"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "day-sun",
+      "title_ru": "Значок рабочего дня",
+      "file": "day-sun.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "День",
+        "Следующий день"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "rating-star",
+      "title_ru": "Оценка гостя",
+      "file": "rating-star.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Отзывы: рейтинг",
+        "Результат заказа: оценка",
+        "Фирменный рецепт"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tip-coins",
+      "title_ru": "Чаевые",
+      "file": "tip-coins.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Результат заказа: чаевые",
+        "Итог дня: доход"
+      ],
+      "transparent": true,
+      "width": 1312,
+      "height": 1199,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "refund-coins",
+      "title_ru": "Возврат оплаты",
+      "file": "refund-coins.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Результат заказа: возврат",
+        "Итог дня: расход"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-visitors",
+      "title_ru": "Больше гостей",
+      "file": "upgrade-visitors.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения: частота гостей"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-patience",
+      "title_ru": "Больше терпения",
+      "file": "upgrade-patience.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения: терпение"
+      ],
+      "transparent": true,
+      "width": 1229,
+      "height": 1280,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-speed",
+      "title_ru": "Ускорение плиты",
+      "file": "upgrade-speed.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения кухни: скорость"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-guides",
+      "title_ru": "Трафареты",
+      "file": "upgrade-guides.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения кухни: направляющие"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "repair-stove",
+      "title_ru": "Ремонт плиты",
+      "file": "repair-stove.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Ремонт: неисправность и объект карточки"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "reward-video",
+      "title_ru": "Просмотр за награду",
+      "file": "reward-video.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Реклама за награду: значок/награда"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "reward-ticket",
+      "title_ru": "Билет без просмотра",
+      "file": "reward-ticket.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Донат: билет пропуска рекламы"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "settings-speaker",
+      "title_ru": "Настройка звука",
+      "file": "settings-speaker.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Пауза: звук"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "order-plate",
+      "title_ru": "Счётчик готовых порций",
+      "file": "order-plate.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Заказ: счётчик блинов"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tutorial-hand",
+      "title_ru": "Рука-указатель для обучения",
+      "file": "tutorial-hand.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "T03"
+      ],
+      "transparent": true,
+      "prompt_file": "alpha-repairs.json",
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    }
+  ]
+}

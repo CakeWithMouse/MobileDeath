@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: 05e55968423d4ec4aa11419c452c7ce5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 317891048705236428
+    second: pancake-ready_0
+  - first:
+      213: -1337671188937010971
+    second: pancake-ready_1
+  - first:
+      213: -4456349741482005642
+    second: pancake-ready_2
+  - first:
+      213: -5794076757494265998
+    second: pancake-ready_3
+  - first:
+      213: 8987573502384905925
+    second: pancake-ready_4
+  - first:
+      213: -6870563909869537743
+    second: pancake-ready_5
+  - first:
+      213: -3412645643519618069
+    second: pancake-ready_6
+  - first:
+      213: 4113110429406034910
+    second: pancake-ready_7
+  - first:
+      213: 1926471909745364872
+    second: pancake-ready_8
+  - first:
+      213: -7315018772164226030
+    second: pancake-ready_9
+  - first:
+      213: 54943429081877348
+    second: pancake-ready_10
+  - first:
+      213: -5220397024540453967
+    second: pancake-ready_11
+  - first:
+      213: 2365130257944578839
+    second: pancake-ready_12
+  - first:
+      213: 7572588883505530712
+    second: pancake-ready_13
+  - first:
+      213: 788336507836290826
+    second: pancake-ready_14
+  - first:
+      213: -1637075615202235846
+    second: pancake-ready_15
+  - first:
+      213: 8271141560576780515
+    second: pancake-ready_16
+  - first:
+      213: -367127139805396182
+    second: pancake-ready_17
+  - first:
+      213: -1636004459763841474
+    second: pancake-ready_18
+  - first:
+      213: -199379725499345102
+    second: pancake-ready_19
+  - first:
+      213: 2505125391490109255
+    second: pancake-ready_20
+  - first:
+      213: 1042764232490605777
+    second: pancake-ready_21
+  - first:
+      213: 1493650714667203809
+    second: pancake-ready_22
+  - first:
+      213: 5161517032695979182
+    second: pancake-ready_23
+  - first:
+      213: -2174919625996988335
+    second: pancake-ready_24
+  - first:
+      213: -6119539927498035756
+    second: pancake-ready_25
+  - first:
+      213: -455633042909991375
+    second: pancake-ready_26
+  - first:
+      213: 2483195258542065107
+    second: pancake-ready_27
+  - first:
+      213: -1207196449783475618
+    second: pancake-ready_28
+  - first:
+      213: 4378245754402687922
+    second: pancake-ready_29
+  - first:
+      213: 8811843035056141433
+    second: pancake-ready_30
+  - first:
+      213: 7279204835262774953
+    second: pancake-ready_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pancake-ready_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1360
+        height: 1155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd1a5b7930696400800000000000000
+      internalID: 317891048705236428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_1
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1150
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e092251423af6de0800000000000000
+      internalID: -1337671188937010971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_2
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1150
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67baf08558dd722c0800000000000000
+      internalID: -4456349741482005642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1122
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277053c23ed479fa0800000000000000
+      internalID: -5794076757494265998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_4
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1129
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce9d527b764abc70800000000000000
+      internalID: 8987573502384905925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_5
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1130
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1367b99968ad6a0a0800000000000000
+      internalID: -6870563909869537743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be39ab14ed8d3a0d0800000000000000
+      internalID: -3412645643519618069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_7
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1116
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb73b2b424b41930800000000000000
+      internalID: 4113110429406034910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_8
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1048
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f042abef33cba10800000000000000
+      internalID: 1926471909745364872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_9
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1096
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21456dfee25db7a90800000000000000
+      internalID: -7315018772164226030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_10
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1088
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bca25f1c233c000800000000000000
+      internalID: 54943429081877348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_11
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 873
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b392c5a09c6d87b0800000000000000
+      internalID: -5220397024540453967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_12
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 849
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b80584071a2d020800000000000000
+      internalID: 2365130257944578839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 615
+        width: 5
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8574b6fd77d371960800000000000000
+      internalID: 7572588883505530712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 183
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07dd0980ebb0fa00800000000000000
+      internalID: 788336507836290826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_15
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 137
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3aaa6dc660f749e0800000000000000
+      internalID: -1637075615202235846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 87
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8262d4d6ff8c270800000000000000
+      internalID: 8271141560576780515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_17
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 45
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a238e7cbfc3b7eaf0800000000000000
+      internalID: -367127139805396182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 5
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3642dc9c9ebb49e0800000000000000
+      internalID: -1636004459763841474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 15
+        width: 99
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237523e2239ab3df0800000000000000
+      internalID: -199379725499345102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_20
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 47
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f4495554ef3c220800000000000000
+      internalID: 2505125391490109255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_21
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 55
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcd51e6b84a87e00800000000000000
+      internalID: 1042764232490605777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_22
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 33
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec3f3a49638ab410800000000000000
+      internalID: 1493650714667203809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 33
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacd8f3f46461a740800000000000000
+      internalID: 5161517032695979182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_24
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 35
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1509c659f1221d1e0800000000000000
+      internalID: -2174919625996988335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_25
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 44
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dde8a0dbd6031ba0800000000000000
+      internalID: -6119539927498035756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_26
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 45
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e6b6959244da9f0800000000000000
+      internalID: -455633042909991375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_27
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 35
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5855d5ee4167220800000000000000
+      internalID: 2483195258542065107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_28
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 15
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e521b84993d2f3fe0800000000000000
+      internalID: -1207196449783475618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_29
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 18
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbc8821157a2cc30800000000000000
+      internalID: 4378245754402687922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_30
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 27
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9747501ad84f94a70800000000000000
+      internalID: 8811843035056141433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pancake-ready_31
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 12
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aeb4251b3ee40560800000000000000
+      internalID: 7279204835262774953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pancake-ready_0: 317891048705236428
+      pancake-ready_1: -1337671188937010971
+      pancake-ready_10: 54943429081877348
+      pancake-ready_11: -5220397024540453967
+      pancake-ready_12: 2365130257944578839
+      pancake-ready_13: 7572588883505530712
+      pancake-ready_14: 788336507836290826
+      pancake-ready_15: -1637075615202235846
+      pancake-ready_16: 8271141560576780515
+      pancake-ready_17: -367127139805396182
+      pancake-ready_18: -1636004459763841474
+      pancake-ready_19: -199379725499345102
+      pancake-ready_2: -4456349741482005642
+      pancake-ready_20: 2505125391490109255
+      pancake-ready_21: 1042764232490605777
+      pancake-ready_22: 1493650714667203809
+      pancake-ready_23: 5161517032695979182
+      pancake-ready_24: -2174919625996988335
+      pancake-ready_25: -6119539927498035756
+      pancake-ready_26: -455633042909991375
+      pancake-ready_27: 2483195258542065107
+      pancake-ready_28: -1207196449783475618
+      pancake-ready_29: 4378245754402687922
+      pancake-ready_3: -5794076757494265998
+      pancake-ready_30: 8811843035056141433
+      pancake-ready_31: 7279204835262774953
+      pancake-ready_4: 8987573502384905925
+      pancake-ready_5: -6870563909869537743
+      pancake-ready_6: -3412645643519618069
+      pancake-ready_7: 4113110429406034910
+      pancake-ready_8: 1926471909745364872
+      pancake-ready_9: -7315018772164226030
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

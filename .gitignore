@@ -44,6 +44,9 @@
 ExportedObj/
 .consulo/
 *.csproj
+!/Tools/CoreChecks/CoreChecks.csproj
+/Tools/CoreChecks/bin/
+/Tools/CoreChecks/obj/
 *.unityproj
 *.sln
 *.slnx

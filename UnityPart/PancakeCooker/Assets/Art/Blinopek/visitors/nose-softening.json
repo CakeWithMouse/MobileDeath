@@ -1,0 +1,187 @@
+{
+  "status": "complete",
+  "count": 9,
+  "edit": "Softened nose bridge, tip, nostrils and lateral shadow contrast; nine targeted built-in imagegen edits.",
+  "files": [
+    {
+      "id": "nurse-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/nurse-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-neutral.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.49014727274576825
+    },
+    {
+      "id": "nurse-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/nurse-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-positive.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.48517481486002606
+    },
+    {
+      "id": "nurse-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/nurse-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/nurse-negative.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4809430440266927
+    },
+    {
+      "id": "elder-man-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/elder-man-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-neutral.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.42032941182454425
+    },
+    {
+      "id": "elder-man-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/elder-man-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-positive.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4215431213378906
+    },
+    {
+      "id": "elder-man-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/elder-man-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/elder-man-negative.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4105491638183594
+    },
+    {
+      "id": "traveler-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/traveler-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-neutral.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.41208839416503906
+    },
+    {
+      "id": "traveler-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/traveler-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-positive.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.41176478068033856
+    },
+    {
+      "id": "traveler-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-nose-softening/traveler-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/traveler-negative.nose-softening.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4063707987467448
+    }
+  ]
+}

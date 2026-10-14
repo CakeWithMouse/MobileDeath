@@ -1,0 +1,486 @@
+{
+  "total": 24,
+  "status": "passed",
+  "images": [
+    {
+      "file": "student-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3963,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2511789
+    },
+    {
+      "file": "student-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4007,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2395557
+    },
+    {
+      "file": "student-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4011,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2303076
+    },
+    {
+      "file": "office-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3967,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2673967
+    },
+    {
+      "file": "office-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.397,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2451593
+    },
+    {
+      "file": "office-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3976,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2391912
+    },
+    {
+      "file": "craftswoman-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3941,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2656164
+    },
+    {
+      "file": "craftswoman-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3971,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2452906
+    },
+    {
+      "file": "craftswoman-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.402,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2404327
+    },
+    {
+      "file": "nurse-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4879,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2262585
+    },
+    {
+      "file": "nurse-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4855,
+      "corner_alpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "bytes": 2104067
+    },
+    {
+      "file": "nurse-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.491,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2035900
+    },
+    {
+      "file": "elder-woman-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3689,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2756772
+    },
+    {
+      "file": "elder-woman-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3726,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2455913
+    },
+    {
+      "file": "elder-woman-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3591,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2468700
+    },
+    {
+      "file": "elder-man-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4162,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2600963
+    },
+    {
+      "file": "elder-man-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4207,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2352432
+    },
+    {
+      "file": "elder-man-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4222,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2364425
+    },
+    {
+      "file": "florist-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.3605,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2699869
+    },
+    {
+      "file": "florist-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.365,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2395767
+    },
+    {
+      "file": "florist-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.363,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2390764
+    },
+    {
+      "file": "traveler-neutral.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4081,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2549487
+    },
+    {
+      "file": "traveler-positive.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4116,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2356081
+    },
+    {
+      "file": "traveler-negative.png",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.4065,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bytes": 2427896
+    }
+  ]
+}

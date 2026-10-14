@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "collection": "Блинопёк — кухня и еда",
+  "generated_with": "built-in image_gen",
+  "source_style_reference": "C:/Users/мистер биба/.codex/skills/blinopek-painterly/references/kitchen-original.png",
+  "asset_counts": {
+    "painted_png": 36,
+    "user_supplied_png": 1,
+    "geometry_svg": 3,
+    "geometry_png_exports": 3
+  },
+  "data_files": [
+    "fold-geometry.json",
+    "validation.json"
+  ],
+  "notes_file": "README.txt",
+  "assets": [
+    {
+      "id": "stove",
+      "title_ru": "Старая эмалированная плита",
+      "file": "stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        39,
+        63,
+        1097,
+        1351
+      ],
+      "prompt": "prompts/stove.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "assembly-table",
+      "title_ru": "Стол сборки",
+      "file": "assembly-table.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1231,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        17,
+        75,
+        1214,
+        1227
+      ],
+      "prompt": "prompts/assembly-table.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pan-base",
+      "title_ru": "Сковорода — основа",
+      "file": "pan-base.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Сковорода — основа, рабочая область"
+      ],
+      "states_or_reuse": "Ручка и блин отдельные; переворот движением слоя.",
+      "transparent": true,
+      "width": 1347,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        75,
+        80,
+        1273,
+        1081
+      ],
+      "prompt": "prompts/pan-base.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background",
+      "title_ru": "Фон кухни без оборудования",
+      "file": "kitchen-background.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "visible_bbox_alpha_gt_16": null,
+      "prompt": "prompts/kitchen-background.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "pan-handle",
+      "title_ru": "Сковорода — отдельная ручка",
+      "file": "pan-handle.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Сковорода — ручка для нажатия"
+      ],
+      "states_or_reuse": "Отдельное движение/нажатие; соединяется с основой сковороды.",
+      "transparent": true,
+      "width": 1346,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        70,
+        109,
+        1293,
+        1082
+      ],
+      "prompt": "prompts/pan-handle.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "plate",
+      "title_ru": "Пустая тарелка сборки",
+      "file": "plate.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Тарелка"
+      ],
+      "states_or_reuse": "Блин и начинка отдельными слоями; можно переиспользовать для превью.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        41,
+        50,
+        1321,
+        1101
+      ],
+      "prompt": "prompts/plate.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "batter-pitcher",
+      "title_ru": "Наливалка с тестом",
+      "file": "batter-pitcher.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Наливалка теста"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        31,
+        39,
+        1201,
+        1241
+      ],
+      "prompt": "prompts/batter-pitcher.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "container-butter",
+      "title_ru": "Маслёнка",
+      "file": "container-butter.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1374,
+      "height": 1145,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        92,
+        145,
+        1320,
+        1038
+      ],
+      "prompt": "prompts/container-butter.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-jam",
+      "title_ru": "Миска с вареньем",
+      "file": "container-jam.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        77,
+        109,
+        1177,
+        1145
+      ],
+      "prompt": "prompts/container-jam.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-honey",
+      "title_ru": "Банка с мёдом",
+      "file": "container-honey.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        153,
+        97,
+        1077,
+        1169
+      ],
+      "prompt": "prompts/container-honey.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-curd",
+      "title_ru": "Миска с творогом",
+      "file": "container-curd.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1290,
+      "height": 1219,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        116,
+        129,
+        1175,
+        1092
+      ],
+      "prompt": "prompts/container-curd.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-mushrooms",
+      "title_ru": "Миска с грибами",
+      "file": "container-mushrooms.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        132,
+        181,
+        1126,
+        1083
+      ],
+      "prompt": "prompts/container-mushrooms.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-ready",
+      "title_ru": "Блин — готовая поверхность",
+      "file": "pancake-ready.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — готовая"
+      ],
+      "states_or_reuse": "Базовая готовая поверхность, независимый выбор для каждой стороны; дырки накладываются маской покрытия.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        47,
+        60,
+        1321,
+        1083
+      ],
+      "prompt": "prompts/pancake-ready.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "batter-raw",
+      "title_ru": "Сырое тесто — текстура нанесения",
+      "file": "batter-raw.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Сырое тесто"
+      ],
+      "states_or_reuse": "Проявляется маской по следу пальца, покрытие сохраняется.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        47,
+        52,
+        1321,
+        1085
+      ],
+      "prompt": "prompts/batter-raw.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-undercooked",
+      "title_ru": "Блин — недожаренная поверхность",
+      "file": "pancake-undercooked.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — сырая/недожаренная"
+      ],
+      "states_or_reuse": "Силуэт и положение сохранены от готового блина. Каждая сторона хранит своё состояние; дырки общей маской.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        45,
+        54,
+        1321,
+        1086
+      ],
+      "prompt": "prompts/pancake-undercooked.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-burnt",
+      "title_ru": "Блин — подгоревшая поверхность",
+      "file": "pancake-burnt.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — подгоревшая"
+      ],
+      "states_or_reuse": "Силуэт и положение сохранены от готового блина. Каждая сторона хранит своё состояние; дырки общей маской.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        45,
+        54,
+        1326,
+        1083
+      ],
+      "prompt": "prompts/pancake-burnt.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "scraper",
+      "title_ru": "Кулинарный скребок",
+      "file": "scraper.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Инструмент удаления начинки"
+      ],
+      "states_or_reuse": "Один PNG для применения и масштабируемых иконок магазина/запаса.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        67,
+        133,
+        1210,
+        1143
+      ],
+      "prompt": "prompts/scraper.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "ready-tray",
+      "title_ru": "Поднос текущего заказа",
+      "file": "ready-tray.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Место готовых блинов текущего заказа"
+      ],
+      "states_or_reuse": "Отдельный статический слой; содержимое отдельно.",
+      "transparent": true,
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        35,
+        193,
+        1508,
+        875
+      ],
+      "prompt": "prompts/ready-tray.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "discard-bowl",
+      "title_ru": "Ёмкость для удаления блина",
+      "file": "discard-bowl.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Место удаления блина"
+      ],
+      "states_or_reuse": "Отдельный статический слой; содержимое отдельно.",
+      "transparent": true,
+      "width": 1231,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        114,
+        113,
+        1130,
+        1157
+      ],
+      "prompt": "prompts/discard-bowl.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-butter",
+      "title_ru": "Масло — слой для намазывания",
+      "file": "filling-butter.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Масло — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1363,
+      "height": 1154,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        115,
+        142,
+        1257,
+        978
+      ],
+      "prompt": "prompts/filling-butter.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-jam",
+      "title_ru": "Варенье — слой для намазывания",
+      "file": "filling-jam.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Варенье — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        86,
+        227,
+        1297,
+        912
+      ],
+      "prompt": "prompts/filling-jam.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-honey",
+      "title_ru": "Мёд — слой для намазывания",
+      "file": "filling-honey.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Мёд — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1346,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        76,
+        217,
+        1284,
+        932
+      ],
+      "prompt": "prompts/filling-honey.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-curd",
+      "title_ru": "Творог — переносимая порция",
+      "file": "filling-curd.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Творог — порция"
+      ],
+      "states_or_reuse": "Один спрайт порции переиспользуется на каждой позиции трафарета; ручное и автоматическое нанесение одинаковы.",
+      "transparent": true,
+      "width": 1374,
+      "height": 1145,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        155,
+        127,
+        1222,
+        1003
+      ],
+      "prompt": "prompts/filling-curd.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-mushrooms",
+      "title_ru": "Грибы — переносимая порция",
+      "file": "filling-mushrooms.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Грибы — порция"
+      ],
+      "states_or_reuse": "Один спрайт порции переиспользуется на каждой позиции трафарета; ручное и автоматическое нанесение одинаковы.",
+      "transparent": true,
+      "width": 1347,
+      "height": 1167,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        171,
+        148,
+        1202,
+        1018
+      ],
+      "prompt": "prompts/filling-mushrooms.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-triangle",
+      "title_ru": "Блин — треугольник",
+      "file": "fold-triangle.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Треугольник"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        326,
+        213,
+        1111,
+        932
+      ],
+      "prompt": "prompts/fold-triangle.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-half",
+      "title_ru": "Блин — первый сгиб пополам",
+      "file": "fold-half.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Треугольник — первый сгиб"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        34,
+        365,
+        1333,
+        910
+      ],
+      "prompt": "prompts/fold-half.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-envelope",
+      "title_ru": "Блин — конверт",
+      "file": "fold-envelope.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Конверт"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        290,
+        350,
+        1119,
+        847
+      ],
+      "prompt": "prompts/fold-envelope.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-roll",
+      "title_ru": "Блин — трубочка",
+      "file": "fold-roll.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Трубочка"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        99,
+        433,
+        1264,
+        770
+      ],
+      "prompt": "prompts/fold-roll.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-envelope-partial",
+      "title_ru": "Блин — конверт, боковые сгибы",
+      "file": "fold-envelope-partial.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Конверт — промежуточное состояние"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        314,
+        103,
+        1097,
+        1057
+      ],
+      "prompt": "prompts/fold-envelope-partial.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-roll-partial",
+      "title_ru": "Блин — трубочка, начало сворачивания",
+      "file": "fold-roll-partial.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Трубочка — промежуточное состояние"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        35,
+        180,
+        1336,
+        980
+      ],
+      "prompt": "prompts/fold-roll-partial.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-incorrect",
+      "title_ru": "Блин — неровный незавершённый сгиб",
+      "file": "fold-incorrect.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Ошибочное складывание — образец"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        60,
+        84,
+        1311,
+        1093
+      ],
+      "prompt": "prompts/fold-incorrect.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "guide-batter-circle",
+      "title_ru": "Контур круга теста",
+      "file": "guide-batter-circle.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Направляющие — контур круга теста"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "guide-filling-marker",
+      "title_ru": "Отметка порционной начинки",
+      "file": "guide-filling-marker.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Направляющие — отметки трафарета"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "coverage-domain",
+      "title_ru": "Область нанесения теста",
+      "file": "coverage-domain.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Покрытие и дырки — геометрическая область"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background-user",
+      "title_ru": "Фон кухни, выбранный пользователем",
+      "file": "kitchen-background-user.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни — активный фон экрана"
+      ],
+      "transparent": false,
+      "source": "User attachment; unchanged",
+      "states_or_reuse": "Основной фон композиции screens/kitchen.png. Столешницы уже в фоне, повторно не накладывать.",
+      "active_in_catalog": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "kitchen-background-fitted-v2",
+      "title_ru": "Кухня без щелей — предыдущий фон",
+      "file": "kitchen-background-fitted-v2.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-fitted-v2.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "active_in_catalog": false
+    },
+    {
+      "id": "kitchen-background-fitted-v3",
+      "title_ru": "Кухня без щелей — мягкая живопись",
+      "file": "kitchen-background-fitted-v3.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-fitted-v3.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "active_in_catalog": false
+    },
+    {
+      "id": "batter-pitcher-floral-v2",
+      "title_ru": "Цветочный кувшин с тестом",
+      "file": "batter-pitcher-floral-v2.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "prompt": "prompts/batter-pitcher-floral-v2.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "visible_bbox_alpha_gt_16": [
+        49,
+        77,
+        1236,
+        1184
+      ],
+      "active_in_catalog": true
+    },
+    {
+      "id": "crepe-stove",
+      "title_ru": "Специальная блинная плита",
+      "file": "crepe-stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA",
+      "prompt": "prompts/crepe-stove.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "visible_bbox_alpha_gt_16": [
+        73,
+        82,
+        1066,
+        1339
+      ],
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background-crepe-stove",
+      "title_ru": "Фон кухни с блинной плитой",
+      "file": "kitchen-background-crepe-stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-perspective.txt",
+      "states_or_reuse": "Фон готовки. Подвижные предметы и их тени размещаются отдельными группами.",
+      "active_in_catalog": true
+    }
+  ],
+  "contact_shadows": "shadows/manifest.json"
+}

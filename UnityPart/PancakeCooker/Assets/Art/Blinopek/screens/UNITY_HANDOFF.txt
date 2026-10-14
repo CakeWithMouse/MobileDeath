@@ -1,0 +1,61 @@
+КУХНЯ — КООРДИНАТЫ И ГОТОВЫЕ АССЕТЫ
+
+Figma: https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520
+Размер 1600×900. Начало координат слева сверху.
+Источник раскладки: screens/screens.js, функция kitchenBase().
+Готовая спецификация слоёв: figma/layered/kitchen-layout.json.
+Редактируемый экспорт: figma/layered/kitchen.svg.
+PNG для визуального сравнения: screens/kitchen.png.
+
+art() задаёт прямоугольник ВИДИМОЙ части спрайта. Полные PNG имеют прозрачные
+поля: учитывать screens/asset-bounds.js (bbox при alpha>128). В layout.json
+группа содержит видимый прямоугольник, дочерний img — размер полного PNG
+и отрицательное смещение прозрачных полей. Не растягивать весь файл напрямую
+в прямоугольник видимого силуэта. stretch:true намеренно меняет проекцию.
+
+ГОТОВО
+kitchen/kitchen-background-crepe-stove.png — действующий цельный фон с
+одним чугунным диском. Старая газовая плита, pan-base и pan-handle на экране
+готовки больше не используются. Новая плита уже нарисована в фоне;
+kitchen/crepe-stove.png — отдельный предмет для каталога/улучшений, не дублировать
+его поверх фона.
+kitchen/batter-pitcher-floral-v2.png — кувшин с тестом.
+kitchen/container-{jam,honey,curd,mushrooms,butter}.png — пять ёмкостей.
+plate.png, ready-tray.png, pancake-ready.png, filling-jam.png,
+fold-triangle.png, scraper.png, discard-bowl.png — предметы текущего примера.
+Все стадии теста/блина, виды начинок и формы складывания зарегистрированы
+в kitchen/manifest.json. UI: ui/manifest.json, ui/glyphs.json, ui/states.json.
+
+ТЕНИ
+kitchen/shadows/*.png — прозрачные спрайты, *.svg — исходная геометрия.
+Тень — дочерний слой предмета, рисуется под ним. Скрывать её вместе с
+заблокированной начинкой; также скрывать выделение и значок помощника.
+Браузерный пример: ?locked=curd,mushrooms#kitchen.
+Тени предметов в фон не впечатывать.
+
+ТРЕБУЕТ РЕАЛИЗАЦИИ В ИГРЕ
+Макеты показывают композицию; переходы, цены, счётчики и примеры заказа
+демонстрационные. Сигнал готовности двух сторон пока является предложением.
+Открытие текста заказа, управление жаркой, жесты нанесения и складывания,
+маски покрытия и покупка помощников должны связываться с игровыми состояниями.
+Статические формы/направляющие есть; деформации жестов и анимации не поставлены.
+
+СТАБИЛЬНОСТЬ И ОГРАНИЧЕНИЯ ИНТЕРФЕЙСА
+Текущие кухонные PNG и их геометрия стабильны после правки перспективы.
+Отдельная текстура рамки выбора не нужна: в макете это тонкий неровный
+контур native ring (#7c9278), позиция и размер находятся в layout.json.
+Стороны показаны маленькими pancake-ready.png / pancake-undercooked.png,
+цифрами 1/2 и ui/glyphs/check.svg (.png есть рядом). Отдельных нарисованных
+иконок «первая сторона»/«вторая сторона» нет.
+Области нанесения: kitchen/guide-batter-circle.*, guide-filling-marker.*,
+coverage-domain.*, fold-geometry.json; подгонять к видимой части блина.
+ВАЖНО: пользователь просил обычный экран без подписей действий и зон.
+Текст вроде «Жарить», «Перевернуть», «Перенести» допустим только в обучении.
+Новые текстовые кнопки вне обучения и конкретный способ управления новой
+плитой этим макетом не утверждены. Текст заказа и числовой HUD — отдельные слои.
+
+
+Revision 8 — visitors, serving tray and shop prices
+All 24 visitor PNGs have natural almond eyes from the new reference; identities and three reactions are preserved. Source canvas dimensions may differ. Use updated asset-bounds.js or per-screen layout JSON for visible silhouette placement. Existing .meta files and GUIDs were preserved.
+Counter: decor/service_delivery.png replaced by a shallow horizontal tray; visible box [1065,748,350,100] in 1600×900 coordinates. Object owns kitchen/shadows/tray.svg.
+Shop: prices moved to footer center (coin y571, text y568); purchase/state icons y666 with size50. See shop-layout.json for exact positions.

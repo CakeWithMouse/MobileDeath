@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "screens": 9,
+  "unique_original_pngs": 66,
+  "validated": [
+    {
+      "key": "facade",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 4,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "counter",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 28,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "kitchen",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 37,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "recipes",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 26,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "shop",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 41,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "day",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 19,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "reviews",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 33,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "pause",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 44,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    },
+    {
+      "key": "rewards",
+      "xml_valid": true,
+      "viewbox": "1600x900",
+      "images": 18,
+      "all_pngs_identical_to_originals": true,
+      "no_screen_png_used": true
+    }
+  ]
+}

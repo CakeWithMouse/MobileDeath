@@ -1,0 +1,10 @@
+{
+  "autoReferenced": true,
+  "references": [
+    "Blinopek.Domain",
+    "Blinopek.Application"
+  ],
+  "noEngineReferences": false,
+  "name": "Blinopek.Infrastructure",
+  "rootNamespace": "Blinopek.Infrastructure"
+}

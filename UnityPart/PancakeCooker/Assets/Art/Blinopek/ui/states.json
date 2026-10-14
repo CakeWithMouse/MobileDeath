@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "note_ru": "Данные для сборки компонентов; это не реализованная логика Unity. Живописные PNG переиспользуются, геометрические знаки — отдельные SVG.",
+  "button": {
+    "base": "button-cream.png",
+    "normal": {
+      "scale": 1,
+      "opacity": 1
+    },
+    "pressed": {
+      "scale": 0.96,
+      "offset_y": 2
+    },
+    "selected": {
+      "overlay": "glyphs/selected.png"
+    },
+    "disabled": {
+      "opacity": 0.45
+    }
+  },
+  "shop_card": {
+    "base": "card-frame.png",
+    "locked": "glyphs/lock.png",
+    "available": "glyphs/plus.png",
+    "purchased": "glyphs/check.png",
+    "installed": "glyphs/selected.png"
+  },
+  "purchase_feedback": {
+    "waiting": "glyphs/loading.png",
+    "success": "glyphs/check.png",
+    "error": "glyphs/close.png",
+    "restore": "glyphs/undo.png"
+  },
+  "helper": {
+    "base": "helper-badge.png",
+    "ingredients": [
+      "butter",
+      "jam",
+      "honey",
+      "curd",
+      "mushrooms"
+    ],
+    "ingredient_source": "../kitchen/container-{ingredient}.png",
+    "locked": "glyphs/lock.png",
+    "available": "glyphs/plus.png",
+    "enabled": "glyphs/check.png",
+    "disabled": {
+      "opacity": 0.45
+    }
+  },
+  "progress": {
+    "track": "patience-track.png",
+    "fill": "#7d9279",
+    "warning_fill": "#ad714f",
+    "value": "0..1; clipping is done by runtime"
+  },
+  "tutorial": {
+    "hand": "tutorial-hand.png",
+    "target": "glyphs/focus-hole.png",
+    "gesture": "glyphs/gesture-line.png",
+    "complete": "glyphs/check.png",
+    "retry": "glyphs/undo.png",
+    "tooltip": "speech-bubble.png",
+    "new_skill": "card-frame.png",
+    "heat_signal": "proposal only; final signal not approved"
+  },
+  "layers": {
+    "fillings": "before folding; separate from crepe",
+    "scraper": "removes all selected filling type before folding",
+    "discard": "removes whole crepe",
+    "ready": "portions of current order, never a stack of raw crepes"
+  },
+  "fonts": {
+    "ui_regular": "fonts/PT_Sans-Web-Regular.ttf",
+    "ui_bold": "fonts/PT_Sans-Web-Bold.ttf",
+    "display": "fonts/PT_Serif-Web-Regular.ttf",
+    "license": "fonts/*-OFL.txt"
+  }
+}

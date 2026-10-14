@@ -1,0 +1,46 @@
+[
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Оборудование кухни.svg",
+    "name": "Блинопёк — Оборудование кухни",
+    "count": 3,
+    "ids": [
+      "kitchen-background-crepe-stove",
+      "batter-pitcher-floral-v2",
+      "crepe-stove"
+    ],
+    "x": 16000,
+    "y": 0
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Знаки и направляющие.svg",
+    "name": "Блинопёк — Знаки и направляющие",
+    "count": 23,
+    "ids": [
+      "arrow-left",
+      "arrow-right",
+      "check",
+      "close",
+      "exit",
+      "focus-hole",
+      "gear",
+      "gesture-line",
+      "hand-drag",
+      "help",
+      "loading",
+      "lock",
+      "minus",
+      "mute",
+      "pause",
+      "play",
+      "plus",
+      "selected",
+      "undo",
+      "guide-batter-circle",
+      "guide-filling-marker",
+      "coverage-domain",
+      "font-specimen"
+    ],
+    "x": 16000,
+    "y": 2200
+  }
+]

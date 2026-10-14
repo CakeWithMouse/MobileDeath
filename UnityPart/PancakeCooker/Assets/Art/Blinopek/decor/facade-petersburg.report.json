@@ -1,0 +1,23 @@
+{
+  "output": "facade_base.png",
+  "backup": "archive/facade-before-petersburg/facade_base.png",
+  "generation_tool": "builtin image_gen",
+  "generated_source": "C:\\Users\\мистер биба\\.codex\\generated_images\\01a139d5-07c7-7803-a208-a31a24afe8bf\\exec-f43f02bd-a4e5-42c1-bffe-d3049cf438d5.png",
+  "style_reference": "C:/Users/мистер биба/.codex/skills/blinopek-painterly/references/kitchen-original.png",
+  "initial_prompt": "facade-petersburg.prompt.txt",
+  "refinement_prompt": "facade-petersburg-refinement.prompt.txt",
+  "changes": [
+    "Petersburg historical ground-floor plaster architecture with restrained rustication",
+    "Cool grey stone plinth, pavement slabs and granite curb",
+    "Simple wrought-iron light bracket",
+    "Quieter broad matte paint planes with selective varied strokes"
+  ],
+  "preserved": [
+    "Intimate frontal composition",
+    "Two side windows and one central timber door",
+    "Blank signboard",
+    "Muted cozy interior lighting",
+    "Bench, linen curtains and ordinary plants"
+  ],
+  "review": "Visually inspected the first generation and refined paint handling; no text or UI was added."
+}

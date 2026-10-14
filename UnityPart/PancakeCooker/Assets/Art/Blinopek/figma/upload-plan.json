@@ -1,0 +1,222 @@
+[
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Кухня 01.svg",
+    "name": "Блинопёк — Кухня 01",
+    "group": "kitchen",
+    "count": 8,
+    "ids": [
+      "assembly-table",
+      "pan-base",
+      "pan-handle",
+      "plate",
+      "container-butter",
+      "container-jam",
+      "container-honey",
+      "container-curd"
+    ],
+    "x": 8000,
+    "y": 0
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Кухня 02.svg",
+    "name": "Блинопёк — Кухня 02",
+    "group": "kitchen",
+    "count": 8,
+    "ids": [
+      "container-mushrooms",
+      "pancake-ready",
+      "batter-raw",
+      "pancake-undercooked",
+      "pancake-burnt",
+      "scraper",
+      "ready-tray",
+      "discard-bowl"
+    ],
+    "x": 8000,
+    "y": 1100
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Кухня 03.svg",
+    "name": "Блинопёк — Кухня 03",
+    "group": "kitchen",
+    "count": 8,
+    "ids": [
+      "filling-butter",
+      "filling-jam",
+      "filling-honey",
+      "filling-curd",
+      "filling-mushrooms",
+      "fold-triangle",
+      "fold-half",
+      "fold-envelope"
+    ],
+    "x": 8000,
+    "y": 2200
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Кухня 04.svg",
+    "name": "Блинопёк — Кухня 04",
+    "group": "kitchen",
+    "count": 4,
+    "ids": [
+      "fold-roll",
+      "fold-envelope-partial",
+      "fold-roll-partial",
+      "fold-incorrect"
+    ],
+    "x": 8000,
+    "y": 3300
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Окружение 01.svg",
+    "name": "Блинопёк — Окружение 01",
+    "group": "decor",
+    "count": 8,
+    "ids": [
+      "facade_base",
+      "facade_green",
+      "wall_plaster",
+      "wall_botanical",
+      "floor_wood",
+      "floor_terracotta",
+      "table_base",
+      "stool_base"
+    ],
+    "x": 10000,
+    "y": 0
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Окружение 02.svg",
+    "name": "Блинопёк — Окружение 02",
+    "group": "decor",
+    "count": 8,
+    "ids": [
+      "table_premium",
+      "chair_premium",
+      "cloth_linen",
+      "cloth_check",
+      "plate_cream",
+      "plate_green",
+      "lamp_base",
+      "lamp_brass"
+    ],
+    "x": 10000,
+    "y": 1100
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Окружение 03.svg",
+    "name": "Блинопёк — Окружение 03",
+    "group": "decor",
+    "count": 5,
+    "ids": [
+      "pitcher",
+      "vase_flowers",
+      "service_background",
+      "service_counter",
+      "service_delivery"
+    ],
+    "x": 10000,
+    "y": 2200
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Посетители.svg",
+    "name": "Блинопёк — Посетители",
+    "group": "visitors",
+    "count": 24,
+    "ids": [
+      "student-neutral",
+      "student-positive",
+      "student-negative",
+      "office-neutral",
+      "office-positive",
+      "office-negative",
+      "craftswoman-neutral",
+      "craftswoman-positive",
+      "craftswoman-negative",
+      "nurse-neutral",
+      "nurse-positive",
+      "nurse-negative",
+      "elder-woman-neutral",
+      "elder-woman-positive",
+      "elder-woman-negative",
+      "elder-man-neutral",
+      "elder-man-positive",
+      "elder-man-negative",
+      "florist-neutral",
+      "florist-positive",
+      "florist-negative",
+      "traveler-neutral",
+      "traveler-positive",
+      "traveler-negative"
+    ],
+    "x": 12000,
+    "y": 0
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Интерфейс 01.svg",
+    "name": "Блинопёк — Интерфейс 01",
+    "group": "ui",
+    "count": 8,
+    "ids": [
+      "panel-cream",
+      "button-cream",
+      "tab-sage",
+      "card-frame",
+      "speech-bubble",
+      "patience-track",
+      "coin-pancake",
+      "currency-honey"
+    ],
+    "x": 14000,
+    "y": 0
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Интерфейс 02.svg",
+    "name": "Блинопёк — Интерфейс 02",
+    "group": "ui",
+    "count": 8,
+    "ids": [
+      "recipe-book-closed",
+      "recipe-book-open",
+      "receipt-order",
+      "helper-badge",
+      "clock-day",
+      "day-sun",
+      "rating-star",
+      "tip-coins"
+    ],
+    "x": 14000,
+    "y": 1100
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Интерфейс 03.svg",
+    "name": "Блинопёк — Интерфейс 03",
+    "group": "ui",
+    "count": 8,
+    "ids": [
+      "refund-coins",
+      "upgrade-visitors",
+      "upgrade-patience",
+      "upgrade-speed",
+      "upgrade-guides",
+      "repair-stove",
+      "reward-video",
+      "reward-ticket"
+    ],
+    "x": 14000,
+    "y": 2200
+  },
+  {
+    "file": "C:\\Users\\мистер биба\\Documents\\ChatGPT\\Блинопёк\\MobileDeath\\UnityPart\\PancakeCooker\\Assets\\Art\\Blinopek\\figma\\catalog\\Блинопёк — Интерфейс 04.svg",
+    "name": "Блинопёк — Интерфейс 04",
+    "group": "ui",
+    "count": 3,
+    "ids": [
+      "settings-speaker",
+      "order-plate",
+      "tutorial-hand"
+    ],
+    "x": 14000,
+    "y": 3300
+  }
+]

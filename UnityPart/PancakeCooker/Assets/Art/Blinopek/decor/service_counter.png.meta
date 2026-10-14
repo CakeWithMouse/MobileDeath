@@ -1,0 +1,1887 @@
+fileFormatVersion: 2
+guid: 430e31c75e293374190ca97bf189b5ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4934783424854346678
+    second: service_counter_0
+  - first:
+      213: 924433591360746185
+    second: service_counter_1
+  - first:
+      213: 8373287025753526755
+    second: service_counter_2
+  - first:
+      213: 7613570731611055118
+    second: service_counter_3
+  - first:
+      213: -4599870244681040154
+    second: service_counter_4
+  - first:
+      213: -6470103803245990512
+    second: service_counter_5
+  - first:
+      213: -5192302979646749686
+    second: service_counter_6
+  - first:
+      213: 774873219124205005
+    second: service_counter_7
+  - first:
+      213: -7161067954603968344
+    second: service_counter_8
+  - first:
+      213: 1435110616905710239
+    second: service_counter_9
+  - first:
+      213: 259440037764431506
+    second: service_counter_10
+  - first:
+      213: -969269251239261300
+    second: service_counter_11
+  - first:
+      213: 6326616988389530989
+    second: service_counter_12
+  - first:
+      213: 4006178389640034061
+    second: service_counter_13
+  - first:
+      213: 2086555856497825503
+    second: service_counter_14
+  - first:
+      213: 746759375421234455
+    second: service_counter_15
+  - first:
+      213: -8312159927358504804
+    second: service_counter_16
+  - first:
+      213: 4469383099118950737
+    second: service_counter_17
+  - first:
+      213: 2084238776586061362
+    second: service_counter_18
+  - first:
+      213: -972561132302064966
+    second: service_counter_19
+  - first:
+      213: 1100598924214136616
+    second: service_counter_20
+  - first:
+      213: -2917029420635914347
+    second: service_counter_21
+  - first:
+      213: -3214192602830513266
+    second: service_counter_22
+  - first:
+      213: 3763369793581595531
+    second: service_counter_23
+  - first:
+      213: -2926619200563164672
+    second: service_counter_24
+  - first:
+      213: -7013800558409076228
+    second: service_counter_25
+  - first:
+      213: -1967562784922229066
+    second: service_counter_26
+  - first:
+      213: 6628309953772831713
+    second: service_counter_27
+  - first:
+      213: 3074429619770691217
+    second: service_counter_28
+  - first:
+      213: 5102871587294693588
+    second: service_counter_29
+  - first:
+      213: -8474510199523265306
+    second: service_counter_30
+  - first:
+      213: -4512099583209806662
+    second: service_counter_31
+  - first:
+      213: 456318079103126335
+    second: service_counter_32
+  - first:
+      213: 6982387546026231229
+    second: service_counter_33
+  - first:
+      213: -7553570173632547069
+    second: service_counter_34
+  - first:
+      213: -2513893217421737331
+    second: service_counter_35
+  - first:
+      213: 1682722524526355431
+    second: service_counter_36
+  - first:
+      213: 3347047428346335299
+    second: service_counter_37
+  - first:
+      213: -2173041391103180687
+    second: service_counter_38
+  - first:
+      213: 7910126193416565788
+    second: service_counter_39
+  - first:
+      213: -1201099604602582304
+    second: service_counter_40
+  - first:
+      213: 1239424672082348409
+    second: service_counter_41
+  - first:
+      213: -6640858203709956022
+    second: service_counter_42
+  - first:
+      213: 6181640664196667022
+    second: service_counter_43
+  - first:
+      213: 54830282526680611
+    second: service_counter_44
+  - first:
+      213: 3955353780698956590
+    second: service_counter_45
+  - first:
+      213: 6566618118861455256
+    second: service_counter_46
+  - first:
+      213: 7160979513018563860
+    second: service_counter_47
+  - first:
+      213: 5079280112534167598
+    second: service_counter_48
+  - first:
+      213: 1824242359530797193
+    second: service_counter_49
+  - first:
+      213: 3055721038884606079
+    second: service_counter_50
+  - first:
+      213: 5265124755332761670
+    second: service_counter_51
+  - first:
+      213: 4036670725552900456
+    second: service_counter_52
+  - first:
+      213: -7599573265809200554
+    second: service_counter_53
+  - first:
+      213: -975246794303383076
+    second: service_counter_54
+  - first:
+      213: -8980515421200037962
+    second: service_counter_55
+  - first:
+      213: 594059641465049921
+    second: service_counter_56
+  - first:
+      213: 8785444835459500087
+    second: service_counter_57
+  - first:
+      213: 1753034270082308492
+    second: service_counter_58
+  - first:
+      213: 2554933732503186219
+    second: service_counter_59
+  - first:
+      213: -4007115515532470159
+    second: service_counter_60
+  - first:
+      213: 7176108940383238696
+    second: service_counter_61
+  - first:
+      213: 7374037559863987370
+    second: service_counter_62
+  - first:
+      213: 4027313684913391551
+    second: service_counter_63
+  - first:
+      213: -7071418967082387980
+    second: service_counter_64
+  - first:
+      213: 1558036109973510013
+    second: service_counter_65
+  - first:
+      213: 7582725507865890954
+    second: service_counter_66
+  - first:
+      213: 8120388560400149094
+    second: service_counter_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: service_counter_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 584
+        width: 88
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbcde9116fdb7440800000000000000
+      internalID: 4934783424854346678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 594
+        width: 95
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2fe77147f34dc00800000000000000
+      internalID: 924433591360746185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 610
+        width: 86
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e11d64bf24e33470800000000000000
+      internalID: 8373287025753526755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_3
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 683
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04ecf1fd36d8a960800000000000000
+      internalID: 7613570731611055118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_4
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 626
+        width: 30
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eeb5e4326af920c0800000000000000
+      internalID: -4599870244681040154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_5
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 691
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d6e9bfed29536a0800000000000000
+      internalID: -6470103803245990512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_6
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 625
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0404f333fb31f7b0800000000000000
+      internalID: -5192302979646749686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 681
+        width: 107
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc59cdb5617e0ca00800000000000000
+      internalID: 774873219124205005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_8
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 673
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8b561e2a6ce9c90800000000000000
+      internalID: -7161067954603968344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_9
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 649
+        width: 14
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a7e06a0898ae310800000000000000
+      internalID: 1435110616905710239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_10
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 578
+        width: 109
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e767bf657b99300800000000000000
+      internalID: 259440037764431506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_11
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 694
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bcc2c50c67c82f0800000000000000
+      internalID: -969269251239261300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_12
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 691
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6dd8ee81a8acc750800000000000000
+      internalID: 6326616988389530989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_13
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 638
+        width: 53
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07375d050ec89730800000000000000
+      internalID: 4006178389640034061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_14
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 578
+        width: 65
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd650961f7fe4fc10800000000000000
+      internalID: 2086555856497825503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_15
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 626
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ddca802b50d5a00800000000000000
+      internalID: 746759375421234455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_16
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 560
+        width: 248
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c904f85f59645ac80800000000000000
+      internalID: -8312159927358504804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_17
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 681
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1599e14bf30760e30800000000000000
+      internalID: 4469383099118950737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_18
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 642
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236c181ef14bcec10800000000000000
+      internalID: 2084238776586061362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_19
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 626
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2a8c29dc4c082f0800000000000000
+      internalID: -972561132302064966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 578
+        width: 70
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fe5fde3ec164f00800000000000000
+      internalID: 1100598924214136616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_21
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 572
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ff1af6231a487d0800000000000000
+      internalID: -2917029420635914347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_22
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 629
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b59947bd4e463d0800000000000000
+      internalID: -3214192602830513266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_23
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 594
+        width: 65
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bbdd853ec2a3430800000000000000
+      internalID: 3763369793581595531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_24
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 651
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a489dc75f8267d0800000000000000
+      internalID: -2926619200563164672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_25
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 626
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf137968d89f9ae90800000000000000
+      internalID: -7013800558409076228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_26
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 586
+        width: 42
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6ae6b5210d1b4e0800000000000000
+      internalID: -1967562784922229066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_27
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 656
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3c0dfd8cc7cfb50800000000000000
+      internalID: 6628309953772831713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_28
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 658
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e0f5d33719aaa20800000000000000
+      internalID: 3074429619770691217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_29
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 645
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d842272caa01d640800000000000000
+      internalID: 5102871587294693588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_30
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 564
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4bdf79fdd746a80800000000000000
+      internalID: -8474510199523265306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_31
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 626
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4679fc55dc161c0800000000000000
+      internalID: -4512099583209806662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_32
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 624
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bc78110ea255600800000000000000
+      internalID: 456318079103126335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_33
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 624
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db541059a7c66e060800000000000000
+      internalID: 6982387546026231229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_34
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 632
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30775a692f35c2790800000000000000
+      internalID: -7553570173632547069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_35
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 626
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82405c107bdc1dd0800000000000000
+      internalID: -2513893217421737331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_36
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 610
+        width: 13
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e321f9783b3a5710800000000000000
+      internalID: 1682722524526355431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_37
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 644
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340d7f417e9137e20800000000000000
+      internalID: 3347047428346335299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_38
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 612
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17003193e5ec7d1e0800000000000000
+      internalID: -2173041391103180687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_39
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 626
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c147b1ffcd966cd60800000000000000
+      internalID: 7910126193416565788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_40
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 618
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea0dc7f546d45fe0800000000000000
+      internalID: -1201099604602582304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_41
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 642
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979c2592c22533110800000000000000
+      internalID: 1239424672082348409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_42
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 642
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a40212406aee6d3a0800000000000000
+      internalID: -6640858203709956022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_43
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 642
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e865d8eae6999c550800000000000000
+      internalID: 6181640664196667022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_44
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 636
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326efe8f9dbc2c000800000000000000
+      internalID: 54830282526680611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_45
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 626
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e234f83ae4d34e630800000000000000
+      internalID: 3955353780698956590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_46
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 629
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f716e3360512b50800000000000000
+      internalID: 6566618118861455256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_47
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 620
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d32553de8e06360800000000000000
+      internalID: 7160979513018563860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_48
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 616
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e202e46e95a3d7640800000000000000
+      internalID: 5079280112534167598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_49
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 594
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988bd00c2c2015910800000000000000
+      internalID: 1824242359530797193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_50
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 578
+        width: 72
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70976f481a186a20800000000000000
+      internalID: 3055721038884606079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_51
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 619
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64889b3b11b711940800000000000000
+      internalID: 5265124755332761670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_52
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 626
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8698ccf33a2250830800000000000000
+      internalID: 4036670725552900456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_53
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 614
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a23e60164e88690800000000000000
+      internalID: -7599573265809200554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_54
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 627
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd95539253a3772f0800000000000000
+      internalID: -975246794303383076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_55
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 626
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b744732eccce5380800000000000000
+      internalID: -8980515421200037962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_56
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 584
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1439be0b8168e3800800000000000000
+      internalID: 594059641465049921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_57
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 582
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7388a53d78b2ce970800000000000000
+      internalID: 8785444835459500087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_58
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 604
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8997537167045810800000000000000
+      internalID: 1753034270082308492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_59
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 615
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2be38e61b2f47320800000000000000
+      internalID: 2554933732503186219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_60
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 594
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1781bb25badd368c0800000000000000
+      internalID: -4007115515532470159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_61
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 584
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a3c058f09a69360800000000000000
+      internalID: 7176108940383238696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_62
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 594
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacc4146718d55660800000000000000
+      internalID: 7374037559863987370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_63
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 557
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb705547574e3e730800000000000000
+      internalID: 4027313684913391551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_64
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 568
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f538195ae54ddd90800000000000000
+      internalID: -7071418967082387980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2172
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77d33256914f9510800000000000000
+      internalID: 1558036109973510013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_66
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 554
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80d3a5aca04b3960800000000000000
+      internalID: 7582725507865890954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: service_counter_67
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 13
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66aebcc3f5a61b070800000000000000
+      internalID: 8120388560400149094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      service_counter_0: 4934783424854346678
+      service_counter_1: 924433591360746185
+      service_counter_10: 259440037764431506
+      service_counter_11: -969269251239261300
+      service_counter_12: 6326616988389530989
+      service_counter_13: 4006178389640034061
+      service_counter_14: 2086555856497825503
+      service_counter_15: 746759375421234455
+      service_counter_16: -8312159927358504804
+      service_counter_17: 4469383099118950737
+      service_counter_18: 2084238776586061362
+      service_counter_19: -972561132302064966
+      service_counter_2: 8373287025753526755
+      service_counter_20: 1100598924214136616
+      service_counter_21: -2917029420635914347
+      service_counter_22: -3214192602830513266
+      service_counter_23: 3763369793581595531
+      service_counter_24: -2926619200563164672
+      service_counter_25: -7013800558409076228
+      service_counter_26: -1967562784922229066
+      service_counter_27: 6628309953772831713
+      service_counter_28: 3074429619770691217
+      service_counter_29: 5102871587294693588
+      service_counter_3: 7613570731611055118
+      service_counter_30: -8474510199523265306
+      service_counter_31: -4512099583209806662
+      service_counter_32: 456318079103126335
+      service_counter_33: 6982387546026231229
+      service_counter_34: -7553570173632547069
+      service_counter_35: -2513893217421737331
+      service_counter_36: 1682722524526355431
+      service_counter_37: 3347047428346335299
+      service_counter_38: -2173041391103180687
+      service_counter_39: 7910126193416565788
+      service_counter_4: -4599870244681040154
+      service_counter_40: -1201099604602582304
+      service_counter_41: 1239424672082348409
+      service_counter_42: -6640858203709956022
+      service_counter_43: 6181640664196667022
+      service_counter_44: 54830282526680611
+      service_counter_45: 3955353780698956590
+      service_counter_46: 6566618118861455256
+      service_counter_47: 7160979513018563860
+      service_counter_48: 5079280112534167598
+      service_counter_49: 1824242359530797193
+      service_counter_5: -6470103803245990512
+      service_counter_50: 3055721038884606079
+      service_counter_51: 5265124755332761670
+      service_counter_52: 4036670725552900456
+      service_counter_53: -7599573265809200554
+      service_counter_54: -975246794303383076
+      service_counter_55: -8980515421200037962
+      service_counter_56: 594059641465049921
+      service_counter_57: 8785444835459500087
+      service_counter_58: 1753034270082308492
+      service_counter_59: 2554933732503186219
+      service_counter_6: -5192302979646749686
+      service_counter_60: -4007115515532470159
+      service_counter_61: 7176108940383238696
+      service_counter_62: 7374037559863987370
+      service_counter_63: 4027313684913391551
+      service_counter_64: -7071418967082387980
+      service_counter_65: 1558036109973510013
+      service_counter_66: 7582725507865890954
+      service_counter_67: 8120388560400149094
+      service_counter_7: 774873219124205005
+      service_counter_8: -7161067954603968344
+      service_counter_9: 1435110616905710239
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

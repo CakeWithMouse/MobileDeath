@@ -1,0 +1,2589 @@
+fileFormatVersion: 2
+guid: 908e415d9ef097549b8a9efdb6383787
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3054188442791469993
+    second: filling-honey_0
+  - first:
+      213: 6966485622352106401
+    second: filling-honey_1
+  - first:
+      213: -1507523659335776531
+    second: filling-honey_2
+  - first:
+      213: -5751187008753110391
+    second: filling-honey_3
+  - first:
+      213: 2824428816912186266
+    second: filling-honey_4
+  - first:
+      213: 5732590872360160672
+    second: filling-honey_5
+  - first:
+      213: 5398789525750959567
+    second: filling-honey_6
+  - first:
+      213: 70728579454096918
+    second: filling-honey_7
+  - first:
+      213: 3651417460898989301
+    second: filling-honey_8
+  - first:
+      213: -6724961860616654417
+    second: filling-honey_9
+  - first:
+      213: 2476111187030818561
+    second: filling-honey_10
+  - first:
+      213: 5168446717405943946
+    second: filling-honey_11
+  - first:
+      213: 4392459363182928913
+    second: filling-honey_12
+  - first:
+      213: 1711268463613749552
+    second: filling-honey_13
+  - first:
+      213: 6028986298254925614
+    second: filling-honey_14
+  - first:
+      213: 2670084964661849966
+    second: filling-honey_15
+  - first:
+      213: -1958746778315615511
+    second: filling-honey_16
+  - first:
+      213: -3051645393160138093
+    second: filling-honey_17
+  - first:
+      213: 8463082431043856929
+    second: filling-honey_18
+  - first:
+      213: -6176191805847615350
+    second: filling-honey_19
+  - first:
+      213: -1634432953779673099
+    second: filling-honey_20
+  - first:
+      213: 2112320908500620862
+    second: filling-honey_21
+  - first:
+      213: 3349533471347968605
+    second: filling-honey_22
+  - first:
+      213: 8086876791935227268
+    second: filling-honey_23
+  - first:
+      213: -4460160932998894617
+    second: filling-honey_24
+  - first:
+      213: -8717190659023330753
+    second: filling-honey_25
+  - first:
+      213: 903816654021750395
+    second: filling-honey_26
+  - first:
+      213: -2336334297344156843
+    second: filling-honey_27
+  - first:
+      213: -6780008855396465209
+    second: filling-honey_28
+  - first:
+      213: -6886276683681235873
+    second: filling-honey_29
+  - first:
+      213: 8635422046369998330
+    second: filling-honey_30
+  - first:
+      213: 3615285421175188704
+    second: filling-honey_31
+  - first:
+      213: -3347381412894311466
+    second: filling-honey_32
+  - first:
+      213: 7510964645972495766
+    second: filling-honey_33
+  - first:
+      213: 6146823438118472256
+    second: filling-honey_34
+  - first:
+      213: -654971671519449382
+    second: filling-honey_35
+  - first:
+      213: -2475677356324706211
+    second: filling-honey_36
+  - first:
+      213: 942504184022271609
+    second: filling-honey_37
+  - first:
+      213: 3243743906165821486
+    second: filling-honey_38
+  - first:
+      213: -7319651968722143249
+    second: filling-honey_39
+  - first:
+      213: 7101016378396279504
+    second: filling-honey_40
+  - first:
+      213: -5906746682307368814
+    second: filling-honey_41
+  - first:
+      213: 7028151736459490481
+    second: filling-honey_42
+  - first:
+      213: -6770094277664623279
+    second: filling-honey_43
+  - first:
+      213: -8271479107231086709
+    second: filling-honey_44
+  - first:
+      213: 4339290888370907716
+    second: filling-honey_45
+  - first:
+      213: 4114845374641566455
+    second: filling-honey_46
+  - first:
+      213: -4579673031929716630
+    second: filling-honey_47
+  - first:
+      213: -5976343221403020335
+    second: filling-honey_48
+  - first:
+      213: -1245888541878444805
+    second: filling-honey_49
+  - first:
+      213: 7225297160121642956
+    second: filling-honey_50
+  - first:
+      213: 6064900114396627124
+    second: filling-honey_51
+  - first:
+      213: 5274068892607931346
+    second: filling-honey_52
+  - first:
+      213: 5215606132810141152
+    second: filling-honey_53
+  - first:
+      213: -6886280604990442517
+    second: filling-honey_54
+  - first:
+      213: -4238738130272924822
+    second: filling-honey_55
+  - first:
+      213: -8995510907567213018
+    second: filling-honey_56
+  - first:
+      213: 2165952092219438681
+    second: filling-honey_57
+  - first:
+      213: 7844761649135828922
+    second: filling-honey_58
+  - first:
+      213: -7168937826951238233
+    second: filling-honey_59
+  - first:
+      213: -4699304486571156569
+    second: filling-honey_60
+  - first:
+      213: 6495685349751138910
+    second: filling-honey_61
+  - first:
+      213: -999907157485501023
+    second: filling-honey_62
+  - first:
+      213: -5164081041185709075
+    second: filling-honey_63
+  - first:
+      213: -3504502924111173309
+    second: filling-honey_64
+  - first:
+      213: -3925744656095336326
+    second: filling-honey_65
+  - first:
+      213: 5591096151029481066
+    second: filling-honey_66
+  - first:
+      213: 1395086430359583590
+    second: filling-honey_67
+  - first:
+      213: -9050380650132859123
+    second: filling-honey_68
+  - first:
+      213: 676547628843314267
+    second: filling-honey_69
+  - first:
+      213: 1053575630437741212
+    second: filling-honey_70
+  - first:
+      213: 4209142643437791736
+    second: filling-honey_71
+  - first:
+      213: -6317493107865439486
+    second: filling-honey_72
+  - first:
+      213: 1310994156420463620
+    second: filling-honey_73
+  - first:
+      213: 5009526529499067028
+    second: filling-honey_74
+  - first:
+      213: 8671489250988374287
+    second: filling-honey_75
+  - first:
+      213: 3365978637943908821
+    second: filling-honey_76
+  - first:
+      213: -6486141468556275069
+    second: filling-honey_77
+  - first:
+      213: -4898032877351469262
+    second: filling-honey_78
+  - first:
+      213: -5583080471161585358
+    second: filling-honey_79
+  - first:
+      213: 5430570327792184920
+    second: filling-honey_80
+  - first:
+      213: -7149051330085997099
+    second: filling-honey_81
+  - first:
+      213: -4684341425437103660
+    second: filling-honey_82
+  - first:
+      213: 2680816820873185408
+    second: filling-honey_83
+  - first:
+      213: 1835395029478738270
+    second: filling-honey_84
+  - first:
+      213: -2392346335688591282
+    second: filling-honey_85
+  - first:
+      213: 7990152060834952926
+    second: filling-honey_86
+  - first:
+      213: -1345412365456833449
+    second: filling-honey_87
+  - first:
+      213: -4179104473491822585
+    second: filling-honey_88
+  - first:
+      213: -5125808095237713734
+    second: filling-honey_89
+  - first:
+      213: -1916461066131674224
+    second: filling-honey_90
+  - first:
+      213: -6112758148705450438
+    second: filling-honey_91
+  - first:
+      213: 3278377805317556917
+    second: filling-honey_92
+  - first:
+      213: 2798331644695153210
+    second: filling-honey_93
+  - first:
+      213: 1764891389954632462
+    second: filling-honey_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: filling-honey_0
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1111
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a360b9f438a26a20800000000000000
+      internalID: 3054188442791469993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_1
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1121
+        width: 75
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3d92573cdeda060800000000000000
+      internalID: 6966485622352106401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1157
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de64bc21833341be0800000000000000
+      internalID: -1507523659335776531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1151
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982fd6af2edaf20b0800000000000000
+      internalID: -5751187008753110391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_4
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1095
+        width: 52
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b7d656b03623720800000000000000
+      internalID: 2824428816912186266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_5
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1121
+        width: 107
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad8cad96014e8f40800000000000000
+      internalID: 5732590872360160672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_6
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1143
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd4c7b387a5cea40800000000000000
+      internalID: 5398789525750959567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_7
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1140
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61654dda4474bf000800000000000000
+      internalID: 70728579454096918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1346
+        height: 1130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f40b8ba5d07ca230800000000000000
+      internalID: 3651417460898989301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1127
+        width: 142
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1f4e171d22ca2a0800000000000000
+      internalID: -6724961860616654417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_10
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1119
+        width: 107
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fb75f610aec5220800000000000000
+      internalID: 2476111187030818561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_11
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1127
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88d387e7e20ab740800000000000000
+      internalID: 5168446717405943946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_12
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1125
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1146bd0c48625fc30800000000000000
+      internalID: 4392459363182928913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_13
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 1126
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039a609d995afb710800000000000000
+      internalID: 1711268463613749552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_14
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1087
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f9e2768134ba350800000000000000
+      internalID: 6028986298254925614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1099
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fe7cee02c0e0520800000000000000
+      internalID: 2670084964661849966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_16
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1081
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e29e89de2221d4e0800000000000000
+      internalID: -1958746778315615511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_17
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1101
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3929b38eea066a5d0800000000000000
+      internalID: -3051645393160138093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_18
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1102
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ae737b1a8e27570800000000000000
+      internalID: 8463082431043856929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_19
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1103
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8846c38642c94aa0800000000000000
+      internalID: -6176191805847615350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_20
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1103
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f725cc53e35159e0800000000000000
+      internalID: -1634432953779673099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_21
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1087
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e365fcabca8705d10800000000000000
+      internalID: 2112320908500620862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_22
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1087
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a0af212feeb7e20800000000000000
+      internalID: 3349533471347968605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_23
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1077
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48556ad989b5a3070800000000000000
+      internalID: 8086876791935227268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_24
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1085
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eba68b23435a12c0800000000000000
+      internalID: -4460160932998894617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_25
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 1088
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32af810841560780800000000000000
+      internalID: -8717190659023330753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_26
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1086
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e6c0d45700b8c00800000000000000
+      internalID: 903816654021750395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_27
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1070
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b5d32c55ca39fd0800000000000000
+      internalID: -2336334297344156843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_28
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1090
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c547183ed198e1a0800000000000000
+      internalID: -6780008855396465209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_29
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1073
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5cff1c57d70f60a0800000000000000
+      internalID: -6886276683681235873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_30
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1075
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5e577499e27d770800000000000000
+      internalID: 8635422046369998330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_31
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1079
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecabca9fe21c2230800000000000000
+      internalID: 3615285421175188704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_32
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1079
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db70b41756bb81d0800000000000000
+      internalID: -3347381412894311466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_33
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1068
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d45bbfc8e4c3860800000000000000
+      internalID: 7510964645972495766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_34
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1035
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ac8168957ed4550800000000000000
+      internalID: 6146823438118472256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_35
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1054
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adea3252cb219e6f0800000000000000
+      internalID: -654971671519449382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_36
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1063
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58a9c5af80a4add0800000000000000
+      internalID: -2475677356324706211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_37
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1055
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97687ffcf82741d00800000000000000
+      internalID: 942504184022271609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_38
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1063
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e201a5585e7140d20800000000000000
+      internalID: 3243743906165821486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_39
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1034
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7f3dcc05f5b6a90800000000000000
+      internalID: -7319651968722143249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_40
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1031
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d28a8af5c0eb8260800000000000000
+      internalID: 7101016378396279504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_41
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 951
+        width: 150
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2982ade0035070ea0800000000000000
+      internalID: -5906746682307368814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_42
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1039
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4763f74c2098160800000000000000
+      internalID: 7028151736459490481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_43
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1035
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15535ebbf1bcb02a0800000000000000
+      internalID: -6770094277664623279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_44
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1045
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b870d6e739dc53d80800000000000000
+      internalID: -8271479107231086709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_45
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1041
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44aef6a8212483c30800000000000000
+      internalID: 4339290888370907716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_46
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1045
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f27b2d111eda1930800000000000000
+      internalID: 4114845374641566455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_47
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1040
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60a46044abb170c0800000000000000
+      internalID: -4579673031929716630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_48
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1012
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d395701183cf0da0800000000000000
+      internalID: -5976343221403020335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_49
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1004
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc1b9fd8f6b5bee0800000000000000
+      internalID: -1245888541878444805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_50
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1005
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf60b16c79654460800000000000000
+      internalID: 7225297160121642956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_51
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1017
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b046d4558ada2450800000000000000
+      internalID: 6064900114396627124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_52
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1013
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d365d0f6b1413940800000000000000
+      internalID: 5274068892607931346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_53
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 1014
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed4f72f42e816840800000000000000
+      internalID: 5215606132810141152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_54
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1009
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3f1eb56440f60a0800000000000000
+      internalID: -6886280604990442517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_55
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 989
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bcd29d02afc25c0800000000000000
+      internalID: -4238738130272924822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_56
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1001
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626fd456d76892380800000000000000
+      internalID: -8995510907567213018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_57
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 993
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956f041c3f10f0e10800000000000000
+      internalID: 2165952092219438681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_58
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 995
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf395418213edc60800000000000000
+      internalID: 7844761649135828922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_59
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 985
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ade5bf6701d28c90800000000000000
+      internalID: -7168937826951238233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_60
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 981
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abd68aa777b8ceb0800000000000000
+      internalID: -4699304486571156569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_61
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 975
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a20a4f86f452a50800000000000000
+      internalID: 6495685349751138910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 895
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5c4bdecbd9f12f0800000000000000
+      internalID: -999907157485501023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 5
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3ebcc47af7558b0800000000000000
+      internalID: -5164081041185709075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349290e78218d5fc0800000000000000
+      internalID: -3504502924111173309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_65
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 175
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78ac86e804f489c0800000000000000
+      internalID: -3925744656095336326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_66
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 165
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e7a239350979d40800000000000000
+      internalID: 5591096151029481066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_67
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 161
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bfc8887b75c5310800000000000000
+      internalID: 1395086430359583590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_68
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 143
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0713caefb6966280800000000000000
+      internalID: -9050380650132859123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_69
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 145
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ca6d2eb74936900800000000000000
+      internalID: 676547628843314267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_70
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 161
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92ff3c247d0f9e00800000000000000
+      internalID: 1053575630437741212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_71
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 143
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9ee07eee0e96a30800000000000000
+      internalID: 4209142643437791736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_72
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 133
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203b3ba6d71c358a0800000000000000
+      internalID: -6317493107865439486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 127
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40cfd044d36913210800000000000000
+      internalID: 1310994156420463620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_74
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 95
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492ffa346d9658540800000000000000
+      internalID: 5009526529499067028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_75
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 109
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09b7ceb781575870800000000000000
+      internalID: 8671489250988374287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_76
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 87
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9233cccbb56be20800000000000000
+      internalID: 3365978637943908821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_77
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 97
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382d5cb03b89cf5a0800000000000000
+      internalID: -6486141468556275069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_78
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 87
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ff7478c01b60cb0800000000000000
+      internalID: -4898032877351469262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_79
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 89
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2314ef354e9e482b0800000000000000
+      internalID: -5583080471161585358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_80
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 85
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e64d3d0f24d5b40800000000000000
+      internalID: 5430570327792184920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_81
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 79
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5b03d41b779cc90800000000000000
+      internalID: -7149051330085997099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_82
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 58
+        width: 47
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9ac22da40edfeb0800000000000000
+      internalID: -4684341425437103660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_83
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 68
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088c90ce1bc243520800000000000000
+      internalID: 2680816820873185408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_84
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 62
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5909921e02a87910800000000000000
+      internalID: 1835395029478738270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_85
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 55
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48f291deadacced0800000000000000
+      internalID: -2392346335688591282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_86
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 47
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed63c6737f8b2ee60800000000000000
+      internalID: 7990152060834952926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_87
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 43
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7540788f492245de0800000000000000
+      internalID: -1345412365456833449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_88
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 39
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708264a8f96d006c0800000000000000
+      internalID: -4179104473491822585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_89
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 45
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0d880f1b87dd8b0800000000000000
+      internalID: -5125808095237713734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_90
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 46
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bea5f60dc5765e0800000000000000
+      internalID: -1916461066131674224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_91
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 53
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36898cb9de1b2ba0800000000000000
+      internalID: -6112758148705450438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_92
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 23
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba4a7d8e332f7d20800000000000000
+      internalID: 3278377805317556917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_93
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 26
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a0acdfdcba5d620800000000000000
+      internalID: 2798331644695153210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: filling-honey_94
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 31
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b246d4e572e7810800000000000000
+      internalID: 1764891389954632462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      filling-honey_0: 3054188442791469993
+      filling-honey_1: 6966485622352106401
+      filling-honey_10: 2476111187030818561
+      filling-honey_11: 5168446717405943946
+      filling-honey_12: 4392459363182928913
+      filling-honey_13: 1711268463613749552
+      filling-honey_14: 6028986298254925614
+      filling-honey_15: 2670084964661849966
+      filling-honey_16: -1958746778315615511
+      filling-honey_17: -3051645393160138093
+      filling-honey_18: 8463082431043856929
+      filling-honey_19: -6176191805847615350
+      filling-honey_2: -1507523659335776531
+      filling-honey_20: -1634432953779673099
+      filling-honey_21: 2112320908500620862
+      filling-honey_22: 3349533471347968605
+      filling-honey_23: 8086876791935227268
+      filling-honey_24: -4460160932998894617
+      filling-honey_25: -8717190659023330753
+      filling-honey_26: 903816654021750395
+      filling-honey_27: -2336334297344156843
+      filling-honey_28: -6780008855396465209
+      filling-honey_29: -6886276683681235873
+      filling-honey_3: -5751187008753110391
+      filling-honey_30: 8635422046369998330
+      filling-honey_31: 3615285421175188704
+      filling-honey_32: -3347381412894311466
+      filling-honey_33: 7510964645972495766
+      filling-honey_34: 6146823438118472256
+      filling-honey_35: -654971671519449382
+      filling-honey_36: -2475677356324706211
+      filling-honey_37: 942504184022271609
+      filling-honey_38: 3243743906165821486
+      filling-honey_39: -7319651968722143249
+      filling-honey_4: 2824428816912186266
+      filling-honey_40: 7101016378396279504
+      filling-honey_41: -5906746682307368814
+      filling-honey_42: 7028151736459490481
+      filling-honey_43: -6770094277664623279
+      filling-honey_44: -8271479107231086709
+      filling-honey_45: 4339290888370907716
+      filling-honey_46: 4114845374641566455
+      filling-honey_47: -4579673031929716630
+      filling-honey_48: -5976343221403020335
+      filling-honey_49: -1245888541878444805
+      filling-honey_5: 5732590872360160672
+      filling-honey_50: 7225297160121642956
+      filling-honey_51: 6064900114396627124
+      filling-honey_52: 5274068892607931346
+      filling-honey_53: 5215606132810141152
+      filling-honey_54: -6886280604990442517
+      filling-honey_55: -4238738130272924822
+      filling-honey_56: -8995510907567213018
+      filling-honey_57: 2165952092219438681
+      filling-honey_58: 7844761649135828922
+      filling-honey_59: -7168937826951238233
+      filling-honey_6: 5398789525750959567
+      filling-honey_60: -4699304486571156569
+      filling-honey_61: 6495685349751138910
+      filling-honey_62: -999907157485501023
+      filling-honey_63: -5164081041185709075
+      filling-honey_64: -3504502924111173309
+      filling-honey_65: -3925744656095336326
+      filling-honey_66: 5591096151029481066
+      filling-honey_67: 1395086430359583590
+      filling-honey_68: -9050380650132859123
+      filling-honey_69: 676547628843314267
+      filling-honey_7: 70728579454096918
+      filling-honey_70: 1053575630437741212
+      filling-honey_71: 4209142643437791736
+      filling-honey_72: -6317493107865439486
+      filling-honey_73: 1310994156420463620
+      filling-honey_74: 5009526529499067028
+      filling-honey_75: 8671489250988374287
+      filling-honey_76: 3365978637943908821
+      filling-honey_77: -6486141468556275069
+      filling-honey_78: -4898032877351469262
+      filling-honey_79: -5583080471161585358
+      filling-honey_8: 3651417460898989301
+      filling-honey_80: 5430570327792184920
+      filling-honey_81: -7149051330085997099
+      filling-honey_82: -4684341425437103660
+      filling-honey_83: 2680816820873185408
+      filling-honey_84: 1835395029478738270
+      filling-honey_85: -2392346335688591282
+      filling-honey_86: 7990152060834952926
+      filling-honey_87: -1345412365456833449
+      filling-honey_88: -4179104473491822585
+      filling-honey_89: -5125808095237713734
+      filling-honey_9: -6724961860616654417
+      filling-honey_90: -1916461066131674224
+      filling-honey_91: -6112758148705450438
+      filling-honey_92: 3278377805317556917
+      filling-honey_93: 2798331644695153210
+      filling-honey_94: 1764891389954632462
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

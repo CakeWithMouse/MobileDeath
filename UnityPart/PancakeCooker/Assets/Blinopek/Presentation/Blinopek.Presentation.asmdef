@@ -1,0 +1,13 @@
+{
+  "autoReferenced": true,
+  "references": [
+    "Blinopek.Domain",
+    "Blinopek.Application",
+    "UnityEngine.UI",
+    "Unity.InputSystem"
+  ],
+  "noEngineReferences": false,
+  "name": "Blinopek.Presentation",
+  "rootNamespace": "Blinopek.Presentation"
+}
+

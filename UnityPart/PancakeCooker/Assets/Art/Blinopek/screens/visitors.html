@@ -1,0 +1,9 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Блинопёк — посетители</title>
+<style>body{margin:0;padding:32px;background:#eae3d3;color:#493b30;font:16px Georgia}h1{font-size:26px;font-weight:400}main{display:grid;grid-template-columns:repeat(3,300px);gap:16px;width:932px}article{background:#f5f0e6;border-radius:8px;padding:12px}h2{font:16px Arial;margin:10px 0 2px}.face{position:relative;overflow:hidden;height:230px;background:#eee7da}.face img{position:absolute}small{font:13px Arial;color:#857363}nav{margin-bottom:20px}button{padding:8px 14px;border:1px solid #a99b85;background:#f5f0e6;color:inherit;cursor:pointer}</style>
+<h1>Блинопёк — посетители</h1><nav><button id="mode">Показать целиком</button></nav><main></main>
+<script src="asset-bounds.js"></script><script>
+const names={student:'Студентка',office:'Офисный сотрудник',craftswoman:'Мастерица',nurse:'Медсестра','elder-woman':'Пожилая женщина','elder-man':'Пожилой мужчина',florist:'Цветочница',traveler:'Путешественник'};
+const moods={neutral:'Ожидание заказа',positive:'Удачный заказ',negative:'Ошибка в заказе'};let whole=false; const revision=Date.now();
+function draw(){document.querySelector('main').replaceChildren();for(const [person,title] of Object.entries(names))for(const [mood,label] of Object.entries(moods)){const p=`visitors/${person}-${mood}.png`,a=ASSET_BOUNDS[p], [l,t,r,b]=a.bbox, s=whole?Math.min(276/(r-l),230/(b-t)):230/((b-t)*.32); const el=document.createElement('article');el.innerHTML=`<div class="face"><img src="../${p}?eye-style=${revision}" style="width:${a.width*s}px;height:${a.height*s}px;left:${138-(l+r)/2*s}px;top:${-t*s}px"></div><h2>${title}</h2><small>${label}</small>`;document.querySelector('main').append(el)}}
+document.querySelector('button').onclick=()=>{whole=!whole;document.querySelector('button').textContent=whole?'Показать лица':'Показать целиком';draw()};draw();
+</script></html>

@@ -1,0 +1,121 @@
+{
+  "screen": "facade",
+  "width": 1600,
+  "height": 900,
+  "origin": "top-left",
+  "source": "screens/screens.js",
+  "layers": [
+    {
+      "type": "layer",
+      "asset": "decor/facade_base.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "0px",
+        "top": "0px",
+        "width": "1600px",
+        "height": "900px",
+        "z-index": "1",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../decor/facade_base.png",
+          "style": {
+            "left": "0px",
+            "top": "0px",
+            "width": "1600px",
+            "height": "900px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "layer",
+      "asset": "ui/button-cream.png",
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "pointer-events": "none",
+        "left": "698px",
+        "top": "744px",
+        "width": "205px",
+        "height": "100px",
+        "z-index": "65",
+        "opacity": "1",
+        "transform": "rotate(0deg)"
+      },
+      "attributes": {},
+      "html": "",
+      "children": [
+        {
+          "type": "img",
+          "asset": null,
+          "source": "../ui/button-cream.png",
+          "style": {
+            "left": "-8.332405345211582px",
+            "top": "-13.344051446945338px",
+            "width": "221.66481069042317px",
+            "height": "130.06430868167203px"
+          },
+          "attributes": {},
+          "html": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "718px",
+        "top": "756px",
+        "width": "165px",
+        "height": "76px"
+      },
+      "attributes": {
+        "aria-label": "counter"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/play.svg\">",
+      "children": []
+    },
+    {
+      "type": "control",
+      "asset": null,
+      "source": null,
+      "style": {
+        "position": "absolute",
+        "border": "0",
+        "background": "transparent",
+        "padding": "0",
+        "cursor": "pointer",
+        "z-index": "80",
+        "left": "1460px",
+        "top": "30px",
+        "width": "100px",
+        "height": "100px"
+      },
+      "attributes": {
+        "aria-label": "pause"
+      },
+      "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/settings-speaker.png\">",
+      "children": []
+    }
+  ]
+}

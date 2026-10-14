@@ -1,0 +1,1107 @@
+fileFormatVersion: 2
+guid: ec91c92a9eb4cf44183d4ace0d06a387
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3557356156156939946
+    second: container-jam_0
+  - first:
+      213: 2074726017687974465
+    second: container-jam_1
+  - first:
+      213: -6994455641556889830
+    second: container-jam_2
+  - first:
+      213: -437128892525929400
+    second: container-jam_3
+  - first:
+      213: 8355457052278795241
+    second: container-jam_4
+  - first:
+      213: 3672543015268747915
+    second: container-jam_5
+  - first:
+      213: 2776358344372971917
+    second: container-jam_6
+  - first:
+      213: -6872024422113007324
+    second: container-jam_7
+  - first:
+      213: 8804813153977095126
+    second: container-jam_8
+  - first:
+      213: -3032134356130178760
+    second: container-jam_9
+  - first:
+      213: -7504710061990664755
+    second: container-jam_10
+  - first:
+      213: -8654837484521572433
+    second: container-jam_11
+  - first:
+      213: -3703394914412276998
+    second: container-jam_12
+  - first:
+      213: 7021991420694553329
+    second: container-jam_13
+  - first:
+      213: -1521117674704989129
+    second: container-jam_14
+  - first:
+      213: -5272700963598041827
+    second: container-jam_15
+  - first:
+      213: 467992720513842407
+    second: container-jam_16
+  - first:
+      213: 6649653703766929572
+    second: container-jam_17
+  - first:
+      213: -7390284589084280604
+    second: container-jam_18
+  - first:
+      213: -894702446397841018
+    second: container-jam_19
+  - first:
+      213: -1462385453416674600
+    second: container-jam_20
+  - first:
+      213: -3984224414184414755
+    second: container-jam_21
+  - first:
+      213: -6715296741026159258
+    second: container-jam_22
+  - first:
+      213: -1833327416853887630
+    second: container-jam_23
+  - first:
+      213: -8312865717211210166
+    second: container-jam_24
+  - first:
+      213: 6298881639802110886
+    second: container-jam_25
+  - first:
+      213: -1646978122233069727
+    second: container-jam_26
+  - first:
+      213: -6239763875110185223
+    second: container-jam_27
+  - first:
+      213: -5691241852876606044
+    second: container-jam_28
+  - first:
+      213: 3349223911852960755
+    second: container-jam_29
+  - first:
+      213: -2029120679004364914
+    second: container-jam_30
+  - first:
+      213: 6188042458051170220
+    second: container-jam_31
+  - first:
+      213: -8480900331532551646
+    second: container-jam_32
+  - first:
+      213: -3482019020030754048
+    second: container-jam_33
+  - first:
+      213: -7210569027021065437
+    second: container-jam_34
+  - first:
+      213: 6368097446579837215
+    second: container-jam_35
+  - first:
+      213: -7572964469179409902
+    second: container-jam_36
+  - first:
+      213: -7089575681985827350
+    second: container-jam_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: container-jam_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1243
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae884b83944e5130800000000000000
+      internalID: 3557356156156939946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1245
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1427d8a1258eacc10800000000000000
+      internalID: 2074726017687974465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1223
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f46c7f6a3beee90800000000000000
+      internalID: -6994455641556889830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_3
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1213
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c9ee796910fe9f0800000000000000
+      internalID: -437128892525929400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_4
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1197
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb2c118beb84f370800000000000000
+      internalID: 8355457052278795241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_5
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1182
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a8f671a6e77f230800000000000000
+      internalID: 3672543015268747915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_6
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1177
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89ea85543b978620800000000000000
+      internalID: 2776358344372971917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_7
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 1171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4292528923aa1a0a0800000000000000
+      internalID: -6872024422113007324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_8
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1173
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3dd74e9eaf03a70800000000000000
+      internalID: 8804813153977095126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1154
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8395a973ed1bbe5d0800000000000000
+      internalID: -3032134356130178760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1162
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc52fb4d5f9e9d790800000000000000
+      internalID: -7504710061990664755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_11
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1159
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa73b52c927d3e780800000000000000
+      internalID: -8654837484521572433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_12
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1162
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2d77f52f5ea9cc0800000000000000
+      internalID: -3703394914412276998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_13
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1164
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2e6563eff137160800000000000000
+      internalID: 7021991420694553329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1132
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73414a9b887e3eae0800000000000000
+      internalID: -1521117674704989129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1092
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1df0e9d86a93d6b0800000000000000
+      internalID: -5272700963598041827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 950
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec32b756e4ae7600800000000000000
+      internalID: 467992720513842407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_17
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 933
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0736cefc0584c50800000000000000
+      internalID: 6649653703766929572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_18
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 885
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e87696525f607990800000000000000
+      internalID: -7390284589084280604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_19
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 882
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681a8c68dd06593f0800000000000000
+      internalID: -894702446397841018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 871
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da866c9d2094bbe0800000000000000
+      internalID: -1462385453416674600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_21
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 859
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1691f210135b8c0800000000000000
+      internalID: -3984224414184414755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_22
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 521
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6652cc571397ec2a0800000000000000
+      internalID: -6715296741026159258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_23
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 439
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27580718d66be86e0800000000000000
+      internalID: -1833327416853887630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_24
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 377
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e5a147ca4c2ac80800000000000000
+      internalID: -8312865717211210166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_25
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 405
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a382ae7a7f1a6750800000000000000
+      internalID: 6298881639802110886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_26
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 360
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f3577bf12c429e0800000000000000
+      internalID: -1646978122233069727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_27
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 363
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f61eb5b0d7e769a0800000000000000
+      internalID: -6239763875110185223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_28
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 136
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5347430b5a401b0800000000000000
+      internalID: -5691241852876606044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 136
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb6d332765da7e20800000000000000
+      internalID: 3349223911852960755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_30
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 47
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f9b814e7d17d3e0800000000000000
+      internalID: -2029120679004364914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_31
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 63
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafcc2774d750e550800000000000000
+      internalID: 6188042458051170220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_32
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 57
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a728b051acd4a80800000000000000
+      internalID: -8480900331532551646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_33
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 69
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003c9e956226dafc0800000000000000
+      internalID: -3482019020030754048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_34
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 63
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323b9f35ca9eeeb90800000000000000
+      internalID: -7210569027021065437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_35
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 31
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19967653e6006850800000000000000
+      internalID: 6368097446579837215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_36
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a18e540fc67e690800000000000000
+      internalID: -7572964469179409902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: container-jam_37
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedacfaba74cc9d90800000000000000
+      internalID: -7089575681985827350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      container-jam_0: 3557356156156939946
+      container-jam_1: 2074726017687974465
+      container-jam_10: -7504710061990664755
+      container-jam_11: -8654837484521572433
+      container-jam_12: -3703394914412276998
+      container-jam_13: 7021991420694553329
+      container-jam_14: -1521117674704989129
+      container-jam_15: -5272700963598041827
+      container-jam_16: 467992720513842407
+      container-jam_17: 6649653703766929572
+      container-jam_18: -7390284589084280604
+      container-jam_19: -894702446397841018
+      container-jam_2: -6994455641556889830
+      container-jam_20: -1462385453416674600
+      container-jam_21: -3984224414184414755
+      container-jam_22: -6715296741026159258
+      container-jam_23: -1833327416853887630
+      container-jam_24: -8312865717211210166
+      container-jam_25: 6298881639802110886
+      container-jam_26: -1646978122233069727
+      container-jam_27: -6239763875110185223
+      container-jam_28: -5691241852876606044
+      container-jam_29: 3349223911852960755
+      container-jam_3: -437128892525929400
+      container-jam_30: -2029120679004364914
+      container-jam_31: 6188042458051170220
+      container-jam_32: -8480900331532551646
+      container-jam_33: -3482019020030754048
+      container-jam_34: -7210569027021065437
+      container-jam_35: 6368097446579837215
+      container-jam_36: -7572964469179409902
+      container-jam_37: -7089575681985827350
+      container-jam_4: 8355457052278795241
+      container-jam_5: 3672543015268747915
+      container-jam_6: 2776358344372971917
+      container-jam_7: -6872024422113007324
+      container-jam_8: 8804813153977095126
+      container-jam_9: -3032134356130178760
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

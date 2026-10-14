@@ -1,0 +1,795 @@
+fileFormatVersion: 2
+guid: a0e2813e944be764499b0d0fab4451f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6331639062388870697
+    second: fold-half_0
+  - first:
+      213: -8136622927685099365
+    second: fold-half_1
+  - first:
+      213: -1704685897744778176
+    second: fold-half_2
+  - first:
+      213: 1658221136026546941
+    second: fold-half_3
+  - first:
+      213: 3228204871204909060
+    second: fold-half_4
+  - first:
+      213: 8515107042703799108
+    second: fold-half_5
+  - first:
+      213: -6117957734613268081
+    second: fold-half_6
+  - first:
+      213: -990436486511850468
+    second: fold-half_7
+  - first:
+      213: 3124448695552750111
+    second: fold-half_8
+  - first:
+      213: 129099233570573562
+    second: fold-half_9
+  - first:
+      213: 7140372723834461351
+    second: fold-half_10
+  - first:
+      213: -7707707912402795675
+    second: fold-half_11
+  - first:
+      213: -2073283046618001494
+    second: fold-half_12
+  - first:
+      213: -4876374868587061888
+    second: fold-half_13
+  - first:
+      213: 3213369760510816766
+    second: fold-half_14
+  - first:
+      213: 823401747198894704
+    second: fold-half_15
+  - first:
+      213: -4787581340338360928
+    second: fold-half_16
+  - first:
+      213: 1964772314577091428
+    second: fold-half_17
+  - first:
+      213: 3078623984944144547
+    second: fold-half_18
+  - first:
+      213: -5451305530845721807
+    second: fold-half_19
+  - first:
+      213: -6662430580936941688
+    second: fold-half_20
+  - first:
+      213: -7938922275523459243
+    second: fold-half_21
+  - first:
+      213: -5674866429178896477
+    second: fold-half_22
+  - first:
+      213: -1272723636568836068
+    second: fold-half_23
+  - first:
+      213: 8542554700367870590
+    second: fold-half_24
+  - first:
+      213: 2088499075266749391
+    second: fold-half_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fold-half_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1002
+        width: 103
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1f258b1df7128a0800000000000000
+      internalID: -6331639062388870697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 865
+        width: 204
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90e7049e88e41f80800000000000000
+      internalID: -8136622927685099365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1002
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cfd43353db758e0800000000000000
+      internalID: -1704685897744778176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 859
+        width: 202
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df238eb665f230710800000000000000
+      internalID: 1658221136026546941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 859
+        width: 564
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400ba520a33eccc20800000000000000
+      internalID: 3228204871204909060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_5
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 935
+        width: 61
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44379c88dbcbb2670800000000000000
+      internalID: 8515107042703799108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 987
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89c58dcad5a81ba0800000000000000
+      internalID: -6117957734613268081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_7
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 945
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c00e853434142f0800000000000000
+      internalID: -990436486511850468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_8
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 923
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12ba59d8854c5b20800000000000000
+      internalID: 3124448695552750111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_9
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 924
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afccfb5a117aac100800000000000000
+      internalID: 129099233570573562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_10
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 929
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac9a083923b71360800000000000000
+      internalID: 7140372723834461351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_11
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 921
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56383c8ad78b80590800000000000000
+      internalID: -7707707912402795675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_12
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 913
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf8e77cd083a33e0800000000000000
+      internalID: -2073283046618001494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_13
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 905
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dd936a4e2a35cb0800000000000000
+      internalID: -4876374868587061888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_14
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 879
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1ba33a5ce289c20800000000000000
+      internalID: 3213369760510816766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_15
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 866
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072e939c68f4d6b00800000000000000
+      internalID: 823401747198894704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_16
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 891
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ade7dbf2281f8db0800000000000000
+      internalID: -4787581340338360928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_17
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 881
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bb3e2a206444b10800000000000000
+      internalID: 1964772314577091428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_18
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 865
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0e79bf33879ba20800000000000000
+      internalID: 3078623984944144547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_19
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 867
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b81df70821954b0800000000000000
+      internalID: -5451305530845721807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_20
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 863
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fdd8a8faa4a83a0800000000000000
+      internalID: -6662430580936941688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 1343
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5570dfba04843d190800000000000000
+      internalID: -7938922275523459243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 120
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af9005ac03de31b0800000000000000
+      internalID: -5674866429178896477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_23
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 113
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1832118890665ee0800000000000000
+      internalID: -1272723636568836068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_24
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 133
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a35c55d304d8670800000000000000
+      internalID: 8542554700367870590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fold-half_25
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 149
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3a107f7d6dbfc10800000000000000
+      internalID: 2088499075266749391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fold-half_0: -6331639062388870697
+      fold-half_1: -8136622927685099365
+      fold-half_10: 7140372723834461351
+      fold-half_11: -7707707912402795675
+      fold-half_12: -2073283046618001494
+      fold-half_13: -4876374868587061888
+      fold-half_14: 3213369760510816766
+      fold-half_15: 823401747198894704
+      fold-half_16: -4787581340338360928
+      fold-half_17: 1964772314577091428
+      fold-half_18: 3078623984944144547
+      fold-half_19: -5451305530845721807
+      fold-half_2: -1704685897744778176
+      fold-half_20: -6662430580936941688
+      fold-half_21: -7938922275523459243
+      fold-half_22: -5674866429178896477
+      fold-half_23: -1272723636568836068
+      fold-half_24: 8542554700367870590
+      fold-half_25: 2088499075266749391
+      fold-half_3: 1658221136026546941
+      fold-half_4: 3228204871204909060
+      fold-half_5: 8515107042703799108
+      fold-half_6: -6117957734613268081
+      fold-half_7: -990436486511850468
+      fold-half_8: 3124448695552750111
+      fold-half_9: 129099233570573562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

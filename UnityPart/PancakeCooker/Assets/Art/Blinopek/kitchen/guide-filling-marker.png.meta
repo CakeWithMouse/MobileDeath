@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 405f3706220353c40b17225b0571ae63
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6973242040856991878
+    second: guide-filling-marker_0
+  - first:
+      213: -6709012854465301549
+    second: guide-filling-marker_1
+  - first:
+      213: 3413393227313023945
+    second: guide-filling-marker_2
+  - first:
+      213: -499818866615474219
+    second: guide-filling-marker_3
+  - first:
+      213: -58302953285179679
+    second: guide-filling-marker_4
+  - first:
+      213: -7757791026063607291
+    second: guide-filling-marker_5
+  - first:
+      213: -2555404231620468559
+    second: guide-filling-marker_6
+  - first:
+      213: -9142649890988914251
+    second: guide-filling-marker_7
+  - first:
+      213: -3971665369903842611
+    second: guide-filling-marker_8
+  - first:
+      213: -2045456844842260896
+    second: guide-filling-marker_9
+  - first:
+      213: -2690084111662513056
+    second: guide-filling-marker_10
+  - first:
+      213: -7833399827095108882
+    second: guide-filling-marker_11
+  - first:
+      213: -2674072029441359001
+    second: guide-filling-marker_12
+  - first:
+      213: 1999106964906762820
+    second: guide-filling-marker_13
+  - first:
+      213: 6779113831389264754
+    second: guide-filling-marker_14
+  - first:
+      213: 4715117604041330051
+    second: guide-filling-marker_15
+  - first:
+      213: -1430745304475366565
+    second: guide-filling-marker_16
+  - first:
+      213: 5824939614932504806
+    second: guide-filling-marker_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: guide-filling-marker_0
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 595
+        width: 71
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688d91ab0bee5c060800000000000000
+      internalID: 6973242040856991878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 605
+        width: 72
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3f010da5cc4e2a0800000000000000
+      internalID: -6709012854465301549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_2
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 572
+        width: 67
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb87b82e0fce5f20800000000000000
+      internalID: 3413393227313023945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 550
+        width: 63
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7a85393694019f0800000000000000
+      internalID: -499818866615474219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 512
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6a41cd5cdd03ff0800000000000000
+      internalID: -58302953285179679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 481
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50af3c11a2ac65490800000000000000
+      internalID: -7757791026063607291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_6
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 431
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b06bb4f361698cd0800000000000000
+      internalID: -2555404231620468559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 395
+        width: 34
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b987dd2d58ce1180800000000000000
+      internalID: -9142649890988914251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_8
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 278
+        width: 23
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca392c836fc1e8c0800000000000000
+      internalID: -3971665369903842611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 302
+        width: 18
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06629cf36d31d93e0800000000000000
+      internalID: -2045456844842260896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 213
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0640f6cc0c6eaaad0800000000000000
+      internalID: -2690084111662513056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 191
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2c3624c5c2a4390800000000000000
+      internalID: -7833399827095108882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 137
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763075538a9c3ead0800000000000000
+      internalID: -2674072029441359001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_13
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 120
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442e64f51314ebb10800000000000000
+      internalID: 1999106964906762820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_14
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 83
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bf4e3cc10441e50800000000000000
+      internalID: 6779113831389264754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_15
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 58
+        width: 71
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d0317aa767f6140800000000000000
+      internalID: 4715117604041330051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 74
+        width: 66
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b00bad9b8f42ce0800000000000000
+      internalID: -1430745304475366565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guide-filling-marker_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 56
+        width: 72
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0172ac7b756d050800000000000000
+      internalID: 5824939614932504806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      guide-filling-marker_0: 6973242040856991878
+      guide-filling-marker_1: -6709012854465301549
+      guide-filling-marker_10: -2690084111662513056
+      guide-filling-marker_11: -7833399827095108882
+      guide-filling-marker_12: -2674072029441359001
+      guide-filling-marker_13: 1999106964906762820
+      guide-filling-marker_14: 6779113831389264754
+      guide-filling-marker_15: 4715117604041330051
+      guide-filling-marker_16: -1430745304475366565
+      guide-filling-marker_17: 5824939614932504806
+      guide-filling-marker_2: 3413393227313023945
+      guide-filling-marker_3: -499818866615474219
+      guide-filling-marker_4: -58302953285179679
+      guide-filling-marker_5: -7757791026063607291
+      guide-filling-marker_6: -2555404231620468559
+      guide-filling-marker_7: -9142649890988914251
+      guide-filling-marker_8: -3971665369903842611
+      guide-filling-marker_9: -2045456844842260896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

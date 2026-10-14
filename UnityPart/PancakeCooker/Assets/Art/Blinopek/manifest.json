@@ -1,0 +1,2811 @@
+{
+  "generator": "Built-in image_gen and native UI geometry",
+  "assets": [
+    {
+      "id": "stove",
+      "title_ru": "Старая эмалированная плита",
+      "file": "kitchen/stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        39,
+        63,
+        1097,
+        1351
+      ],
+      "prompt": "prompts/stove.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "assembly-table",
+      "title_ru": "Стол сборки",
+      "file": "kitchen/assembly-table.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1231,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        17,
+        75,
+        1214,
+        1227
+      ],
+      "prompt": "prompts/assembly-table.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pan-base",
+      "title_ru": "Сковорода — основа",
+      "file": "kitchen/pan-base.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Сковорода — основа, рабочая область"
+      ],
+      "states_or_reuse": "Ручка и блин отдельные; переворот движением слоя.",
+      "transparent": true,
+      "width": 1347,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        75,
+        80,
+        1273,
+        1081
+      ],
+      "prompt": "prompts/pan-base.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background",
+      "title_ru": "Фон кухни без оборудования",
+      "file": "kitchen/kitchen-background.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "visible_bbox_alpha_gt_16": null,
+      "prompt": "prompts/kitchen-background.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "pan-handle",
+      "title_ru": "Сковорода — отдельная ручка",
+      "file": "kitchen/pan-handle.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Сковорода — ручка для нажатия"
+      ],
+      "states_or_reuse": "Отдельное движение/нажатие; соединяется с основой сковороды.",
+      "transparent": true,
+      "width": 1346,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        70,
+        109,
+        1293,
+        1082
+      ],
+      "prompt": "prompts/pan-handle.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "plate",
+      "title_ru": "Пустая тарелка сборки",
+      "file": "kitchen/plate.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Тарелка"
+      ],
+      "states_or_reuse": "Блин и начинка отдельными слоями; можно переиспользовать для превью.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        41,
+        50,
+        1321,
+        1101
+      ],
+      "prompt": "prompts/plate.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "batter-pitcher",
+      "title_ru": "Наливалка с тестом",
+      "file": "kitchen/batter-pitcher.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Наливалка теста"
+      ],
+      "states_or_reuse": "Статический отдельный слой.",
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        31,
+        39,
+        1201,
+        1241
+      ],
+      "prompt": "prompts/batter-pitcher.txt",
+      "active_in_catalog": false
+    },
+    {
+      "id": "container-butter",
+      "title_ru": "Маслёнка",
+      "file": "kitchen/container-butter.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1374,
+      "height": 1145,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        92,
+        145,
+        1320,
+        1038
+      ],
+      "prompt": "prompts/container-butter.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-jam",
+      "title_ru": "Миска с вареньем",
+      "file": "kitchen/container-jam.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        77,
+        109,
+        1177,
+        1145
+      ],
+      "prompt": "prompts/container-jam.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-honey",
+      "title_ru": "Банка с мёдом",
+      "file": "kitchen/container-honey.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        153,
+        97,
+        1077,
+        1169
+      ],
+      "prompt": "prompts/container-honey.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-curd",
+      "title_ru": "Миска с творогом",
+      "file": "kitchen/container-curd.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1290,
+      "height": 1219,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        116,
+        129,
+        1175,
+        1092
+      ],
+      "prompt": "prompts/container-curd.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "container-mushrooms",
+      "title_ru": "Миска с грибами",
+      "file": "kitchen/container-mushrooms.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Ёмкости начинок"
+      ],
+      "states_or_reuse": "Ёмкость выбора; активное состояние и помощник отдельными UI слоями.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        132,
+        181,
+        1126,
+        1083
+      ],
+      "prompt": "prompts/container-mushrooms.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-ready",
+      "title_ru": "Блин — готовая поверхность",
+      "file": "kitchen/pancake-ready.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — готовая"
+      ],
+      "states_or_reuse": "Базовая готовая поверхность, независимый выбор для каждой стороны; дырки накладываются маской покрытия.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        47,
+        60,
+        1321,
+        1083
+      ],
+      "prompt": "prompts/pancake-ready.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "batter-raw",
+      "title_ru": "Сырое тесто — текстура нанесения",
+      "file": "kitchen/batter-raw.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Сырое тесто"
+      ],
+      "states_or_reuse": "Проявляется маской по следу пальца, покрытие сохраняется.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        47,
+        52,
+        1321,
+        1085
+      ],
+      "prompt": "prompts/batter-raw.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-undercooked",
+      "title_ru": "Блин — недожаренная поверхность",
+      "file": "kitchen/pancake-undercooked.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — сырая/недожаренная"
+      ],
+      "states_or_reuse": "Силуэт и положение сохранены от готового блина. Каждая сторона хранит своё состояние; дырки общей маской.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        45,
+        54,
+        1321,
+        1086
+      ],
+      "prompt": "prompts/pancake-undercooked.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "pancake-burnt",
+      "title_ru": "Блин — подгоревшая поверхность",
+      "file": "kitchen/pancake-burnt.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Поверхность блина — подгоревшая"
+      ],
+      "states_or_reuse": "Силуэт и положение сохранены от готового блина. Каждая сторона хранит своё состояние; дырки общей маской.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        45,
+        54,
+        1326,
+        1083
+      ],
+      "prompt": "prompts/pancake-burnt.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "scraper",
+      "title_ru": "Кулинарный скребок",
+      "file": "kitchen/scraper.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Инструмент удаления начинки"
+      ],
+      "states_or_reuse": "Один PNG для применения и масштабируемых иконок магазина/запаса.",
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        67,
+        133,
+        1210,
+        1143
+      ],
+      "prompt": "prompts/scraper.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "ready-tray",
+      "title_ru": "Поднос текущего заказа",
+      "file": "kitchen/ready-tray.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Место готовых блинов текущего заказа"
+      ],
+      "states_or_reuse": "Отдельный статический слой; содержимое отдельно.",
+      "transparent": true,
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        35,
+        193,
+        1508,
+        875
+      ],
+      "prompt": "prompts/ready-tray.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "discard-bowl",
+      "title_ru": "Ёмкость для удаления блина",
+      "file": "kitchen/discard-bowl.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Место удаления блина"
+      ],
+      "states_or_reuse": "Отдельный статический слой; содержимое отдельно.",
+      "transparent": true,
+      "width": 1231,
+      "height": 1278,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        114,
+        113,
+        1130,
+        1157
+      ],
+      "prompt": "prompts/discard-bowl.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-butter",
+      "title_ru": "Масло — слой для намазывания",
+      "file": "kitchen/filling-butter.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Масло — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1363,
+      "height": 1154,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        115,
+        142,
+        1257,
+        978
+      ],
+      "prompt": "prompts/filling-butter.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-jam",
+      "title_ru": "Варенье — слой для намазывания",
+      "file": "kitchen/filling-jam.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Варенье — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        86,
+        227,
+        1297,
+        912
+      ],
+      "prompt": "prompts/filling-jam.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-honey",
+      "title_ru": "Мёд — слой для намазывания",
+      "file": "kitchen/filling-honey.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Мёд — слой для намазывания"
+      ],
+      "states_or_reuse": "Слой проявляется маской нанесения; ручное и автоматическое нанесение одинаковы. До складывания весь тип удаляется скребком.",
+      "transparent": true,
+      "width": 1346,
+      "height": 1168,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        76,
+        217,
+        1284,
+        932
+      ],
+      "prompt": "prompts/filling-honey.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-curd",
+      "title_ru": "Творог — переносимая порция",
+      "file": "kitchen/filling-curd.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Творог — порция"
+      ],
+      "states_or_reuse": "Один спрайт порции переиспользуется на каждой позиции трафарета; ручное и автоматическое нанесение одинаковы.",
+      "transparent": true,
+      "width": 1374,
+      "height": 1145,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        155,
+        127,
+        1222,
+        1003
+      ],
+      "prompt": "prompts/filling-curd.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "filling-mushrooms",
+      "title_ru": "Грибы — переносимая порция",
+      "file": "kitchen/filling-mushrooms.png",
+      "category": "Начинки и помощники",
+      "asset_list_coverage": [
+        "Грибы — порция"
+      ],
+      "states_or_reuse": "Один спрайт порции переиспользуется на каждой позиции трафарета; ручное и автоматическое нанесение одинаковы.",
+      "transparent": true,
+      "width": 1347,
+      "height": 1167,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        171,
+        148,
+        1202,
+        1018
+      ],
+      "prompt": "prompts/filling-mushrooms.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-triangle",
+      "title_ru": "Блин — треугольник",
+      "file": "kitchen/fold-triangle.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Треугольник"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        326,
+        213,
+        1111,
+        932
+      ],
+      "prompt": "prompts/fold-triangle.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-half",
+      "title_ru": "Блин — первый сгиб пополам",
+      "file": "kitchen/fold-half.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Треугольник — первый сгиб"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        34,
+        365,
+        1333,
+        910
+      ],
+      "prompt": "prompts/fold-half.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-envelope",
+      "title_ru": "Блин — конверт",
+      "file": "kitchen/fold-envelope.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Конверт"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        290,
+        350,
+        1119,
+        847
+      ],
+      "prompt": "prompts/fold-envelope.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-roll",
+      "title_ru": "Блин — трубочка",
+      "file": "kitchen/fold-roll.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Трубочка"
+      ],
+      "states_or_reuse": "Статический визуальный образец формы при правильной прожарке. Фактические жесты, дырки и прожарку сохранять через деформируемые слои поверхности; это не покадровая анимация.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        99,
+        433,
+        1264,
+        770
+      ],
+      "prompt": "prompts/fold-roll.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-envelope-partial",
+      "title_ru": "Блин — конверт, боковые сгибы",
+      "file": "kitchen/fold-envelope-partial.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Конверт — промежуточное состояние"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        314,
+        103,
+        1097,
+        1057
+      ],
+      "prompt": "prompts/fold-envelope-partial.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-roll-partial",
+      "title_ru": "Блин — трубочка, начало сворачивания",
+      "file": "kitchen/fold-roll-partial.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Трубочка — промежуточное состояние"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        35,
+        180,
+        1336,
+        980
+      ],
+      "prompt": "prompts/fold-roll-partial.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "fold-incorrect",
+      "title_ru": "Блин — неровный незавершённый сгиб",
+      "file": "kitchen/fold-incorrect.png",
+      "category": "Блин и тесто",
+      "asset_list_coverage": [
+        "Ошибочное складывание — образец"
+      ],
+      "states_or_reuse": "Статический визуальный образец. Произвольный результат жестов должен сохранять собственную геометрию, покрытие и начинки; один образец не заменяет произвольные ошибки.",
+      "transparent": true,
+      "width": 1362,
+      "height": 1155,
+      "color_mode": "RGBA",
+      "visible_bbox_alpha_gt_16": [
+        60,
+        84,
+        1311,
+        1093
+      ],
+      "prompt": "prompts/fold-incorrect.txt",
+      "active_in_catalog": true
+    },
+    {
+      "id": "guide-batter-circle",
+      "title_ru": "Контур круга теста",
+      "file": "kitchen/guide-batter-circle.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Направляющие — контур круга теста"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "guide-filling-marker",
+      "title_ru": "Отметка порционной начинки",
+      "file": "kitchen/guide-filling-marker.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Направляющие — отметки трафарета"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "coverage-domain",
+      "title_ru": "Область нанесения теста",
+      "file": "kitchen/coverage-domain.svg",
+      "category": "Геометрия и направляющие",
+      "asset_list_coverage": [
+        "Покрытие и дырки — геометрическая область"
+      ],
+      "states_or_reuse": "Математическая форма; динамические маски и проекция выполняются кодом.",
+      "transparent": true,
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background-user",
+      "title_ru": "Фон кухни, выбранный пользователем",
+      "file": "kitchen/kitchen-background-user.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни — активный фон экрана"
+      ],
+      "transparent": false,
+      "source": "User attachment; unchanged",
+      "states_or_reuse": "Основной фон композиции screens/kitchen.png. Столешницы уже в фоне, повторно не накладывать.",
+      "active_in_catalog": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "kitchen-background-fitted-v2",
+      "title_ru": "Кухня без щелей — предыдущий фон",
+      "file": "kitchen/kitchen-background-fitted-v2.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-fitted-v2.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "active_in_catalog": false
+    },
+    {
+      "id": "kitchen-background-fitted-v3",
+      "title_ru": "Кухня без щелей — мягкая живопись",
+      "file": "kitchen/kitchen-background-fitted-v3.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-fitted-v3.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "active_in_catalog": false
+    },
+    {
+      "id": "batter-pitcher-floral-v2",
+      "title_ru": "Цветочный кувшин с тестом",
+      "file": "kitchen/batter-pitcher-floral-v2.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "prompt": "prompts/batter-pitcher-floral-v2.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "visible_bbox_alpha_gt_16": [
+        49,
+        77,
+        1236,
+        1184
+      ],
+      "active_in_catalog": true
+    },
+    {
+      "id": "crepe-stove",
+      "title_ru": "Специальная блинная плита",
+      "file": "kitchen/crepe-stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA",
+      "prompt": "prompts/crepe-stove.txt",
+      "states_or_reuse": "Отдельный вариант; предшествующие файлы сохранены.",
+      "visible_bbox_alpha_gt_16": [
+        73,
+        82,
+        1066,
+        1339
+      ],
+      "active_in_catalog": true
+    },
+    {
+      "id": "kitchen-background-crepe-stove",
+      "title_ru": "Фон кухни с блинной плитой",
+      "file": "kitchen/kitchen-background-crepe-stove.png",
+      "category": "Окружение и кухня",
+      "asset_list_coverage": [
+        "Рабочая зона кухни"
+      ],
+      "transparent": false,
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "prompt": "prompts/kitchen-background-perspective.txt",
+      "states_or_reuse": "Фон готовки. Подвижные предметы и их тени размещаются отдельными группами.",
+      "active_in_catalog": true
+    },
+    {
+      "id": "facade_base",
+      "title_ru": "Фасад блинной",
+      "file": "decor/facade_base.png",
+      "category": "facade",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Фасад и вывеска / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "base",
+      "shop_preview_source": "facade_base.png",
+      "usage_notes": "Петербургский фасад: вход, высокие окна и пустая вывеска.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A complete modest pancake cafe storefront in plain warm wooden window frames and matching timber door, broad blank cream wood signboard above, two large windows with simple linen curtains, centered door. Frontal slight lived perspective, only shallow pavement strip and cropped building wall around it, no people, no cars, no text. 16:9 landscape whole scene. Architectural layout must match a variant with green facade; keep clean well-kept surfaces with only selective wear. Opaque image.",
+        "Precise variant edit of this cafe facade: keep the architecture, camera, two windows, centered door, glass, curtains, surrounding pavement and placement exactly the same. Replace ALL sage-green-painted timber of the storefront frames, door, lower panels and sign frame with simple natural warm brown unpainted wood. Replace the botanical sign decorations with a completely EMPTY plain cream signboard with no letters. The base version is modest plain wood. Leave broad quiet planes of wood with sparse long varied grainwise strokes and soft colored shadows; avoid repeated scratch or canvas noise. Retain cozy matte handpainted character and mildly irregular edges, not a photo. No new objects, text, people or glow."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png",
+        "facade_green.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "facade_green",
+      "title_ru": "Фасад — зелёный, расписная вывеска",
+      "file": "decor/facade_green.png",
+      "category": "facade",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Фасад и вывеска / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "purchasable",
+      "shop_preview_source": "facade_green.png",
+      "usage_notes": "Цельный фасад, вывеска оставлена пустой под отдельный набор текста.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A complete modest pancake cafe storefront, faded sage green painted timber frames, matching centered wooden door, two large windows with simple linen curtains, broad cream wood signboard with sparse hand-painted green leaves at both ends and EMPTY center ready for separately typeset title. Frontal slight lived perspective, shallow pavement strip, no people, no cars, no text. 16:9 landscape scene. Layout consistent with plain wooden facade. Opaque image."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "wall_plaster",
+      "title_ru": "Стены — кремовая штукатурка",
+      "file": "decor/wall_plaster.png",
+      "category": "wall",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Стены / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "base",
+      "shop_preview_source": "wall_plaster.png",
+      "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of warm cream plaster wall, straight-on orthographic view, edge-to-edge. Broad quiet matte plaster color fields, a few translucent cooler grey teal and dusty pink brush transitions, very sparse visible hand tool / brush edges, NO cracks, NO vignette, NO objects, NO frame, no lighting gradient spotlight. Painted readable wall material rather than a photographic or uniformly noisy texture. Opaque image."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "wall_botanical",
+      "title_ru": "Стены — светлые растительные обои",
+      "file": "decor/wall_botanical.png",
+      "category": "wall",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Стены / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "purchasable",
+      "shop_preview_source": "wall_botanical.png",
+      "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of light warm cream wallpaper with a restrained sparse repeating botanical pattern: small dusty sage green paired leaves on thin soft brown curling stems, generous cream negative space between sprigs. Straight-on orthographic edge-to-edge. Hand painted small variation, quiet broad flat fields; pattern suitable behind cafe furniture, not ornate maximalism. NO border, objects, text, damage or vignette. Opaque image."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "floor_wood",
+      "title_ru": "Пол — светлые доски",
+      "file": "decor/floor_wood.png",
+      "category": "floor",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Пол / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "base",
+      "shop_preview_source": "floor_wood.png",
+      "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of light wooden floorboards, top-down orthographic edge-to-edge. Pale honey beige boards of slightly varying width, staggered subtle end joins, sparse long ochre and grey-green strokes along grain, large calm planes. Gentle material variation, NO excessive scratches, no cracks, no objects, no frame, no vignette. Domestic clean floor, not rustic fantasy. Opaque image."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "floor_terracotta",
+      "title_ru": "Пол — терракота",
+      "file": "decor/floor_terracotta.png",
+      "category": "floor",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Пол / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": false,
+      "variant": "purchasable",
+      "shop_preview_source": "floor_terracotta.png",
+      "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of square muted terracotta floor tiles, top-down orthographic edge-to-edge. Several warm dusty rose-brown and soft burnt sienna clay squares with thin cream-grey grout, gently irregular matte tile edges, broad smooth paint fields with selective dry strokes near corners. Calm domestic floor. NO objects, damage, cracks, text, border or vignette. Opaque image."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "table_base",
+      "title_ru": "Мебель — простой стол",
+      "file": "decor/table_base.png",
+      "category": "furniture",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "table_base.png",
+      "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple cafe table, light honey-brown wooden rectangular tabletop with rounded worn edges, four straightforward sturdy legs, no tablecloth and no objects. View from seated-counter eye height looking slightly down at top, front-right three-quarter view, full silhouette with clear space on all sides. Transparent background, no scene, no floor, no drop-shadow cloud. Structure practical, quiet broad wood planes. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1374,
+      "height": 1145,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "stool_base",
+      "title_ru": "Мебель — простой табурет",
+      "file": "decor/stool_base.png",
+      "category": "furniture",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "stool_base.png",
+      "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple light honey-brown wooden stool matching a plain cafe table, square seat with softly rounded corners, four sturdy legs and lower stretchers. Slightly elevated front-right three-quarter view, full silhouette all legs visible where structurally correct, clear transparent padding. No surrounding floor, no objects, no fake checkerboard. Sparse long strokes on wood, calm planes. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "table_premium",
+      "title_ru": "Мебель — тёмный стол",
+      "file": "decor/table_premium.png",
+      "category": "furniture",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "table_premium.png",
+      "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe table, rectangular tabletop with softly rounded corners, four slender sturdy legs, subtle copper brown worn edge accents, no cloth or objects. Slightly elevated front-right three-quarter view matching a simple cafe table, whole silhouette padded on transparent background. Broad calm dark colored wood planes, sparse long grainwise strokes, no floor or shadow cloud. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1312,
+      "height": 1199,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "chair_premium",
+      "title_ru": "Мебель — стул с зелёным сиденьем",
+      "file": "decor/chair_premium.png",
+      "category": "furniture",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "chair_premium.png",
+      "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe chair, simple gently curved back with two vertical slats, upholstered muted sage green seat, four slim sturdy wooden legs. Slightly elevated front-right three-quarter view, full silhouette, generous transparent padding. Seat fabric smooth matte soft masses, wood broad dark brown planes and sparse long marks. No surrounding floor or other objects. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "cloth_linen",
+      "title_ru": "Скатерть — однотонный лён",
+      "file": "decor/cloth_linen.png",
+      "category": "tablecloth",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Скатерти / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "cloth_linen.png",
+      "usage_notes": "Прозрачная накидка для отдельного стола; требуется согласовать масштаб/ракурс в сцене.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated plain natural cream linen rectangular tablecloth, draped over an invisible rectangular cafe table so only the complete cloth top and hanging front/right sides are visible. Slightly elevated front-right three-quarter view. Soft few uneven broad folds, gentle warm grey shade, tiny hem, no decorative embroidery. Transparent background around and beneath the floating cloth, no table legs or visible table, no floor. Entire silhouette padded. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+        "Precise background extraction. Use input image as edit target: keep ONLY the physical Скатерть — однотонный лён exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+        "Edit this transparent cutout. Replace only the green checked pattern of this tablecloth with SOLID plain natural cream linen. Retain exactly the cloth silhouette, pose, folds and transparent background. Make large calm matte cloth color areas and a few soft folds in grey-beige; no colored pink/blue patchwork. Absolutely no glow, no surrounding floor, no cast shadow. True transparent background and crisp opaque cloth."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1431,
+      "height": 1099,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "cloth_check",
+      "title_ru": "Скатерть — зелёная клетка",
+      "file": "decor/cloth_check.png",
+      "category": "tablecloth",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Скатерти / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "cloth_check.png",
+      "usage_notes": "Прозрачная накидка для отдельного стола; требуется согласовать масштаб/ракурс в сцене.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated cream-and-muted-sage-green checked linen rectangular tablecloth draped over an invisible cafe table, complete cloth top and hanging front/right sides visible. Slightly elevated front-right three-quarter view, same silhouette as plain linen cloth. Restrained medium green gingham checks follow soft broad uneven folds, quiet material, not microtexture. Transparent padding, no table legs, no table or surrounding floor. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1431,
+      "height": 1099,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "plate_cream",
+      "title_ru": "Посуда — кремовая керамика",
+      "file": "decor/plate_cream.png",
+      "category": "dishware",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Посуда / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "plate_cream.png",
+      "usage_notes": "Пустая тарелка с широким свободным центром; блин и начинка отдельными слоями.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated EMPTY broad shallow cream ceramic dinner plate for pancake assembly. Slightly elevated overhead three-quarter view so the oval is wide and shallow, center large flat unobstructed cream with subtle cool reflected shade, narrow gently thick rim with no pattern. Full padded silhouette, transparent background, no food, utensils or surface. Painterly ceramic has large calm matte planes and only selected edge strokes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+        "Precise background extraction. Use input image as edit target: keep ONLY the physical Посуда — кремовая керамика exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+        "A single empty cream ceramic dinner plate, isolated on transparent background. Painted matte gouache domestic object in the attached kitchen painting's style: large smooth calm cream area, a few broad colored strokes along rim, one delicate dark brown edge, no tiny texture everywhere. Seen slightly from above, oval plate entire silhouette. No pattern, no food, no table, no backdrop, no gradient, no shadow or halo beyond the plate. PNG with true transparent background.",
+        "Edit the attached transparent ceramic plate cutout: remove ONLY the green leaf border and replace it with the same cream ceramic paint as the center. Preserve the exact plate shape, viewpoint, wide empty center, rim, palette, quiet painterly brushwork and full transparent background. Plain cream dinner plate with no pattern, no food. Keep empty area outside the plate completely transparent; no shadows or glow outside silhouette."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1423,
+      "height": 1105,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "plate_green",
+      "title_ru": "Посуда — зелёный узор",
+      "file": "decor/plate_green.png",
+      "category": "dishware",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Посуда / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "plate_green.png",
+      "usage_notes": "Пустая тарелка с широким свободным центром; блин и начинка отдельными слоями.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated EMPTY broad shallow cream ceramic dinner plate for pancake assembly. Slightly elevated overhead three-quarter view, large flat unobstructed cream center, narrow rim decorated with a sparse hand-painted muted green leaf-and-line motif ONLY at edge. Whole padded silhouette on transparent background, no food, utensils, floor. Pattern must leave pancake/fillings readable; broad calm matte ceramic planes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+        "Precise background extraction. Use input image as edit target: keep ONLY the physical Посуда — зелёный узор exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+        "A single empty cream ceramic dinner plate with a restrained green leaf border only on narrow rim, isolated on transparent background. Painted matte gouache domestic object in the attached kitchen painting's style: large smooth calm cream center, a few broad colored strokes along rim, delicate dark brown edge. Seen slightly from above, entire oval plate. No food, no table, no backdrop, no gradient, no shadow or halo beyond the plate. PNG with true transparent background."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1423,
+      "height": 1105,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "lamp_base",
+      "title_ru": "Освещение — простой светильник",
+      "file": "decor/lamp_base.png",
+      "category": "lighting",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Освещение / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "lamp_base.png",
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple domestic hanging ceiling light: dark grey-green metal stem and modest cream enamel shallow bell-shaped shade with softly visible warm pale bulb below. Full front view slightly from below, straight but mildly handmade geometry, whole fixture with ceiling cap and stem included, clear transparent padding. No luminous halo, no background, no chain tangles, no surrounding room. Matte enamel smooth planes with selective edges. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "lamp_brass",
+      "title_ru": "Освещение — латунный светильник",
+      "file": "decor/lamp_brass.png",
+      "category": "lighting",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Освещение / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "lamp_brass.png",
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated tasteful domestic hanging ceiling light: restrained aged matte brass ceiling cap, stem and fittings, cream linen broad pleated lampshade with warm ochre shadow inside. Front view slightly from below, whole fixture padded on transparent background. Quiet matte brass broad planes with a few subdued highlights, fabric soft larger folds, no ornate luxury flourishes, no halo, no surrounding room. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "pitcher",
+      "title_ru": "На стойке — керамический кувшин",
+      "file": "decor/pitcher.png",
+      "category": "counter_decor",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Предметы на стойке / Базовый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "base",
+      "shop_preview_source": "pitcher.png",
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated everyday cream ceramic water pitcher, modest rounded body, slightly pinched pouring lip, one curved dark sage handle, narrow faded green line around neck. Slightly elevated three-quarter view, full silhouette transparent padding, no flowers, no liquid stream, no tabletop. Matte ceramic with broad calm grey-blue shade and small selective warm edge accents, subtly imperfect handmade oval. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1205,
+      "height": 1305,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "vase_flowers",
+      "title_ru": "На стойке — ваза с цветами",
+      "file": "decor/vase_flowers.png",
+      "category": "counter_decor",
+      "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Предметы на стойке / Покупаемый",
+      "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+      "transparent": true,
+      "variant": "purchasable",
+      "shop_preview_source": "vase_flowers.png",
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated small grey-green ceramic vase holding a restrained asymmetrical handful of ordinary meadow flowers: three cream daisies, two small dusty rose blooms, a few sage leaves and slim stems. Slightly elevated front three-quarter view, entire delicate bouquet and vase visible with transparent padding. Naturally uneven heights, quiet composition, no lavish decorative bouquet, no glitter, no tabletop. Selective small flower accents amid broad calm vase planes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1129,
+      "height": 1393,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "service_background",
+      "title_ru": "Зона обслуживания — фон без посетителя и стойки",
+      "file": "decor/service_background.png",
+      "category": "service_scene",
+      "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+      "states_or_reuse": "Отдельный фон без посетителя, мебели и передней стойки; посетитель и сменный декор накладываются слоями.",
+      "transparent": false,
+      "variant": null,
+      "shop_preview_source": null,
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: 16:9 game service scene background viewed from behind a counter but WITH NO COUNTER AND NO PERSON. Modest small domestic pancake cafe. Camera chest height, modest perspective: large timber-framed street windows across back wall, centered-right entrance door, cream walls and muted teal lower wainscot, pale wood floor. Entire foreground clear floor for visitor sprite; no people anywhere, no front counter, NO furniture, no plates, no wall art, no free standing decor, no UI. Empty architecture retains lived coziness through colored light and materials. Use the second reference only for spatial orientation, replace excessively uniform heavy texture with original kitchen reference controlled varied painting. No text. Opaque image.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png",
+        "pancake-counter-screen-v1.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alpha_extrema": null,
+      "color_mode": "RGB"
+    },
+    {
+      "id": "service_counter",
+      "title_ru": "Зона обслуживания — передняя стойка",
+      "file": "decor/service_counter.png",
+      "category": "service_scene",
+      "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+      "states_or_reuse": "Передний слой поверх посетителя; поверхность пустая для отдельных предметов и выдачи.",
+      "transparent": true,
+      "variant": null,
+      "shop_preview_source": null,
+      "usage_notes": "",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A separate wide front service counter layer for a 16:9 cafe game. Counter extends fully horizontally across image; show a large usable muted cream painted wooden countertop seen from behind at chest height, in shallow perspective, warm brown wooden front lip, narrow dark wooden front fascia. Empty surface, NO food, dishes, till, jars, decor, labels or people. Transparent area above and under complete counter silhouette, width-to-height about 5:1. Quiet painted cream tabletop with broad soft grey-green planes, only a few brown wear accents at lip, no overall peeling/speckling. Full visible ends, no room background. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 2172,
+      "height": 724,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "service_delivery",
+      "title_ru": "Зона обслуживания — поверхность выдачи",
+      "file": "decor/service_delivery.png",
+      "category": "service_scene",
+      "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+      "states_or_reuse": "Отдельный поднос обозначает область выдачи текущего заказа; блюда накладываются независимо.",
+      "transparent": true,
+      "variant": null,
+      "shop_preview_source": null,
+      "usage_notes": "Неглубокий поднос для выдачи заказа. Продольные края параллельны стойке; отдельная контактная тень принадлежит предмету.",
+      "generator": "built-in image_gen",
+      "prompt_history": [
+        "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE separate empty shallow rectangular wooden serving tray used as clear order delivery surface on a cafe counter, a practical large tray for two pancake plates. Warm light wood with modest raised dark sage rim and integrated side grip cutouts; slightly overhead front three-quarter view, wide horizontal ellipse-like rectangular perspective, whole silhouette transparent padding. NO food, plate, labels or markings, no background surface. Large calm usable interior plane, a few sparse long material strokes and soft colored shadows. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop.",
+        "Precise background extraction. Use input image as edit target: keep ONLY the physical Зона обслуживания — поверхность выдачи exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+        "A single small empty rectangular wooden serving tray with low muted sage rim and two handle openings, isolated on transparent background. Painterly domestic game prop matching attached source painting; broad quiet pale wood plane with a few long material strokes. Three-quarter overhead view, entire silhouette. No table, no background, no cast shadow or halo. Transparent PNG cutout."
+      ],
+      "source_reference_files": [
+        "kitchen-original.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "color_mode": "RGBA",
+      "prompt": "service_delivery.perspective.prompt.txt"
+    },
+    {
+      "id": "panel-cream",
+      "title_ru": "Кремовая панель",
+      "file": "ui/panel-cream.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Общие элементы: панели",
+        "Пауза и настройки",
+        "Итог дня: панель отчёта",
+        "Результат заказа",
+        "Результат покупки"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "button-cream",
+      "title_ru": "Кнопка кремовая",
+      "file": "ui/button-cream.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Общие элементы: кнопки",
+        "Принятие/уточнение",
+        "Покупка/установка",
+        "Переходы"
+      ],
+      "transparent": true,
+      "width": 1942,
+      "height": 809,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tab-sage",
+      "title_ru": "Вкладка шалфейная",
+      "file": "ui/tab-sage.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Вкладки",
+        "Книга рецептов: категории"
+      ],
+      "transparent": true,
+      "width": 1632,
+      "height": 963,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "card-frame",
+      "title_ru": "Рамка карточки",
+      "file": "ui/card-frame.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Магазин: карточка",
+        "Отзывы: карточка",
+        "Рецепты: карточки",
+        "Донат: наборы"
+      ],
+      "transparent": true,
+      "width": 1086,
+      "height": 1448,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "speech-bubble",
+      "title_ru": "Облако реплики",
+      "file": "ui/speech-bubble.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Стойка и диалог: облако и варианты"
+      ],
+      "transparent": true,
+      "width": 2172,
+      "height": 724,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "patience-track",
+      "title_ru": "Шкала терпения",
+      "file": "ui/patience-track.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Стойка: терпение",
+        "Прогресс готовки",
+        "Ожидание покупки"
+      ],
+      "transparent": true,
+      "width": 1774,
+      "height": 887,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "coin-pancake",
+      "title_ru": "Монета с блином",
+      "file": "ui/coin-pancake.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Валюты: монеты",
+        "Цена",
+        "Прибыль",
+        "Награда"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "currency-honey",
+      "title_ru": "Янтарная капля мёда",
+      "file": "ui/currency-honey.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Валюты: мёд",
+        "Премиальные наборы"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "recipe-book-closed",
+      "title_ru": "Книга рецептов: обложка",
+      "file": "ui/recipe-book-closed.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Книга рецептов: обложка",
+        "Кнопка рецептов"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "recipe-book-open",
+      "title_ru": "Книга рецептов: разворот",
+      "file": "ui/recipe-book-open.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Книга рецептов: страницы"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "receipt-order",
+      "title_ru": "Записка заказа",
+      "file": "ui/receipt-order.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Заказ: доступ к тексту",
+        "Итог дня: строки",
+        "Отзывы"
+      ],
+      "transparent": true,
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "helper-badge",
+      "title_ru": "Значок помощника начинки",
+      "file": "ui/helper-badge.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "5 помощников: общий знак автоматизации"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "clock-day",
+      "title_ru": "Игровые часы",
+      "file": "ui/clock-day.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Время дня",
+        "Продление дня"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "day-sun",
+      "title_ru": "Значок рабочего дня",
+      "file": "ui/day-sun.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "День",
+        "Следующий день"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "rating-star",
+      "title_ru": "Оценка гостя",
+      "file": "ui/rating-star.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Отзывы: рейтинг",
+        "Результат заказа: оценка",
+        "Фирменный рецепт"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tip-coins",
+      "title_ru": "Чаевые",
+      "file": "ui/tip-coins.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Результат заказа: чаевые",
+        "Итог дня: доход"
+      ],
+      "transparent": true,
+      "width": 1312,
+      "height": 1199,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "refund-coins",
+      "title_ru": "Возврат оплаты",
+      "file": "ui/refund-coins.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Результат заказа: возврат",
+        "Итог дня: расход"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-visitors",
+      "title_ru": "Больше гостей",
+      "file": "ui/upgrade-visitors.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения: частота гостей"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-patience",
+      "title_ru": "Больше терпения",
+      "file": "ui/upgrade-patience.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения: терпение"
+      ],
+      "transparent": true,
+      "width": 1229,
+      "height": 1280,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-speed",
+      "title_ru": "Ускорение плиты",
+      "file": "ui/upgrade-speed.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения кухни: скорость"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "upgrade-guides",
+      "title_ru": "Трафареты",
+      "file": "ui/upgrade-guides.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Улучшения кухни: направляющие"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "repair-stove",
+      "title_ru": "Ремонт плиты",
+      "file": "ui/repair-stove.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Ремонт: неисправность и объект карточки"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "reward-video",
+      "title_ru": "Просмотр за награду",
+      "file": "ui/reward-video.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Реклама за награду: значок/награда"
+      ],
+      "transparent": true,
+      "width": 1230,
+      "height": 1278,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "reward-ticket",
+      "title_ru": "Билет без просмотра",
+      "file": "ui/reward-ticket.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Донат: билет пропуска рекламы"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "settings-speaker",
+      "title_ru": "Настройка звука",
+      "file": "ui/settings-speaker.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Пауза: звук"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "order-plate",
+      "title_ru": "Счётчик готовых порций",
+      "file": "ui/order-plate.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "Заказ: счётчик блинов"
+      ],
+      "transparent": true,
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "tutorial-hand",
+      "title_ru": "Рука-указатель для обучения",
+      "file": "ui/tutorial-hand.png",
+      "category": "ui",
+      "asset_list_coverage": [
+        "T03"
+      ],
+      "transparent": true,
+      "prompt_file": "alpha-repairs.json",
+      "width": 1129,
+      "height": 1393,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "student-neutral",
+      "title_ru": "Студентка — нейтральная",
+      "file": "visitors/student-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Студентка / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.23,
+          0.02,
+          0.72,
+          0.31
+        ],
+        "avatar_crop_px_xyxy": [
+          236,
+          31,
+          737,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "student-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "student-positive",
+      "title_ru": "Студентка — довольная",
+      "file": "visitors/student-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Студентка / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "student-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.23,
+          0.02,
+          0.72,
+          0.31
+        ],
+        "avatar_crop_px_xyxy": [
+          236,
+          31,
+          737,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "student-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "student-negative",
+      "title_ru": "Студентка — недовольная",
+      "file": "visitors/student-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Студентка / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "student-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.23,
+          0.02,
+          0.72,
+          0.31
+        ],
+        "avatar_crop_px_xyxy": [
+          236,
+          31,
+          737,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "student-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "office-neutral",
+      "title_ru": "Офисный сотрудник — нейтральный",
+      "file": "visitors/office-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Офисный сотрудник / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "avatar_crop_normalized": [
+          0.29,
+          0.02,
+          0.68,
+          0.31
+        ],
+        "type": "ordinary",
+        "avatar_crop_px_xyxy": [
+          297,
+          31,
+          696,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "office-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "office-positive",
+      "title_ru": "Офисный сотрудник — довольный",
+      "file": "visitors/office-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Офисный сотрудник / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "office-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.29,
+          0.02,
+          0.68,
+          0.31
+        ],
+        "avatar_crop_px_xyxy": [
+          297,
+          31,
+          696,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "office-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "office-negative",
+      "title_ru": "Офисный сотрудник — недовольный",
+      "file": "visitors/office-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Офисный сотрудник / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "office-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.29,
+          0.02,
+          0.68,
+          0.31
+        ],
+        "avatar_crop_px_xyxy": [
+          297,
+          31,
+          696,
+          476
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "office-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "craftswoman-neutral",
+      "title_ru": "Мастерица — нейтральная",
+      "file": "visitors/craftswoman-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Мастерица / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "avatar_crop_normalized": [
+          0.25,
+          0.04,
+          0.7,
+          0.36
+        ],
+        "type": "ordinary",
+        "avatar_crop_px_xyxy": [
+          256,
+          61,
+          717,
+          553
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "craftswoman-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "craftswoman-positive",
+      "title_ru": "Мастерица — довольная",
+      "file": "visitors/craftswoman-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Мастерица / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "craftswoman-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.25,
+          0.04,
+          0.7,
+          0.36
+        ],
+        "avatar_crop_px_xyxy": [
+          256,
+          61,
+          717,
+          553
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "craftswoman-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "craftswoman-negative",
+      "title_ru": "Мастерица — недовольная",
+      "file": "visitors/craftswoman-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Мастерица / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "craftswoman-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.25,
+          0.04,
+          0.7,
+          0.36
+        ],
+        "avatar_crop_px_xyxy": [
+          256,
+          61,
+          717,
+          553
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "craftswoman-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "nurse-neutral",
+      "title_ru": "Медсестра — нейтральная",
+      "file": "visitors/nurse-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Медсестра / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.69,
+          0.33
+        ],
+        "type": "ordinary",
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          707,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "nurse-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "nurse-positive",
+      "title_ru": "Медсестра — довольная",
+      "file": "visitors/nurse-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Медсестра / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "nurse-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.69,
+          0.33
+        ],
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          707,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "nurse-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "nurse-negative",
+      "title_ru": "Медсестра — недовольная",
+      "file": "visitors/nurse-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Медсестра / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "nurse-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.69,
+          0.33
+        ],
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          707,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "nurse-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-woman-neutral",
+      "title_ru": "Пожилая женщина — нейтральная",
+      "file": "visitors/elder-woman-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилая женщина / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "avatar_crop_normalized": [
+          0.23,
+          0.05,
+          0.72,
+          0.37
+        ],
+        "type": "ordinary",
+        "avatar_crop_px_xyxy": [
+          236,
+          77,
+          737,
+          568
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-woman-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-woman-positive",
+      "title_ru": "Пожилая женщина — довольная",
+      "file": "visitors/elder-woman-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилая женщина / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "elder-woman-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.23,
+          0.05,
+          0.72,
+          0.37
+        ],
+        "avatar_crop_px_xyxy": [
+          236,
+          77,
+          737,
+          568
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-woman-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-woman-negative",
+      "title_ru": "Пожилая женщина — недовольная",
+      "file": "visitors/elder-woman-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилая женщина / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "elder-woman-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.23,
+          0.05,
+          0.72,
+          0.37
+        ],
+        "avatar_crop_px_xyxy": [
+          236,
+          77,
+          737,
+          568
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-woman-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-man-neutral",
+      "title_ru": "Пожилой мужчина — нейтральный",
+      "file": "visitors/elder-man-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилой мужчина / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "avatar_crop_normalized": [
+          0.24,
+          0.025,
+          0.65,
+          0.33
+        ],
+        "type": "ordinary",
+        "avatar_crop_px_xyxy": [
+          246,
+          38,
+          666,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-man-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-man-positive",
+      "title_ru": "Пожилой мужчина — довольный",
+      "file": "visitors/elder-man-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилой мужчина / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "elder-man-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.24,
+          0.025,
+          0.65,
+          0.33
+        ],
+        "avatar_crop_px_xyxy": [
+          246,
+          38,
+          666,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-man-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "elder-man-negative",
+      "title_ru": "Пожилой мужчина — недовольный",
+      "file": "visitors/elder-man-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Пожилой мужчина / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "elder-man-neutral.png",
+        "type": "ordinary",
+        "avatar_crop_normalized": [
+          0.24,
+          0.025,
+          0.65,
+          0.33
+        ],
+        "avatar_crop_px_xyxy": [
+          246,
+          38,
+          666,
+          507
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "elder-man-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "florist-neutral",
+      "title_ru": "Цветочница — нейтральная",
+      "file": "visitors/florist-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Цветочница / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.2,
+          0.005,
+          0.76,
+          0.34
+        ],
+        "avatar_crop_px_xyxy": [
+          205,
+          8,
+          778,
+          522
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "florist-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "florist-positive",
+      "title_ru": "Цветочница — довольная",
+      "file": "visitors/florist-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Цветочница / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "florist-neutral.png",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.2,
+          0.005,
+          0.76,
+          0.34
+        ],
+        "avatar_crop_px_xyxy": [
+          205,
+          8,
+          778,
+          522
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "florist-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "florist-negative",
+      "title_ru": "Цветочница — недовольная",
+      "file": "visitors/florist-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Цветочница / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "florist-neutral.png",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.2,
+          0.005,
+          0.76,
+          0.34
+        ],
+        "avatar_crop_px_xyxy": [
+          205,
+          8,
+          778,
+          522
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "florist-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "traveler-neutral",
+      "title_ru": "Путешественник — нейтральный",
+      "file": "visitors/traveler-neutral.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Путешественник / Нейтральная реакция"
+      ],
+      "states_or_reuse": {
+        "reaction": "neutral",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.66,
+          0.29
+        ],
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          676,
+          445
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "traveler-neutral.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "traveler-positive",
+      "title_ru": "Путешественник — довольный",
+      "file": "visitors/traveler-positive.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Путешественник / positive"
+      ],
+      "states_or_reuse": {
+        "reaction": "positive",
+        "base": "traveler-neutral.png",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.66,
+          0.29
+        ],
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          676,
+          445
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "traveler-positive.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    },
+    {
+      "id": "traveler-negative",
+      "title_ru": "Путешественник — недовольный",
+      "file": "visitors/traveler-negative.png",
+      "category": "visitors",
+      "asset_list_coverage": [
+        "Посетители / Путешественник / negative"
+      ],
+      "states_or_reuse": {
+        "reaction": "negative",
+        "base": "traveler-neutral.png",
+        "type": "story",
+        "avatar_crop_normalized": [
+          0.3,
+          0.02,
+          0.66,
+          0.29
+        ],
+        "avatar_crop_px_xyxy": [
+          307,
+          31,
+          676,
+          445
+        ],
+        "avatar_integration": "Crop the selected portrait state using xyxy bounds; resize to review avatar, no extra drawing required."
+      },
+      "transparent": true,
+      "version": "v1",
+      "prompt_file": "traveler-negative.prompt.txt",
+      "source_style_reference": "../style/kitchen-original.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "alpha_verified": true,
+      "qa": {
+        "reviewed_visual": true,
+        "expressions": "neutral / satisfied / dissatisfied, subdued",
+        "alignment_note": "Shared framing and pose; regenerated expression variants may have small brushwork or silhouette differences. Use Sprite crossfade or mask face area if exact body stability is required."
+      },
+      "alpha_cleanup_prompt": "alpha-cleanup.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA"
+    }
+  ],
+  "native_controls": "ui/glyphs.json",
+  "contact_shadows": "kitchen/shadows/manifest.json",
+  "ui_state_data": "ui/states.json",
+  "screens": "screens/index.html",
+  "layered_screens": "figma/layered/manifest.json"
+}

@@ -1,0 +1,440 @@
+{
+  "generator": "Built-in image_gen",
+  "reference": "codex-clipboard-16a79158-baf1-4955-a8bc-d2ef65f962a7.png",
+  "count": 24,
+  "constraints": "Natural almond-shaped eyes, muted whites, small highlights; preserve identity, emotions and softened noses.",
+  "assets": [
+    {
+      "id": "student-neutral",
+      "file": "visitors/student-neutral.png",
+      "prompt": "visitors/student-neutral.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        92,
+        38,
+        949,
+        1536
+      ],
+      "sha256": "710f026a3020211c7169fb9e28d1e053f2216efca420a361e3aa7f56a3e7e698"
+    },
+    {
+      "id": "student-positive",
+      "file": "visitors/student-positive.png",
+      "prompt": "visitors/student-positive.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        91,
+        41,
+        952,
+        1536
+      ],
+      "sha256": "442c27851211b834009332228b6a74735481027f8c8e076df70c8d7e61c52189"
+    },
+    {
+      "id": "student-negative",
+      "file": "visitors/student-negative.png",
+      "prompt": "visitors/student-negative.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        91,
+        45,
+        952,
+        1536
+      ],
+      "sha256": "0332882f61e0ad79dd8ea09a0d3827eaab6add1d8d440e5e5d0c1ac3bd2704c2"
+    },
+    {
+      "id": "office-neutral",
+      "file": "visitors/office-neutral.png",
+      "prompt": "visitors/office-neutral.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        66,
+        36,
+        979,
+        1536
+      ],
+      "sha256": "cbc8e18772abe4971efbb8117f97cd8bd3d1cab0ce77e8a67c6060dc93777910"
+    },
+    {
+      "id": "office-positive",
+      "file": "visitors/office-positive.png",
+      "prompt": "visitors/office-positive.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        68,
+        36,
+        979,
+        1536
+      ],
+      "sha256": "f81d5a117fd7f2c5583fbacdeed8f86d48591ee3adc26c0300ca4f11155d93e7"
+    },
+    {
+      "id": "office-negative",
+      "file": "visitors/office-negative.png",
+      "prompt": "visitors/office-negative.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        66,
+        28,
+        982,
+        1536
+      ],
+      "sha256": "e73462a6c34badb8d1e54d796e3fc8678dfa21bb8446ffcef1c04aa95c5b1b2d"
+    },
+    {
+      "id": "craftswoman-neutral",
+      "file": "visitors/craftswoman-neutral.png",
+      "prompt": "visitors/craftswoman-neutral.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        71,
+        70,
+        965,
+        1536
+      ],
+      "sha256": "987debbf192e17b3da8e134c0e9e03e1dfbee1b02de2e2e7c69210cc7806ad6f"
+    },
+    {
+      "id": "craftswoman-positive",
+      "file": "visitors/craftswoman-positive.png",
+      "prompt": "visitors/craftswoman-positive.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        71,
+        45,
+        972,
+        1536
+      ],
+      "sha256": "6f3b6241ce9ddf399f17271613ab384ec5ac44af1215575ca4e7a467ced8ae78"
+    },
+    {
+      "id": "craftswoman-negative",
+      "file": "visitors/craftswoman-negative.png",
+      "prompt": "visitors/craftswoman-negative.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        73,
+        70,
+        969,
+        1536
+      ],
+      "sha256": "d1ac9d24289d05d87f67f15ab5ad22868c58f774ce8778b5b640a1c87ddd5d1e"
+    },
+    {
+      "id": "nurse-neutral",
+      "file": "visitors/nurse-neutral.png",
+      "prompt": "visitors/nurse-neutral.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        295,
+        29,
+        980,
+        1254
+      ],
+      "sha256": "1f576c6a47e5829f9d3d962e04897521cfef204ae963cbf43482f0c04cb77e11"
+    },
+    {
+      "id": "nurse-positive",
+      "file": "visitors/nurse-positive.png",
+      "prompt": "visitors/nurse-positive.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        276,
+        16,
+        989,
+        1254
+      ],
+      "sha256": "7a5322b705de1489f78a3a0b1f63d89e0d320d9a7d7407abb1e071a00e1cfe7d"
+    },
+    {
+      "id": "nurse-negative",
+      "file": "visitors/nurse-negative.png",
+      "prompt": "visitors/nurse-negative.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        275,
+        15,
+        974,
+        1254
+      ],
+      "sha256": "3e5e0934b9860e7ba9c447cfcd811d89a4891b718ad5db047e7ff20f5c677385"
+    },
+    {
+      "id": "elder-woman-neutral",
+      "file": "visitors/elder-woman-neutral.png",
+      "prompt": "visitors/elder-woman-neutral.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        219,
+        15,
+        1047,
+        1254
+      ],
+      "sha256": "02a601bb6306b48441e20ada8521fcf97fa6367163ebc7ed058536e5b64bced9"
+    },
+    {
+      "id": "elder-woman-positive",
+      "file": "visitors/elder-woman-positive.png",
+      "prompt": "visitors/elder-woman-positive.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        205,
+        21,
+        1063,
+        1254
+      ],
+      "sha256": "066cf820a0e2ca7dbf695fd8ba13ce0e300d29d3649a8794304deb5ebc50ae01"
+    },
+    {
+      "id": "elder-woman-negative",
+      "file": "visitors/elder-woman-negative.png",
+      "prompt": "visitors/elder-woman-negative.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        227,
+        19,
+        1048,
+        1254
+      ],
+      "sha256": "e0a8bbd5dce2a6d216926157357bfd4011d3fe4158f7454b67dae91d5ed8a409"
+    },
+    {
+      "id": "elder-man-neutral",
+      "file": "visitors/elder-man-neutral.png",
+      "prompt": "visitors/elder-man-neutral.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        284,
+        27,
+        1002,
+        1254
+      ],
+      "sha256": "2c1910515a5b4f77957dd77a3cd604dd31db3291adbba02ccf21e43a37c06195"
+    },
+    {
+      "id": "elder-man-positive",
+      "file": "visitors/elder-man-positive.png",
+      "prompt": "visitors/elder-man-positive.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        272,
+        10,
+        1009,
+        1254
+      ],
+      "sha256": "7b52b0a05f07ac331ae24faae9de152c35683e1c6658c151a31c0731465f30ee"
+    },
+    {
+      "id": "elder-man-negative",
+      "file": "visitors/elder-man-negative.png",
+      "prompt": "visitors/elder-man-negative.eye-style.prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_bbox": [
+        294,
+        15,
+        1023,
+        1254
+      ],
+      "sha256": "95f45f3a64ecc391064609b555a388b1bb636d3c26428ba1fbadcbaa264016b6"
+    },
+    {
+      "id": "florist-neutral",
+      "file": "visitors/florist-neutral.png",
+      "prompt": "visitors/florist-neutral.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        65,
+        9,
+        977,
+        1536
+      ],
+      "sha256": "7f51c2e4a0ca959545555ac0362e8bb71ae2d64d1b4ec03bbef9add1ea46cd38"
+    },
+    {
+      "id": "florist-positive",
+      "file": "visitors/florist-positive.png",
+      "prompt": "visitors/florist-positive.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        66,
+        7,
+        979,
+        1536
+      ],
+      "sha256": "7707b518a49e7274a347426fcdaa49b5d2f2bc5030b50f780c996325b234c284"
+    },
+    {
+      "id": "florist-negative",
+      "file": "visitors/florist-negative.png",
+      "prompt": "visitors/florist-negative.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        63,
+        7,
+        980,
+        1536
+      ],
+      "sha256": "fe713d84b7e9406d8bd0d432b8cf5db2888e0eccd5eee908bf939ffb0a231b01"
+    },
+    {
+      "id": "traveler-neutral",
+      "file": "visitors/traveler-neutral.png",
+      "prompt": "visitors/traveler-neutral.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        67,
+        47,
+        974,
+        1536
+      ],
+      "sha256": "0f92168e10f46ed7f3b99110e5dfc2a39b4f1ec55f8c13135cb6c24615b6f264"
+    },
+    {
+      "id": "traveler-positive",
+      "file": "visitors/traveler-positive.png",
+      "prompt": "visitors/traveler-positive.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        70,
+        44,
+        977,
+        1536
+      ],
+      "sha256": "60d8a71475e959db0f858278e423a40a43a5c4afec153588b6bf37d03d463e76"
+    },
+    {
+      "id": "traveler-negative",
+      "file": "visitors/traveler-negative.png",
+      "prompt": "visitors/traveler-negative.eye-style.prompt.txt",
+      "width": 1024,
+      "height": 1536,
+      "alpha": [
+        0,
+        254
+      ],
+      "visible_bbox": [
+        68,
+        29,
+        978,
+        1536
+      ],
+      "sha256": "6932c2d14f2ceba5bcff7c49a56a87d15fb27773ad5ff9335fed252f4e05fb74"
+    }
+  ]
+}

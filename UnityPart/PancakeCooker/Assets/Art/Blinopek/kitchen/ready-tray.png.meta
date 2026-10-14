@@ -1,0 +1,1471 @@
+fileFormatVersion: 2
+guid: f1c7f74e7729c914785abf7de2520127
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5874708535410891491
+    second: ready-tray_0
+  - first:
+      213: 2854488190997662707
+    second: ready-tray_1
+  - first:
+      213: 4001704041074085897
+    second: ready-tray_2
+  - first:
+      213: 446730582026139351
+    second: ready-tray_3
+  - first:
+      213: 4376254312342144052
+    second: ready-tray_4
+  - first:
+      213: -9031323189367986756
+    second: ready-tray_5
+  - first:
+      213: -6777446176659712254
+    second: ready-tray_6
+  - first:
+      213: -7485210411377154091
+    second: ready-tray_7
+  - first:
+      213: -4373607457088078104
+    second: ready-tray_8
+  - first:
+      213: 2335811815447270108
+    second: ready-tray_9
+  - first:
+      213: 5064135258176218874
+    second: ready-tray_10
+  - first:
+      213: 4221555192573436495
+    second: ready-tray_11
+  - first:
+      213: -8694984382681223496
+    second: ready-tray_12
+  - first:
+      213: -2222748337192089996
+    second: ready-tray_13
+  - first:
+      213: -3909528332529402509
+    second: ready-tray_14
+  - first:
+      213: 9115760907272012643
+    second: ready-tray_15
+  - first:
+      213: 222789407389138258
+    second: ready-tray_16
+  - first:
+      213: -2043477601674083362
+    second: ready-tray_17
+  - first:
+      213: 6658445806269168176
+    second: ready-tray_18
+  - first:
+      213: 4227661204748991163
+    second: ready-tray_19
+  - first:
+      213: 5450511923874295998
+    second: ready-tray_20
+  - first:
+      213: 503221191050841442
+    second: ready-tray_21
+  - first:
+      213: 4849915454385968333
+    second: ready-tray_22
+  - first:
+      213: 5148222940845350459
+    second: ready-tray_23
+  - first:
+      213: 3522036259717853926
+    second: ready-tray_24
+  - first:
+      213: 3652815239191202636
+    second: ready-tray_25
+  - first:
+      213: 4533774747788581980
+    second: ready-tray_26
+  - first:
+      213: -1181749607523685396
+    second: ready-tray_27
+  - first:
+      213: -5927202714270922333
+    second: ready-tray_28
+  - first:
+      213: -7258541805364460944
+    second: ready-tray_29
+  - first:
+      213: 3123145984527305569
+    second: ready-tray_30
+  - first:
+      213: -2078019889861658876
+    second: ready-tray_31
+  - first:
+      213: -3214478366377091271
+    second: ready-tray_32
+  - first:
+      213: 2842990571356322623
+    second: ready-tray_33
+  - first:
+      213: 6848873384707552715
+    second: ready-tray_34
+  - first:
+      213: 3299013633566026562
+    second: ready-tray_35
+  - first:
+      213: -255415245015412502
+    second: ready-tray_36
+  - first:
+      213: 1655605410371634513
+    second: ready-tray_37
+  - first:
+      213: -5900787983623283048
+    second: ready-tray_38
+  - first:
+      213: -2844513850796463897
+    second: ready-tray_39
+  - first:
+      213: 5506176130531250278
+    second: ready-tray_40
+  - first:
+      213: 2441186313194896342
+    second: ready-tray_41
+  - first:
+      213: 8840021268605332404
+    second: ready-tray_42
+  - first:
+      213: -1070441835871094189
+    second: ready-tray_43
+  - first:
+      213: -7552480838740003738
+    second: ready-tray_44
+  - first:
+      213: 5938721674532067073
+    second: ready-tray_45
+  - first:
+      213: -6307921901583362560
+    second: ready-tray_46
+  - first:
+      213: 7612424284156347299
+    second: ready-tray_47
+  - first:
+      213: -7894446025268760244
+    second: ready-tray_48
+  - first:
+      213: -946471490490494180
+    second: ready-tray_49
+  - first:
+      213: 6202940669520704906
+    second: ready-tray_50
+  - first:
+      213: -5537909411273234457
+    second: ready-tray_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ready-tray_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 966
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea1f149948278150800000000000000
+      internalID: 5874708535410891491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 922
+        width: 151
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb86ffc2ed2d9720800000000000000
+      internalID: 2854488190997662707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 903
+        width: 69
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90057789f98e88730800000000000000
+      internalID: 4001704041074085897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 983
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6b8f3f81b133600800000000000000
+      internalID: 446730582026139351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_4
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1013
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434cce55c149bbc30800000000000000
+      internalID: 4376254312342144052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_5
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 991
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb529f5c86b4aa280800000000000000
+      internalID: -9031323189367986756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 947
+        width: 54
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2075edb5c9ca1f1a0800000000000000
+      internalID: -6777446176659712254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_7
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 983
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d72fc80ac03f1890800000000000000
+      internalID: -7485210411377154091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 923
+        width: 28
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eef34da033dd43c0800000000000000
+      internalID: -4373607457088078104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_9
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 991
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd215e178787a6020800000000000000
+      internalID: 2335811815447270108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 933
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6ef16bf2c674640800000000000000
+      internalID: 5064135258176218874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_11
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 975
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f42ab05b41af59a30800000000000000
+      internalID: 4221555192573436495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_12
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 951
+        width: 107
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be67be95c5355780800000000000000
+      internalID: -8694984382681223496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 979
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4764398f9263721e0800000000000000
+      internalID: -2222748337192089996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 913
+        width: 41
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d7244f1b09eb9c0800000000000000
+      internalID: -3909528332529402509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_15
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 996
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363475f6f30b18e70800000000000000
+      internalID: 9115760907272012643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_16
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 974
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d362f19c1871300800000000000000
+      internalID: 222789407389138258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_17
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 937
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3cfb5b2fb14a3e0800000000000000
+      internalID: -2043477601674083362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_18
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1013
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03afcdece2d876c50800000000000000
+      internalID: 6658445806269168176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_19
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 991
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba73c3777babaa30800000000000000
+      internalID: 4227661204748991163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_20
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 966
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0fe8a77bb14ab40800000000000000
+      internalID: 5450511923874295998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_21
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 887
+        width: 249
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26dc800d10dcbf600800000000000000
+      internalID: 503221191050841442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_22
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 979
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc45a59e86c5e4340800000000000000
+      internalID: 4849915454385968333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_23
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1001
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e9a9dfc79227740800000000000000
+      internalID: 5148222940845350459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_24
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 977
+        width: 111
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e237825159c0e030800000000000000
+      internalID: 3522036259717853926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_25
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1007
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b002a4b1861b230800000000000000
+      internalID: 3652815239191202636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_26
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 951
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c1395bc143bee30800000000000000
+      internalID: 4533774747788581980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_27
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 951
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebe71e3ef4999fe0800000000000000
+      internalID: -1181749607523685396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_28
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 953
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a98628f8885ebda0800000000000000
+      internalID: -5927202714270922333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_29
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 917
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072cde77faa744b90800000000000000
+      internalID: -7258541805364460944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_30
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 925
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b007dc9b4a75b20800000000000000
+      internalID: 3123145984527305569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_31
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 948
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40779948be36923e0800000000000000
+      internalID: -2078019889861658876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_32
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 935
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f5ae1f4f0e363d0800000000000000
+      internalID: -3214478366377091271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_33
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 893
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b7a71acd4547720800000000000000
+      internalID: 2842990571356322623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_34
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 909
+        width: 65
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5fe177e061c0f50800000000000000
+      internalID: 6848873384707552715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1519
+        height: 889
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bafd9bb6378cd20800000000000000
+      internalID: 3299013633566026562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_36
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 850
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae013aa1035947cf0800000000000000
+      internalID: -255415245015412502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_37
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 835
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1558a655954e9f610800000000000000
+      internalID: 1655605410371634513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_38
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 99
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e9d35b7903c1ea0800000000000000
+      internalID: -5900787983623283048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_39
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 101
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8299c39b14688d0800000000000000
+      internalID: -2844513850796463897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_40
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 81
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660dc0b840ed96c40800000000000000
+      internalID: 5506176130531250278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_41
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 73
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbf6849406d0e120800000000000000
+      internalID: 2441186313194896342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_42
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 42
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb6e12e1801eaa70800000000000000
+      internalID: 8840021268605332404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_43
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 49
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35abf2c52d60521f0800000000000000
+      internalID: -1070441835871094189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_44
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 41
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66435f121b2303790800000000000000
+      internalID: -7552480838740003738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_45
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 45
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1079566f5e39a6250800000000000000
+      internalID: 5938721674532067073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_46
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 18
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00697398372c578a0800000000000000
+      internalID: -6307921901583362560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_47
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 31
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a342b8dd83c4a960800000000000000
+      internalID: 7612424284156347299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_48
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 15
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c417c55aa2b417290800000000000000
+      internalID: -7894446025268760244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_49
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 9
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13974ba1357dd2f0800000000000000
+      internalID: -946471490490494180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_50
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 7
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85fa91aca5451650800000000000000
+      internalID: 6202940669520704906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready-tray_51
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 7
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e724c64bb46523b0800000000000000
+      internalID: -5537909411273234457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ready-tray_0: 5874708535410891491
+      ready-tray_1: 2854488190997662707
+      ready-tray_10: 5064135258176218874
+      ready-tray_11: 4221555192573436495
+      ready-tray_12: -8694984382681223496
+      ready-tray_13: -2222748337192089996
+      ready-tray_14: -3909528332529402509
+      ready-tray_15: 9115760907272012643
+      ready-tray_16: 222789407389138258
+      ready-tray_17: -2043477601674083362
+      ready-tray_18: 6658445806269168176
+      ready-tray_19: 4227661204748991163
+      ready-tray_2: 4001704041074085897
+      ready-tray_20: 5450511923874295998
+      ready-tray_21: 503221191050841442
+      ready-tray_22: 4849915454385968333
+      ready-tray_23: 5148222940845350459
+      ready-tray_24: 3522036259717853926
+      ready-tray_25: 3652815239191202636
+      ready-tray_26: 4533774747788581980
+      ready-tray_27: -1181749607523685396
+      ready-tray_28: -5927202714270922333
+      ready-tray_29: -7258541805364460944
+      ready-tray_3: 446730582026139351
+      ready-tray_30: 3123145984527305569
+      ready-tray_31: -2078019889861658876
+      ready-tray_32: -3214478366377091271
+      ready-tray_33: 2842990571356322623
+      ready-tray_34: 6848873384707552715
+      ready-tray_35: 3299013633566026562
+      ready-tray_36: -255415245015412502
+      ready-tray_37: 1655605410371634513
+      ready-tray_38: -5900787983623283048
+      ready-tray_39: -2844513850796463897
+      ready-tray_4: 4376254312342144052
+      ready-tray_40: 5506176130531250278
+      ready-tray_41: 2441186313194896342
+      ready-tray_42: 8840021268605332404
+      ready-tray_43: -1070441835871094189
+      ready-tray_44: -7552480838740003738
+      ready-tray_45: 5938721674532067073
+      ready-tray_46: -6307921901583362560
+      ready-tray_47: 7612424284156347299
+      ready-tray_48: -7894446025268760244
+      ready-tray_49: -946471490490494180
+      ready-tray_5: -9031323189367986756
+      ready-tray_50: 6202940669520704906
+      ready-tray_51: -5537909411273234457
+      ready-tray_6: -6777446176659712254
+      ready-tray_7: -7485210411377154091
+      ready-tray_8: -4373607457088078104
+      ready-tray_9: 2335811815447270108
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

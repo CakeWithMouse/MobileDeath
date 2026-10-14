@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 141f26c942d78d24183d8487eef4c6a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8159126943785953615
+    second: panel-cream_0
+  - first:
+      213: 2833803726024861992
+    second: panel-cream_1
+  - first:
+      213: -908884135598606264
+    second: panel-cream_2
+  - first:
+      213: -8365560666404720394
+    second: panel-cream_3
+  - first:
+      213: -458676805570396683
+    second: panel-cream_4
+  - first:
+      213: -8775581828490744669
+    second: panel-cream_5
+  - first:
+      213: 5867116663399910839
+    second: panel-cream_6
+  - first:
+      213: -3329188978112022936
+    second: panel-cream_7
+  - first:
+      213: -2326735590052920798
+    second: panel-cream_8
+  - first:
+      213: 2726918629670396247
+    second: panel-cream_9
+  - first:
+      213: 1090830945403366571
+    second: panel-cream_10
+  - first:
+      213: -9060424025690500631
+    second: panel-cream_11
+  - first:
+      213: 3472675395784152804
+    second: panel-cream_12
+  - first:
+      213: 6534286711603408869
+    second: panel-cream_13
+  - first:
+      213: -1333658989944157189
+    second: panel-cream_14
+  - first:
+      213: -8723719437418545648
+    second: panel-cream_15
+  - first:
+      213: -4352799918755449959
+    second: panel-cream_16
+  - first:
+      213: -6358121412987900897
+    second: panel-cream_17
+  - first:
+      213: -7119448316444376290
+    second: panel-cream_18
+  - first:
+      213: 1368461727319886177
+    second: panel-cream_19
+  - first:
+      213: -3327195743636188230
+    second: panel-cream_20
+  - first:
+      213: 4266114757957181896
+    second: panel-cream_21
+  - first:
+      213: 7624478968840974382
+    second: panel-cream_22
+  - first:
+      213: 2894052896946327371
+    second: panel-cream_23
+  - first:
+      213: -1675005354885805018
+    second: panel-cream_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: panel-cream_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 986
+        width: 134
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f492ea9f9ba0b3170800000000000000
+      internalID: 8159126943785953615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1116
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829e3e48971b35720800000000000000
+      internalID: 2833803726024861992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1114
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84838a3b1bef263f0800000000000000
+      internalID: -908884135598606264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_3
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 988
+        width: 128
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f077f385ee87eb80800000000000000
+      internalID: -8365560666404720394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_4
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1044
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdf34120e372a9f0800000000000000
+      internalID: -458676805570396683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 998
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acaf6f62ded63680800000000000000
+      internalID: -8775581828490744669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_6
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 960
+        width: 89
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd0ab1258f2c6150800000000000000
+      internalID: 5867116663399910839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_7
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1044
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866bc7163485cc1d0800000000000000
+      internalID: -3329188978112022936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_8
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 959
+        width: 286
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22203a4fe46c5bfd0800000000000000
+      internalID: -2326735590052920798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1020
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75126ecbb06f7d520800000000000000
+      internalID: 2726918629670396247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_10
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1030
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac65c227f8632f00800000000000000
+      internalID: 1090830945403366571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_11
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 1000
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e19d425a58e24280800000000000000
+      internalID: -9060424025690500631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_12
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1036
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e614f99fdb613030800000000000000
+      internalID: 3472675395784152804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_13
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1002
+        width: 51
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef2da1e4237eaa50800000000000000
+      internalID: 6534286711603408869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_14
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 991
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb4fd4f634ed7de0800000000000000
+      internalID: -1333658989944157189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_15
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 994
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e3f74546f1fe680800000000000000
+      internalID: -8723719437418545648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_16
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1018
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9937b38398fb793c0800000000000000
+      internalID: -4352799918755449959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_17
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1016
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c2d0cf24a63c7a0800000000000000
+      internalID: -6358121412987900897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_18
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 982
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1384950a73a23d90800000000000000
+      internalID: -7119448316444376290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 972
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1698e99c0b0cdf210800000000000000
+      internalID: 1368461727319886177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 1231
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab39f52791d63d1d0800000000000000
+      internalID: -3327195743636188230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_21
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 950
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1e61ff4c8443b30800000000000000
+      internalID: 4266114757957181896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_22
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 258
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20f337d9379fc960800000000000000
+      internalID: 7624478968840974382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_23
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 218
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f0da3c6cdb92820800000000000000
+      internalID: 2894052896946327371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel-cream_24
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 212
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c8729118f21c8e0800000000000000
+      internalID: -1675005354885805018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      panel-cream_0: 8159126943785953615
+      panel-cream_1: 2833803726024861992
+      panel-cream_10: 1090830945403366571
+      panel-cream_11: -9060424025690500631
+      panel-cream_12: 3472675395784152804
+      panel-cream_13: 6534286711603408869
+      panel-cream_14: -1333658989944157189
+      panel-cream_15: -8723719437418545648
+      panel-cream_16: -4352799918755449959
+      panel-cream_17: -6358121412987900897
+      panel-cream_18: -7119448316444376290
+      panel-cream_19: 1368461727319886177
+      panel-cream_2: -908884135598606264
+      panel-cream_20: -3327195743636188230
+      panel-cream_21: 4266114757957181896
+      panel-cream_22: 7624478968840974382
+      panel-cream_23: 2894052896946327371
+      panel-cream_24: -1675005354885805018
+      panel-cream_3: -8365560666404720394
+      panel-cream_4: -458676805570396683
+      panel-cream_5: -8775581828490744669
+      panel-cream_6: 5867116663399910839
+      panel-cream_7: -3329188978112022936
+      panel-cream_8: -2326735590052920798
+      panel-cream_9: 2726918629670396247
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

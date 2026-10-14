@@ -1,0 +1,540 @@
+[
+  {
+    "id": "facade_base",
+    "title_ru": "Фасад блинной",
+    "file": "facade_base.png",
+    "category": "facade",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Фасад и вывеска / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "base",
+    "shop_preview_source": "facade_base.png",
+    "usage_notes": "Петербургский фасад: вход, высокие окна и пустая вывеска.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A complete modest pancake cafe storefront in plain warm wooden window frames and matching timber door, broad blank cream wood signboard above, two large windows with simple linen curtains, centered door. Frontal slight lived perspective, only shallow pavement strip and cropped building wall around it, no people, no cars, no text. 16:9 landscape whole scene. Architectural layout must match a variant with green facade; keep clean well-kept surfaces with only selective wear. Opaque image.",
+      "Precise variant edit of this cafe facade: keep the architecture, camera, two windows, centered door, glass, curtains, surrounding pavement and placement exactly the same. Replace ALL sage-green-painted timber of the storefront frames, door, lower panels and sign frame with simple natural warm brown unpainted wood. Replace the botanical sign decorations with a completely EMPTY plain cream signboard with no letters. The base version is modest plain wood. Leave broad quiet planes of wood with sparse long varied grainwise strokes and soft colored shadows; avoid repeated scratch or canvas noise. Retain cozy matte handpainted character and mildly irregular edges, not a photo. No new objects, text, people or glow."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png",
+      "facade_green.png"
+    ],
+    "width": 1672,
+    "height": 941,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "facade_green",
+    "title_ru": "Фасад — зелёный, расписная вывеска",
+    "file": "facade_green.png",
+    "category": "facade",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Фасад и вывеска / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "purchasable",
+    "shop_preview_source": "facade_green.png",
+    "usage_notes": "Цельный фасад, вывеска оставлена пустой под отдельный набор текста.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A complete modest pancake cafe storefront, faded sage green painted timber frames, matching centered wooden door, two large windows with simple linen curtains, broad cream wood signboard with sparse hand-painted green leaves at both ends and EMPTY center ready for separately typeset title. Frontal slight lived perspective, shallow pavement strip, no people, no cars, no text. 16:9 landscape scene. Layout consistent with plain wooden facade. Opaque image."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1672,
+    "height": 941,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "wall_plaster",
+    "title_ru": "Стены — кремовая штукатурка",
+    "file": "wall_plaster.png",
+    "category": "wall",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Стены / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "base",
+    "shop_preview_source": "wall_plaster.png",
+    "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of warm cream plaster wall, straight-on orthographic view, edge-to-edge. Broad quiet matte plaster color fields, a few translucent cooler grey teal and dusty pink brush transitions, very sparse visible hand tool / brush edges, NO cracks, NO vignette, NO objects, NO frame, no lighting gradient spotlight. Painted readable wall material rather than a photographic or uniformly noisy texture. Opaque image."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "wall_botanical",
+    "title_ru": "Стены — светлые растительные обои",
+    "file": "wall_botanical.png",
+    "category": "wall",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Стены / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "purchasable",
+    "shop_preview_source": "wall_botanical.png",
+    "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of light warm cream wallpaper with a restrained sparse repeating botanical pattern: small dusty sage green paired leaves on thin soft brown curling stems, generous cream negative space between sprigs. Straight-on orthographic edge-to-edge. Hand painted small variation, quiet broad flat fields; pattern suitable behind cafe furniture, not ornate maximalism. NO border, objects, text, damage or vignette. Opaque image."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "floor_wood",
+    "title_ru": "Пол — светлые доски",
+    "file": "floor_wood.png",
+    "category": "floor",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Пол / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "base",
+    "shop_preview_source": "floor_wood.png",
+    "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of light wooden floorboards, top-down orthographic edge-to-edge. Pale honey beige boards of slightly varying width, staggered subtle end joins, sparse long ochre and grey-green strokes along grain, large calm planes. Gentle material variation, NO excessive scratches, no cracks, no objects, no frame, no vignette. Domestic clean floor, not rustic fantasy. Opaque image."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "floor_terracotta",
+    "title_ru": "Пол — терракота",
+    "file": "floor_terracotta.png",
+    "category": "floor",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Пол / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": false,
+    "variant": "purchasable",
+    "shop_preview_source": "floor_terracotta.png",
+    "usage_notes": "Материальный образец для развертки/масштабирования в сцене; бесшовность не проверена.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: One square continuous scene material swatch of square muted terracotta floor tiles, top-down orthographic edge-to-edge. Several warm dusty rose-brown and soft burnt sienna clay squares with thin cream-grey grout, gently irregular matte tile edges, broad smooth paint fields with selective dry strokes near corners. Calm domestic floor. NO objects, damage, cracks, text, border or vignette. Opaque image."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "table_base",
+    "title_ru": "Мебель — простой стол",
+    "file": "table_base.png",
+    "category": "furniture",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "table_base.png",
+    "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple cafe table, light honey-brown wooden rectangular tabletop with rounded worn edges, four straightforward sturdy legs, no tablecloth and no objects. View from seated-counter eye height looking slightly down at top, front-right three-quarter view, full silhouette with clear space on all sides. Transparent background, no scene, no floor, no drop-shadow cloud. Structure practical, quiet broad wood planes. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1374,
+    "height": 1145,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "stool_base",
+    "title_ru": "Мебель — простой табурет",
+    "file": "stool_base.png",
+    "category": "furniture",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "stool_base.png",
+    "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple light honey-brown wooden stool matching a plain cafe table, square seat with softly rounded corners, four sturdy legs and lower stretchers. Slightly elevated front-right three-quarter view, full silhouette all legs visible where structurally correct, clear transparent padding. No surrounding floor, no objects, no fake checkerboard. Sparse long strokes on wood, calm planes. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1129,
+    "height": 1393,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "table_premium",
+    "title_ru": "Мебель — тёмный стол",
+    "file": "table_premium.png",
+    "category": "furniture",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "table_premium.png",
+    "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe table, rectangular tabletop with softly rounded corners, four slender sturdy legs, subtle copper brown worn edge accents, no cloth or objects. Slightly elevated front-right three-quarter view matching a simple cafe table, whole silhouette padded on transparent background. Broad calm dark colored wood planes, sparse long grainwise strokes, no floor or shadow cloud. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1312,
+    "height": 1199,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "chair_premium",
+    "title_ru": "Мебель — стул с зелёным сиденьем",
+    "file": "chair_premium.png",
+    "category": "furniture",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "chair_premium.png",
+    "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe chair, simple gently curved back with two vertical slats, upholstered muted sage green seat, four slim sturdy wooden legs. Slightly elevated front-right three-quarter view, full silhouette, generous transparent padding. Seat fabric smooth matte soft masses, wood broad dark brown planes and sparse long marks. No surrounding floor or other objects. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1129,
+    "height": 1393,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "cloth_linen",
+    "title_ru": "Скатерть — однотонный лён",
+    "file": "cloth_linen.png",
+    "category": "tablecloth",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Скатерти / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "cloth_linen.png",
+    "usage_notes": "Прозрачная накидка для отдельного стола; требуется согласовать масштаб/ракурс в сцене.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated plain natural cream linen rectangular tablecloth, draped over an invisible rectangular cafe table so only the complete cloth top and hanging front/right sides are visible. Slightly elevated front-right three-quarter view. Soft few uneven broad folds, gentle warm grey shade, tiny hem, no decorative embroidery. Transparent background around and beneath the floating cloth, no table legs or visible table, no floor. Entire silhouette padded. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+      "Precise background extraction. Use input image as edit target: keep ONLY the physical Скатерть — однотонный лён exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+      "Edit this transparent cutout. Replace only the green checked pattern of this tablecloth with SOLID plain natural cream linen. Retain exactly the cloth silhouette, pose, folds and transparent background. Make large calm matte cloth color areas and a few soft folds in grey-beige; no colored pink/blue patchwork. Absolutely no glow, no surrounding floor, no cast shadow. True transparent background and crisp opaque cloth."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1431,
+    "height": 1099,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "cloth_check",
+    "title_ru": "Скатерть — зелёная клетка",
+    "file": "cloth_check.png",
+    "category": "tablecloth",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Скатерти / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "cloth_check.png",
+    "usage_notes": "Прозрачная накидка для отдельного стола; требуется согласовать масштаб/ракурс в сцене.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated cream-and-muted-sage-green checked linen rectangular tablecloth draped over an invisible cafe table, complete cloth top and hanging front/right sides visible. Slightly elevated front-right three-quarter view, same silhouette as plain linen cloth. Restrained medium green gingham checks follow soft broad uneven folds, quiet material, not microtexture. Transparent padding, no table legs, no table or surrounding floor. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1431,
+    "height": 1099,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "plate_cream",
+    "title_ru": "Посуда — кремовая керамика",
+    "file": "plate_cream.png",
+    "category": "dishware",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Посуда / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "plate_cream.png",
+    "usage_notes": "Пустая тарелка с широким свободным центром; блин и начинка отдельными слоями.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated EMPTY broad shallow cream ceramic dinner plate for pancake assembly. Slightly elevated overhead three-quarter view so the oval is wide and shallow, center large flat unobstructed cream with subtle cool reflected shade, narrow gently thick rim with no pattern. Full padded silhouette, transparent background, no food, utensils or surface. Painterly ceramic has large calm matte planes and only selected edge strokes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+      "Precise background extraction. Use input image as edit target: keep ONLY the physical Посуда — кремовая керамика exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+      "A single empty cream ceramic dinner plate, isolated on transparent background. Painted matte gouache domestic object in the attached kitchen painting's style: large smooth calm cream area, a few broad colored strokes along rim, one delicate dark brown edge, no tiny texture everywhere. Seen slightly from above, oval plate entire silhouette. No pattern, no food, no table, no backdrop, no gradient, no shadow or halo beyond the plate. PNG with true transparent background.",
+      "Edit the attached transparent ceramic plate cutout: remove ONLY the green leaf border and replace it with the same cream ceramic paint as the center. Preserve the exact plate shape, viewpoint, wide empty center, rim, palette, quiet painterly brushwork and full transparent background. Plain cream dinner plate with no pattern, no food. Keep empty area outside the plate completely transparent; no shadows or glow outside silhouette."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1423,
+    "height": 1105,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "plate_green",
+    "title_ru": "Посуда — зелёный узор",
+    "file": "plate_green.png",
+    "category": "dishware",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Посуда / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "plate_green.png",
+    "usage_notes": "Пустая тарелка с широким свободным центром; блин и начинка отдельными слоями.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated EMPTY broad shallow cream ceramic dinner plate for pancake assembly. Slightly elevated overhead three-quarter view, large flat unobstructed cream center, narrow rim decorated with a sparse hand-painted muted green leaf-and-line motif ONLY at edge. Whole padded silhouette on transparent background, no food, utensils, floor. Pattern must leave pancake/fillings readable; broad calm matte ceramic planes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges.",
+      "Precise background extraction. Use input image as edit target: keep ONLY the physical Посуда — зелёный узор exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+      "A single empty cream ceramic dinner plate with a restrained green leaf border only on narrow rim, isolated on transparent background. Painted matte gouache domestic object in the attached kitchen painting's style: large smooth calm cream center, a few broad colored strokes along rim, delicate dark brown edge. Seen slightly from above, entire oval plate. No food, no table, no backdrop, no gradient, no shadow or halo beyond the plate. PNG with true transparent background."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1423,
+    "height": 1105,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "lamp_base",
+    "title_ru": "Освещение — простой светильник",
+    "file": "lamp_base.png",
+    "category": "lighting",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Освещение / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "lamp_base.png",
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple domestic hanging ceiling light: dark grey-green metal stem and modest cream enamel shallow bell-shaped shade with softly visible warm pale bulb below. Full front view slightly from below, straight but mildly handmade geometry, whole fixture with ceiling cap and stem included, clear transparent padding. No luminous halo, no background, no chain tangles, no surrounding room. Matte enamel smooth planes with selective edges. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nPrioritize large QUIET areas with virtually no tiny marks. Only a handful of clear strokes describe each major material plane; varied smooth and dry edges."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1129,
+    "height": 1393,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "lamp_brass",
+    "title_ru": "Освещение — латунный светильник",
+    "file": "lamp_brass.png",
+    "category": "lighting",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Освещение / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "lamp_brass.png",
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated tasteful domestic hanging ceiling light: restrained aged matte brass ceiling cap, stem and fittings, cream linen broad pleated lampshade with warm ochre shadow inside. Front view slightly from below, whole fixture padded on transparent background. Quiet matte brass broad planes with a few subdued highlights, fabric soft larger folds, no ornate luxury flourishes, no halo, no surrounding room. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1129,
+    "height": 1393,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "pitcher",
+    "title_ru": "На стойке — керамический кувшин",
+    "file": "pitcher.png",
+    "category": "counter_decor",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Предметы на стойке / Базовый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "base",
+    "shop_preview_source": "pitcher.png",
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated everyday cream ceramic water pitcher, modest rounded body, slightly pinched pouring lip, one curved dark sage handle, narrow faded green line around neck. Slightly elevated three-quarter view, full silhouette transparent padding, no flowers, no liquid stream, no tabletop. Matte ceramic with broad calm grey-blue shade and small selective warm edge accents, subtly imperfect handmade oval. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1205,
+    "height": 1305,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "vase_flowers",
+    "title_ru": "На стойке — ваза с цветами",
+    "file": "vase_flowers.png",
+    "category": "counter_decor",
+    "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Предметы на стойке / Покупаемый",
+    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "transparent": true,
+    "variant": "purchasable",
+    "shop_preview_source": "vase_flowers.png",
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated small grey-green ceramic vase holding a restrained asymmetrical handful of ordinary meadow flowers: three cream daisies, two small dusty rose blooms, a few sage leaves and slim stems. Slightly elevated front three-quarter view, entire delicate bouquet and vase visible with transparent padding. Naturally uneven heights, quiet composition, no lavish decorative bouquet, no glitter, no tabletop. Selective small flower accents amid broad calm vase planes. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1129,
+    "height": 1393,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "service_background",
+    "title_ru": "Зона обслуживания — фон без посетителя и стойки",
+    "file": "service_background.png",
+    "category": "service_scene",
+    "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+    "states_or_reuse": "Отдельный фон без посетителя, мебели и передней стойки; посетитель и сменный декор накладываются слоями.",
+    "transparent": false,
+    "variant": null,
+    "shop_preview_source": null,
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: 16:9 game service scene background viewed from behind a counter but WITH NO COUNTER AND NO PERSON. Modest small domestic pancake cafe. Camera chest height, modest perspective: large timber-framed street windows across back wall, centered-right entrance door, cream walls and muted teal lower wainscot, pale wood floor. Entire foreground clear floor for visitor sprite; no people anywhere, no front counter, NO furniture, no plates, no wall art, no free standing decor, no UI. Empty architecture retains lived coziness through colored light and materials. Use the second reference only for spatial orientation, replace excessively uniform heavy texture with original kitchen reference controlled varied painting. No text. Opaque image.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png",
+      "pancake-counter-screen-v1.png"
+    ],
+    "width": 1672,
+    "height": 941,
+    "alpha_extrema": null,
+    "color_mode": "RGB"
+  },
+  {
+    "id": "service_counter",
+    "title_ru": "Зона обслуживания — передняя стойка",
+    "file": "service_counter.png",
+    "category": "service_scene",
+    "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+    "states_or_reuse": "Передний слой поверх посетителя; поверхность пустая для отдельных предметов и выдачи.",
+    "transparent": true,
+    "variant": null,
+    "shop_preview_source": null,
+    "usage_notes": "",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: A separate wide front service counter layer for a 16:9 cafe game. Counter extends fully horizontally across image; show a large usable muted cream painted wooden countertop seen from behind at chest height, in shallow perspective, warm brown wooden front lip, narrow dark wooden front fascia. Empty surface, NO food, dishes, till, jars, decor, labels or people. Transparent area above and under complete counter silhouette, width-to-height about 5:1. Quiet painted cream tabletop with broad soft grey-green planes, only a few brown wear accents at lip, no overall peeling/speckling. Full visible ends, no room background. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 2172,
+    "height": 724,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA"
+  },
+  {
+    "id": "service_delivery",
+    "title_ru": "Зона обслуживания — поверхность выдачи",
+    "file": "service_delivery.png",
+    "category": "service_scene",
+    "asset_list_coverage": "Окружение и кухня / Зона обслуживания",
+    "states_or_reuse": "Отдельный поднос обозначает область выдачи текущего заказа; блюда накладываются независимо.",
+    "transparent": true,
+    "variant": null,
+    "shop_preview_source": null,
+    "usage_notes": "Неглубокий поднос для выдачи заказа. Продольные края параллельны стойке; отдельная контактная тень принадлежит предмету.",
+    "generator": "built-in image_gen",
+    "prompt_history": [
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE separate empty shallow rectangular wooden serving tray used as clear order delivery surface on a cafe counter, a practical large tray for two pancake plates. Warm light wood with modest raised dark sage rim and integrated side grip cutouts; slightly overhead front three-quarter view, wide horizontal ellipse-like rectangular perspective, whole silhouette transparent padding. NO food, plate, labels or markings, no background surface. Large calm usable interior plane, a few sparse long material strokes and soft colored shadows. Output a true alpha PNG cutout, never a painted checkerboard or white background.\nLarge quiet areas, varied purposeful brush strokes. For cutouts, all empty pixels outside object must have alpha zero, absolutely NO diffuse background glow or cast shadow, NO gradient backdrop.",
+      "Precise background extraction. Use input image as edit target: keep ONLY the physical Зона обслуживания — поверхность выдачи exactly as painted with identical silhouette, perspective, material, inner shading. REMOVE ENTIRE OUTSIDE BACKGROUND including the large soft brown/grey glow and diffuse shadow halo. Every pixel outside the physical silhouette must be fully transparent, real alpha=0. No vignette, glow, checkerboard or cast shadow around object; opaque object alpha=255 and antialiased boundary. Keep the object and all its existing painted detail; do not restyle or add anything. Export isolated PNG cutout.",
+      "A single small empty rectangular wooden serving tray with low muted sage rim and two handle openings, isolated on transparent background. Painterly domestic game prop matching attached source painting; broad quiet pale wood plane with a few long material strokes. Three-quarter overhead view, entire silhouette. No table, no background, no cast shadow or halo. Transparent PNG cutout."
+    ],
+    "source_reference_files": [
+      "kitchen-original.png"
+    ],
+    "width": 1672,
+    "height": 941,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "color_mode": "RGBA",
+    "prompt": "service_delivery.perspective.prompt.txt"
+  }
+]

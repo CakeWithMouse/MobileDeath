@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: 5b1a4cb89879cbc49916670a5f580fd0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -744945584014199959
+    second: reward-video_0
+  - first:
+      213: -644259151822663008
+    second: reward-video_1
+  - first:
+      213: -7379706773508846654
+    second: reward-video_2
+  - first:
+      213: -4308411660491587987
+    second: reward-video_3
+  - first:
+      213: -3626318458659648285
+    second: reward-video_4
+  - first:
+      213: 4246239673776085382
+    second: reward-video_5
+  - first:
+      213: 6376334895298656291
+    second: reward-video_6
+  - first:
+      213: 8103683772140502591
+    second: reward-video_7
+  - first:
+      213: -3599610817927596936
+    second: reward-video_8
+  - first:
+      213: -2628198367213682165
+    second: reward-video_9
+  - first:
+      213: -9206824433115742828
+    second: reward-video_10
+  - first:
+      213: -8279310117814058987
+    second: reward-video_11
+  - first:
+      213: 136647033140618405
+    second: reward-video_12
+  - first:
+      213: -7194397611232725914
+    second: reward-video_13
+  - first:
+      213: 2596984443446255924
+    second: reward-video_14
+  - first:
+      213: -6724495817248843399
+    second: reward-video_15
+  - first:
+      213: -251269265794103252
+    second: reward-video_16
+  - first:
+      213: -5273309368545899001
+    second: reward-video_17
+  - first:
+      213: 2841823363582812442
+    second: reward-video_18
+  - first:
+      213: 396679105498935759
+    second: reward-video_19
+  - first:
+      213: 6107689566744623711
+    second: reward-video_20
+  - first:
+      213: 6106783855088671572
+    second: reward-video_21
+  - first:
+      213: -4466831877436490007
+    second: reward-video_22
+  - first:
+      213: 6163255223865126225
+    second: reward-video_23
+  - first:
+      213: -641058027629105788
+    second: reward-video_24
+  - first:
+      213: 3763004619826954240
+    second: reward-video_25
+  - first:
+      213: 2940843384350943533
+    second: reward-video_26
+  - first:
+      213: -1842175077033177214
+    second: reward-video_27
+  - first:
+      213: 1405775197756170629
+    second: reward-video_28
+  - first:
+      213: -3312778589281259479
+    second: reward-video_29
+  - first:
+      213: -7450527154251004999
+    second: reward-video_30
+  - first:
+      213: -1165417961053898845
+    second: reward-video_31
+  - first:
+      213: 333752249579954836
+    second: reward-video_32
+  - first:
+      213: -8496073608923667871
+    second: reward-video_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: reward-video_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1158
+        width: 56
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96376df20fb69a5f0800000000000000
+      internalID: -744945584014199959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1217
+        height: 1252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2d05007b12f07f0800000000000000
+      internalID: -644259151822663008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_2
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1249
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb0672f9c3069990800000000000000
+      internalID: -7379706773508846654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_3
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1237
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e7f36fb627534c0800000000000000
+      internalID: -4308411660491587987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_4
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1232
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec462d239abcadc0800000000000000
+      internalID: -3626318458659648285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1204
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689189a5c7cadea30800000000000000
+      internalID: 4246239673776085382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_6
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1192
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3283433ddca4d7850800000000000000
+      internalID: 6376334895298656291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_7
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1186
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e3882a471167070800000000000000
+      internalID: 8103683772140502591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 134
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874b5cb580d9b0ec0800000000000000
+      internalID: -3599610817927596936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 66
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0287f28283c68bd0800000000000000
+      internalID: -2628198367213682165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_10
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 64
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dbfba35f9ca3080800000000000000
+      internalID: -9206824433115742828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_11
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 72
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5104562405bf91d80800000000000000
+      internalID: -8279310117814058987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_12
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 56
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a425fda0c775e100800000000000000
+      internalID: 136647033140618405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_13
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 64
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664fd897d7d582c90800000000000000
+      internalID: -7194397611232725914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 30
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43164d687975a0420800000000000000
+      internalID: 2596984443446255924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_15
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 25
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979584f9eaacda2a0800000000000000
+      internalID: -6724495817248843399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_16
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 46
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c288e5d1fef438cf0800000000000000
+      internalID: -251269265794103252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_17
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 54
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e0519811171d6b0800000000000000
+      internalID: -5273309368545899001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 48
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1162c4ea4f207720800000000000000
+      internalID: 2841823363582812442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_19
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 47
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc175157b89418500800000000000000
+      internalID: 396679105498935759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_20
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 39
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a3c201d4fd2c450800000000000000
+      internalID: 6107689566744623711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_21
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 51
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b96a2af87afb450800000000000000
+      internalID: 6106783855088671572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 39
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eeb102e210a202c0800000000000000
+      internalID: -4466831877436490007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_23
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 39
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d2d86c8f7488550800000000000000
+      internalID: 6163255223865126225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_24
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 30
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d21cece118a17f0800000000000000
+      internalID: -641058027629105788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_25
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 39
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00080f4b3c0e83430800000000000000
+      internalID: 3763004619826954240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_26
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 45
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29ab401a79ffc820800000000000000
+      internalID: 2940843384350943533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 31
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f0c5717874f66e0800000000000000
+      internalID: -1842175077033177214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_28
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581af402811528310800000000000000
+      internalID: 1405775197756170629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_29
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 31
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920fe56cc65a602d0800000000000000
+      internalID: -3312778589281259479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_30
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 13
+        width: 47
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3877d17096a9890800000000000000
+      internalID: -7450527154251004999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_31
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 13
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7b5800a8a93dfe0800000000000000
+      internalID: -1165417961053898845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_32
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 87
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492633717e9b1a400800000000000000
+      internalID: 333752249579954836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reward-video_33
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 0
+        width: 85
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162a88a1112e71a80800000000000000
+      internalID: -8496073608923667871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      reward-video_0: -744945584014199959
+      reward-video_1: -644259151822663008
+      reward-video_10: -9206824433115742828
+      reward-video_11: -8279310117814058987
+      reward-video_12: 136647033140618405
+      reward-video_13: -7194397611232725914
+      reward-video_14: 2596984443446255924
+      reward-video_15: -6724495817248843399
+      reward-video_16: -251269265794103252
+      reward-video_17: -5273309368545899001
+      reward-video_18: 2841823363582812442
+      reward-video_19: 396679105498935759
+      reward-video_2: -7379706773508846654
+      reward-video_20: 6107689566744623711
+      reward-video_21: 6106783855088671572
+      reward-video_22: -4466831877436490007
+      reward-video_23: 6163255223865126225
+      reward-video_24: -641058027629105788
+      reward-video_25: 3763004619826954240
+      reward-video_26: 2940843384350943533
+      reward-video_27: -1842175077033177214
+      reward-video_28: 1405775197756170629
+      reward-video_29: -3312778589281259479
+      reward-video_3: -4308411660491587987
+      reward-video_30: -7450527154251004999
+      reward-video_31: -1165417961053898845
+      reward-video_32: 333752249579954836
+      reward-video_33: -8496073608923667871
+      reward-video_4: -3626318458659648285
+      reward-video_5: 4246239673776085382
+      reward-video_6: 6376334895298656291
+      reward-video_7: 8103683772140502591
+      reward-video_8: -3599610817927596936
+      reward-video_9: -2628198367213682165
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

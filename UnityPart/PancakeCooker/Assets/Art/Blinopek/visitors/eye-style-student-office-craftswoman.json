@@ -1,0 +1,189 @@
+{
+  "status": "complete",
+  "count": 9,
+  "eye_reference": "C:/Users/B6EA~1/AppData/Local/Temp/codex-clipboard-16a79158-baf1-4955-a8bc-d2ef65f962a7.png",
+  "description": "Natural small almond eyes with dark brown irises and muted whites, following approved eye crop. Existing reactions retained. Built-in imagegen local edits; painterly rendering can vary slightly outside edit regions. Real PNG alpha verified.",
+  "meta_files_modified": false,
+  "entries": [
+    {
+      "id": "student-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/student-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-neutral.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4021898905436198
+    },
+    {
+      "id": "student-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/student-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-positive.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.3994909922281901
+    },
+    {
+      "id": "student-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/student-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/student-negative.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.4003283182779948
+    },
+    {
+      "id": "office-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/office-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-neutral.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.3985424041748047
+    },
+    {
+      "id": "office-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/office-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-positive.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.3964773813883464
+    },
+    {
+      "id": "office-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/office-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/office-negative.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.3939310709635417
+    },
+    {
+      "id": "craftswoman-neutral",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-neutral.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/craftswoman-neutral.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-neutral.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.40091387430826825
+    },
+    {
+      "id": "craftswoman-positive",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-positive.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/craftswoman-positive.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-positive.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.3871949513753255
+    },
+    {
+      "id": "craftswoman-negative",
+      "path": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-negative.png",
+      "archive": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/archive/visitors-before-eye-style/craftswoman-negative.png",
+      "prompt": "C:/Users/мистер биба/Documents/ChatGPT/Блинопёк/MobileDeath/UnityPart/PancakeCooker/Assets/Art/Blinopek/visitors/craftswoman-negative.eye-style.prompt.txt",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 1536,
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_zero_fraction": 0.40132776896158856
+    }
+  ]
+}
