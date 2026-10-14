@@ -139,9 +139,9 @@ async function migrateUserProfile(connection) {
 }
 
 async function setup() {
-  if (process.platform !== 'win32' || process.arch !== 'x64') throw new Error('Automatic installation supports Windows x64 only. See DATABASE_SETUP.md.');
+  if (process.platform !== 'win32' || process.arch !== 'x64') throw new Error('Automatic installation supports Windows x64 only. See docs/DATABASE_SETUP.md.');
   if (!fs.existsSync(stateFile) && fs.existsSync(envFile)) {
-    throw new Error('Existing ServerPart/.env found. Refusing to replace it; see DATABASE_SETUP.md.');
+    throw new Error('Existing ServerPart/.env found. Refusing to replace it; see docs/DATABASE_SETUP.md.');
   }
   if (!fs.existsSync(stateFile) && fs.existsSync(data)) {
     throw new Error('Existing data directory without credentials. Refusing to initialize it.');
