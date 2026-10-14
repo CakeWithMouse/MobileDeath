@@ -1,7 +1,7 @@
 {
   "name": "Blinopek.Tests",
   "rootNamespace": "Blinopek.Tests",
-  "references": ["Blinopek.Domain", "Blinopek.Application", "Blinopek.Infrastructure"],
+  "references": ["Blinopek.Domain", "Blinopek.Application", "Blinopek.Infrastructure", "Blinopek.Presentation", "UnityEngine.UI"],
   "includePlatforms": ["Editor"],
   "optionalUnityReferences": ["TestAssemblies"],
   "autoReferenced": false

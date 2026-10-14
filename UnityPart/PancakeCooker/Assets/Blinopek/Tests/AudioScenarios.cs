@@ -36,8 +36,10 @@ namespace Blinopek.Tests
             send(new GameCommand(ActionKind.BeginFold, (int)s.Order.Portions[0].Shape));
             foreach (var d in Recipes.Gestures(s.Order.Portions[0].Shape))
                 send(new GameCommand(ActionKind.FoldGesture, d == Direction.Left ? -400 : d == Direction.Right ? 400 : 0, d == Direction.Down ? -400 : d == Direction.Up ? 400 : 0));
+            Check(Count(sounds, SoundCue.Serve) == 0 && Count(sounds, SoundCue.Tray) == 1, "Finishing must only play tray audio");
+            send(new GameCommand(ActionKind.ServeOrder));
             Check(Count(sounds, SoundCue.Serve) == 1 && Count(sounds, SoundCue.Tip) == 1 && Count(sounds, SoundCue.Positive) == 1, "Successful serving audio");
-            send(new GameCommand(ActionKind.FinalizeFold)); send(new GameCommand(ActionKind.Tick, 1));
+            send(new GameCommand(ActionKind.FinalizeFold)); send(new GameCommand(ActionKind.ServeOrder)); send(new GameCommand(ActionKind.Tick, 1));
             Check(Count(sounds, SoundCue.Serve) == 1 && Count(sounds, SoundCue.Tip) == 1, "Repeated serving audio");
             var expired = Session(); Do(expired, ActionKind.Accept); audio.Reset(expired);
             var tick = new GameCommand(ActionKind.Tick, expired.Order.PatienceLimit);

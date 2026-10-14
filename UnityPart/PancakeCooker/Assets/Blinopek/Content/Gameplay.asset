@@ -43,7 +43,7 @@ MonoBehaviour:
     maxPortions: 24
   bodyFont: {fileID: 12800000, guid: fac5a918ff5f49e43894a67bad0897d8, type: 3}
   titleFont: {fileID: 12800000, guid: 82119a5cac01d0546a2e0c7ead2165de, type: 3}
-  kitchenBackground: {fileID: 2800000, guid: 087003069da250be8bfa02afbed9db2f, type: 3}
+  kitchenBackground: {fileID: 2800000, guid: 3a9837ff2e034e1bac5880d368b10427, type: 3}
   counterBackground: {fileID: 2800000, guid: 7aa418e8094e63b45846334f213874ae, type: 3}
   counter: {fileID: 2800000, guid: 430e31c75e293374190ca97bf189b5ba, type: 3}
   pan: {fileID: 2800000, guid: d927461035cfd20469ca53e0fa77c010, type: 3}

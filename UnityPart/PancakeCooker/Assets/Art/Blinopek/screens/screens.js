@@ -23,22 +23,19 @@ function avatar(id,x,y){const path=`visitors/${id}-neutral.png`,b=ASSET_BOUNDS[p
 function back(){button('arrow-left',25,795,115,79,'counter')}
 function serviceBase(){art('decor/service_background.png',0,0,1600,900,{stretch:true});art('decor/chair_premium.png',1025,414,160,280);art('decor/table_premium.png',846,500,320,247);art('decor/stool_base.png',1350,580,150,180);art('decor/table_base.png',1270,440,270,230);art('decor/vase_flowers.png',1000,391,100,130);art('decor/lamp_brass.png',1140,-38,165,240);}
 function kitchenBase(){
- // Fitted painted room: the stove and counters form one continuous backdrop.
- art('kitchen/kitchen-background-crepe-stove.png',0,0,1600,900,{stretch:true});
- art('kitchen/batter-pitcher-floral-v2.png',18,265,260,260,{z:4,shadow:'pitcher'});
- art('kitchen/pancake-ready.png',377,308,363,235,{stretch:true,z:6});
- art('kitchen/ready-tray.png',1140,200,395,139,{stretch:true,z:4,shadow:'tray'});
- art('kitchen/fold-triangle.png',1192,220,126,90,{z:5,shadow:'fold'});
- art('kitchen/plate.png',1103,351,472,291,{stretch:true,z:4,shadow:'plate'});
- art('kitchen/pancake-ready.png',1158,390,362,213,{stretch:true,z:5});
- art('kitchen/filling-jam.png',1240,440,200,107,{stretch:true,z:6});
+ // Approved overhead composition: empty dishes are painted into the room; food stays separate.
+ art('kitchen/kitchen-background-topview-v4.png',0,0,1600,900,{stretch:true});
+ art('kitchen/pancake-ready.png',382,300,364,310,{stretch:true,z:6});
+ art('kitchen/fold-triangle.png',1190,190,148,126,{z:5,shadow:'fold'});
+ art('kitchen/pancake-ready.png',1144,404,372,298,{stretch:true,z:5});
+ art('kitchen/filling-jam.png',1230,475,200,150,{stretch:true,z:6});
  const locked=new Set((new URLSearchParams(location.search).get('locked')||'').split(','));
- const fill=[['jam',864,255,141,127],['honey',1015,255,116,130],['curd',882,403,140,119],['mushrooms',886,540,133,96],['butter',1029,526,112,105]];
+ const fill=[['jam',844,250,149,142],['honey',1010,267,112,133],['curd',869,422,141,133],['mushrooms',879,584,116,104],['butter',1010,604,108,101]];
  fill.forEach(([id,x,y,w,h])=>{if(locked.has(id))return;art(`kitchen/container-${id}.png`,x,y,w,h,{z:6,shadow:id});if(id==='butter'||id==='curd')art('ui/helper-badge.png',x+w-19,y+h-15,27,27,{z:30})});
- if(!locked.has('jam'))node('div','ring','left:860px;top:255px;width:149px;height:132px;border-width:3px;transform:rotate(-4deg)');
+ if(!locked.has('jam'))node('div','ring','left:840px;top:246px;width:157px;height:150px;border-width:3px;transform:rotate(-4deg)');
  // Proposed two-side cooking indicator; tutorial labels are separate.
- paper(370,151,330,62,40);text('1',390,166,24,22);art('kitchen/pancake-ready.png',423,165,49,34,{z:45});glyph('check',480,171,23);
- text('2',552,166,24,22,'opacity:.55');art('kitchen/pancake-undercooked.png',585,165,49,34,{z:45,opacity:.55});
+ paper(410,112,330,62,40);text('1',430,127,24,22);art('kitchen/pancake-ready.png',463,126,49,34,{z:45});glyph('check',520,132,23);
+ text('2',592,127,24,22,'opacity:.55');art('kitchen/pancake-undercooked.png',625,126,49,34,{z:45,opacity:.55});
  button('arrow-left',24,804,110,76,'counter');uiButton('recipe-book-closed',159,797,87,90,'recipes');
  paper(1271,805,203,75,60);art('kitchen/scraper.png',1285,811,69,61,{z:65});text('×3',1381,824,75,30,'z-index:70');
  paper(1495,805,87,75,60);art('kitchen/discard-bowl.png',1510,811,57,62,{z:65});

@@ -33,10 +33,10 @@ namespace Blinopek.Application
         {
             observed = s;
             if (s == null) return;
-            revision = s.Revision; pancakeId = s.Pancake?.Id ?? -1;
-            heatA = s.Pancake?.HeatA ?? 0; heatB = s.Pancake?.HeatB ?? 0;
+            revision = s.Revision; pancakeId = s.PanPancake?.Id ?? -1;
+            heatA = s.PanPancake?.HeatA ?? 0; heatB = s.PanPancake?.HeatB ?? 0;
             revenue = s.Ledger.Revenue; tips = s.Ledger.Tips; refunds = s.Ledger.Refunds;
-            finished = s.Order.Finished.Count; orderPhase = s.Order.Phase; dayPhase = s.Phase;
+            finished = s.FinishedCount; orderPhase = s.Order.Phase; dayPhase = s.Phase;
             lowPatience = IsLow(s);
         }
         private static bool IsLow(DaySession s) => !s.IsTutorial && s.HasActiveOrder &&
@@ -75,7 +75,7 @@ namespace Blinopek.Application
                 signals.Add(new SoundSignal(s.Order.Report.Total >= 65 ? SoundCue.Positive : SoundCue.Negative, 1.15f));
             }
             else if (cancelled) signals.Add(new SoundSignal(SoundCue.Negative));
-            else if (s.Order.Finished.Count > finished) signals.Add(new SoundSignal(SoundCue.Tray, .65f));
+            else if (s.FinishedCount > finished) signals.Add(new SoundSignal(SoundCue.Tray, .65f));
             if (s.Ledger.Revenue > revenue) signals.Add(new SoundSignal(SoundCue.Payment, served ? 1.4f : .18f));
             if (s.Ledger.Tips > tips) signals.Add(new SoundSignal(SoundCue.Tip, 1.55f));
             if (s.Ledger.Refunds > refunds) signals.Add(new SoundSignal(SoundCue.Refund, served ? 1.4f : .3f));
@@ -85,7 +85,7 @@ namespace Blinopek.Application
                 else if (s.Phase == DayPhase.Result)
                     signals.Add(new SoundSignal(s.Success ? SoundCue.DaySuccess : SoundCue.DayFailure, served ? 2.1f : .4f));
             }
-            var p = s.Pancake;
+            var p = s.PanPancake;
             if (p != null && p.Id == pancakeId && command.kind == ActionKind.Tick)
             {
                 int oldHeat = p.Stage == PancakeStage.SideA ? heatA : heatB;
@@ -93,7 +93,7 @@ namespace Blinopek.Application
                 if (p.Stage == PancakeStage.SideA || p.Stage == PancakeStage.SideB)
                 {
                     if (oldHeat < s.Rules.burnTicks && heat >= s.Rules.burnTicks) signals.Add(new SoundSignal(SoundCue.Burnt));
-                    else if (oldHeat < s.Rules.readyTicks && heat >= s.Rules.readyTicks && s.Tutorial != TutorialStep.Demonstration)
+                    else if (oldHeat < s.Rules.readyTicks && heat >= s.Rules.readyTicks && (!s.IsLessonPancake(p) || s.Tutorial != TutorialStep.Demonstration))
                         signals.Add(new SoundSignal(SoundCue.Ready));
                 }
             }

@@ -35,6 +35,28 @@ namespace Blinopek.Tests
             Assert.That(restored.Dispatch(new GameCommand(ActionKind.BeginStroke, -1, 500, 500)), Is.True, "Restored gesture must not lock the new pointer");
             Assert.That(restored.Session.Ledger.Revenue, Is.Zero, "Tutorial must not pay on each restore");
         }
+        [Test] public void JsonRoundTripKeepsPanAndPlateSeparate()
+        {
+            var rules = new BalanceRules { readyTicks = 2, burnTicks = 6 };
+            var store = new FileGameStore(file);
+            store.Save(new SavedGame { profile = new Profile { tutorialComplete = true, demonstrationSeen = true }, rules = rules });
+            var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(34);
+            Action<GameCommand> send = c => Assert.That(game.Dispatch(c), Is.True, c.kind.ToString());
+            CoreScenarios.Paint(send, -1); send(new GameCommand(ActionKind.FinishBatter)); send(new GameCommand(ActionKind.Tick, 2));
+            send(new GameCommand(ActionKind.Flip)); send(new GameCommand(ActionKind.Tick, 2)); send(new GameCommand(ActionKind.MoveToPlate));
+            send(new GameCommand(ActionKind.BeginFold)); send(new GameCommand(ActionKind.FoldGesture, 0, 400));
+            CoreScenarios.Paint(send, -1); send(new GameCommand(ActionKind.FinishBatter)); send(new GameCommand(ActionKind.Tick, 3)); game.Save();
+            var restored = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules);
+            Assert.That(restored.Session.PanPancake.HeatA, Is.EqualTo(3));
+            Assert.That(restored.Session.PlatePancake.Stage, Is.EqualTo(PancakeStage.Folding));
+            Assert.That(restored.Session.PlatePancake.Folds.Count, Is.EqualTo(1));
+            Assert.That(restored.Session.PlatePancake.HeatA, Is.EqualTo(2));
+            Assert.That(restored.Session.PanPancake.Id, Is.Not.EqualTo(restored.Session.PlatePancake.Id));
+            Assert.That(restored.Session.Balance, Is.EqualTo(game.Session.Balance));
+            Assert.That(restored.Dispatch(new GameCommand(ActionKind.FoldGesture, 400, 0)), Is.True);
+            Assert.That(restored.Session.PanPancake.HeatA, Is.EqualTo(3));
+            Assert.That(restored.Session.ReadyPancakes.Count, Is.EqualTo(1));
+        }
         [Test] public void CorruptedPrimaryRecoversBackupAndRetainsCorruptEvidence()
         {
             var store = new FileGameStore(file); var saved = new SavedGame { profile = new Profile(), rules = new BalanceRules() };

@@ -184,13 +184,14 @@ namespace Blinopek.Presentation
             }
             ui.volume = Muted ? 0 : EffectsVolume;
             for (int i = 0; i < voices.Length; i++) voices[i].volume = Muted ? 0 : voiceGains[i] * EffectsVolume;
-            var s = controller.Session; var p = s?.Pancake;
-            bool frying = p != null && (p.Stage == PancakeStage.SideA || p.Stage == PancakeStage.SideB) && s.HasActiveOrder;
+            var s = controller.Session; var p = s?.PanPancake;
+            bool frying = p != null && (p.Stage == PancakeStage.SideA || p.Stage == PancakeStage.SideB) && s.CanCook;
             float world = Muted || worldPaused ? 0 : EffectsVolume;
             Loop(fry, library.frying, frying ? world * (kitchen ? .6f : .22f) : 0, 2.5f, dt);
             AudioClip stroke = gestureType == -1 ? library.batter : gestureType == 0 ? library.butter : gestureType == 1 ? library.jam : gestureType == 2 ? library.honey : null;
-            bool moving = p != null && s.HasActiveOrder && Time.unscaledTime < gestureUntil &&
-                (p.Stage == PancakeStage.Batter || p.Stage == PancakeStage.Plate);
+            var painting = gestureType == -1 ? s?.PanPancake : s?.PlatePancake;
+            bool moving = painting != null && s.CanCook && Time.unscaledTime < gestureUntil &&
+                (painting.Stage == PancakeStage.Batter || painting.Stage == PancakeStage.Plate);
             Loop(gesture, stroke, moving ? world * .8f : 0, 6, dt);
             bool menu = facade || s == null || s.Phase == DayPhase.Result;
             float music = Muted ? 0 : MusicVolume * (worldPaused && !facade ? .4f : 1);

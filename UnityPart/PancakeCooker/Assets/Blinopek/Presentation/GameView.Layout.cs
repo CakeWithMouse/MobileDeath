@@ -12,8 +12,8 @@ namespace Blinopek.Presentation
     // Coordinates and cropped artwork follow the artist's 1600 x 900 Figma export, node 4199:520.
     public sealed partial class GameView
     {
-        private Text dayText, honeyText, scraperText, resultDay, profitText;
-        private GameObject orderDetails, tutorialPanel, orderHud, facade;
+        private Text dayText, honeyText, scraperText, resultDay, profitText, orderPrice;
+        private GameObject orderDetails, tutorialPanel, orderHud, facade, counterPatience, orderPayment;
         private Image kitchenPatienceBar;
         private RawImage sideArtA, sideArtB;
         private RawImage panGuide;
@@ -29,6 +29,13 @@ namespace Blinopek.Presentation
             => Picture(name, parent, art.Find(key), x, y, w, h, preserve);
         private RawImage Paper(string name, Transform parent, float x, float y, float w, float h)
             => Art(name, parent, "ui/panel-cream.png", x, y, w, h, false);
+        private Text PaperLabel(string name, Transform parent, float x, float y, float w, float h, int size)
+        {
+            var paper = Paper(name + "Paper", parent, x, y, w, h);
+            var label = Label(name, paper.transform, "", 12, 6, w - 24, h - 12, size);
+            label.alignment = TextAnchor.MiddleCenter;
+            return label;
+        }
         private Button IconButton(string name, Transform parent, string key, float x, float y, float w, float h, Action action, bool background = true)
         {
             var b = Button(name, parent, "", x, y, w, h, action);
@@ -86,6 +93,8 @@ namespace Blinopek.Presentation
             BuildHud(); BuildResults(); BuildShop(); BuildBook(); BuildFacade(); BuildPause();
             storage = Label("StorageError", root, "", 270, 760, 1060, 38, 20, new Color(.65f, .14f, .1f));
             ghost = Picture("DraggedPortion", root, art.fillings[3], 0, 0, 70, 60, false); ghost.gameObject.SetActive(false);
+            draggedReady = Display(root, "DraggedReadyPancake", 0, 0, 148, 126);
+            draggedReady.Root.SetActive(false); displays.Add(draggedReady);
         }
         private void BuildHud()
         {
@@ -116,47 +125,74 @@ namespace Blinopek.Presentation
         {
             ServiceBackground(counter.transform);
             visitor = Picture("Visitor", counter.transform, art.visitors[0], 94, 191, 470, 792);
+            visitorHome = visitor.rectTransform.anchoredPosition;
             Picture("ServiceCounter", counter.transform, art.counter, -30, 723, 1660, 240, false);
-            Art("Delivery", counter.transform, "decor/service_delivery.png", 1040, 755, 400, 110);
+            deliveryTray = Rect("DeliveryTray", counter.transform, 1020, 735, 420, 140);
+            deliveryTrayHome = deliveryTray.anchoredPosition;
+            Art("Delivery", deliveryTray, "decor/service_delivery.png", 0, 0, 420, 140, false);
+            var trayHit = deliveryTray.gameObject.AddComponent<Image>(); trayHit.color = Color.clear;
+            deliveryInput = deliveryTray.gameObject.AddComponent<TrayServeDrag>(); deliveryInput.View = this;
+            for (int i = 0; i < 3; i++) {
+                var portion = Display(deliveryTray, "CounterPancake" + i, 0, 0, 148, 126);
+                Picture("PortionPlate", portion.Root.transform, art.plate, -3, 3, 154, 120, false).transform.SetAsFirstSibling();
+                deliveryDisplays.Add(portion); displays.Add(portion);
+            }
+            deliveryCount = PaperLabel("DeliveryCount", deliveryTray, 330, -35, 80, 38, 22);
+            var trayArrow = Art("ServeTrayArrow", deliveryTray, "ui/glyphs/arrow-right.png", 186, -36, 48, 38);
+            trayArrow.rectTransform.localRotation = Quaternion.Euler(0, 0, 90); deliveryArrow = trayArrow.gameObject;
             Art("CounterPitcher", counter.transform, "decor/pitcher.png", 1444, 658, 112, 183);
             Art("SpeechBubble", counter.transform, "ui/speech-bubble.png", 620, 145, 825, 285, false);
-            dialogue = Label("Request", counter.transform, "", 737, 160, 600, 195, 34, Ink, true); dialogue.alignment = TextAnchor.MiddleCenter;
+            dialogue = Label("Request", counter.transform, "", 680, 168, 705, 144, 32, Ink, true); dialogue.alignment = TextAnchor.MiddleCenter;
+            orderPayment = Rect("OrderPayment", counter.transform, 1238, 316, 145, 42).gameObject;
+            orderPrice = Label("OrderPrice", orderPayment.transform, "", 0, 0, 101, 42, 27); orderPrice.alignment = TextAnchor.MiddleRight;
+            Art("OrderCoin", orderPayment.transform, "ui/coin-pancake.png", 109, 5, 32, 32);
+            reaction = Label("Reaction", counter.transform, "", 680, 168, 705, 180, 24); reaction.alignment = TextAnchor.MiddleCenter;
             accept = IconButton("AcceptOrder", counter.transform, "ui/glyphs/check.png", 856, 448, 176, 86, () => { if (Command(ActionKind.Accept)) SwitchKitchen(true); });
             clarify = IconButton("ClarifyOrder", counter.transform, "ui/glyphs/help.png", 1065, 448, 176, 86, () => Command(ActionKind.Clarify));
             nextGuest = IconButton("NextGuest", counter.transform, "ui/glyphs/arrow-right.png", 930, 448, 260, 86, () => Command(ActionKind.NextGuest));
-            Art("PatienceTrack", counter.transform, "ui/patience-track.png", 747, 560, 580, 53, false);
-            patienceBar = Panel("PatienceFill", counter.transform, 785, 579, 500, 14, Green); patienceBar.raycastTarget = false;
-            patienceText = Label("Patience", counter.transform, "", 747, 615, 580, 32, 21); patienceText.alignment = TextAnchor.MiddleCenter;
-            reaction = Label("Reaction", counter.transform, "", 650, 650, 740, 66, 22); reaction.alignment = TextAnchor.MiddleCenter;
+            counterPatience = Rect("CounterPatience", counter.transform, 813, 554, 440, 32).gameObject;
+            Art("PatienceTrack", counterPatience.transform, "ui/patience-track.png", 0, 0, 440, 32, false);
+            patienceBar = Panel("PatienceFill", counterPatience.transform, 29, 12, 379, 8, Green); patienceBar.raycastTarget = false;
             IconButton("RecipeBook", counter.transform, "ui/recipe-book-closed.png", 28, 770, 108, 104, OpenBook, false);
             toKitchen = IconButton("KitchenTab", counter.transform, "ui/glyphs/arrow-right.png", 1448, 795, 120, 80, () => SwitchKitchen(true));
-            displays.Add(Display(counter.transform, "ServedPancake", 1150, 770, 240, 90));
+            serveOrderCounter = Button("ServeOrderCounter", counter.transform, "Отдать заказ", 805, 448, 250, 86, () => Command(ActionKind.ServeOrder));
         }
         private void BuildKitchen()
         {
             Picture("KitchenRoom", kitchen.transform, art.kitchenBackground, 0, 0, 1600, 900, false);
-            Shadow(kitchen.transform, "pitcher", 18, 265, 260, 260);
-            Art("BatterPitcher", kitchen.transform, "kitchen/batter-pitcher-floral-v2.png", 18, 265, 260, 260);
-            Shadow(kitchen.transform, "tray", 1140, 200, 395, 139);
-            Picture("ReadyTray", kitchen.transform, art.tray, 1140, 200, 395, 139, false);
-            Shadow(kitchen.transform, "plate", 1103, 351, 472, 291);
-            Picture("Plate", kitchen.transform, art.plate, 1103, 351, 472, 291, false);
-            var panSurface = Rect("PanSurface", kitchen.transform, 377, 308, 363, 235);
+            // The approved overhead background includes the empty dishes and batter jug.
+            // Food, ingredients and HUD remain independent interactive layers.
+            const float panWidth = 364, panHeight = 310, plateWidth = 372, plateHeight = 298;
+            var panSurface = Rect("PanSurface", kitchen.transform, 382, 300, panWidth, panHeight);
             var panHit = panSurface.gameObject.AddComponent<Image>(); panHit.color = Color.clear;
             var panRouter = panSurface.gameObject.AddComponent<KitchenInputRouter>(); panRouter.View = this; panRouter.Pan = true;
-            panGuide = Art("BatterGuide", panSurface, "kitchen/guide-batter-circle.png", 0, 0, 363, 235, false); panGuide.color = new Color(1, .94f, .75f, .65f);
-            displays.Add(Display(panSurface, "PancakeOnPan", 0, 0, 363, 235));
-            plateSurface = Rect("PlateSurface", kitchen.transform, 1158, 390, 362, 213);
+            panGuide = Art("BatterGuide", panSurface, "kitchen/guide-batter-circle.png", 0, 0, panWidth, panHeight, false); panGuide.color = new Color(1, .94f, .75f, .65f);
+            panDisplay = Display(panSurface, "PancakeOnPan", 0, 0, panWidth, panHeight); displays.Add(panDisplay);
+            plateSurface = Rect("PlateSurface", kitchen.transform, 1144, 404, plateWidth, plateHeight);
             var plateHit = plateSurface.gameObject.AddComponent<Image>(); plateHit.color = Color.clear;
             plateSurface.gameObject.AddComponent<KitchenInputRouter>().View = this;
-            displays.Add(Display(plateSurface, "PancakeOnPlate", 0, 0, 362, 213));
-            displays.Add(Display(kitchen.transform, "ReadyPancake", 1192, 220, 126, 90));
+            assemblyDisplay = Display(plateSurface, "PancakeOnPlate", 0, 0, plateWidth, plateHeight); displays.Add(assemblyDisplay);
+            // Keep full-sized plates and page through larger prepared stocks.
+            for (int i = 0; i < 2; i++)
+            {
+                var portion = Display(kitchen.transform, "ReadyPancake" + i, 1190 + i * 165, 190, 148, 126);
+                Picture("PortionPlate", portion.Root.transform, art.plate, -3, 3, 154, 120, false).transform.SetAsFirstSibling();
+                var selection = Art("SelectedReady", portion.Root.transform, "kitchen/guide-batter-circle.png", -6, 0, 160, 126, false);
+                selection.color = new Color(.39f, .55f, .42f, .85f); portion.Selection = selection.gameObject;
+                var hit = portion.Root.AddComponent<Image>(); hit.color = Color.clear;
+                portion.Input = portion.Root.AddComponent<ReadyPancakeDrag>(); portion.Input.View = this;
+                readyDisplays.Add(portion); displays.Add(portion);
+            }
+            trayCount = PaperLabel("TrayCount", kitchen.transform, 1180, 119, 335, 42, 22);
+            trayPrevious = IconButton("TrayPrevious", kitchen.transform, "ui/glyphs/arrow-left.png", 1127, 116, 50, 48, () => ChangeTrayPage(-1), false);
+            trayNext = IconButton("TrayNext", kitchen.transform, "ui/glyphs/arrow-right.png", 1518, 116, 50, 48, () => ChangeTrayPage(1), false);
+            serveOrder = Button("ServeOrder", kitchen.transform, "Отдать заказ", 1190, 337, 330, 58, () => Command(ActionKind.ServeOrder));
             for (int i = 0; i < 4; i++)
             {
-                var p = Recipes.PortionTargets[i]; var marker = Label("PortionGuide", plateSurface, "+", p.X * .362f - 16, (1000 - p.Y) * .213f - 16, 32, 32, 29, Green);
+                var p = Recipes.PortionTargets[i]; var marker = Label("PortionGuide", plateSurface, "+", p.X * plateWidth / 1000 - 16, (1000 - p.Y) * plateHeight / 1000 - 16, 32, 32, 29, Green);
                 marker.alignment = TextAnchor.MiddleCenter; portionGuides.Add(marker);
             }
-            var positions = new[] { new Rect(1029, 526, 112, 105), new Rect(864, 255, 141, 127), new Rect(1015, 255, 116, 130), new Rect(882, 403, 140, 119), new Rect(886, 540, 133, 96) };
+            var positions = new[] { new Rect(1010, 604, 108, 101), new Rect(844, 250, 149, 142), new Rect(1010, 267, 112, 133), new Rect(869, 422, 141, 133), new Rect(879, 584, 116, 104) };
             string[] names = { "butter", "jam", "honey", "curd", "mushrooms" };
             for (int i = 0; i < 5; i++)
             {
@@ -165,35 +201,36 @@ namespace Blinopek.Presentation
                 var ring = Art("SelectedIngredient", card.transform, "kitchen/guide-batter-circle.png", -6, -6, p.width + 12, p.height + 12, false); ring.color = new Color(.39f, .55f, .42f, .85f); ingredientSelections.Add(ring.gameObject);
                 Picture("Container", card.transform, art.containers[i], 0, 0, p.width, p.height);
                 var badge = Art("HelperBadge", card.transform, "ui/helper-badge.png", p.width - 19, p.height - 15, 27, 27); helperBadges.Add(badge.gameObject);
-                var label = Label("Name", card.transform, Recipes.IngredientName((Ingredient)i), -20, p.height + 2, p.width + 40, 25, 18); label.alignment = TextAnchor.MiddleCenter; ingredientLabels.Add(label);
+                var label = PaperLabel("Name", card.transform, 0, p.height - 20, p.width, 39, 18);
+                label.text = Recipes.IngredientName((Ingredient)i); ingredientLabels.Add(label);
                 var drag = card.gameObject.AddComponent<IngredientDrag>(); drag.View = this; drag.Ingredient = i;
             }
-            Paper("HeatStatus", kitchen.transform, 370, 151, 330, 62);
-            heatA = Label("SideA", kitchen.transform, "1", 390, 158, 24, 35, 22);
-            heatB = Label("SideB", kitchen.transform, "2", 552, 158, 24, 35, 22);
-            sideArtA = Picture("SideAImage", kitchen.transform, art.raw, 423, 165, 49, 34);
-            sideArtB = Picture("SideBImage", kitchen.transform, art.raw, 585, 165, 49, 34);
-            sideReadyA = Art("SideAReady", kitchen.transform, "ui/glyphs/check.png", 480, 171, 23, 23).gameObject;
-            sideReadyB = Art("SideBReady", kitchen.transform, "ui/glyphs/check.png", 642, 171, 23, 23).gameObject;
-            heatBarA = Panel("HeatA", kitchen.transform, 390, 198, 120, 4, Gold); heatBarA.raycastTarget = false;
-            heatBarB = Panel("HeatB", kitchen.transform, 552, 198, 120, 4, Gold); heatBarB.raycastTarget = false;
-            finishBatter = Button("FinishBatter", kitchen.transform, "Начать жарку", 397, 588, 282, 62, () => Command(ActionKind.FinishBatter));
-            flip = Button("FlipHandle", kitchen.transform, "Перевернуть", 397, 588, 282, 62, () => Command(ActionKind.Flip));
-            move = Button("MoveToPlate", kitchen.transform, "На тарелку →", 397, 588, 282, 62, () => Command(ActionKind.MoveToPlate));
+            Paper("HeatStatus", kitchen.transform, 410, 112, 330, 62);
+            heatA = Label("SideA", kitchen.transform, "1", 430, 119, 24, 35, 22);
+            heatB = Label("SideB", kitchen.transform, "2", 592, 119, 24, 35, 22);
+            sideArtA = Picture("SideAImage", kitchen.transform, art.raw, 463, 126, 49, 34);
+            sideArtB = Picture("SideBImage", kitchen.transform, art.raw, 625, 126, 49, 34);
+            sideReadyA = Art("SideAReady", kitchen.transform, "ui/glyphs/check.png", 520, 132, 23, 23).gameObject;
+            sideReadyB = Art("SideBReady", kitchen.transform, "ui/glyphs/check.png", 682, 132, 23, 23).gameObject;
+            heatBarA = Panel("HeatA", kitchen.transform, 430, 159, 120, 4, Gold); heatBarA.raycastTarget = false;
+            heatBarB = Panel("HeatB", kitchen.transform, 592, 159, 120, 4, Gold); heatBarB.raycastTarget = false;
+            finishBatter = Button("FinishBatter", kitchen.transform, "Начать жарку", 423, 662, 282, 58, () => Command(ActionKind.FinishBatter));
+            flip = Button("FlipHandle", kitchen.transform, "Перевернуть", 423, 662, 282, 58, () => Command(ActionKind.Flip));
+            move = Button("MoveToPlate", kitchen.transform, "На тарелку →", 423, 662, 282, 58, () => Command(ActionKind.MoveToPlate));
             for (int i = 0; i < 3; i++)
             {
                 int shape = i; string[] forms = { "triangle", "envelope", "roll" };
-                var b = IconButton("Fold" + i, kitchen.transform, "kitchen/fold-" + forms[i] + ".png", 1145 + i * 145, 665, 135, 82, () => Command(ActionKind.BeginFold, shape)); foldButtons.Add(b);
+                var b = IconButton("Fold" + i, kitchen.transform, "kitchen/fold-" + forms[i] + ".png", 1135 + i * 145, 746, 135, 54, () => Command(ActionKind.BeginFold, shape)); foldButtons.Add(b);
             }
-            foldGuide = Label("FoldGuide", kitchen.transform, "", 1120, 668, 450, 66, 25); foldGuide.alignment = TextAnchor.MiddleCenter;
-            finishFold = Button("FinishIncorrectFold", kitchen.transform, "Закончить как есть", 1170, 735, 365, 55, () => Command(ActionKind.FinalizeFold));
+            foldGuide = PaperLabel("FoldGuide", kitchen.transform, 1130, 333, 430, 68, 22);
+            finishFold = Button("FinishIncorrectFold", kitchen.transform, "Закончить как есть", 1170, 746, 365, 54, () => Command(ActionKind.FinalizeFold));
             IconButton("CounterTab", kitchen.transform, "ui/glyphs/arrow-left.png", 24, 804, 110, 76, () => SwitchKitchen(false));
             IconButton("KitchenRecipeBook", kitchen.transform, "ui/recipe-book-closed.png", 159, 797, 87, 90, OpenBook, false);
             remove = IconButton("Scraper", kitchen.transform, "kitchen/scraper.png", 1271, 805, 203, 75, () => Command(ActionKind.Remove, SelectedIngredient));
             var scraperIcon = remove.transform.Find("Icon").GetComponent<RectTransform>(); scraperIcon.anchoredPosition = new Vector2(48, -37); scraperIcon.sizeDelta = new Vector2(69, 61);
             scraperText = Label("ScraperCount", remove.transform, "", 110, 6, 82, 63, 30);
             trashZone = Rect("DiscardZone", kitchen.transform, 1495, 805, 87, 75);
-            discard = IconButton("Discard", trashZone, "kitchen/discard-bowl.png", 0, 0, 87, 75, () => Command(ActionKind.Discard));
+            discard = IconButton("Discard", trashZone, "kitchen/discard-bowl.png", 0, 0, 87, 75, DiscardSelectedPancake);
             tutorialPanel = Rect("TutorialHint", kitchen.transform, 282, 797, 952, 86).gameObject;
             Paper("Paper", tutorialPanel.transform, 0, 0, 952, 86);
             hint = Label("Hint", tutorialPanel.transform, "", 25, 8, 902, 70, 22); hint.alignment = TextAnchor.MiddleCenter;

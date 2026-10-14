@@ -1,0 +1,18 @@
+{
+  "revision": "cooking-topview-v4",
+  "date": "2026-10-14",
+  "figma_url": "https://www.figma.com/design/80WNK9VHbbHZyhh0DGUb9D/OverDigging?node-id=4199-520",
+  "frame_name": "Блинопёк — Готовка",
+  "frame_size": [1600, 900],
+  "frame_position": [5500, 900],
+  "operation": "Replaced the existing frame fill with the approved image and hid its previous Clip path group.",
+  "approved_reference": "cooking-topview-v4.png",
+  "proof": "cooking-topview-v4-proof.jpg",
+  "runtime_background": "../kitchen/kitchen-background-topview-v4.png",
+  "runtime_layout": "../../../Blinopek/Presentation/GameView.Layout.cs",
+  "static_objects": ["room", "stove", "batter jug", "empty assembly plate", "empty ready tray"],
+  "dynamic_objects": ["pancakes", "fillings", "ingredient containers", "helpers", "HUD", "controls"],
+  "pan_surface": [382, 300, 364, 310],
+  "plate_surface": [1144, 404, 372, 298],
+  "validation": "CookingScreenValidation.Run: render plus pointer input checks in Unity 6000.6.5f1"
+}

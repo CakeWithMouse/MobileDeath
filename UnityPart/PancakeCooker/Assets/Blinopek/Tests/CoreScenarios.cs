@@ -20,7 +20,7 @@ namespace Blinopek.Tests
             { "Repeated painting costs more without more coverage", RepeatPaint },
             { "Stroke sampling is independent of event count", StrokeSampling },
             { "Wrong portion placement lowers quality", PortionPlacement },
-            { "Patience expiration refunds once and clears kitchen", Timeout },
+            { "Patience expiration refunds once and preserves kitchen", Timeout },
             { "Closing finishes accepted order and rejects new one", Closing },
             { "Unaccepted visitor creates no closing revenue", UnacceptedClosing },
             { "Pause reasons compose and stop every clock", Pauses },
@@ -34,7 +34,26 @@ namespace Blinopek.Tests
             { "Audio only observes committed commands and restores silently", AudioCommitted },
             { "Audio money and serving feedback happen once", AudioReceipts },
             { "Audio cooking and patience thresholds trigger once", AudioThresholds },
-            { "Audio helper emits a bounded sequence", AudioHelper }
+            { "Audio helper emits a bounded sequence", AudioHelper },
+            { "Cooking before acceptance prepares a paid-for stock without revenue", CookBeforeOrder },
+            { "Serving prepared stock preserves extra portions and the active pancake", ServePreparedStock },
+            { "Cancelled orders return prepared portions and preserve held strokes", KeepCancelledCooking },
+            { "A pancake started before the lesson keeps ordinary cooking rules", FreeCookingBeforeLesson },
+            { "Prepared stock and independent heat survive save replay", FreeCookingReplay },
+            { "Legacy saves replay before switching cooking rules exactly once", LegacyCookingReplay },
+            { "Closing clears unused stock without serving or paying for it", ClosePreparedKitchen },
+            { "Cooking without a guest emits tray and heat audio without payment", FreeCookingAudio },
+            { "A second pancake fries while the first is partially folded", FryWhileFolding },
+            { "Filling tools affect only the plate while the pan is occupied", FillWhileFrying },
+            { "Discard removes only the specified pancake", DiscardOneStation },
+            { "Timeout and closing handle both kitchen stations", ConcurrentTimeout },
+            { "Replay restores two pancakes and an interrupted gesture independently", ConcurrentReplay },
+            { "The tutorial protects only its own pancake during parallel cooking", ConcurrentLesson },
+            { "Ready pancakes can be discarded by identity without affecting either station", DiscardReadyPancake },
+            { "A discarded order portion must be replaced before explicit serving", ReplaceReadyPortion },
+            { "Prepared orders still expire while waiting for explicit serving", ReadyOrderTimeout },
+            { "Discard and explicit serving survive replay without duplicate rewards", ManualServingReplay },
+            { "Automatic-serving saves migrate without rewriting past orders", LegacyServingReplay }
         };
         private sealed class MemoryStore : IGameStore { public SavedGame Data; public int Writes; public SavedGame Load() => Data; public void Save(SavedGame game) { Data = game; Writes++; } }
         private sealed class BrokenStore : IGameStore { public SavedGame Load() => throw new Exception("broken"); public void Save(SavedGame game) => throw new Exception("Must not overwrite"); }
@@ -80,8 +99,10 @@ namespace Blinopek.Tests
             var s = Session(); Check(Do(s, ActionKind.Accept), "Accept"); int paid = s.Ledger.Revenue;
             Check(!Do(s, ActionKind.Accept) && s.Ledger.Revenue == paid, "Double acceptance");
             Plate(s); Fill(s, s.Order.Portions[0]); FoldPancake(s, s.Order.Portions[0].Shape);
+            Check(s.CanServeOrder && s.Order.Phase == OrderPhase.Accepted && s.Order.Report == null && s.Reviews.Count == 0, "Final fold served automatically");
+            Check(Do(s, ActionKind.ServeOrder), "Explicit serving rejected");
             Check(s.Order.Phase == OrderPhase.Served && s.Order.Report.Total >= 95, "Correct dish not served well");
-            int tips = s.Ledger.Tips; Check(!Do(s, ActionKind.FinalizeFold) && s.Ledger.Tips == tips && s.Reviews.Count == 1, "Double serving");
+            int tips = s.Ledger.Tips; Check(!Do(s, ActionKind.FinalizeFold) && !Do(s, ActionKind.ServeOrder) && s.Ledger.Tips == tips && s.Reviews.Count == 1, "Double serving");
         }
         private static void SafeTutorial()
         {
@@ -95,6 +116,7 @@ namespace Blinopek.Tests
             Do(s, ActionKind.Flip); Do(s, ActionKind.Tick, 500); Do(s, ActionKind.MoveToPlate); Fill(s, s.Order.Portions[0]);
             Do(s, ActionKind.BeginFold); Check(!Do(s, ActionKind.FoldGesture, -400, 0) && s.Pancake.Folds.Count == 0, "Bad tutorial gesture advanced");
             Do(s, ActionKind.FoldGesture, 0, 400); Do(s, ActionKind.FoldGesture, 400, 0);
+            Check(!s.TutorialCompleted && s.Ledger.Revenue == 0 && Do(s, ActionKind.ServeOrder), "Lesson must wait for explicit serving");
             Check(s.TutorialCompleted && s.Ledger.Revenue == s.Order.Price && s.Ledger.Products == 0, "Tutorial reward");
             Do(s, ActionKind.Tick, 1); Do(s, ActionKind.NextGuest); Do(s, ActionKind.Accept); Do(s, ActionKind.BeginStroke, -1, 500, 500);
             Check(s.Ledger.Products > 0 && !s.IsTutorial, "Safe mode leaked into ordinary order");
@@ -106,8 +128,8 @@ namespace Blinopek.Tests
             Do(s, ActionKind.FinishBatter); Do(s, ActionKind.Flip); Check(!Do(s, ActionKind.MoveToPlate), "Raw second side moved");
             Do(s, ActionKind.Tick, 2); Check(Do(s, ActionKind.MoveToPlate) && s.Pancake.HeatA == 0, "Early flip must keep raw side A");
         }
-        private static void BurnedIsServeable() { var s = Session(); Do(s, ActionKind.Accept); Plate(s, true); Fill(s, s.Order.Portions[0]); FoldPancake(s, Fold.Triangle); Check(s.Order.Phase == OrderPhase.Served && s.Order.Report.Cooking < 100, "Burnt dish blocked or unpenalized"); }
-        private static void IncorrectFold() { var s = Session(); Do(s, ActionKind.Accept); Plate(s); Fill(s, s.Order.Portions[0]); Do(s, ActionKind.BeginFold); Do(s, ActionKind.FoldGesture, -400); Check(Do(s, ActionKind.FinalizeFold) && s.Order.Phase == OrderPhase.Served && s.Order.Report.Shape == 0, "Wrong fold deadlock"); }
+        private static void BurnedIsServeable() { var s = Session(); Do(s, ActionKind.Accept); Plate(s, true); Fill(s, s.Order.Portions[0]); FoldPancake(s, Fold.Triangle); Check(Do(s, ActionKind.ServeOrder) && s.Order.Phase == OrderPhase.Served && s.Order.Report.Cooking < 100, "Burnt dish blocked or unpenalized"); }
+        private static void IncorrectFold() { var s = Session(); Do(s, ActionKind.Accept); Plate(s); Fill(s, s.Order.Portions[0]); Do(s, ActionKind.BeginFold); Do(s, ActionKind.FoldGesture, -400); Check(Do(s, ActionKind.FinalizeFold) && Do(s, ActionKind.ServeOrder) && s.Order.Phase == OrderPhase.Served && s.Order.Report.Shape == 0, "Wrong fold deadlock"); }
         private static void MultiplePortions()
         {
             var profile = Profile(); profile.day = 3; DaySession s = null;
@@ -117,7 +139,7 @@ namespace Blinopek.Tests
                 Plate(s); Fill(s, s.Order.Portions[i]); FoldPancake(s, s.Order.Portions[i].Shape);
                 if (i > 0) Check(s.Order.Phase == OrderPhase.Accepted && s.Ledger.Tips == 0, "Served before last portion");
             }
-            Check(s.Order.Report.Total >= 95, "Reverse preparation penalized");
+            Check(Do(s, ActionKind.ServeOrder) && s.Order.Report.Total >= 95, "Reverse preparation penalized");
         }
         private static void Scraper()
         {
@@ -148,14 +170,17 @@ namespace Blinopek.Tests
         }
         private static void Timeout()
         {
-            var s = Session(); Do(s, ActionKind.Accept); Plate(s); int products = s.Ledger.Products; Do(s, ActionKind.Tick, 1000);
-            Check(s.Order.Phase == OrderPhase.Cancelled && s.Pancake == null && s.Ledger.Refunds == s.Order.Price && s.Ledger.Products == products, "Timeout refund/clear");
+            var s = Session(); Do(s, ActionKind.Accept); Plate(s); var pancake = s.Pancake; int products = s.Ledger.Products; Do(s, ActionKind.Tick, 1000);
+            Check(s.Order.Phase == OrderPhase.Cancelled && s.Pancake == pancake && s.Ledger.Refunds == s.Order.Price && s.Ledger.Products == products, "Timeout refund/preservation");
             Do(s, ActionKind.Tick, 100); Check(s.Ledger.Refunds == s.Order.Price && !Do(s, ActionKind.FinalizeFold), "Duplicate timeout refund");
+            Fill(s, s.Order.Portions[0]); FoldPancake(s, s.Order.Portions[0].Shape);
+            Check(s.ReadyPancakes.Count == 1 && s.Order.Phase == OrderPhase.Cancelled, "Cannot finish cooking after the guest leaves");
         }
         private static void Closing()
         {
             var rules = Rules(); rules.dayTicks = 2; var s = Session(null, rules); Do(s, ActionKind.Accept); Plate(s);
             Check(s.Phase == DayPhase.Closing && s.HasActiveOrder, "Closing dropped active order"); Fill(s, s.Order.Portions[0]); FoldPancake(s, Fold.Triangle);
+            Check(Do(s, ActionKind.ServeOrder), "Cannot explicitly serve the closing order");
             Check(s.Phase == DayPhase.Result && !Do(s, ActionKind.NextGuest) && s.Ledger.Rent > 0, "Closing did not settle");
         }
         private static void UnacceptedClosing() { var rules = Rules(); rules.dayTicks = 2; var s = Session(null, rules); Do(s, ActionKind.Tick, 2); Check(s.Phase == DayPhase.Result && s.Ledger.Revenue == 0 && !Do(s, ActionKind.Accept), "Accepted after close"); }

@@ -1,0 +1,10 @@
+Built-in image_gen, 2026-10-14. Edit target: approved pancake-cooking-screen-topview-v4.png.
+Style reference: blinopek-painterly/references/kitchen-original.png.
+
+Use case: precise-object-edit. Asset: production game background, 16:9.
+Keep the approved camera, object coordinates, sizes, slightly overhead perspective, stove and circular griddle, wooden countertop, wall tiles, cloths, floral batter jug on the left, large striped ceramic assembly plate on the right and rectangular enamel serving tray at upper right unchanged.
+Remove all user interface panels, numbers, icons and buttons at top and bottom; both round pancakes and jam topping; folded pancake from serving tray; all five small ingredient vessels between stove and plate (jam bowl, honey jar, curd bowl, mushroom bowl, butter dish), plus tiny helper badges beside them.
+Reconstruct underlying wood/tile/metal unobtrusively. The griddle must be empty dark iron, the assembly plate empty cream with its original muted teal rings, and the tray empty. Keep the large batter jug with batter and its shadow, the stove knob and lower handle. Do not move, enlarge, shrink or redesign anything remaining. No food on griddle, plate or tray, no UI/text.
+Preserve matte painterly marks, varied quiet surfaces, faded mint and cream, colored shadows. Output full-bleed opaque landscape background in the approved layout.
+
+Runtime: cookware and jug are static background; ingredient containers, food, HUD, hit targets and animations remain separate Unity objects.

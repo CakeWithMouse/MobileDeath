@@ -11,7 +11,7 @@ namespace Blinopek.Domain
     public enum DayPhase { Serving, Closing, Result }
     public enum OrderPhase { Offered, Accepted, Served, Cancelled }
     public enum TutorialStep { Welcome, Batter, Demonstration, Discard, Retry, SideA, SideB, Filling, Folding, Complete }
-    public enum ActionKind { Tick = 0, Accept = 1, Clarify = 2, BeginStroke = 3, Stroke = 4, EndStroke = 5, FinishBatter = 6, Flip = 7, MoveToPlate = 8, Portion = 9, Remove = 10, Discard = 11, BeginFold = 12, FoldGesture = 13, FinalizeFold = 14, NextGuest = 15, TutorialContinue = 16, ApplyHelper = 17 }
+    public enum ActionKind { Tick = 0, Accept = 1, Clarify = 2, BeginStroke = 3, Stroke = 4, EndStroke = 5, FinishBatter = 6, Flip = 7, MoveToPlate = 8, Portion = 9, Remove = 10, Discard = 11, BeginFold = 12, FoldGesture = 13, FinalizeFold = 14, NextGuest = 15, TutorialContinue = 16, ApplyHelper = 17, EnableFreeCooking = 18, ServeOrder = 19, EnableManualServing = 20 }
 
     // All simulation time is in 50 ms ticks, coordinates in [0,1000], money in hundredths.
     [Serializable]

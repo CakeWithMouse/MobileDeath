@@ -12,6 +12,9 @@
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Infrastructure/LocalDevelopmentGateway.cs" />
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/CoreScenarios.cs" />
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/AudioScenarios.cs" />
+    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/FreeCookingScenarios.cs" />
+    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/ConcurrentCookingScenarios.cs" />
+    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/ManualServingScenarios.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
 </Project>

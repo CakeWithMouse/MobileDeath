@@ -1,5 +1,8 @@
 {
   "status": "verified_after_reload",
+  "kitchen_revision": "cooking-topview-v4.json",
+  "kitchen_revision_status": "verified_after_reload_2026-10-14",
+  "kitchen_revision_proof": "cooking-topview-v4-proof.jpg",
   "asset_boards": 14,
   "asset_images": 126,
   "layered_screens": 9,

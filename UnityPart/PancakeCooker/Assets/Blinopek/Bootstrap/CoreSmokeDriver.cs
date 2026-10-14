@@ -122,8 +122,14 @@ namespace Blinopek.Bootstrap
             Drag("PanSurface", Position(pan, .5f, .5f), Position(plate, .5f, .5f));
             Check(View.Session.Pancake.Stage == PancakeStage.Plate, "Dragging moves a cooked pancake to the plate");
             Paint("PlateSurface"); yield return Shot("05-butter"); Click("Fold0");
-            Drag("PlateSurface", Position(plate, .5f, .2f), Position(plate, .5f, .8f)); yield return Shot("06-fold");
-            Drag("PlateSurface", Position(plate, .2f, .7f), Position(plate, .8f, .7f));
+            Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .51f, .51f));
+            Check(View.Session.Pancake.Folds.Count == 0, "A tap with finger jitter does not fold the pancake");
+            Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .5f, .63f));
+            Check(View.Session.Pancake.Folds.Count == 1, "A short swipe from the pancake center folds upward");
+            yield return Shot("06-fold");
+            Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .58f, .5f));
+            yield return new WaitForSecondsRealtime(CookingMotion.FoldSeconds * 2 + .1f);
+            Click("ServeOrder");
             Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Pointer-driven tutorial serves a correct order");
             yield return new WaitForSecondsRealtime(2);
             Check(View.Audio.PlayedCount(SoundCue.Serve) == 1 && View.Audio.PlayedCount(SoundCue.Payment) == 1, "Tutorial serving and payment clips play once");
@@ -170,15 +176,16 @@ namespace Blinopek.Bootstrap
                 Click("Fold" + (int)recipe.Shape);
                 foreach (var direction in Recipes.Gestures(recipe.Shape)) {
                     Vector2 from = new Vector2(.5f, .5f), to = from;
-                    if (direction == Direction.Up) { from.y = .2f; to.y = .8f; }
-                    if (direction == Direction.Down) { from.y = .8f; to.y = .2f; }
-                    if (direction == Direction.Right) { from.x = .2f; to.x = .8f; }
-                    if (direction == Direction.Left) { from.x = .8f; to.x = .2f; }
+                    if (direction == Direction.Up) to.y += .13f;
+                    if (direction == Direction.Down) to.y -= .13f;
+                    if (direction == Direction.Right) to.x += .08f;
+                    if (direction == Direction.Left) to.x -= .08f;
                     Drag("PlateSurface", Position(plate, from.x, from.y), Position(plate, to.x, to.y));
                 }
-                // Rapid QA gestures queue visual folds; let delivery finish before painting the next portion.
+                // Rapid QA gestures queue visual folds; let them finish before painting the next portion.
                 yield return new WaitForSecondsRealtime(CookingMotion.FoldSeconds * Recipes.Gestures(recipe.Shape).Length + .1f);
             }
+            Click("ServeOrder");
             Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Ordinary order serves every requested portion with correct fillings and folds");
             Check(View.Session.Ledger.Products > 0 && View.Session.Ledger.Revenue == price, "Ordinary cooking spends products and pays acceptance once");
             yield return new WaitForSecondsRealtime(3);

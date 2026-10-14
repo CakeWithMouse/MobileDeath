@@ -43,6 +43,7 @@ namespace Blinopek.Domain
     public sealed class PancakeState
     {
         public readonly int Id;
+        public readonly bool IsLesson;
         public PancakeStage Stage { get; internal set; }
         public readonly CoverageMask Batter = new CoverageMask();
         public readonly IngredientLayer[] Fillings = new IngredientLayer[5];
@@ -52,7 +53,7 @@ namespace Blinopek.Domain
         public Fold ActualFold { get; internal set; } = Fold.Incorrect;
         public readonly List<Direction> Folds = new List<Direction>();
         public bool FoldError { get; internal set; }
-        public PancakeState(int id) { Id = id; }
+        public PancakeState(int id, bool isLesson = false) { Id = id; IsLesson = isLesson; }
         public int IngredientBits
         {
             get { int bits = 0; for (int i = 0; i < 5; i++) if (Fillings[i] != null && Fillings[i].Dose > 0) bits |= 1 << i; return bits; }

@@ -58,19 +58,25 @@ namespace Blinopek.Application
             if (saved.sessionStart != null)
             {
                 if (saved.schema != 1 || saved.environment != gateway.Environment) throw new InvalidOperationException("Incompatible save environment or schema.");
-                Session = new DaySession(saved.sessionStart, saved.rules, saved.seed);
+                Session = new DaySession(saved.sessionStart, saved.rules, saved.seed, false, false);
                 foreach (var command in saved.commands)
                     if (!Session.Execute(command)) throw new InvalidOperationException("Invalid command in saved session: " + command.kind);
                 if (Session.Phase == DayPhase.Result && !saved.settled) Settle();
-                else if (Session.Phase != DayPhase.Result) Dispatch(new GameCommand(ActionKind.EndStroke));
+                else if (Session.Phase != DayPhase.Result) {
+                    Dispatch(new GameCommand(ActionKind.EndStroke));
+                    if (!Session.FreeCooking) Dispatch(new GameCommand(ActionKind.EnableFreeCooking));
+                    if (!Session.ManualServing) Dispatch(new GameCommand(ActionKind.EnableManualServing));
+                }
             }
         }
         public bool StartDay(int seed)
         {
             if (StorageBlocked || (Session != null && Session.Phase != DayPhase.Result)) return false;
             saved = new SavedGame { profile = Profile.Copy(), sessionStart = Profile.Copy(), seed = seed, rules = nextRules.Copy(), environment = gateway.Environment };
-            Session = new DaySession(saved.sessionStart, saved.rules, saved.seed);
-            Save(); DayStarted?.Invoke(); Changed?.Invoke(); return true;
+            Session = new DaySession(saved.sessionStart, saved.rules, saved.seed, false, false);
+            Dispatch(new GameCommand(ActionKind.EnableFreeCooking));
+            Dispatch(new GameCommand(ActionKind.EnableManualServing));
+            DayStarted?.Invoke(); Changed?.Invoke(); return true;
         }
         public bool Dispatch(GameCommand command)
         {

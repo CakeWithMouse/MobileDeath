@@ -20,8 +20,8 @@ namespace Blinopek.Presentation
         private Canvas canvas;
         private RectTransform root, plateSurface, trashZone;
         private GameObject kitchen, counter, results, shop, pausePanel, book;
-        private Text hud, clock, orderStrip, hint, patienceText, dialogue, reaction, resultText, shopBalance, progress, foldGuide, storage;
-        private Text heatA, heatB;
+        private Text hud, clock, orderStrip, hint, dialogue, reaction, resultText, shopBalance, progress, foldGuide, storage;
+        private Text heatA, heatB, trayCount;
         private Image patienceBar, heatBarA, heatBarB;
         private RawImage visitor, ghost;
         private Button accept, clarify, nextGuest, finishBatter, flip, move, remove, discard, finishFold, toKitchen;
@@ -31,6 +31,18 @@ namespace Blinopek.Presentation
         private readonly List<Text> portionGuides = new List<Text>();
         private readonly List<Action> shopRefreshers = new List<Action>();
         private readonly List<PancakeDisplay> displays = new List<PancakeDisplay>();
+        private readonly List<PancakeDisplay> readyDisplays = new List<PancakeDisplay>();
+        private readonly List<PancakeState> trayPancakes = new List<PancakeState>();
+        private PancakeDisplay draggedReady;
+        private PancakeDisplay panDisplay, assemblyDisplay;
+        private readonly List<PancakeDisplay> deliveryDisplays = new List<PancakeDisplay>();
+        private RectTransform deliveryTray;
+        private TrayServeDrag deliveryInput;
+        private Vector2 deliveryTrayHome, visitorHome;
+        private Text deliveryCount;
+        private GameObject deliveryArrow;
+        private Button serveOrder, serveOrderCounter, trayPrevious, trayNext;
+        private int selectedReadyId, trayPage;
         private readonly Dictionary<PancakeState, CookingMotion> motions = new Dictionary<PancakeState, CookingMotion>();
         private CookingAtlas cookingAtlas;
         private bool dirty = true, showKitchen;
@@ -41,6 +53,7 @@ namespace Blinopek.Presentation
         public int SelectedIngredient { get; private set; }
         public GameController Controller => controller;
         public GameAudio Audio { get; private set; }
+        public bool CanServeTray => Session != null && Session.CanServeOrder && !controller.Paused && FinishingPancake() == null;
         private bool audioUiReady;
 
         private sealed class PancakeDisplay
@@ -48,6 +61,8 @@ namespace Blinopek.Presentation
             public GameObject Root;
             public PancakeGraphic Base;
             public CookingEffectsGraphic Effects;
+            public ReadyPancakeDrag Input;
+            public GameObject Selection;
         }
 
         public void Initialize(GameController game, GameContent content)
@@ -111,8 +126,8 @@ namespace Blinopek.Presentation
         }
         private PancakeState FinishingPancake()
         {
-            if (Session == null || Session.Pancake != null || Session.Order.Finished.Count == 0) return null;
-            var last = Session.Order.Finished[Session.Order.Finished.Count - 1];
+            if (Session == null || Session.PlatePancake != null || Session.LastFinished == null) return null;
+            var last = Session.LastFinished;
             return motions.TryGetValue(last, out var motion) && motion.Folding ? last : null;
         }
         private void ShowDisplay(PancakeDisplay d, PancakeState p)
@@ -123,9 +138,9 @@ namespace Blinopek.Presentation
         public bool Command(ActionKind kind, int a = 0, int b = 0, int c = 0, int d = 0)
         {
             // Observe before dispatch: the final gesture moves this same state to Finished.
-            var p = Session?.Pancake;
-            if (kind == ActionKind.BeginStroke && FinishingPancake() != null) return false;
-            if (p != null) Motion(p);
+            if ((kind == ActionKind.MoveToPlate || kind == ActionKind.ServeOrder) && FinishingPancake() != null) return false;
+            if (Session?.PanPancake != null) Motion(Session.PanPancake);
+            if (Session?.PlatePancake != null) Motion(Session.PlatePancake);
             bool accepted = controller.Dispatch(new GameCommand(kind, a, b, c, d));
             if (!accepted && !controller.Paused && kind != ActionKind.Tick && kind != ActionKind.Stroke &&
                 kind != ActionKind.EndStroke && kind != ActionKind.BeginStroke) Audio.PlayUi(SoundCue.Error);
@@ -133,11 +148,30 @@ namespace Blinopek.Presentation
         }
         private void Buy(ShopItem item, int ingredient = 0)
         { if (!controller.Buy(item, ingredient)) Audio.PlayUi(SoundCue.Error); }
-        public bool Capture(int pointer)
+        public bool Capture(int pointer, bool pan = false, bool ready = false)
         {
-            if (controller.Paused || capturedPointer != int.MinValue || Session == null || !Session.HasActiveOrder || FinishingPancake() != null) return false;
+            if (controller.Paused || capturedPointer != int.MinValue || Session == null || !Session.CanCook || (!pan && FinishingPancake() != null)) return false;
+            if (!ready) { selectedReadyId = 0; dirty = true; }
             capturedPointer = pointer; return true;
         }
+        public void SelectReadyPancake(int id)
+        {
+            if (Session.FindTrayPancake(id) == null) return;
+            selectedReadyId = id; dirty = true;
+        }
+        public void MoveReadyGhost(PancakeState pancake, Vector2 position)
+        {
+            ShowDisplay(draggedReady, pancake);
+            draggedReady.Root.transform.position = position;
+        }
+        public void HideReadyGhost() { if (draggedReady != null) draggedReady.Root.SetActive(false); }
+        private void DiscardSelectedPancake()
+        {
+            int id = Session.FindTrayPancake(selectedReadyId)?.Id ?? Session.Pancake?.Id ?? 0;
+            if (id != 0 && Command(ActionKind.Discard, id)) selectedReadyId = 0;
+        }
+        private void ChangeTrayPage(int direction)
+        { trayPage += direction; selectedReadyId = 0; dirty = true; }
         public bool OwnsPointer(int pointer) => capturedPointer == pointer;
         public void ReleasePointer() { capturedPointer = int.MinValue; }
         public bool OverTrash(Vector2 p) => RectTransformUtility.RectangleContainsScreenPoint(trashZone, p);
@@ -149,7 +183,7 @@ namespace Blinopek.Presentation
         }
         public void SelectIngredient(int type)
         {
-            if (Session.Pancake == null || Session.Pancake.Stage != PancakeStage.Plate || !Session.StartProfile.Owns((Ingredient)type)) return;
+            if (Session.PlatePancake == null || Session.PlatePancake.Stage != PancakeStage.Plate || !Session.StartProfile.Owns((Ingredient)type)) return;
             if (SelectedIngredient != type) Audio.PlayUi(SoundCue.Select);
             SelectedIngredient = type;
             if (Session.StartProfile.HelperEnabled((Ingredient)type)) Command(ActionKind.ApplyHelper, type);
@@ -163,11 +197,11 @@ namespace Blinopek.Presentation
         public void HidePortionGhost() { if (ghost != null) ghost.gameObject.SetActive(false); }
         private void SwitchKitchen(bool show)
         {
-            Command(ActionKind.EndStroke); ReleasePointer(); HidePortionGhost(); showKitchen = show; orderDetails.SetActive(false); dirty = true;
+            Command(ActionKind.EndStroke); ReleasePointer(); HidePortionGhost(); HideReadyGhost(); selectedReadyId = 0; showKitchen = show; orderDetails.SetActive(false); dirty = true;
         }
         private void StartNextDay()
         {
-            if (controller.StartDay(Environment.TickCount)) { motions.Clear(); showKitchen = false; shop.SetActive(false); SelectedIngredient = 0; dirty = true; }
+            if (controller.StartDay(Environment.TickCount)) { motions.Clear(); showKitchen = false; shop.SetActive(false); SelectedIngredient = 0; selectedReadyId = trayPage = 0; dirty = true; }
         }
         public static string Money(int cents) => (cents / 100.0).ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
         private static void FillBar(Image image, float fraction)
@@ -181,72 +215,120 @@ namespace Blinopek.Presentation
             dirty = false;
             Audio.SetContext(showKitchen, atFacade); RefreshAudioControls();
             if (controller.StorageBlocked || Session == null) { storage.text = controller.StorageError ?? "Смена не загружена."; return; }
-            var s = Session; var o = s.Order; var p = s.Pancake;
+            var s = Session; var o = s.Order; var p = s.PanPancake; var plate = s.PlatePancake;
             PancakeState finishing = showKitchen ? FinishingPancake() : null;
             bool terminal = o.Phase == OrderPhase.Served || o.Phase == OrderPhase.Cancelled;
-            if (terminal && previousPhase != o.Phase && finishing == null) showKitchen = false;
+            if (o.Phase == OrderPhase.Served && previousPhase != o.Phase && finishing == null && p == null && plate == null && s.ReadyPancakes.Count == 0) showKitchen = false;
+            if (s.Phase == DayPhase.Closing && s.GuestLeaving) showKitchen = false;
             if (finishing == null) previousPhase = o.Phase;
             bool showingResult = s.Phase == DayPhase.Result && finishing == null;
             Audio.SetContext(showKitchen, atFacade);
             kitchen.SetActive(showKitchen && !showingResult && !atFacade); counter.SetActive(!showKitchen && !showingResult && !atFacade);
             results.SetActive(showingResult && !atFacade);
             pausePanel.SetActive((controller.Pauses & PauseReason.Menu) != 0 && !atFacade);
-            orderHud.SetActive(showKitchen && s.Phase != DayPhase.Result && !atFacade);
+            orderHud.SetActive(showKitchen && s.HasActiveOrder && s.Phase != DayPhase.Result && !atFacade);
             if (!orderHud.activeSelf) orderDetails.SetActive(false);
-            tutorialPanel.SetActive(s.IsTutorial);
+            bool showLesson = s.IsTutorial && s.HasActiveOrder && ((p == null && plate == null) || s.IsLessonPancake(p) || s.IsLessonPancake(plate));
+            tutorialPanel.SetActive(showLesson);
             panGuide.gameObject.SetActive(p == null || p.Stage == PancakeStage.Batter);
             int balance = s.Phase == DayPhase.Result ? controller.Profile.coins : s.Balance;
             dayText.text = s.StartProfile.day.ToString(); hud.text = Money(balance); honeyText.text = controller.Profile.honey.ToString();
             int minutes = 9 * 60 + Math.Min(s.ElapsedTicks, s.Rules.dayTicks) * 9 * 60 / s.Rules.dayTicks;
             clock.text = (minutes / 60).ToString("00") + ":" + (minutes % 60).ToString("00");
             progress.text = o.Finished.Count + "/" + o.Portions.Count; scraperText.text = "×" + s.Scrapers;
-            toKitchen.interactable = s.HasActiveOrder;
+            toKitchen.interactable = s.CanCook;
             orderStrip.text = string.Join("\n", Describe(o));
             hint.text = TutorialHint(s);
             dialogue.text = o.Request;
+            bool leavingWithoutOrder = s.GuestLeaving && o.Phase == OrderPhase.Offered;
+            dialogue.gameObject.SetActive(!terminal && !leavingWithoutOrder);
+            orderPrice.text = (o.Price / 100m).ToString("0.##", System.Globalization.CultureInfo.InvariantCulture);
+            orderPayment.SetActive(!terminal && !leavingWithoutOrder);
             visitor.texture = !terminal ? art.visitors[o.Visitor] : o.Report.Total >= 65 ? art.positiveVisitors[o.Visitor] : art.negativeVisitors[o.Visitor];
             visitor.uvRect = art.Uv(visitor.texture);
             if (visitor.texture != null) { float w = visitor.texture.width * visitor.uvRect.width, h = visitor.texture.height * visitor.uvRect.height; float fit = Mathf.Min(470 / w, 792 / h); visitor.rectTransform.sizeDelta = new Vector2(w * fit, h * fit); }
+            float departure = Mathf.SmoothStep(0, 1, Mathf.Clamp01((s.GuestDepartureProgress - .45f) / .55f));
+            visitor.rectTransform.anchoredPosition = visitorHome + Vector2.left * (750 * departure);
+            visitor.color = new Color(1, 1, 1, 1 - departure);
+            visitor.gameObject.SetActive(!s.GuestHasLeft);
             float patience = 1 - (float)o.WaitTicks / o.PatienceLimit;
-            patienceText.text = s.IsTutorial ? "Первый заказ: учимся без потерь и спешки" : "Терпение " + Mathf.CeilToInt(Mathf.Clamp01(patience) * 100) + "%";
             FillBar(patienceBar, patience);
             FillBar(kitchenPatienceBar, patience);
-            reaction.text = terminal ? Reaction(o) : o.Clarified ? "Соберите все порции. Начинки добавляются на тарелке. Готовые блины выдаются вместе." : (s.IsTutorial ? "Оплата после успешного урока: " : "Оплата при принятии: ") + Money(o.Price) + " монет";
-            accept.gameObject.SetActive(o.Phase == OrderPhase.Offered); clarify.gameObject.SetActive(!terminal); clarify.interactable = !o.Clarified;
-            nextGuest.gameObject.SetActive(terminal); nextGuest.interactable = s.CanOfferNext;
+            reaction.text = leavingWithoutOrder ? "До завтра!" : terminal ? Reaction(o) : "";
+            reaction.gameObject.SetActive(s.GuestLeaving && !s.GuestHasLeft);
+            counterPatience.SetActive(!s.GuestLeaving);
+            accept.gameObject.SetActive(o.Phase == OrderPhase.Offered && s.Phase == DayPhase.Serving); clarify.gameObject.SetActive(!s.GuestLeaving); clarify.interactable = !o.Clarified;
+            nextGuest.gameObject.SetActive(terminal && s.Phase == DayPhase.Serving); nextGuest.interactable = s.CanOfferNext;
             nextGuest.GetComponentInChildren<Text>().text = "";
+            bool canShowServe = s.HasActiveOrder && finishing == null && (plate == null || plate.Stage != PancakeStage.Folding);
+            serveOrder.gameObject.SetActive(canShowServe);
+            serveOrderCounter.gameObject.SetActive(s.HasActiveOrder);
+            serveOrder.interactable = serveOrderCounter.interactable = CanServeTray;
             finishBatter.gameObject.SetActive(p != null && p.Stage == PancakeStage.Batter);
-            flip.gameObject.SetActive(p != null && p.Stage == PancakeStage.SideA && s.Tutorial != TutorialStep.Demonstration && s.Tutorial != TutorialStep.Discard);
-            move.gameObject.SetActive(p != null && p.Stage == PancakeStage.SideB); move.interactable = p != null && p.HeatB >= s.Rules.readyTicks;
-            bool onPlate = p != null && p.Stage == PancakeStage.Plate;
+            flip.gameObject.SetActive(p != null && p.Stage == PancakeStage.SideA && (!s.IsLessonPancake(p) || (s.Tutorial != TutorialStep.Demonstration && s.Tutorial != TutorialStep.Discard)));
+            move.gameObject.SetActive(p != null && p.Stage == PancakeStage.SideB);
+            move.interactable = p != null && p.HeatB >= s.Rules.readyTicks && plate == null && finishing == null;
+            move.GetComponentInChildren<Text>().text = plate != null || finishing != null ? "Освободите тарелку" : "На тарелку →";
+            bool onPlate = plate != null && plate.Stage == PancakeStage.Plate;
             foreach (var guide in portionGuides) guide.gameObject.SetActive(onPlate && SelectedIngredient >= 3);
             for (int i = 0; i < 3; i++) foldButtons[i].gameObject.SetActive(onPlate);
-            discard.interactable = p != null;
-            finishFold.gameObject.SetActive(p != null && p.Stage == PancakeStage.Folding && !s.IsTutorial);
+            if (s.FindTrayPancake(selectedReadyId) == null) selectedReadyId = 0;
+            discard.interactable = p != null || plate != null || selectedReadyId != 0;
+            finishFold.gameObject.SetActive(plate != null && plate.Stage == PancakeStage.Folding && !s.IsLessonPancake(plate));
             for (int i = 0; i < 5; i++)
             {
                 ingredientCards[i].gameObject.SetActive(s.StartProfile.Owns((Ingredient)i));
                 ingredientCards[i].raycastTarget = onPlate;
                 ingredientSelections[i].SetActive(onPlate && i == SelectedIngredient);
                 helperBadges[i].SetActive(s.StartProfile.HelperEnabled((Ingredient)i));
-                ingredientLabels[i].gameObject.SetActive(s.IsTutorial);
+                ingredientLabels[i].transform.parent.gameObject.SetActive(showLesson);
             }
-            remove.interactable = onPlate && s.Scrapers > 0 && p.Fillings[SelectedIngredient] != null;
-            if (onPlate && p.Fillings[SelectedIngredient] != null) {
-                var filling = p.Fillings[SelectedIngredient];
+            remove.interactable = onPlate && s.Scrapers > 0 && plate.Fillings[SelectedIngredient] != null;
+            if (onPlate && plate.Fillings[SelectedIngredient] != null) {
+                var filling = plate.Fillings[SelectedIngredient];
                 hint.text = Recipes.IngredientName((Ingredient)SelectedIngredient) + ": " + (SelectedIngredient < 3 ? filling.Mask.Percent + "% покрытия" : filling.Portions.Count + " порций") + ". Выберите форму, когда начинка готова.";
             }
-            foldGuide.text = p != null && p.Stage == PancakeStage.Folding ? FoldHint(p) : "";
+            foldGuide.text = plate != null && plate.Stage == PancakeStage.Folding ? FoldHint(plate) : "";
+            foldGuide.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(foldGuide.text));
             SetHeat(heatA, heatBarA, "I", p == null ? 0 : p.HeatA);
             SetHeat(heatB, heatBarB, "II", p == null ? 0 : p.HeatB);
             SetSideImage(sideArtA, p == null ? 0 : p.HeatA); SetSideImage(sideArtB, p == null ? 0 : p.HeatB);
             sideReadyA.SetActive(p != null && p.HeatA >= s.Rules.readyTicks && p.HeatA < s.Rules.burnTicks);
             sideReadyB.SetActive(p != null && p.HeatB >= s.Rules.readyTicks && p.HeatB < s.Rules.burnTicks);
-            ShowDisplay(displays[0], terminal && o.Finished.Count > 0 ? o.Finished[o.Finished.Count - 1] : null);
-            ShowDisplay(displays[1], p != null && p.Stage <= PancakeStage.SideB ? p : null);
-            ShowDisplay(displays[2], finishing ?? (p != null && p.Stage >= PancakeStage.Plate ? p : null));
-            int trayIndex = o.Finished.Count - (finishing != null ? 2 : 1);
-            ShowDisplay(displays[3], trayIndex >= 0 && !terminal ? o.Finished[trayIndex] : null);
+            ShowDisplay(panDisplay, p);
+            ShowDisplay(assemblyDisplay, finishing ?? plate);
+            bool delivered = o.Phase == OrderPhase.Served && !s.GuestHasLeft;
+            int deliveryTotal = delivered ? o.Finished.Count : s.TrayCount;
+            int shownOnDelivery = Math.Min(deliveryTotal, deliveryDisplays.Count);
+            for (int i = 0; i < deliveryDisplays.Count; i++) {
+                var display = deliveryDisplays[i];
+                var ready = i < shownOnDelivery ? delivered ? o.Finished[i] : s.TrayPancakeAt(i) : null;
+                ShowDisplay(display, ready == finishing ? null : ready);
+                var rect = (RectTransform)display.Root.transform;
+                rect.anchoredPosition = new Vector2(210 + (i - (shownOnDelivery - 1) * .5f) * (shownOnDelivery == 3 ? 128 : 164), -73);
+                rect.localScale = Vector3.one * (shownOnDelivery == 3 ? .78f : 1);
+            }
+            deliveryCount.text = "×" + deliveryTotal;
+            deliveryCount.transform.parent.gameObject.SetActive(deliveryTotal > deliveryDisplays.Count);
+            deliveryArrow.SetActive(CanServeTray);
+            if (!deliveryInput.IsDragging) deliveryTray.anchoredPosition = deliveryTrayHome + (delivered ? Vector2.up * 70 : Vector2.zero);
+            trayPancakes.Clear();
+            if (s.HasActiveOrder) foreach (var ready in o.Finished) if (ready != finishing) trayPancakes.Add(ready);
+            foreach (var ready in s.ReadyPancakes) if (ready != finishing) trayPancakes.Add(ready);
+            int lastPage = Math.Max(0, (trayPancakes.Count - 1) / readyDisplays.Count);
+            trayPage = Mathf.Clamp(trayPage, 0, lastPage);
+            for (int i = 0; i < readyDisplays.Count; i++) {
+                int index = trayPage * readyDisplays.Count + i;
+                var ready = index < trayPancakes.Count ? trayPancakes[index] : null;
+                var display = readyDisplays[i];
+                display.Input.Pancake = ready;
+                ShowDisplay(display, ready);
+                display.Selection.SetActive(ready != null && ready.Id == selectedReadyId);
+            }
+            trayPrevious.gameObject.SetActive(lastPage > 0); trayNext.gameObject.SetActive(lastPage > 0);
+            trayPrevious.interactable = trayPage > 0; trayNext.interactable = trayPage < lastPage;
+            trayCount.text = "Готово: " + s.TrayCount;
+            trayCount.transform.parent.gameObject.SetActive(s.TrayCount > 0);
             if (s.Phase == DayPhase.Result)
             {
                 var l = s.Ledger;
@@ -279,14 +361,14 @@ namespace Blinopek.Presentation
         private static string FoldHint(PancakeState p)
         {
             var steps = Recipes.Gestures(p.IntendedFold); int i = Math.Min(p.Folds.Count, steps.Length - 1);
-            string arrow = steps[i] == Direction.Up ? "↑ снизу вверх" : steps[i] == Direction.Right ? "→ слева направо" : steps[i] == Direction.Down ? "↓ сверху вниз" : "← справа налево";
-            return "Сгиб " + (i + 1) + "/" + steps.Length + "    " + arrow;
+            string arrow = steps[i] == Direction.Up ? "↑ вверх" : steps[i] == Direction.Right ? "→ вправо" : steps[i] == Direction.Down ? "↓ вниз" : "← влево";
+            return "Сгиб " + (i + 1) + "/" + steps.Length + "    " + arrow + "\nПроведите по блину";
         }
         private static string TutorialHint(DaySession s)
         {
-            var p = s.Pancake;
+            var p = s.IsLessonPancake(s.PlatePancake) ? s.PlatePancake : s.Pancake;
             if (p != null && p.Stage == PancakeStage.Batter) return "Намажьте круг тестом. Покрытие: " + p.Batter.Percent + "%. Затем «Начать жарку».";
-            if (s.IsTutorial && p != null && p.Stage == PancakeStage.SideA && s.Tutorial == TutorialStep.SideA && p.HeatA >= s.Rules.readyTicks) return "Пора! Коснитесь блина или нажмите «Перевернуть». В этом уроке блин подождёт вас.";
+            if (s.IsLessonPancake(p) && p.Stage == PancakeStage.SideA && s.Tutorial == TutorialStep.SideA && p.HeatA >= s.Rules.readyTicks) return "Пора! Коснитесь блина или нажмите «Перевернуть». В этом уроке блин подождёт вас.";
             if (p != null && p.Stage == PancakeStage.Folding) return s.Feedback + " " + FoldHint(p);
             return s.Feedback;
         }
@@ -318,8 +400,8 @@ namespace Blinopek.Presentation
             foreach (var display in displays) if (display.Root.activeInHierarchy && display.Base.Motion != null)
             { display.Base.Show(display.Base.Motion); display.Effects.Show(display.Base.Motion, Session.Rules); }
         }
-        private void OnApplicationPause(bool paused) { ReleasePointer(); HidePortionGhost(); controller?.SetPause(PauseReason.Background, paused); tickRemainder = 0; }
-        private void OnApplicationFocus(bool focused) { if (!focused) { ReleasePointer(); HidePortionGhost(); } controller?.SetPause(PauseReason.Focus, !focused); tickRemainder = 0; }
+        private void OnApplicationPause(bool paused) { ReleasePointer(); HidePortionGhost(); HideReadyGhost(); controller?.SetPause(PauseReason.Background, paused); tickRemainder = 0; }
+        private void OnApplicationFocus(bool focused) { if (!focused) { ReleasePointer(); HidePortionGhost(); HideReadyGhost(); } controller?.SetPause(PauseReason.Focus, !focused); tickRemainder = 0; }
         private void OnApplicationQuit() { controller?.Save(); }
         private void OnDestroy() { cookingAtlas?.Dispose(); if (controller != null) { controller.Changed -= Invalidate; controller.Save(); } }
     }

@@ -37,7 +37,7 @@ namespace Blinopek.Editor
                     entries.Add(new Artwork { key = key, texture = AssetDatabase.LoadAssetAtPath<Texture2D>(root + key) });
                 }
             content.artwork = entries.ToArray();
-            content.kitchenBackground = AssetDatabase.LoadAssetAtPath<Texture2D>(root + "kitchen/kitchen-background-crepe-stove.png");
+            content.kitchenBackground = AssetDatabase.LoadAssetAtPath<Texture2D>(root + "kitchen/kitchen-background-topview-v4.png");
             EditorUtility.SetDirty(content);
         }
     }
