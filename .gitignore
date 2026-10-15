@@ -108,13 +108,6 @@ InitTestScene*.unity*
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
-# Local assistant files and scratch work
-.codex/
-.agents/
-AGENTS.md
-AGENTS.local.md
-.codex-tmp/
-
 # Figma board exports embed copies of source PNGs and are stored in Figma.
 /UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/catalog/*.svg
 /UnityPart/PancakeCooker/Assets/Art/Blinopek/figma/catalog/*.svg.meta
