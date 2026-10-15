@@ -56,6 +56,9 @@ namespace Blinopek.Presentation
                 {
                     var source = art.Find("kitchen/" + CookingFoldArt.Keys[pose] + ".png"); var uv = art.Uv(source);
                     float aspect = source.width * uv.width / (source.height * uv.height); PoseAspects[pose] = aspect;
+                    // Orient the pixels before deriving alpha, silhouettes and cooking variants,
+                    // so the entire transition uses the same gesture-aligned shape.
+                    uv = CookingFoldArt.ArtworkUv(CookingFoldArt.CanonicalPose(pose), uv);
                     int width = Mathf.RoundToInt(aspect >= 1 ? 512 : 512 * aspect), height = Mathf.RoundToInt(aspect >= 1 ? 512 / aspect : 512);
                     var target = RenderTexture.GetTemporary(width, height, 0, RenderTextureFormat.ARGB32);
                     Texture2D ready;

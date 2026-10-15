@@ -20,6 +20,10 @@ MonoBehaviour:
     patiencePerPancakeTicks: 2200
     clarifyPenaltyTicks: 160
     guestIntervalTicks: 40
+    guestArrivalBaseTicks: 80
+    guestArrivalMinTicks: 40
+    guestArrivalReductionPerDecorationPointTicks: 2
+    darkTablesDecorationPoints: 10
     maxPancakes: 2
     multiPancakeDay: 2
     rent: 800
@@ -31,6 +35,7 @@ MonoBehaviour:
     ingredientUnlockCost: 1800
     scraperPrice: 200
     patienceUpgradeCost: 2400
+    darkTableUpgradeCost: 18000
     helperHoneyPrice: 10
     startingCoins: 3000
     startingHoney: 0
@@ -43,6 +48,8 @@ MonoBehaviour:
     maxPortions: 24
   bodyFont: {fileID: 12800000, guid: fac5a918ff5f49e43894a67bad0897d8, type: 3}
   titleFont: {fileID: 12800000, guid: 82119a5cac01d0546a2e0c7ead2165de, type: 3}
+  signboardFont: {fileID: 12800000, guid: 921cd6bf045a5b109c4409024e1b8b1b, type: 3}
+  signboardShader: {fileID: 4800000, guid: 9da46f5f9db95b846a485f337c6cccba, type: 3}
   kitchenBackground: {fileID: 2800000, guid: 3a9837ff2e034e1bac5880d368b10427, type: 3}
   counterBackground: {fileID: 2800000, guid: 7aa418e8094e63b45846334f213874ae, type: 3}
   counter: {fileID: 2800000, guid: 430e31c75e293374190ca97bf189b5ba, type: 3}
@@ -543,18 +550,18 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 45558a3f36e61fc48a8f217f72bfafc7, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.019650655
-      y: 0.041921397
-      width: 0.962154294
-      height: 0.887336245
+      x: 0.054426705
+      y: 0.059596845
+      width: 0.899129173
+      height: 0.743207713
   - key: decor/table_premium.png
     texture: {fileID: 2800000, guid: 2e23045283543db40a6884d1bf50afcd, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.022103659
-      y: 0.035863219
-      width: 0.955030488
-      height: 0.927439533
+      x: 0.045718433
+      y: 0.064798599
+      width: 0.910740203
+      height: 0.734676007
   - key: decor/vase_flowers.png
     texture: {fileID: 2800000, guid: 3607ed98311b7e24dbc11e5cacf17c6c, type: 3}
     uv:
@@ -1023,194 +1030,194 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 86f024cd878ec5641ba6d1c7d2cf12ce, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.071289062
+      x: 0.069335938
       y: 0.000000000
-      width: 0.875000000
-      height: 0.955078125
+      width: 0.879882812
+      height: 0.956380208
   - key: visitors/craftswoman-neutral.png
     texture: {fileID: 2800000, guid: 896d729e49a1d574b8d1658b2a4e027e, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.068359375
+      x: 0.066406250
       y: 0.000000000
-      width: 0.874023438
-      height: 0.953776042
+      width: 0.878906250
+      height: 0.956380208
   - key: visitors/craftswoman-positive.png
     texture: {fileID: 2800000, guid: 084996e9dd8f8f646a8058e0a74b35bc, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.070312500
+      x: 0.066406250
       y: 0.000000000
-      width: 0.875000000
-      height: 0.959635417
+      width: 0.884765625
+      height: 0.972656250
   - key: visitors/elder-man-negative.png
     texture: {fileID: 2800000, guid: 0c03f40f87ff1b3458a2efb38c19edd0, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.084960938
+      x: 0.085326954
       y: 0.000000000
-      width: 0.843750000
-      height: 0.970703125
+      width: 0.843700159
+      height: 0.990430622
   - key: visitors/elder-man-neutral.png
     texture: {fileID: 2800000, guid: aef0afd9f1b73eb4cb8b06461b6f49a3, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.083007812
+      x: 0.082934609
       y: 0.000000000
-      width: 0.838867188
-      height: 0.964192708
+      width: 0.838915470
+      height: 0.980063796
   - key: visitors/elder-man-positive.png
     texture: {fileID: 2800000, guid: 4cbb6a0cddab74f4ea4086dd4929ecf1, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.085937500
+      x: 0.086124402
       y: 0.000000000
-      width: 0.836914062
-      height: 0.964843750
+      width: 0.836523126
+      height: 0.994417863
   - key: visitors/elder-woman-negative.png
     texture: {fileID: 2800000, guid: 89ce291e102685c4dbbe4b20e771a08d, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.045898438
+      x: 0.046251994
       y: 0.000000000
-      width: 0.925781250
-      height: 0.964843750
+      width: 0.925039872
+      height: 0.987240829
   - key: visitors/elder-woman-neutral.png
     texture: {fileID: 2800000, guid: 63e813d308667d04ea34c8bc487a0970, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.043945312
+      x: 0.043859649
       y: 0.000000000
-      width: 0.924804688
-      height: 0.942708333
+      width: 0.925039872
+      height: 0.990430622
   - key: visitors/elder-woman-positive.png
     texture: {fileID: 2800000, guid: 105575eef0fcaa14795821e1b408b054, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.043945312
+      x: 0.043859649
       y: 0.000000000
-      width: 0.926757812
-      height: 0.951822917
+      width: 0.926634769
+      height: 0.987240829
   - key: visitors/florist-negative.png
     texture: {fileID: 2800000, guid: eda81110da95ab84fbe9e4d5bb45e5c7, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.063476562
+      x: 0.059570312
       y: 0.000000000
-      width: 0.892578125
-      height: 0.995442708
+      width: 0.900390625
+      height: 0.997395833
   - key: visitors/florist-neutral.png
     texture: {fileID: 2800000, guid: 9a63c7638a01e644f8e7d93658a2fb01, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.064453125
+      x: 0.060546875
       y: 0.000000000
-      width: 0.887695312
-      height: 0.994140625
+      width: 0.896484375
+      height: 0.996093750
   - key: visitors/florist-positive.png
     texture: {fileID: 2800000, guid: 5b1440578842cf8479163d967879929f, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.065429688
+      x: 0.061523438
       y: 0.000000000
-      width: 0.889648438
-      height: 0.993489583
+      width: 0.897460938
+      height: 0.997395833
   - key: visitors/nurse-negative.png
     texture: {fileID: 2800000, guid: d8ffb2d50cde3e743a781d8680419578, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.097656250
+      x: 0.097288676
       y: 0.000000000
-      width: 0.831054688
-      height: 0.981770833
+      width: 0.831738437
+      height: 0.992025518
   - key: visitors/nurse-neutral.png
     texture: {fileID: 2800000, guid: b84e831d8fe8b134cba69fe52b82a098, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.099609375
+      x: 0.099681021
       y: 0.000000000
-      width: 0.825195312
-      height: 0.973958333
+      width: 0.825358852
+      height: 0.979266348
   - key: visitors/nurse-positive.png
     texture: {fileID: 2800000, guid: ac8da5926acbdab45a860898da80629d, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.097656250
+      x: 0.097288676
       y: 0.000000000
-      width: 0.832031250
-      height: 0.984375000
+      width: 0.832535885
+      height: 0.990430622
   - key: visitors/office-negative.png
     texture: {fileID: 2800000, guid: fad0a4fd17d611f4a8bb1f80b3d0baf8, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.064453125
+      x: 0.062500000
       y: 0.000000000
-      width: 0.892578125
-      height: 0.977213542
+      width: 0.899414062
+      height: 0.984375000
   - key: visitors/office-neutral.png
     texture: {fileID: 2800000, guid: 9cc6c15b74e3d1d47b257c287cde2341, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.065429688
+      x: 0.062500000
       y: 0.000000000
-      width: 0.889648438
-      height: 0.976562500
+      width: 0.895507812
+      height: 0.978515625
   - key: visitors/office-positive.png
     texture: {fileID: 2800000, guid: bc00c994b42da89409b581377afaccad, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.066406250
+      x: 0.064453125
       y: 0.000000000
-      width: 0.889648438
-      height: 0.975260417
+      width: 0.894531250
+      height: 0.979166667
   - key: visitors/student-negative.png
     texture: {fileID: 2800000, guid: d8a69dfcebe552a419863657dcbe5cad, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.088867188
+      x: 0.085937500
       y: 0.000000000
-      width: 0.839843750
-      height: 0.970052083
+      width: 0.846679688
+      height: 0.973307292
   - key: visitors/student-neutral.png
     texture: {fileID: 2800000, guid: 70e97572c3875a54faeb2c9366fa4723, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.089843750
+      x: 0.086914062
       y: 0.000000000
-      width: 0.835937500
-      height: 0.970052083
+      width: 0.842773438
+      height: 0.977213542
   - key: visitors/student-positive.png
     texture: {fileID: 2800000, guid: 232f5dfa297d75445a10bc71675b5175, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.088867188
+      x: 0.085937500
       y: 0.000000000
-      width: 0.838867188
-      height: 0.971354167
+      width: 0.845703125
+      height: 0.975260417
   - key: visitors/traveler-negative.png
     texture: {fileID: 2800000, guid: 117fef5e9bb1bec4ba9933f123c4a257, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.067382812
+      x: 0.063476562
       y: 0.000000000
-      width: 0.886718750
-      height: 0.979166667
+      width: 0.894531250
+      height: 0.983072917
   - key: visitors/traveler-neutral.png
     texture: {fileID: 2800000, guid: 152b716dcf962e745b7ee6055d92cd84, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.065429688
+      x: 0.062500000
       y: 0.000000000
-      width: 0.884765625
-      height: 0.972005208
+      width: 0.891601562
+      height: 0.973958333
   - key: visitors/traveler-positive.png
     texture: {fileID: 2800000, guid: a0308a2ebbad317408969f64a1c5863e, type: 3}
     uv:
       serializedVersion: 2
-      x: 0.068359375
+      x: 0.065429688
       y: 0.000000000
-      width: 0.883789062
-      height: 0.971354167
+      width: 0.890625000
+      height: 0.973307292
   - key: ui/glyphs/shop.png
     texture: {fileID: 2800000, guid: f2f80cbf23035b2e8879ca4dc899ec3d, type: 3}
     uv:

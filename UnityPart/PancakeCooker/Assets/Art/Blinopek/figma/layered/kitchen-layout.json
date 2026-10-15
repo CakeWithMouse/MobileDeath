@@ -1306,7 +1306,10 @@
         "opacity": "1",
         "transform": "rotate(0deg)"
       },
-      "attributes": {},
+      "attributes": {
+        "role": "img",
+        "aria-label": "Жаринки"
+      },
       "html": "",
       "children": [
         {

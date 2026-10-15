@@ -80,6 +80,7 @@ namespace Blinopek.Tests
         {
             FirstPancakeOnPlate(); var first = view.Session.PlatePancake;
             Pour(); var second = view.Session.PanPancake; Click("FinishBatter");
+            view.SelectIngredient(0);
             SwipePlate(new Vector2(60, 0));
             Assert.That(first.Fillings[0].Mask.Count, Is.GreaterThan(0));
             Assert.That(second.IngredientBits, Is.Zero);
@@ -90,7 +91,7 @@ namespace Blinopek.Tests
             Assert.That(Find("MoveToPlate").GetComponent<Button>().interactable, Is.False, "Occupied plate must block transfer");
             Assert.That(Find("PancakeOnPan").activeInHierarchy && Find("PancakeOnPlate").activeInHierarchy, Is.True);
             SwipePlate(new Vector2(40, 0));
-            Assert.That(view.Session.ReadyPancakes.Single(), Is.SameAs(first));
+            Assert.That(view.Session.TrayPancakeAt(0), Is.SameAs(first));
             Assert.That(view.Session.PanPancake, Is.SameAs(second));
             Assert.That(Find("PancakeOnPlate").GetComponentInChildren<PancakeGraphic>().Motion.State, Is.SameAs(first), "Finishing animation must stay on the plate while the second pancake fries");
         }
@@ -113,32 +114,84 @@ namespace Blinopek.Tests
             view.Refresh(); Click("MoveToPlate");
             Assert.That(view.Session.PlatePancake, Is.SameAs(second));
             Assert.That(view.Session.PanPancake, Is.Null);
-            Assert.That(view.Session.ReadyPancakes.Single(), Is.SameAs(first));
+            Assert.That(view.Session.TrayPancakeAt(0), Is.SameAs(first));
         }
 
-        [Test] public void PointerCanPourAndFryBeforeAcceptingAnOrder()
+        [Test] public void OrderIsAcceptedOnceWithoutLeavingTheCounter()
+        {
+            var order = view.Session.Order;
+            Assert.That(order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(view.GetComponentsInChildren<Button>(true).Any(b => b.name == "AcceptOrder"), Is.False);
+            view.Refresh(); view.Refresh();
+            Click("ClarifyOrder");
+            Assert.That(order.Clarified, Is.True);
+            Click("Pause"); Click("ExitToMainMenu"); Click("ContinueShift");
+            Assert.That(view.Session.Order, Is.SameAs(order));
+            Assert.That(view.Session.Ledger.Revenue, Is.EqualTo(order.Price));
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+        }
+
+        [Test] public void PointerCanPourAndFryWithoutConfirmingAnOrder()
         {
             Click("KitchenTab"); Pour(); Click("FinishBatter"); Send(ActionKind.Tick, 2); view.Refresh();
-            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Offered));
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
             Assert.That(view.Session.Pancake.HeatA, Is.EqualTo(2));
             Click("FlipHandle"); Send(ActionKind.Tick, 2); view.Refresh(); Click("MoveToPlate");
             Assert.That(view.Session.Pancake.Stage, Is.EqualTo(PancakeStage.Plate));
-            Assert.That(Find("KitchenOrderHud").activeInHierarchy, Is.False);
-            Assert.That(view.Session.Ledger.Revenue, Is.Zero);
+            Assert.That(Find("KitchenOrderHud").activeInHierarchy, Is.True);
+            Assert.That(view.Session.Ledger.Revenue, Is.EqualTo(view.Session.Order.Price));
         }
 
         [Test] public void GuestLeavingDoesNotSwitchAwayFromTheFryingPan()
         {
-            Click("AcceptOrder"); Pour(); Click("FinishBatter"); var pancake = view.Session.Pancake;
+            Click("KitchenTab"); Pour(); Click("FinishBatter"); var pancake = view.Session.Pancake;
             Send(ActionKind.Tick, view.Session.Order.PatienceLimit); view.Refresh();
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Cancelled));
             Assert.That(view.Session.Pancake, Is.SameAs(pancake));
             Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
             Click("FlipHandle"); Send(ActionKind.Tick, 2); view.Refresh(); Click("MoveToPlate");
             Assert.That(pancake.Stage, Is.EqualTo(PancakeStage.Plate));
+            Send(ActionKind.Tick, view.Session.Rules.guestIntervalTicks - 2); view.Refresh();
+            Assert.That(view.Session.Order.Id, Is.EqualTo(2));
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(view.Session.PlatePancake, Is.SameAs(pancake));
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True, "Arriving guests must not interrupt cooking");
         }
 
-        [Test] public void PreparedStockShowsOnTrayAndSurvivesAcceptance()
+        [Test] public void SpeechBubbleIsHiddenWhileWaitingForTheNextGuest()
+        {
+            Send(ActionKind.Tick, view.Session.Rules.dayTicks + view.Session.Rules.guestIntervalTicks);
+            content.balance.guestArrivalBaseTicks = 80; content.balance.guestArrivalMinTicks = 40;
+            content.balance.guestArrivalReductionPerDecorationPointTicks = 2;
+            Assert.That(view.Controller.StartDay(7), Is.True);
+            Send(ActionKind.Accept); Send(ActionKind.Tick, view.Session.Order.PatienceLimit);
+            Send(ActionKind.Tick, 40); view.Refresh();
+            Assert.That(view.Session.GuestHasLeft, Is.True);
+            Assert.That(Find("Visitor").activeSelf, Is.False);
+            Assert.That(Find("SpeechBubble").activeSelf, Is.False, "Empty speech bubble must not float above the empty counter");
+            Send(ActionKind.Tick, 40); view.Refresh();
+            Assert.That(view.Session.Order.Id, Is.EqualTo(2));
+            Assert.That(Find("Visitor").activeSelf && Find("SpeechBubble").activeSelf && Find("Request").activeSelf, Is.True);
+        }
+
+        [Test] public void CounterShowsTheNextGuestWithoutAContinueButton()
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); Send(ActionKind.ServeOrder); view.Refresh();
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(view.GetComponentsInChildren<Button>(true).Any(b => b.name == "NextGuest"), Is.False);
+            Send(ActionKind.Tick, view.Session.Rules.guestIntervalTicks - 1); view.Refresh();
+            Assert.That(Find("Reaction").activeInHierarchy, Is.True);
+            Assert.That(view.GetComponentsInChildren<Button>(true).Any(b => b.name == "AcceptOrder"), Is.False);
+            Send(ActionKind.Tick, 1); view.Refresh();
+            Assert.That(view.Session.Order.Id, Is.EqualTo(2));
+            Assert.That(Find("Visitor").activeInHierarchy && Find("Request").activeInHierarchy, Is.True);
+            Assert.That(Find("Visitor").GetComponent<RawImage>().color.a, Is.EqualTo(1));
+            Assert.That(Find("Reaction").activeInHierarchy, Is.False);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+        }
+
+        [Test] public void PreparedStockShowsOnTrayAndSurvivesNavigation()
         {
             Click("KitchenTab");
             for (int i = 0; i < 3; i++)
@@ -153,15 +206,20 @@ namespace Blinopek.Tests
             Assert.That(Find("TrayCount").GetComponent<Text>().text, Is.EqualTo("Готово: 3"));
             Assert.That(Find("PancakeOnPlate").activeInHierarchy, Is.False);
             Pour(); Click("FinishBatter"); var active = view.Session.Pancake;
-            Click("CounterTab"); Click("AcceptOrder");
+            Click("CounterTab"); Click("KitchenTab");
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
-            Assert.That(view.Session.TrayCount, Is.EqualTo(3), "Acceptance must keep prepared food on the tray");
-            Click("ServeOrder");
+            Assert.That(view.Session.TrayCount, Is.EqualTo(3), "Navigation must keep prepared food on the tray");
+            Click("KitchenTray");
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            SwipeTray(view.TrayServeDirection * 100);
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
             Assert.That(view.Session.Pancake, Is.SameAs(active));
-            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
-            Assert.That(Find("TrayCount").GetComponent<Text>().text, Is.EqualTo("Готово: 2"));
-            Assert.That(Find("ReadyPancake0").activeInHierarchy && Find("ReadyPancake1").activeInHierarchy, Is.True);
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(view.Session.Order.Finished.Count, Is.EqualTo(3), "The entire prepared tray must reach the guest");
+            Click("KitchenTab");
+            Assert.That(Find("PancakeOnPan").activeInHierarchy, Is.True);
+            Assert.That(view.Session.TrayCount, Is.Zero);
         }
 
         private void PrepareReadyPortion()
@@ -174,6 +232,21 @@ namespace Blinopek.Tests
             foreach (var graphic in view.GetComponentsInChildren<PancakeGraphic>(true))
                 if (graphic.Motion != null) for (int i = 0; i < 30; i++) graphic.Motion.Advance(.1f);
             view.Refresh(); Canvas.ForceUpdateCanvases();
+        }
+        private void SwipeTray(Vector2 delta, System.Action beforeRelease = null)
+        {
+            var target = Find("DeliveryTray"); var rect = target.GetComponent<RectTransform>();
+            var parent = (RectTransform)rect.parent;
+            var start = parent.InverseTransformPoint(rect.position);
+            var e = new PointerEventData(EventSystem.current) { pointerId = 9, position = RectTransformUtility.WorldToScreenPoint(null, rect.position) };
+            ExecuteEvents.Execute(target, e, ExecuteEvents.pointerDownHandler);
+            e.position = RectTransformUtility.WorldToScreenPoint(null, parent.TransformPoint(start + (Vector3)delta));
+            ExecuteEvents.Execute(target, e, ExecuteEvents.dragHandler);
+            beforeRelease?.Invoke();
+            ExecuteEvents.Execute(target, e, ExecuteEvents.pointerUpHandler);
+            view.Refresh(); Canvas.ForceUpdateCanvases();
+            Assert.That(view.OwnsPointer(9), Is.False);
+            Assert.That(target.GetComponent<TrayServeDrag>().IsDragging, Is.False);
         }
         private void TouchReady(int slot, bool discard)
         {
@@ -215,9 +288,61 @@ namespace Blinopek.Tests
             }
         }
 
+        private void Tap(GameObject target)
+        {
+            var e = new PointerEventData(EventSystem.current) {
+                pointerId = 8, position = RectTransformUtility.WorldToScreenPoint(null, target.transform.position)
+            };
+            ExecuteEvents.Execute(target, e, ExecuteEvents.pointerDownHandler);
+            ExecuteEvents.Execute(target, e, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(target, e, ExecuteEvents.pointerClickHandler);
+            view.Refresh(); Canvas.ForceUpdateCanvases();
+        }
+
+        [TestCase("KitchenTray")]
+        [TestCase("ReadyPancake0")]
+        [TestCase("ReadyPancake1")]
+        public void TappingAnyPartOfPreparedTrayOpensCounter(string targetName)
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); PrepareReadyPortion();
+            Assert.That(view.GetComponentsInChildren<Transform>(true).Any(t => t.name == "ServeOrder"), Is.False);
+            var target = Find(targetName); VerifyReadyRaycast(target); Tap(target);
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(view.Session.TrayCount, Is.EqualTo(2));
+            Assert.That(view.Session.Reviews, Is.Empty);
+            Assert.That(view.OwnsPointer(8), Is.False);
+        }
+
+        [TestCase("KitchenTray")]
+        [TestCase("ReadyPancake0")]
+        public void TrayTapCannotStartServingWhilePausedOrWithoutAnActiveOrder(string targetName)
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); var target = Find(targetName);
+            view.Controller.SetPause(PauseReason.Menu, true); view.Refresh(); Tap(target);
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
+            view.Controller.SetPause(PauseReason.Menu, false); view.Refresh();
+            Send(ActionKind.Tick, view.Session.Order.PatienceLimit); view.Refresh(); Tap(target);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Cancelled));
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
+        }
+
+        [Test] public void DraggingPreparedPortionDoesNotOpenCounter()
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); PrepareReadyPortion();
+            TouchReady(0, true);
+            Assert.That(view.Session.TrayCount, Is.EqualTo(1));
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
+            // Some input modules still deliver a click after releasing a drag over its source.
+            ExecuteEvents.Execute(Find("ReadyPancake0"), new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+            view.Refresh();
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+        }
+
         [Test] public void SelectedReadyPortionCanBeDiscardedWhileBothStationsAreOccupied()
         {
-            Click("KitchenTab"); PrepareReadyPortion(); var ready = view.Session.ReadyPancakes.Single();
+            Click("KitchenTab"); PrepareReadyPortion(); var ready = view.Session.TrayPancakeAt(0);
             Pour(); Click("FinishBatter"); Send(ActionKind.Tick, 2); view.Refresh(); Click("FlipHandle");
             Send(ActionKind.Tick, 2); view.Refresh(); Click("MoveToPlate"); var plate = view.Session.PlatePancake;
             Pour(); var pan = view.Session.PanPancake;
@@ -232,7 +357,7 @@ namespace Blinopek.Tests
         [Test] public void TrayPagesAllowDraggingTheThirdPortionToTrash()
         {
             Click("KitchenTab"); PrepareReadyPortion(); PrepareReadyPortion(); PrepareReadyPortion();
-            var first = view.Session.ReadyPancakes[0]; var third = view.Session.ReadyPancakes[2];
+            var first = view.Session.TrayPancakeAt(0); var third = view.Session.TrayPancakeAt(2);
             Click("TrayNext");
             Assert.That(Find("ReadyPancake0").GetComponent<ReadyPancakeDrag>().Pancake, Is.SameAs(third));
             Assert.That(Find("ReadyPancake1").activeSelf, Is.False);
@@ -243,19 +368,130 @@ namespace Blinopek.Tests
             Assert.That(Find("TrayNext").activeSelf, Is.False);
         }
 
-        [Test] public void ExplicitServeWaitsForReplacementAndWorksFromCounter()
+        [Test] public void ExplicitServeStaysAvailableDuringReplacementAndWorksFromCounter()
         {
-            Click("AcceptOrder");
-            Assert.That(Find("ServeOrder").GetComponent<Button>().interactable, Is.False);
+            Click("KitchenTab");
+            Assert.That(Find("KitchenTray").GetComponent<Button>().interactable, Is.True);
             PrepareReadyPortion();
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
-            Assert.That(Find("ServeOrder").GetComponent<Button>().interactable, Is.True);
+            Assert.That(Find("KitchenTray").GetComponent<Button>().interactable, Is.True);
             TouchReady(0, false); Click("Discard");
-            Assert.That(Find("ServeOrder").GetComponent<Button>().interactable, Is.False);
-            PrepareReadyPortion(); Click("CounterTab"); Click("ServeOrderCounter");
+            Assert.That(Find("KitchenTray").GetComponent<Button>().interactable, Is.True);
+            PrepareReadyPortion(); Click("CounterTab");
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(view.Session.Reviews, Is.Empty);
+            Assert.That(Find("DeliveryHint").activeInHierarchy, Is.True);
+            VerifyReadyRaycast(Find("DeliveryTray"));
+            SwipeTray(view.TrayServeDirection * 100);
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
             Assert.That(view.Session.Reviews.Count, Is.EqualTo(1));
-            Assert.That(Find("ServeOrderCounter").activeSelf, Is.False);
+            Assert.That(Find("DeliveryHint").activeInHierarchy, Is.False);
+            int balance = view.Session.Balance;
+            SwipeTray(view.TrayServeDirection * 100);
+            Assert.That(view.Session.Reviews.Count, Is.EqualTo(1));
+            Assert.That(view.Session.Balance, Is.EqualTo(balance));
+        }
+
+        [Test] public void EmptyTrayCanBeHandedOverFromEitherScreen()
+        {
+            Click("KitchenTab");
+            VerifyReadyRaycast(Find("KitchenTray"));
+            Click("KitchenTray");
+            VerifyReadyRaycast(Find("DeliveryTray"));
+            SwipeTray(view.TrayServeDirection * 100);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
+            Assert.That(view.Session.Order.Report.Total, Is.Zero);
+            Assert.That(view.Session.Order.Report.Refund, Is.EqualTo(view.Session.Order.Price));
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void KitchenTrayRemainsClickableDuringPartialAndFinalFold(bool finalFold)
+        {
+            Click("KitchenTab"); PrepareReadyPortion();
+            Pour(); Click("FinishBatter"); Send(ActionKind.Tick, 2); view.Refresh();
+            Click("FlipHandle"); Send(ActionKind.Tick, 2); view.Refresh(); Click("MoveToPlate");
+            var folding = view.Session.PlatePancake;
+            Click("Fold0"); SwipePlate(new Vector2(0, 40));
+            if (finalFold) SwipePlate(new Vector2(40, 0));
+            VerifyReadyRaycast(Find("KitchenTray"));
+            Click("KitchenTray"); SwipeTray(view.TrayServeDirection * 100);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
+            Assert.That(view.Session.Order.Finished.Count, Is.EqualTo(finalFold ? 2 : 1));
+            Click("KitchenTab");
+            if (finalFold) Assert.That(Find("PancakeOnPlate").activeInHierarchy, Is.False, "Delivered pancake must not reappear in its finishing animation");
+            else Assert.That(view.Session.PlatePancake, Is.SameAs(folding), "Serving must preserve unfinished cooking");
+        }
+
+        [TestCase(false, false, false)]
+        [TestCase(true, false, false)]
+        [TestCase(false, true, false)]
+        [TestCase(true, true, true)]
+        public void KitchenTrayAlwaysOpensCounterBeforeHandoff(bool busyPan, bool busyPlate, bool sparePortion)
+        {
+            Click("KitchenTab"); PrepareReadyPortion();
+            if (sparePortion) PrepareReadyPortion();
+            if (busyPlate) {
+                Pour(); Click("FinishBatter"); Send(ActionKind.Tick, 2); view.Refresh();
+                Click("FlipHandle"); Send(ActionKind.Tick, 2); view.Refresh(); Click("MoveToPlate");
+            }
+            if (busyPan) { Pour(); Click("FinishBatter"); }
+            var pan = view.Session.PanPancake; var plate = view.Session.PlatePancake;
+            int balance = view.Session.Balance, trayCount = view.Session.TrayCount;
+            Assert.That(view.CanServeTray, Is.False, "A hidden counter cannot accept tray input");
+            SwipeTray(view.TrayServeDirection * 100);
+            Click("KitchenTray");
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.False);
+            Assert.That(Find("Counter").activeInHierarchy && view.CanServeTray, Is.True);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(view.Session.Order.Report, Is.Null);
+            Assert.That(view.Session.Reviews, Is.Empty);
+            Assert.That(view.Session.Balance, Is.EqualTo(balance));
+            Assert.That(view.Session.TrayCount, Is.EqualTo(trayCount));
+            Assert.That(view.Session.PanPancake, Is.SameAs(pan));
+            Assert.That(view.Session.PlatePancake, Is.SameAs(plate));
+            SwipeTray(view.TrayServeDirection * 100);
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(view.Session.PanPancake, Is.SameAs(pan));
+            Assert.That(view.Session.PlatePancake, Is.SameAs(plate));
+        }
+
+        [Test] public void TrayRequiresMovementTowardGuestAndReturnsAfterInvalidGestures()
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); Click("KitchenTray");
+            var tray = Find("DeliveryTray").GetComponent<RectTransform>(); var home = tray.anchoredPosition;
+            var direction = view.TrayServeDirection;
+            foreach (var delta in new[] { Vector2.zero, direction * 20, -direction * 100, new Vector2(-direction.y, direction.x) * 100 }) {
+                SwipeTray(delta);
+                Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+                Assert.That(view.Session.Reviews, Is.Empty);
+                Assert.That(tray.anchoredPosition, Is.EqualTo(home));
+            }
+            SwipeTray(direction * 100, () => {
+                Assert.That(Vector2.Dot(tray.anchoredPosition - home, direction), Is.GreaterThan(70));
+                Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Accepted), "The guest receives food only on release");
+            });
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void InterruptedTrayGestureCannotHandOverOrder(bool pause)
+        {
+            Click("KitchenTab"); PrepareReadyPortion(); Click("KitchenTray");
+            SwipeTray(view.TrayServeDirection * 100, () => {
+                if (pause) view.Controller.SetPause(PauseReason.Menu, true);
+                else Send(ActionKind.Tick, view.Session.Order.PatienceLimit);
+                view.Refresh();
+            });
+            Assert.That(view.Session.Order.Phase, Is.EqualTo(pause ? OrderPhase.Accepted : OrderPhase.Cancelled));
+            Assert.That(view.Session.Order.Phase, Is.Not.EqualTo(OrderPhase.Served));
+            if (pause) {
+                view.Controller.SetPause(PauseReason.Menu, false); view.Refresh();
+                SwipeTray(view.TrayServeDirection * 100);
+                Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ namespace Blinopek.Editor
             var config = AssetDatabase.LoadAssetAtPath<GameContent>(ContentPath);
             if (config == null) { config = ScriptableObject.CreateInstance<GameContent>(); AssetDatabase.CreateAsset(config, ContentPath); }
             config.bodyFont = Load<Font>("ui/fonts/PT_Sans-Web-Regular.ttf"); config.titleFont = Load<Font>("ui/fonts/PT_Serif-Web-Regular.ttf");
+            config.signboardFont = Load<Font>("ui/fonts/YesevaOne-Regular.ttf");
+            config.signboardShader = AssetDatabase.LoadAssetAtPath<Shader>("Assets/Blinopek/Presentation/Signboard.shader");
             config.kitchenBackground = Load<Texture2D>("kitchen/kitchen-background.png");
             config.stove = Load<Texture2D>("kitchen/stove.png"); config.assemblyTable = Load<Texture2D>("kitchen/assembly-table.png");
             config.counterBackground = Load<Texture2D>("decor/service_background.png"); config.counter = Load<Texture2D>("decor/service_counter.png");

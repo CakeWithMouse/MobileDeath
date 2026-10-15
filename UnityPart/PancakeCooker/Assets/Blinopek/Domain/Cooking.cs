@@ -3,10 +3,20 @@ using System.Collections.Generic;
 
 namespace Blinopek.Domain
 {
+    public readonly struct CoverageStamp
+    {
+        public readonly int X, Y, Radius;
+        public CoverageStamp(int x, int y, int radius) { X = x; Y = y; Radius = radius; }
+    }
+
     public sealed class CoverageMask
     {
         public const int Size = 128;
         private readonly bool[] cells = new bool[Size * Size];
+        private readonly List<CoverageStamp> stamps = new List<CoverageStamp>();
+        // Retain the original brush geometry for rendering; scoring still uses cells.
+        // Existing saves rebuild these from their command journal during replay.
+        public IReadOnlyList<CoverageStamp> Stamps => stamps;
         public int Count { get; private set; }
         public int Revision { get; private set; }
         public static readonly int CircleCells = CountCircle();
@@ -21,6 +31,7 @@ namespace Blinopek.Domain
         }
         public void Stamp(int px, int py, int radius)
         {
+            stamps.Add(new CoverageStamp(px, py, radius));
             int x0 = Math.Max(0, (px - radius) * Size / 1000 - 1), x1 = Math.Min(Size - 1, (px + radius) * Size / 1000 + 1);
             int y0 = Math.Max(0, (py - radius) * Size / 1000 - 1), y1 = Math.Min(Size - 1, (py + radius) * Size / 1000 + 1);
             for (int y = y0; y <= y1; y++) for (int x = x0; x <= x1; x++)

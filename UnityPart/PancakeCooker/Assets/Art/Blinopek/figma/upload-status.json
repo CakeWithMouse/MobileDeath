@@ -244,5 +244,32 @@
       "screens/screens.js",
       "figma/layered/manifest.json"
     ]
+  },
+  "cafe_tables_revision": {
+    "date": "2026-10-15",
+    "method": "Figma UI in Codex in-app browser",
+    "figma_synced": true,
+    "frames": [
+      "4199:947",
+      "4199:821",
+      "4199:1125",
+      "4199:881",
+      "4199:1024",
+      "4199:773"
+    ],
+    "changes": [
+      "All 12 cafe tables replaced by approved light sprite",
+      "Catalog table_base and table_premium replaced",
+      "Shop dark table card and purchase plus replace brass lamp card"
+    ],
+    "catalog_image_nodes": [
+      "4199:1676",
+      "4199:262"
+    ],
+    "shop_image_node": "4209:52",
+    "proof": [
+      "output/approvals/cafe-tables-v2/figma-counter.png",
+      "output/approvals/cafe-tables-v2/figma-shop.png"
+    ]
   }
 }

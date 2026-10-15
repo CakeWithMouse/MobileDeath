@@ -17,7 +17,7 @@ namespace Blinopek.Presentation
             public FoldPose Pose;
             public Direction Direction;
             public float Warp;
-            public int Layer;
+            public int Layer, CoverageLayer;
         }
         private readonly List<Patch> patches = new List<Patch>(4096);
         private readonly List<Quad> quads = new List<Quad>(8192);
@@ -62,24 +62,25 @@ namespace Blinopek.Presentation
         private int FillingBits(int x, int y)
         {
             int result = 0;
-            for (int i = 0; i < 3; i++) if (motion.State.Fillings[i] != null && motion.State.Fillings[i].Mask[x, y]) result |= 1 << i;
+            for (int i = 0; i < 3; i++) if (coverage[i + 1].Visible(x, y)) result |= 1 << i;
             return result;
         }
         private CookingVertex Vertex(Vector2 uv) => CookingDeformation.FoldPoint(uv, motion.State, motion.FoldPosition);
         private void RebuildSurface()
         {
-            patches.Clear(); quads.Clear(); var state = motion.State;
+            patches.Clear(); quads.Clear(); var state = motion.State; RefreshCoverage();
             if (atlas.HasFoldArt && motion.FoldPosition > 0) { RebuildAuthoredFolds(); return; }
-            const int size = CoverageMask.Size;
+            const int size = SoftCoverage.Size, scale = size / CoverageMask.Size;
             for (int y = 0; y < size; y++)
             {
                 int x = 0;
                 while (x < size)
                 {
-                    if (!state.Batter[x, y]) { x++; continue; }
-                    int start = x, bits = FillingBits(x, y); x++;
-                    while (x < size && x - start < 8 && state.Batter[x, y] && FillingBits(x, y) == bits
-                        && x != 36 && x != 64 && x != 92) x++;
+                    if (!coverage[0].Visible(x, y)) { x++; continue; }
+                    int start = x, bits = FillingBits(x, y); bool edge = SoftEdge(x, y); x++;
+                    // Keep every shared corner along the feather; merge only opaque interiors.
+                    while (!edge && x < size && x - start < 8 * scale && coverage[0].Visible(x, y) && !SoftEdge(x, y) && FillingBits(x, y) == bits
+                        && x != 36 * scale && x != 64 * scale && x != 92 * scale) x++;
                     var uv = Rect.MinMaxRect(start / (float)size, y / (float)size, x / (float)size, (y + 1f) / size);
                     var point = Vertex(uv.center);
                     patches.Add(new Patch { Uv = uv, Depth = point.Position.z, Facing = point.Facing, Fillings = bits });
@@ -114,7 +115,7 @@ namespace Blinopek.Presentation
             }
         }
         private void Add(Rect uv, int tile, float alpha, float shade, Rect? source = null)
-        { quads.Add(new Quad { Uv = uv, Tile = atlas.Tiles[tile], Source = source ?? new Rect(0, 0, 1, 1), Tint = new Color(shade, shade, shade, alpha) }); }
+        { quads.Add(new Quad { Uv = uv, Tile = atlas.Tiles[tile], Source = source ?? new Rect(0, 0, 1, 1), Tint = new Color(shade, shade, shade, alpha), CoverageLayer = tile >= 3 && tile <= 5 ? tile - 2 : 0 }); }
         protected override void OnPopulateMesh(VertexHelper vh) => PopulatePage(vh, 0);
         internal void PopulatePage(VertexHelper vh, int page)
         {
@@ -146,7 +147,7 @@ namespace Blinopek.Presentation
                 p.x = .5f + (p.x - .5f) * (1 + Mathf.Sin(t * Mathf.PI) * .05f);
             }
             var sourceUv = new Vector2(q.Tile.x + (x - q.Source.x) / q.Source.width * q.Tile.width, q.Tile.y + (y - q.Source.y) / q.Source.height * q.Tile.height);
-            vh.AddVert(new Vector3(rect.xMin + p.x * rect.width, rect.yMin + screenY * rect.height), q.Tint, sourceUv);
+            vh.AddVert(new Vector3(rect.xMin + p.x * rect.width, rect.yMin + screenY * rect.height), CoverageTint(q, new Vector2(x, y)), sourceUv);
         }
     }
 

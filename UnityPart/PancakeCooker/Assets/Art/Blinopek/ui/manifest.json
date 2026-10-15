@@ -93,11 +93,11 @@
     },
     {
       "id": "coin-pancake",
-      "title_ru": "Монета с блином",
+      "title_ru": "Златник — монета с блином",
       "file": "coin-pancake.png",
       "category": "ui",
       "asset_list_coverage": [
-        "Валюты: монеты",
+        "Валюты: златники",
         "Цена",
         "Прибыль",
         "Награда"
@@ -109,11 +109,11 @@
     },
     {
       "id": "currency-honey",
-      "title_ru": "Янтарная капля мёда",
+      "title_ru": "Жаринка — янтарная капля",
       "file": "currency-honey.png",
       "category": "ui",
       "asset_list_coverage": [
-        "Валюты: мёд",
+        "Валюты: жаринки",
         "Премиальные наборы"
       ],
       "transparent": true,

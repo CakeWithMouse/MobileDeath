@@ -73,7 +73,15 @@ namespace Blinopek.Domain
         }
         private static int PortionQuality(List<Point> portions, int tolerance)
         {
-            int hits = 0, used = 0;
+            int hits = 0, matched = MatchedPortionTargets(portions, tolerance);
+            for (int i = 0; i < Recipes.PortionTargets.Length; i++) if ((matched & (1 << i)) != 0) hits++;
+            return Math.Max(0, hits * 100 / Recipes.PortionTargets.Length - Math.Max(0, portions.Count - Recipes.PortionTargets.Length) * 15);
+        }
+        // The stencil and scoring must agree on which distinct positions are filled.
+        public static int MatchedPortionTargets(IReadOnlyList<Point> portions, int tolerance)
+        {
+            int used = 0;
+            if (portions == null) return used;
             foreach (var p in portions)
             {
                 int best = -1, dist = tolerance * tolerance;
@@ -82,9 +90,9 @@ namespace Blinopek.Domain
                     var t = Recipes.PortionTargets[i]; int d = (p.X - t.X) * (p.X - t.X) + (p.Y - t.Y) * (p.Y - t.Y);
                     if (d <= dist) { best = i; dist = d; }
                 }
-                if (best >= 0) { hits++; used |= 1 << best; }
+                if (best >= 0) used |= 1 << best;
             }
-            return Math.Max(0, hits * 100 / Recipes.PortionTargets.Length - Math.Max(0, portions.Count - Recipes.PortionTargets.Length) * 15);
+            return used;
         }
         public static int HeatQuality(int heat, BalanceRules rules) => heat < rules.readyTicks ? heat * 60 / rules.readyTicks : heat >= rules.burnTicks ? 10 : 100;
     }

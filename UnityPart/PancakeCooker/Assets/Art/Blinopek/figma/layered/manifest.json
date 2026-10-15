@@ -2,8 +2,8 @@
   "schema_version": 1,
   "kind": "layered_screen_layouts",
   "source": "screens/screens.js",
-  "source_sha256": "6ae5058808ab03e68b0b0e3db4b905e1b5e331734ccb07d6840eda31013b7b58",
-  "bounds_sha256": "893b11b668814d2ff8c79076b5cdcd6b7d10e98ed1a1ed4851b212d95a89bf02",
+  "source_sha256": "a9db806f56e886ea6adcc5f88dc4bdd96ade7a2cef58530cd3ba582da5ee6898",
+  "bounds_sha256": "859e1dcd115e80adbea8d9787c10ef3e400c481b2401bf46b0599b54359a5c20",
   "notes": [
     "Historical SVG export metadata: file and bytes describe previous exports, which are now excluded from Git. Use the corresponding *-layout.json files and screens/screens.js for local layouts; editable boards are stored in Figma.",
     "Original PNG files are embedded separately; no flattened screen PNG is used.",
@@ -13,8 +13,8 @@
   ],
   "screens": [
     {
-      "key": "facade",
-      "title": "Фасад",
+      "key": "main-menu",
+      "title": "Главное меню",
       "file": "figma/layered/facade.svg",
       "width": 1600,
       "height": 900,
@@ -43,7 +43,7 @@
       "file": "figma/layered/counter.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 64239555,
+      "bytes": 63559806,
       "layer_counts": {
         "groups": 34,
         "asset_groups": 23,
@@ -63,7 +63,6 @@
         "decor/service_delivery.png",
         "decor/stool_base.png",
         "decor/table_base.png",
-        "decor/table_premium.png",
         "decor/vase_flowers.png",
         "kitchen/shadows/tray.svg",
         "ui/button-cream.png",
@@ -145,7 +144,7 @@
       "file": "figma/layered/recipes.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 49610971,
+      "bytes": 48931222,
       "layer_counts": {
         "groups": 29,
         "asset_groups": 23,
@@ -162,7 +161,6 @@
         "decor/service_background.png",
         "decor/stool_base.png",
         "decor/table_base.png",
-        "decor/table_premium.png",
         "decor/vase_flowers.png",
         "kitchen/container-butter.png",
         "kitchen/container-curd.png",
@@ -187,7 +185,7 @@
       "file": "figma/layered/shop.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 97459399,
+      "bytes": 96238759,
       "layer_counts": {
         "groups": 50,
         "asset_groups": 38,
@@ -214,7 +212,6 @@
         "ui/currency-honey.png",
         "ui/day-sun.png",
         "ui/glyphs/arrow-left.png",
-        "ui/glyphs/check.png",
         "ui/glyphs/lock.png",
         "ui/glyphs/pause.png",
         "ui/glyphs/plus.png",
@@ -231,7 +228,7 @@
       "file": "figma/layered/day.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 39381675,
+      "bytes": 38701974,
       "layer_counts": {
         "groups": 27,
         "asset_groups": 15,
@@ -248,7 +245,6 @@
         "decor/service_background.png",
         "decor/stool_base.png",
         "decor/table_base.png",
-        "decor/table_premium.png",
         "decor/vase_flowers.png",
         "ui/button-cream.png",
         "ui/coin-pancake.png",
@@ -267,7 +263,7 @@
       "file": "figma/layered/reviews.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 74483605,
+      "bytes": 73803856,
       "layer_counts": {
         "groups": 40,
         "asset_groups": 29,
@@ -284,7 +280,6 @@
         "decor/service_background.png",
         "decor/stool_base.png",
         "decor/table_base.png",
-        "decor/table_premium.png",
         "decor/vase_flowers.png",
         "ui/button-cream.png",
         "ui/glyphs/close.png",
@@ -361,7 +356,7 @@
       "file": "figma/layered/rewards.svg",
       "width": 1600,
       "height": 900,
-      "bytes": 41006554,
+      "bytes": 40326805,
       "layer_counts": {
         "groups": 21,
         "asset_groups": 15,
@@ -378,7 +373,6 @@
         "decor/service_background.png",
         "decor/stool_base.png",
         "decor/table_base.png",
-        "decor/table_premium.png",
         "decor/vase_flowers.png",
         "ui/button-cream.png",
         "ui/coin-pancake.png",
@@ -391,5 +385,6 @@
         "ui/reward-video.png"
       ]
     }
-  ]
+  ],
+  "cafe_tables_revision": "2026-10-15: light defaults, dark table shop card; layered layout JSON refreshed."
 }

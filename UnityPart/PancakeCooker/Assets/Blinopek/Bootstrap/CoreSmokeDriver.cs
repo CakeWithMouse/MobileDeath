@@ -100,16 +100,25 @@ namespace Blinopek.Bootstrap
                 Drag(surfaceName, Position(rect, (501 - edge) / 1000f, y / 1000f), Position(rect, (499 + edge) / 1000f, y / 1000f));
             }
         }
+        private void HandOverTray()
+        {
+            Check(View.Session.Order.Phase == OrderPhase.Accepted && View.Session.Order.Report == null, "Serve button waits for the tray gesture");
+            Check(GameObject.Find("Counter") != null && GameObject.Find("Kitchen") == null, "Serve button opens the customer counter");
+            var tray = GameObject.Find("DeliveryTray").GetComponent<RectTransform>();
+            var parent = (RectTransform)tray.parent;
+            var destination = parent.InverseTransformPoint(tray.position) + (Vector3)(View.TrayServeDirection * 100);
+            Drag("DeliveryTray", Position(tray, .5f, .5f), RectTransformUtility.WorldToScreenPoint(null, parent.TransformPoint(destination)));
+        }
         private IEnumerator Run()
         {
             View.Controller.SetPause(PauseReason.Focus | PauseReason.Background, false);
-            Check(GameObject.Find("Facade") != null && View.Controller.Paused, "Game opens at the facade with the shift paused");
-            yield return Shot("00-facade");
-            Click("FacadeShop"); yield return Shot("00-facade-shop"); Click("CloseShop");
-            Check(GameObject.Find("Facade") != null && View.Controller.Paused, "Closing shop returns to the paused facade");
+            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Game opens at the main menu with the shift paused");
+            yield return Shot("00-main-menu");
+            Click("MainMenuShop"); yield return Shot("00-main-menu-shop"); Click("CloseShop");
+            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Closing shop returns to the paused main menu");
             Click("ContinueShift");
-            Check(!View.Controller.Paused && GameObject.Find("Facade") == null, "Facade play starts the shift");
-            yield return Shot("01-counter"); Click("AcceptOrder"); yield return Shot("02-kitchen");
+            Check(!View.Controller.Paused && GameObject.Find("MainMenu") == null, "MainMenu play starts the shift");
+            yield return Shot("01-counter"); Click("KitchenTab"); yield return Shot("02-kitchen");
             yield return VerifyGestureAudio();
             Paint("PanSurface"); Check(View.Session.Pancake.Batter.Percent >= 90, "Pointer strokes cover the pan");
             Click("FinishBatter"); yield return VerifyAudio(); View.Command(ActionKind.Tick, 200); yield return Shot("03-burnt-lesson");
@@ -129,7 +138,8 @@ namespace Blinopek.Bootstrap
             yield return Shot("06-fold");
             Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .58f, .5f));
             yield return new WaitForSecondsRealtime(CookingMotion.FoldSeconds * 2 + .1f);
-            Click("ServeOrder");
+            Click("KitchenTray");
+            yield return null; HandOverTray();
             Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Pointer-driven tutorial serves a correct order");
             yield return new WaitForSecondsRealtime(2);
             Check(View.Audio.PlayedCount(SoundCue.Serve) == 1 && View.Audio.PlayedCount(SoundCue.Payment) == 1, "Tutorial serving and payment clips play once");
@@ -137,10 +147,10 @@ namespace Blinopek.Bootstrap
             View.Command(ActionKind.Tick, View.Session.Rules.dayTicks); View.Refresh();
             Check(View.Session.Phase == DayPhase.Result && View.Controller.Profile.day == 2, "Day settles and advances"); yield return Shot("08-results");
             var completedSession = View.Session;
-            Click("ReturnToFacade");
-            Check(View.Session == completedSession && View.Session.Phase == DayPhase.Result && View.Controller.Paused, "Result returns to facade without starting another shift");
-            yield return Shot("08-facade-after-results");
-            Click("FacadeShop"); yield return Shot("09-shop");
+            Click("ReturnToMainMenu");
+            Check(View.Session == completedSession && View.Session.Phase == DayPhase.Result && View.Controller.Paused, "Result returns to main menu without starting another shift");
+            yield return Shot("08-main-menu-after-results");
+            Click("MainMenuShop"); yield return Shot("09-shop");
             Click("BuyIngredient1"); Check(View.Controller.Profile.Owns(Ingredient.Jam), "Shop unlock persists");
             Click("BuyIngredient3"); Click("UpgradeTab"); Click("BuyScraper");
             Click("CloseShop"); Click("ContinueShift");
@@ -153,7 +163,7 @@ namespace Blinopek.Bootstrap
             yield return Shot("recipes-second");
             Check(View.Controller.Paused && !View.Command(ActionKind.Tick, 20) && View.Session.ElapsedTicks == beforePause, "Recipe book pauses the real view controller");
             Click("CloseBook"); Check(!View.Controller.Paused, "Recipe book closes without leaving a pause");
-            Click("AcceptOrder"); yield return null; Canvas.ForceUpdateCanvases();
+            Click("KitchenTab"); yield return null; Canvas.ForceUpdateCanvases();
             int price = View.Session.Order.Price;
             for (int portion = 0; portion < View.Session.Order.Portions.Count; portion++)
             {
@@ -185,7 +195,8 @@ namespace Blinopek.Bootstrap
                 // Rapid QA gestures queue visual folds; let them finish before painting the next portion.
                 yield return new WaitForSecondsRealtime(CookingMotion.FoldSeconds * Recipes.Gestures(recipe.Shape).Length + .1f);
             }
-            Click("ServeOrder");
+            Click("KitchenTray");
+            yield return null; HandOverTray();
             Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Ordinary order serves every requested portion with correct fillings and folds");
             Check(View.Session.Ledger.Products > 0 && View.Session.Ledger.Revenue == price, "Ordinary cooking spends products and pays acceptance once");
             yield return new WaitForSecondsRealtime(3);

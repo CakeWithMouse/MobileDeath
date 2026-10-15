@@ -24,9 +24,13 @@ namespace Blinopek.Tests
             { "Closing finishes accepted order and rejects new one", Closing },
             { "Unaccepted visitor creates no closing revenue", UnacceptedClosing },
             { "Pause reasons compose and stop every clock", Pauses },
+            { "Restart restores the same day and persists its fresh journal", RestartDay },
+            { "Restart preserves external pauses and rejects unavailable days", RestartDayGuards },
             { "Save replay restores heat, masks, costs and receipt", Replay },
             { "Failure restores balance, tools and day", FailedDay },
             { "Success advances once and purchases persist", ProgressAndShop },
+            { "Dark tables require one paid upgrade and persist across days", DarkTablesPurchase },
+            { "Dark tables reject unaffordable purchases and failed days", DarkTablesGuards },
             { "Owned helpers use normal costs and only one ingredient", Helpers },
             { "Locked ingredients never appear in generated orders", Generation },
             { "Active session pins its balance settings", PinnedRules },
@@ -36,7 +40,7 @@ namespace Blinopek.Tests
             { "Audio cooking and patience thresholds trigger once", AudioThresholds },
             { "Audio helper emits a bounded sequence", AudioHelper },
             { "Cooking before acceptance prepares a paid-for stock without revenue", CookBeforeOrder },
-            { "Serving prepared stock preserves extra portions and the active pancake", ServePreparedStock },
+            { "Serving hands over the entire prepared tray and preserves active cooking", ServePreparedStock },
             { "Cancelled orders return prepared portions and preserve held strokes", KeepCancelledCooking },
             { "A pancake started before the lesson keeps ordinary cooking rules", FreeCookingBeforeLesson },
             { "Prepared stock and independent heat survive save replay", FreeCookingReplay },
@@ -50,10 +54,21 @@ namespace Blinopek.Tests
             { "Replay restores two pancakes and an interrupted gesture independently", ConcurrentReplay },
             { "The tutorial protects only its own pancake during parallel cooking", ConcurrentLesson },
             { "Ready pancakes can be discarded by identity without affecting either station", DiscardReadyPancake },
-            { "A discarded order portion must be replaced before explicit serving", ReplaceReadyPortion },
+            { "A ready portion can be replaced without blocking explicit serving", ReplaceReadyPortion },
+            { "Empty and incomplete trays can be served, evaluated and replayed exactly once", IncompleteOrderServing },
             { "Prepared orders still expire while waiting for explicit serving", ReadyOrderTimeout },
             { "Discard and explicit serving survive replay without duplicate rewards", ManualServingReplay },
-            { "Automatic-serving saves migrate without rewriting past orders", LegacyServingReplay }
+            { "Automatic-serving saves migrate without rewriting past orders", LegacyServingReplay },
+            { "Guests arrive automatically after serving and replay exactly once", AutomaticGuestArrival },
+            { "Automatic arrivals respect pauses, timeout and closing", AutomaticGuestTiming },
+            { "Old waiting saves resume automatic arrivals without rewriting history", AutomaticGuestLegacyWait },
+            { "Decoration points shorten guest intervals within balance limits", DecorationGuestBalance },
+            { "Decorated guest intervals apply after both serving and timeout", DecorationGuestFlow },
+            { "Decoration purchases and balance snapshots govern the next shift", DecorationGuestPurchase },
+            { "Closing does not wait for the decoration arrival interval", DecorationGuestClosing },
+            { "Tick journal batches remain replayable across the command limit", TickJournalBoundary },
+            { "Command rejection preserves state and publishes feedback once", CommandRejection },
+            { "Every successful shop action saves and notifies once", ShopNotifications }
         };
         private sealed class MemoryStore : IGameStore { public SavedGame Data; public int Writes; public SavedGame Load() => Data; public void Save(SavedGame game) { Data = game; Writes++; } }
         private sealed class BrokenStore : IGameStore { public SavedGame Load() => throw new Exception("broken"); public void Save(SavedGame game) => throw new Exception("Must not overwrite"); }
@@ -181,15 +196,75 @@ namespace Blinopek.Tests
             var rules = Rules(); rules.dayTicks = 2; var s = Session(null, rules); Do(s, ActionKind.Accept); Plate(s);
             Check(s.Phase == DayPhase.Closing && s.HasActiveOrder, "Closing dropped active order"); Fill(s, s.Order.Portions[0]); FoldPancake(s, Fold.Triangle);
             Check(Do(s, ActionKind.ServeOrder), "Cannot explicitly serve the closing order");
+            Check(s.Phase == DayPhase.Closing && s.GuestLeaving && s.Ledger.Rent == 0, "Settled before the guest departed");
+            Check(!Do(s, ActionKind.NextGuest), "A new guest arrived after closing");
+            Do(s, ActionKind.Tick, rules.guestIntervalTicks);
             Check(s.Phase == DayPhase.Result && !Do(s, ActionKind.NextGuest) && s.Ledger.Rent > 0, "Closing did not settle");
         }
-        private static void UnacceptedClosing() { var rules = Rules(); rules.dayTicks = 2; var s = Session(null, rules); Do(s, ActionKind.Tick, 2); Check(s.Phase == DayPhase.Result && s.Ledger.Revenue == 0 && !Do(s, ActionKind.Accept), "Accepted after close"); }
+        private static void UnacceptedClosing()
+        {
+            var rules = Rules(); rules.dayTicks = 2;
+            var s = Session(null, rules);
+            Do(s, ActionKind.Tick, rules.dayTicks);
+            Check(s.Phase == DayPhase.Closing && s.GuestLeaving && !Do(s, ActionKind.Accept), "Accepted after close or skipped departure");
+            Do(s, ActionKind.Tick, rules.guestIntervalTicks);
+            Check(s.Phase == DayPhase.Result && s.Ledger.Revenue == 0, "Unaccepted guest did not leave without revenue");
+        }
         private static void Pauses()
         {
             var store = new MemoryStore { Data = new SavedGame { profile = Profile(), rules = Rules() } }; var game = new GameController(store, new LocalDevelopmentGateway(), Rules()); game.StartDay(7); game.Dispatch(new GameCommand(ActionKind.Accept));
             game.SetPause(PauseReason.Menu, true); game.SetPause(PauseReason.Background, true); game.SetPause(PauseReason.Menu, false);
             Check(!game.Dispatch(new GameCommand(ActionKind.Tick, 10)) && game.Session.ElapsedTicks == 0, "One reason cleared another");
             game.SetPause(PauseReason.Background, false); Check(game.Dispatch(new GameCommand(ActionKind.Tick, 10)) && game.Session.ElapsedTicks == 10, "Did not resume");
+        }
+        private static void RestartDay()
+        {
+            var rules = Rules(); var profile = Profile(); profile.day = 8; profile.honey = 12;
+            profile.helpersOwned = profile.helpersEnabled = 1; profile.darkTablesUpgrade = profile.patienceUpgrade = true;
+            profile.ratingCount = 10; profile.ratingTotal = 850;
+            var store = new MemoryStore { Data = new SavedGame { profile = profile, rules = rules } };
+            var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(77);
+            var original = game.Session;
+            game.Dispatch(new GameCommand(ActionKind.Accept)); Paint(c => game.Dispatch(c), -1);
+            game.Dispatch(new GameCommand(ActionKind.FinishBatter)); game.Dispatch(new GameCommand(ActionKind.Tick, rules.readyTicks));
+            game.Dispatch(new GameCommand(ActionKind.Flip)); game.Dispatch(new GameCommand(ActionKind.Tick, rules.readyTicks));
+            game.Dispatch(new GameCommand(ActionKind.MoveToPlate));
+            Check(game.Dispatch(new GameCommand(ActionKind.ApplyHelper, 0)) && game.Dispatch(new GameCommand(ActionKind.Remove, 0)), "Restart setup could not spend a scraper");
+            Check(original.ElapsedTicks > 0 && original.Ledger.Products > 0 && original.Scrapers == 1, "Restart setup did not change the shift");
+            game.SetPause(PauseReason.Menu, true); rules.readyTicks = 99;
+            int started = 0; game.DayStarted += () => started++;
+            Check(game.RestartDay() && started == 1 && !game.Paused, "Restart did not resume exactly once");
+            var fresh = game.Session;
+            Check(fresh != original && fresh.ElapsedTicks == 0 && fresh.Phase == DayPhase.Serving, "Restart kept the old clock or phase");
+            Check(fresh.PanPancake == null && fresh.PlatePancake == null && fresh.ReadyPancakes.Count == 0 && fresh.Reviews.Count == 0 && fresh.Ledger.Profit == 0, "Restart kept cooking or shift receipts");
+            Check(fresh.Scrapers == 2 && fresh.Balance == profile.coins && fresh.StartProfile.day == 8 && fresh.Rules.readyTicks == 2, "Restart changed starting resources or pinned balance");
+            Check(game.Profile.honey == 12 && game.Profile.ownedIngredients == 31 && game.Profile.helpersEnabled == 1 && game.Profile.darkTablesUpgrade && game.Profile.patienceUpgrade && game.Profile.ratingTotal == 850, "Restart lost permanent progress");
+            Check(fresh.Order.Id == 1 && fresh.Order.Phase == OrderPhase.Offered && fresh.Order.Price == original.Order.Price && fresh.Order.Portions.Count == original.Order.Portions.Count, "Restart changed the initial order");
+            for (int i = 0; i < fresh.Order.Portions.Count; i++)
+                Check(fresh.Order.Portions[i].Ingredients == original.Order.Portions[i].Ingredients && fresh.Order.Portions[i].Shape == original.Order.Portions[i].Shape, "Restart changed the random seed");
+            Check(store.Data.commands.Count == 2 && !store.Data.settled, "Restart kept the previous command journal");
+            var restored = new GameController(store, new LocalDevelopmentGateway(), rules);
+            Check(restored.Session.ElapsedTicks == 0 && restored.Session.Balance == profile.coins && restored.Session.FreeCooking && restored.Session.ManualServing && restored.Session.Pancake == null, "Restart did not survive reload");
+            Check(restored.Dispatch(new GameCommand(ActionKind.Accept)), "Restarted day cannot accept orders");
+        }
+        private static void RestartDayGuards()
+        {
+            var rules = Rules(); rules.dayTicks = 2;
+            var store = new MemoryStore(); var game = new GameController(store, new LocalDevelopmentGateway(), rules);
+            Check(!game.RestartDay() && store.Writes == 0, "Restart created an unstarted day");
+            game.StartDay(7);
+            game.SetPause(PauseReason.Menu | PauseReason.RecipeBook | PauseReason.Focus | PauseReason.Background, true);
+            Check(game.RestartDay() && game.Pauses == (PauseReason.Focus | PauseReason.Background), "Restart lost external pauses");
+            Check(game.Session.FreeCooking && game.Session.ManualServing && game.Session.IsTutorial && game.Session.Tutorial == TutorialStep.Welcome, "Restart under pause lost modes or tutorial");
+            Check(!game.Dispatch(new GameCommand(ActionKind.Tick, 1)), "Restart ran while app was suspended");
+            game.SetPause(PauseReason.Focus | PauseReason.Background, false);
+            var closing = new GameController(new MemoryStore { Data = new SavedGame { profile = Profile(), rules = rules } }, new LocalDevelopmentGateway(), rules);
+            closing.StartDay(7); closing.Dispatch(new GameCommand(ActionKind.Accept)); closing.Dispatch(new GameCommand(ActionKind.Tick, rules.dayTicks));
+            Check(closing.Session.Phase == DayPhase.Closing && closing.RestartDay() && closing.Session.Phase == DayPhase.Serving, "Cannot restart a closing shift");
+            closing.Dispatch(new GameCommand(ActionKind.Tick, rules.dayTicks + rules.guestIntervalTicks));
+            Check(closing.Session.Phase == DayPhase.Result && !closing.RestartDay(), "Restart reopened a settled day");
+            var blocked = new GameController(new BrokenStore(), new LocalDevelopmentGateway(), rules);
+            Check(!blocked.RestartDay(), "Restart overwrote blocked storage");
         }
         private static void Replay()
         {
@@ -201,14 +276,14 @@ namespace Blinopek.Tests
         private static void FailedDay()
         {
             var rules = Rules(); rules.rent = 100000; rules.dayTicks = 2;
-            var store = new MemoryStore { Data = new SavedGame { profile = Profile(), rules = rules } }; var game = new GameController(store, new LocalDevelopmentGateway(), rules); int coins = game.Profile.coins; game.StartDay(7); game.Dispatch(new GameCommand(ActionKind.Tick, 2));
+            var store = new MemoryStore { Data = new SavedGame { profile = Profile(), rules = rules } }; var game = new GameController(store, new LocalDevelopmentGateway(), rules); int coins = game.Profile.coins; game.StartDay(7); game.Dispatch(new GameCommand(ActionKind.Tick, rules.dayTicks + rules.guestIntervalTicks));
             Check(!game.Session.Success && game.Profile.coins == coins && game.Profile.day == 1 && game.Profile.scrapers == 2, "Failed day changed profile");
             Check(game.StartDay(8) && game.Session.StartProfile.coins == coins && game.Profile.day == 1, "Retry advanced");
         }
         private static void ProgressAndShop()
         {
             var rules = Rules(); rules.dayTicks = 2; var profile = Profile(); profile.ownedIngredients = 1;
-            var store = new MemoryStore { Data = new SavedGame { profile = profile, rules = rules } }; var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(7); game.Dispatch(new GameCommand(ActionKind.Tick, 2));
+            var store = new MemoryStore { Data = new SavedGame { profile = profile, rules = rules } }; var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(7); game.Dispatch(new GameCommand(ActionKind.Tick, rules.dayTicks + rules.guestIntervalTicks));
             int coins = game.Profile.coins; Check(game.Profile.day == 2, "No advancement");
             var restored = new GameController(store, new LocalDevelopmentGateway(), rules); Check(restored.Profile.day == 2 && restored.Profile.coins == coins, "Duplicate settlement on load");
             Check(restored.Buy(ShopItem.Ingredient, 1) && !restored.Buy(ShopItem.Ingredient, 1) && restored.Profile.coins == coins - rules.ingredientUnlockCost, "Double purchase");

@@ -48,6 +48,14 @@ namespace Blinopek.Presentation
             }
         }
         public static FoldPose CanonicalPose(int art) => new[] { FoldPose.Half, FoldPose.Triangle, FoldPose.EnvelopeSides, FoldPose.Envelope, FoldPose.RollStart, FoldPose.Roll, FoldPose.Incorrect }[art];
+        public static Rect ArtworkUv(FoldPose pose, Rect uv)
+        {
+            // The painted triangle folds face down, and the roll starts at the bottom.
+            // Match the recipe gestures: fold up, then right; roll from the top down.
+            if (pose == FoldPose.Half || pose == FoldPose.Triangle || pose == FoldPose.RollStart || pose == FoldPose.RollMiddle || pose == FoldPose.Roll)
+                return new Rect(uv.x, uv.yMax, uv.width, -uv.height);
+            return uv;
+        }
         public static Rect Placement(FoldPose pose, float aspect, Vector2 canvasSize)
         {
             float width = pose == FoldPose.Round ? 1 : pose == FoldPose.Half ? .94f : pose == FoldPose.Triangle ? .56f : pose == FoldPose.Envelope ? .58f : pose == FoldPose.EnvelopeTop ? .58f : pose == FoldPose.Roll ? .86f : pose == FoldPose.Incorrect ? .87f : .94f;
@@ -61,10 +69,10 @@ namespace Blinopek.Presentation
         {
             float x = uv.x, y = uv.y;
             if (pose == FoldPose.Round) return new FoldSample { Source = uv, Inside = true };
-            if (pose == FoldPose.Half) return new FoldSample(new Vector2(x, layer == 0 ? .5f * y : 1 - .5f * y), layer != 0);
+            if (pose == FoldPose.Half) return new FoldSample(new Vector2(x, layer == 0 ? .5f * (1 - y) : .5f + .5f * y), layer != 0);
             if (pose == FoldPose.Triangle)
             {
-                float u = .43f * x, v = .43f * (1 - y);
+                float u = .43f * x, v = .43f * y;
                 return new FoldSample(new Vector2(.5f + (layer % 2 == 0 ? u : -u), .5f + (layer < 2 ? v : -v)), layer % 2 != 0);
             }
             if (pose == FoldPose.EnvelopeLeft || pose == FoldPose.EnvelopeSides)
@@ -83,11 +91,11 @@ namespace Blinopek.Presentation
             }
             if (pose == FoldPose.RollStart || pose == FoldPose.RollMiddle)
             {
-                float seam = .27f + .08f * (1 - x);
-                if (layer == 0 && y < seam) return new FoldSample(new Vector2(x, .06f + .2f * y / seam), false);
-                return new FoldSample(new Vector2(x, .24f + .72f * Mathf.Clamp01((y - seam) / (1 - seam))), true);
+                float seam = .73f - .08f * (1 - x);
+                if (layer == 0 && y > seam) return new FoldSample(new Vector2(x, .94f - .2f * (1 - y) / (1 - seam)), false);
+                return new FoldSample(new Vector2(x, .04f + .72f * Mathf.Clamp01(y / seam)), true);
             }
-            if (pose == FoldPose.Roll) return new FoldSample(new Vector2(x, .12f + .3f * layer + .2f * y), layer == 1);
+            if (pose == FoldPose.Roll) return new FoldSample(new Vector2(x, .68f - .3f * layer + .2f * y), layer == 1);
             bool flap = x < .28f + y * .32f;
             return new FoldSample(new Vector2(flap && layer == 0 ? .12f + x * .4f : x, y), !flap || layer != 0);
         }

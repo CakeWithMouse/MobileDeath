@@ -174,6 +174,7 @@ public static class CookingAnimationValidation
             string key = CookingFoldArt.Keys[CookingFoldArt.ArtIndex(poses[test])];
             reference.texture = art.Find("kitchen/" + key + ".png"); reference.uvRect = art.Uv(reference.texture);
             float aspect = reference.texture.width * reference.uvRect.width / (reference.texture.height * reference.uvRect.height);
+            reference.uvRect = CookingFoldArt.ArtworkUv(poses[test], reference.uvRect);
             var placement = CookingFoldArt.Placement(poses[test], aspect, graphic.rectTransform.sizeDelta);
             reference.rectTransform.sizeDelta = Vector2.Scale(placement.size, graphic.rectTransform.sizeDelta);
             title.text = "Слева — Unity, справа — PNG из Figma";
@@ -212,8 +213,8 @@ public static class CookingAnimationValidation
         var controller = new Blinopek.Application.GameController(store, new Blinopek.Infrastructure.LocalDevelopmentGateway(), art.balance);
         var go = new GameObject("View lifecycle validation"); var view = go.AddComponent<GameView>(); view.Initialize(controller, art);
         Check(view.Session != null, "GameView initializes with animated surfaces");
-        typeof(GameView).GetMethod("PlayFromFacade", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
-        Check(view.Command(ActionKind.Accept), "View accepts an order after entering from the facade");
+        typeof(GameView).GetMethod("PlayFromMainMenu", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+        Check(view.Command(ActionKind.Accept), "View accepts an order after entering from the main menu");
         typeof(GameView).GetMethod("SwitchKitchen", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, new object[] { true });
         Check(view.Command(ActionKind.BeginStroke, -1, 500, 500), "View starts batter after entering the kitchen"); view.Command(ActionKind.EndStroke);
         view.Session.Pancake.Batter.Stamp(500, 500, 500);

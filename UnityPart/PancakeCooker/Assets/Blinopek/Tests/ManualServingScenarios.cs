@@ -28,15 +28,38 @@ namespace Blinopek.Tests
         {
             var s = Session();
             Check(!Do(s, ActionKind.ServeOrder), "Served before acceptance");
-            Do(s, ActionKind.Accept); Check(!Do(s, ActionKind.ServeOrder), "Served an empty order");
+            Do(s, ActionKind.Accept); Check(s.CanServeOrder, "Empty accepted order cannot be handed over");
             Prepare(s, s.Order.Portions[0]); var unwanted = s.Order.Finished[0];
             Check(s.CanServeOrder && s.Reviews.Count == 0 && s.Ledger.Tips == 0, "Ready order completed automatically");
             int paid = s.Ledger.Revenue, products = s.Ledger.Products;
-            Check(Do(s, ActionKind.Discard, unwanted.Id) && !s.CanServeOrder && s.Order.Finished.Count == 0, "Discarded portion still counts towards the order");
-            Check(!Do(s, ActionKind.ServeOrder) && s.Ledger.Revenue == paid && s.Ledger.Products == products, "Incomplete order served or discard changed the receipt");
+            Check(Do(s, ActionKind.Discard, unwanted.Id) && s.CanServeOrder && s.Order.Finished.Count == 0, "Discard blocked serving or still counts towards the order");
+            Check(s.Ledger.Revenue == paid && s.Ledger.Products == products, "Discard changed the receipt");
             Prepare(s, s.Order.Portions[0]); var replacement = s.Order.Finished[0];
             Check(replacement.Id != unwanted.Id && Do(s, ActionKind.ServeOrder), "Replacement could not be served");
             Check(!Do(s, ActionKind.Discard, replacement.Id) && s.Order.Finished[0] == replacement, "Already delivered food was discarded");
+        }
+
+        private static void IncompleteOrderServing()
+        {
+            foreach (int portions in new[] { 0, 1 }) {
+                var profile = Profile(); profile.day = 3;
+                var rules = Rules(); int seed = 1;
+                while (Session(profile, rules, seed).Order.Portions.Count < 2) seed++;
+                var store = new MemoryStore { Data = new SavedGame { profile = profile, rules = rules } };
+                var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(seed);
+                Check(game.Dispatch(new GameCommand(ActionKind.Accept)), "Cannot accept the partial-order fixture");
+                if (portions > 0) PrepareWithCommands(c => Check(game.Dispatch(c), "Partial-order cooking failed: " + c.kind));
+                var s = game.Session;
+                Check(s.CanServeOrder && s.TrayCount == portions && s.Order.Portions.Count > portions, "Incomplete order is blocked");
+                Check(game.Dispatch(new GameCommand(ActionKind.ServeOrder)), "Cannot intentionally hand over an incomplete order");
+                var report = s.Order.Report;
+                Check(s.Order.Phase == OrderPhase.Served && s.Order.Finished.Count == portions && s.TrayCount == 0, "Serving fabricated or retained food");
+                Check(report.Quantity == portions * 100 / s.Order.Portions.Count && report.Total < 65 && report.Refund == s.Order.Price && report.Tips == 0, "Missing portions escaped quality evaluation");
+                if (portions == 0) Check(report.Total == 0, "Empty tray received a positive score");
+                var restored = new GameController(store, new LocalDevelopmentGateway(), rules);
+                Check(restored.Session.Order.Phase == OrderPhase.Served && restored.Session.Order.Report.Total == report.Total && restored.Session.Balance == s.Balance && restored.Session.Reviews.Count == 1, "Incomplete delivery did not replay exactly once");
+                Check(!restored.Dispatch(new GameCommand(ActionKind.ServeOrder)) && restored.Session.Reviews.Count == 1 && restored.Session.Ledger.Refunds == report.Refund, "Incomplete delivery refunded twice");
+            }
         }
 
         private static void ReadyOrderTimeout()
@@ -77,6 +100,85 @@ namespace Blinopek.Tests
             Check(again.Session.Order.Phase == OrderPhase.Served && again.Session.Reviews.Count == 1 && again.Session.Balance == restored.Session.Balance, "Serving reward changed during replay");
             Check(!again.Dispatch(new GameCommand(ActionKind.ServeOrder)) && !again.Dispatch(new GameCommand(ActionKind.Discard, replacement)), "Replay allowed a second serve or discard of delivered food");
             Check(store.Data.commands.FindAll(c => c.kind == ActionKind.EnableManualServing).Count == 1, "Migration marker repeated");
+        }
+
+        private static void AutomaticGuestArrival()
+        {
+            foreach (bool tutorial in new[] { false, true }) {
+                var rules = Rules(); rules.guestIntervalTicks = 40;
+                var profile = Profile(tutorial); profile.demonstrationSeen = true; profile.ownedIngredients = 1;
+                var store = new MemoryStore { Data = new SavedGame { profile = profile, rules = rules } };
+                var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(7);
+                var audio = new AudioFeedback(game.Session); var sounds = new List<SoundSignal>();
+                game.CommandApplied += c => sounds.AddRange(audio.AfterCommand(game.Session, c));
+                Action<GameCommand> send = c => Check(game.Dispatch(c), "Arrival command failed: " + c.kind);
+                for (int id = 1; id <= 2; id++) {
+                    send(new GameCommand(ActionKind.Accept)); PrepareWithCommands(send); send(new GameCommand(ActionKind.ServeOrder));
+                    int balance = game.Session.Balance;
+                    send(new GameCommand(ActionKind.Tick, 39));
+                    Check(game.Session.Order.Id == id && game.Session.GuestLeaving, "Guest arrived before departure finished");
+                    send(new GameCommand(ActionKind.Tick, 1));
+                    Check(game.Session.Order.Id == id + 1 && game.Session.Order.Phase == OrderPhase.Offered && !game.Session.GuestLeaving, "Next guest requires a button or was accepted automatically");
+                    Check(game.Session.Balance == balance && game.Session.Reviews.Count == id && Count(sounds, SoundCue.GuestEnter) == id, "Arrival changed rewards or repeated its sound");
+                    send(new GameCommand(ActionKind.Tick, 40));
+                    Check(game.Session.Order.Id == id + 1, "An offered guest was replaced");
+                }
+                var restored = new GameController(store, new LocalDevelopmentGateway(), rules);
+                Check(restored.Session.Order.Id == 3 && restored.Session.Order.Request == game.Session.Order.Request && restored.Session.Balance == game.Session.Balance && restored.Session.Reviews.Count == 2, "Arrival replay changed order or rewards");
+                Check(store.Data.commands.FindAll(c => c.kind == ActionKind.NextGuest).Count == 2, "Automatic arrivals were not journaled exactly once");
+            }
+        }
+
+        private static void AutomaticGuestTiming()
+        {
+            foreach (bool closing in new[] { false, true }) {
+                var rules = Rules(); rules.guestIntervalTicks = 40; rules.patiencePerPancakeTicks = 4;
+                if (closing) rules.dayTicks = 44;
+                var store = new MemoryStore { Data = new SavedGame { profile = Profile(), rules = rules } };
+                var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(7);
+                game.Dispatch(new GameCommand(ActionKind.BeginStroke, -1, 500, 500)); game.Dispatch(new GameCommand(ActionKind.EndStroke));
+                game.Dispatch(new GameCommand(ActionKind.FinishBatter)); var pan = game.Session.PanPancake;
+                game.Dispatch(new GameCommand(ActionKind.Accept)); game.Dispatch(new GameCommand(ActionKind.Tick, 4));
+                game.Dispatch(new GameCommand(ActionKind.Tick, 39));
+                Check(game.Session.Order.Id == 1 && game.Session.Order.Phase == OrderPhase.Cancelled, "Timeout did not leave time for departure");
+                int heat = pan.HeatA, elapsed = game.Session.ElapsedTicks, refund = game.Session.Ledger.Refunds;
+                foreach (var reason in new[] { PauseReason.Menu, PauseReason.RecipeBook, PauseReason.Background, PauseReason.Focus }) {
+                    game.SetPause(reason, true);
+                    Check(!game.Dispatch(new GameCommand(ActionKind.Tick, 100)), "Arrival timer ran while paused");
+                    Check(game.Session.Order.Id == 1 && game.Session.ElapsedTicks == elapsed && pan.HeatA == heat, "Paused arrival changed the session");
+                    game.SetPause(reason, false);
+                }
+                Check(game.Dispatch(new GameCommand(ActionKind.Tick, 1)), "Arrival tick failed");
+                Check(game.Session.Ledger.Refunds == refund && game.Session.Reviews.Count == 1, "Arrival refunded twice");
+                if (closing) Check(game.Session.Phase == DayPhase.Result && game.Session.Order.Id == 1, "A guest arrived at closing");
+                else Check(game.Session.Order.Id == 2 && game.Session.Order.Phase == OrderPhase.Offered && game.Session.PanPancake == pan && pan.HeatA == heat + 1, "Arrival lost food or interrupted frying");
+            }
+        }
+
+        private static void AutomaticGuestLegacyWait()
+        {
+            foreach (int waited in new[] { 17, 80 }) {
+                var rules = Rules(); rules.guestIntervalTicks = 40;
+                var profile = Profile(); var legacy = new DaySession(profile, rules, 7, false, false);
+                var commands = new List<GameCommand>();
+                Action<GameCommand> send = c => { Check(legacy.Execute(c), "Waiting fixture command failed: " + c.kind); commands.Add(c.Copy()); };
+                send(new GameCommand(ActionKind.EnableFreeCooking)); send(new GameCommand(ActionKind.EnableManualServing));
+                send(new GameCommand(ActionKind.Accept)); PrepareWithCommands(send); send(new GameCommand(ActionKind.ServeOrder));
+                send(new GameCommand(ActionKind.Tick, waited));
+                var store = new MemoryStore { Data = new SavedGame { profile = profile.Copy(), sessionStart = profile.Copy(), seed = 7, rules = rules, commands = commands } };
+                var restored = new GameController(store, new LocalDevelopmentGateway(), rules);
+                Check(restored.Session.Order.Id == 1 && restored.Session.Balance == legacy.Balance, "Loading rewrote an old wait");
+                if (waited < 40) {
+                    restored.Dispatch(new GameCommand(ActionKind.Tick, 39 - waited));
+                    Check(restored.Session.Order.Id == 1, "Loading skipped the remaining interval");
+                }
+                Check(restored.Dispatch(new GameCommand(ActionKind.Tick, 1)) && restored.Session.Order.Id == 2, "Waiting save did not resume arrivals");
+                var again = new GameController(store, new LocalDevelopmentGateway(), rules);
+                var audio = new AudioFeedback(again.Session); var sounds = new List<SoundSignal>();
+                again.CommandApplied += c => sounds.AddRange(audio.AfterCommand(again.Session, c));
+                again.Dispatch(new GameCommand(ActionKind.Tick, 40));
+                Check(again.Session.Order.Id == 2 && again.Session.Balance == legacy.Balance && sounds.Count == 0 && store.Data.commands.FindAll(c => c.kind == ActionKind.NextGuest).Count == 1, "Loading duplicated an arrival, reward or audio");
+            }
         }
 
         private static void LegacyServingReplay()

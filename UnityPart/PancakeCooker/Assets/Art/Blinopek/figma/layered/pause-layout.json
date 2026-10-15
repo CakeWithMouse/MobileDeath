@@ -1306,7 +1306,10 @@
         "opacity": "1",
         "transform": "rotate(0deg)"
       },
-      "attributes": {},
+      "attributes": {
+        "role": "img",
+        "aria-label": "Жаринки"
+      },
       "html": "",
       "children": [
         {
@@ -1748,7 +1751,7 @@
         "height": "90px"
       },
       "attributes": {
-        "aria-label": "facade"
+        "aria-label": "Главное меню"
       },
       "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/exit.svg\">",
       "children": []

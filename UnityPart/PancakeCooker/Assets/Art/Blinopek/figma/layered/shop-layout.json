@@ -75,15 +75,15 @@
     },
     {
       "type": "layer",
-      "asset": "decor/table_premium.png",
+      "asset": "decor/table_base.png",
       "source": null,
       "style": {
         "position": "absolute",
         "pointer-events": "none",
-        "left": "866.8403776978417px",
-        "top": "500px",
-        "width": "278.31924460431657px",
-        "height": "247px",
+        "left": "846px",
+        "top": "500.00080702623086px",
+        "width": "319.99999999999994px",
+        "height": "219.01533494753832px",
         "z-index": "1",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -94,12 +94,12 @@
         {
           "type": "img",
           "asset": null,
-          "source": "../decor/table_premium.png",
+          "source": "../decor/table_base.png",
           "style": {
-            "left": "-6.441546762589928px",
-            "top": "-9.773381294964029px",
-            "width": "291.42446043165467px",
-            "height": "266.3246402877698px"
+            "left": "-19.37046004842615px",
+            "top": "-58.111380145278446px",
+            "width": "355.8999192897498px",
+            "height": "294.68926553672316px"
           },
           "attributes": {},
           "html": "",
@@ -149,9 +149,9 @@
         "position": "absolute",
         "pointer-events": "none",
         "left": "1270px",
-        "top": "451.24810892586993px",
+        "top": "440.0000000690072px",
         "width": "270px",
-        "height": "207.5037821482602px",
+        "height": "184.79418886198548px",
         "z-index": "1",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -164,10 +164,10 @@
           "asset": null,
           "source": "../decor/table_base.png",
           "style": {
-            "left": "-5.5143721633888045px",
-            "top": "-16.543116490166415px",
-            "width": "280.6202723146747px",
-            "height": "233.8502269288956px"
+            "left": "-16.343825665859566px",
+            "top": "-49.03147699757869px",
+            "width": "300.2905569007264px",
+            "height": "248.64406779661016px"
           },
           "attributes": {},
           "html": "",
@@ -789,15 +789,15 @@
     },
     {
       "type": "layer",
-      "asset": "decor/lamp_brass.png",
+      "asset": "decor/table_premium.png",
       "source": null,
       "style": {
         "position": "absolute",
         "pointer-events": "none",
-        "left": "1156.6776556776556px",
-        "top": "275px",
-        "width": "176.64468864468864px",
-        "height": "220px",
+        "left": "1155px",
+        "top": "324.83266932270914px",
+        "width": "180.00000000000003px",
+        "height": "120.33466135458168px",
         "z-index": "48",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -808,12 +808,12 @@
         {
           "type": "img",
           "asset": null,
-          "source": "../decor/lamp_brass.png",
+          "source": "../decor/table_premium.png",
           "style": {
-            "left": "-2.73992673992674px",
-            "top": "-1.6117216117216118px",
-            "width": "181.96336996336998px",
-            "height": "224.51282051282053px"
+            "left": "-9.03585657370518px",
+            "top": "-32.844621513944226px",
+            "width": "197.64143426294822px",
+            "height": "163.79282868525897px"
           },
           "attributes": {},
           "html": "",
@@ -875,7 +875,7 @@
     },
     {
       "type": "layer",
-      "asset": "ui/glyphs/check.svg",
+      "asset": "ui/glyphs/plus.svg",
       "source": null,
       "style": {
         "position": "absolute",
@@ -894,7 +894,7 @@
         {
           "type": "img",
           "asset": null,
-          "source": "../ui/glyphs/check.svg",
+          "source": "../ui/glyphs/plus.svg",
           "style": {
             "left": "0px",
             "top": "0px",
@@ -1350,7 +1350,10 @@
         "opacity": "1",
         "transform": "rotate(0deg)"
       },
-      "attributes": {},
+      "attributes": {
+        "role": "img",
+        "aria-label": "Жаринки"
+      },
       "html": "",
       "children": [
         {
@@ -1494,7 +1497,7 @@
         "height": "55px"
       },
       "attributes": {
-        "aria-label": "facade"
+        "aria-label": "Главное меню"
       },
       "html": "<img class=\"symbol\" alt=\"\" src=\"../ui/glyphs/arrow-left.svg\">",
       "children": []

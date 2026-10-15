@@ -42,19 +42,25 @@ public static class MenuNavigationValidation
         try
         {
             view.Initialize(controller, content); Canvas.ForceUpdateCanvases();
-            Check(Visible(view, "Facade") && !Visible(view, "Counter") && controller.Paused, "Startup shows only facade and pauses the level");
-            var initial = view.Session;
-            Check(!controller.Dispatch(new GameCommand(ActionKind.Tick, 1)) && initial.ElapsedTicks == 0, "Facade stops the level clock");
+            Check(Visible(view, "MainMenu") && !Visible(view, "Counter") && controller.Paused, "Startup shows only main menu and pauses the level");
+            Check(view.Session == null && !controller.Dispatch(new GameCommand(ActionKind.Tick, 1)), "Startup waits for play before creating a level");
             Check(content.Find("ui/glyphs/shop.png") != null && content.Find("ui/glyphs/home.png") != null, "Shop and home glyphs are linked in gameplay content");
-            Click(view, "FacadeShop");
+            Click(view, "MainMenuShop");
             var shop = Button(view, "CloseShop").transform.parent;
-            Check(shop.GetSiblingIndex() == shop.parent.childCount - 1, "Shop draws above the facade");
+            Check(shop.GetSiblingIndex() == shop.parent.childCount - 1, "Shop draws above the main menu");
             Click(view, "CloseShop");
-            Check(Visible(view, "Facade") && !Visible(view, "Shop") && controller.Paused, "Shop closes back to the paused facade");
+            Check(Visible(view, "MainMenu") && !Visible(view, "Shop") && controller.Paused, "Shop closes back to the paused main menu");
             Click(view, "ContinueShift");
-            Check(view.Session == initial && !controller.Paused && Visible(view, "Counter"), "Play enters the existing level without replacing it");
-            Click(view, "Pause"); Click(view, "ExitToFacade"); Click(view, "ContinueShift");
-            Check(view.Session == initial && !controller.Paused, "An unfinished level resumes from the facade");
+            var initial = view.Session;
+            Check(initial != null && !controller.Paused && Visible(view, "Counter"), "Play starts the level");
+            Click(view, "Pause");
+            var menuLabel = view.GetComponentsInChildren<Text>().Single(t => t.name == "ExitHelp");
+            Check(menuLabel.text == "Главное меню", "Pause uses the canonical main menu title");
+            Check(menuLabel.preferredWidth <= menuLabel.rectTransform.rect.width && menuLabel.preferredHeight <= menuLabel.rectTransform.rect.height, "Main menu label fits without clipping");
+            Click(view, "ExitToMainMenu");
+            Check(!Visible(view, "MainMenuShop"), "Unfinished level cannot open the shop from the main menu");
+            Click(view, "ContinueShift");
+            Check(view.Session == initial && !controller.Paused, "An unfinished level resumes from the main menu");
             Click(view, "RecipeBook");
             var titles = view.GetComponentsInChildren<Text>().Where(t => t.name == "RecipeName").ToArray();
             Check(titles.Length == 2 && titles[0].text == "Сладкий\nтреугольник" && titles[1].text == "Грибной\nконверт", "First spread has both recipe names");
@@ -62,12 +68,12 @@ public static class MenuNavigationValidation
             Click(view, "NextRecipe");
             Check(view.GetComponentsInChildren<Text>().Any(t => t.name == "RecipeName" && t.text == "Сладкая\nтрубочка"), "Second spread has a recipe name");
             Click(view, "CloseBook");
-            Check(controller.Dispatch(new GameCommand(ActionKind.Tick, 2)), "Level can finish after closing the book"); view.Refresh();
-            Check(view.Session.Phase == DayPhase.Result && view.Session.Success != failure && Visible(view, "DayResults") && !Visible(view, "Facade"), "Finished level shows the result before the menu");
+            Check(controller.Dispatch(new GameCommand(ActionKind.Tick, content.balance.dayTicks + Math.Max(1, content.balance.guestIntervalTicks))), "Level finishes after the closing guest leaves"); view.Refresh();
+            Check(view.Session.Phase == DayPhase.Result && view.Session.Success != failure && Visible(view, "DayResults") && !Visible(view, "MainMenu"), "Finished level shows the result before the menu");
             int nextDay = controller.Profile.day;
-            Click(view, "ReturnToFacade");
-            Check(view.Session == initial && controller.Paused && !Visible(view, "DayResults") && Visible(view, "Facade"), "Result returns to the facade without starting a level");
-            Click(view, "FacadeShop");
+            Click(view, "ReturnToMainMenu");
+            Check(view.Session == initial && controller.Paused && !Visible(view, "DayResults") && Visible(view, "MainMenu"), "Result returns to the main menu without starting a level");
+            Click(view, "MainMenuShop");
             if (!failure)
             {
                 Click(view, "BuyIngredient1");
@@ -75,7 +81,7 @@ public static class MenuNavigationValidation
             }
             else Check(!Button(view, "BuyIngredient1").interactable, "Failed level preserves purchase restrictions");
             Click(view, "CloseShop"); Click(view, "ContinueShift");
-            Check(view.Session != initial && view.Session.StartProfile.day == nextDay && !controller.Paused, "Only facade play starts the next or repeated level");
+            Check(view.Session != initial && view.Session.StartProfile.day == nextDay && !controller.Paused, "Only main menu play starts the next or repeated level");
             Check(nextDay == (failure ? 1 : 2), failure ? "Failure repeats the same day" : "Success advances one day");
             if (!failure) Check(view.Session.StartProfile.Owns(Ingredient.Jam), "Next level receives the purchase");
         }

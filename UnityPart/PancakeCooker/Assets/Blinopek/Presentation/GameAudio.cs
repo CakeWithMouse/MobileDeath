@@ -19,7 +19,7 @@ namespace Blinopek.Presentation
         private readonly Dictionary<SoundCue, int> played = new Dictionary<SoundCue, int>();
         private AudioSource[] voices;
         private readonly float[] voiceGains = new float[8];
-        private bool kitchen, facade, worldPaused, suspended, settingsDirty, persistSettings;
+        private bool kitchen, mainMenu, worldPaused, suspended, settingsDirty, persistSettings;
         private float clock, gestureUntil, changedAt, lastError = -10;
         private int gestureType = -2, lastX, lastY;
         public float MusicVolume { get; private set; } = .35f;
@@ -63,7 +63,7 @@ namespace Blinopek.Presentation
             var source = child.AddComponent<AudioSource>(); source.playOnAwake = false;
             source.spatialBlend = 0; source.loop = loop; source.volume = 0; return source;
         }
-        public void SetContext(bool inKitchen, bool atFacade) { kitchen = inKitchen; facade = atFacade; }
+        public void SetContext(bool inKitchen, bool atMainMenu) { kitchen = inKitchen; mainMenu = atMainMenu; }
         public void SetMusicVolume(float value) { MusicVolume = Mathf.Clamp01(value); SettingsChanged(); }
         public void SetEffectsVolume(float value) { EffectsVolume = Mathf.Clamp01(value); SettingsChanged(); }
         public void SetAmbienceVolume(float value) { AmbienceVolume = Mathf.Clamp01(value); SettingsChanged(); }
@@ -193,8 +193,8 @@ namespace Blinopek.Presentation
             bool moving = painting != null && s.CanCook && Time.unscaledTime < gestureUntil &&
                 (painting.Stage == PancakeStage.Batter || painting.Stage == PancakeStage.Plate);
             Loop(gesture, stroke, moving ? world * .8f : 0, 6, dt);
-            bool menu = facade || s == null || s.Phase == DayPhase.Result;
-            float music = Muted ? 0 : MusicVolume * (worldPaused && !facade ? .4f : 1);
+            bool menu = mainMenu || s == null || s.Phase == DayPhase.Result;
+            float music = Muted ? 0 : MusicVolume * (worldPaused && !mainMenu ? .4f : 1);
             Loop(dayMusic, library.musicDay, menu ? 0 : music, .45f, dt);
             Loop(menuMusic, library.musicMenu, menu ? music : 0, .45f, dt);
             float background = Muted || menu ? 0 : AmbienceVolume * (kitchen ? .22f : .55f) * (worldPaused ? .2f : 1);

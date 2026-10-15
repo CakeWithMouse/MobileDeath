@@ -75,15 +75,15 @@
     },
     {
       "type": "layer",
-      "asset": "decor/table_premium.png",
+      "asset": "decor/table_base.png",
       "source": null,
       "style": {
         "position": "absolute",
         "pointer-events": "none",
-        "left": "866.8403776978417px",
-        "top": "500px",
-        "width": "278.31924460431657px",
-        "height": "247px",
+        "left": "846px",
+        "top": "500.00080702623086px",
+        "width": "319.99999999999994px",
+        "height": "219.01533494753832px",
         "z-index": "1",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -94,12 +94,12 @@
         {
           "type": "img",
           "asset": null,
-          "source": "../decor/table_premium.png",
+          "source": "../decor/table_base.png",
           "style": {
-            "left": "-6.441546762589928px",
-            "top": "-9.773381294964029px",
-            "width": "291.42446043165467px",
-            "height": "266.3246402877698px"
+            "left": "-19.37046004842615px",
+            "top": "-58.111380145278446px",
+            "width": "355.8999192897498px",
+            "height": "294.68926553672316px"
           },
           "attributes": {},
           "html": "",
@@ -149,9 +149,9 @@
         "position": "absolute",
         "pointer-events": "none",
         "left": "1270px",
-        "top": "451.24810892586993px",
+        "top": "440.0000000690072px",
         "width": "270px",
-        "height": "207.5037821482602px",
+        "height": "184.79418886198548px",
         "z-index": "1",
         "opacity": "1",
         "transform": "rotate(0deg)"
@@ -164,10 +164,10 @@
           "asset": null,
           "source": "../decor/table_base.png",
           "style": {
-            "left": "-5.5143721633888045px",
-            "top": "-16.543116490166415px",
-            "width": "280.6202723146747px",
-            "height": "233.8502269288956px"
+            "left": "-16.343825665859566px",
+            "top": "-49.03147699757869px",
+            "width": "300.2905569007264px",
+            "height": "248.64406779661016px"
           },
           "attributes": {},
           "html": "",
@@ -927,7 +927,10 @@
         "opacity": "1",
         "transform": "rotate(0deg)"
       },
-      "attributes": {},
+      "attributes": {
+        "role": "img",
+        "aria-label": "Жаринки"
+      },
       "html": "",
       "children": [
         {

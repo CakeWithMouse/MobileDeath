@@ -145,25 +145,28 @@
     "file": "table_base.png",
     "category": "furniture",
     "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Базовый",
-    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "states_or_reuse": "Светлые столы по умолчанию на обоих местах в кафе.",
     "transparent": true,
     "variant": "base",
     "shop_preview_source": "table_base.png",
     "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
     "generator": "built-in image_gen",
     "prompt_history": [
-      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple cafe table, light honey-brown wooden rectangular tabletop with rounded worn edges, four straightforward sturdy legs, no tablecloth and no objects. View from seated-counter eye height looking slightly down at top, front-right three-quarter view, full silhouette with clear space on all sides. Transparent background, no scene, no floor, no drop-shadow cloud. Structure practical, quiet broad wood planes. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated simple cafe table, light honey-brown wooden rectangular tabletop with rounded worn edges, four straightforward sturdy legs, no tablecloth and no objects. View from seated-counter eye height looking slightly down at top, front-right three-quarter view, full silhouette with clear space on all sides. Transparent background, no scene, no floor, no drop-shadow cloud. Structure practical, quiet broad wood planes. Output a true alpha PNG cutout, never a painted checkerboard or white background.",
+      "Use case: precise-object-edit.\nAsset type: corrected transparent cafe table sprite for the 2D game Blinopek, approval draft.\nInput image 1 is the original kitchen painting, authoritative STYLE reference. Input image 2 is the light wooden TABLE EDIT TARGET. Input image 3 is the empty cafe room, a camera/perspective reference ONLY. Input image 4 is the user's cropped game screenshot showing placement; its UI is not part of the sprite.\nRedraw just ONE simple light honey-brown wooden rectangular cafe table. Correct its perspective to sit naturally on the floor in image 3 as seen from behind a service counter: camera around standing chest height, looking only slightly downward. Nearly frontal view with a modest view of the right side. Front and rear long edges of the tabletop almost horizontal and mutually coherent; tabletop depth visibly much shallower than in input 2, roughly one fifth of the total object height. Avoid the steep overhead/product-isometric view of input 2. Standard dining-table proportions, rectangular top moderately wider than deep, softly rounded worn corners, slim natural rectangular-section legs, sound wooden apron.\nExactly FOUR legs attached beneath the four physical corners, extending to one coherent ground plane: two front legs, two rear legs positioned correctly in depth. No extra middle leg, no floating or detached legs, no crossing diagonals, no splayed broken perspective. Rear legs may be naturally partially occluded; never invent a fifth leg.\nKeep recognizable simple construction and light warm wood identity of input 2, but make the new geometry readable at 270px wide on the room background.\nClosely follow the original kitchen painting: matte gouache/dry oil, muted honey ochre wood with cool grey-green shaded planes. Unequal brush sizes and directions, broad calm painted masses with sparse long grainwise strokes, selective edge wear. Alternate firm and soft edges. Do not fill every surface with scratches or uniform canvas noise. Soft daylight from upper left consistent with the room.\nIsolated single table ONLY, fully visible with generous transparent margins on every side including feet. Empty tabletop. NO chairs, vase, cloth, floor, room, UI, text, labels, watermark, decorative accessories, ground-shadow cloud. Genuine transparent RGBA background, no painted checkerboard.\n"
     ],
     "source_reference_files": [
       "kitchen-original.png"
     ],
-    "width": 1374,
-    "height": 1145,
+    "width": 1378,
+    "height": 1141,
     "alpha_extrema": [
       0,
       255
     ],
-    "color_mode": "RGBA"
+    "color_mode": "RGBA",
+    "revision": "cafe-tables-v2",
+    "sha256": "d5b2a4172a78515ecd0ed60669d064b1ad7f2ce444b838927c42856d0e1604d5"
   },
   {
     "id": "stool_base",
@@ -197,25 +200,28 @@
     "file": "table_premium.png",
     "category": "furniture",
     "asset_list_coverage": "Улучшения, ремонт и декор / Варианты декора / Мебель / Покупаемый",
-    "states_or_reuse": "Магазинное превью переиспользует этот же PNG; отдельный новый рисунок не нужен.",
+    "states_or_reuse": "Апгрейд «Тёмные столы» за 180 монет: заменяет оба стола, сохраняется в профиле.",
     "transparent": true,
     "variant": "purchasable",
     "shop_preview_source": "table_premium.png",
     "usage_notes": "Предмет отдельным прозрачным слоем; расстановка и масштаб задаются сценой.",
     "generator": "built-in image_gen",
     "prompt_history": [
-      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe table, rectangular tabletop with softly rounded corners, four slender sturdy legs, subtle copper brown worn edge accents, no cloth or objects. Slightly elevated front-right three-quarter view matching a simple cafe table, whole silhouette padded on transparent background. Broad calm dark colored wood planes, sparse long grainwise strokes, no floor or shadow cloud. Output a true alpha PNG cutout, never a painted checkerboard or white background."
+      "Use case: stylized-concept.\nStyle reference: the attached original kitchen painting is the authoritative art direction. Intimate everyday domestic painted realism, matte gouache / dry oil; muted cream, dusty mint, grey teal, ochre, copper brown, graphite, pink grey. Construct shapes with broad quiet color masses and selective varied brush marks, different size/direction/density, partly lost and partly firm edges. Wood uses sparse long grainwise marks; ceramic smooth broad matte colored planes; metal cooler broad strokes. Never uniform canvas-noise, uniform stippling, embossed oil filter, distressed flakes everywhere, glossy 3D, vector cartoon, golden fairy-tale haze or decorative sparks. Keep color shadows rather than sepia. Controlled readable object geometry with mild handmade asymmetry. Soft daylight from upper left. No words, letters, labels, numbers, watermark. Game scene assets for Blinopek; quiet useful domestic objects.\nDeliverable: ONE isolated dark walnut cafe table, rectangular tabletop with softly rounded corners, four slender sturdy legs, subtle copper brown worn edge accents, no cloth or objects. Slightly elevated front-right three-quarter view matching a simple cafe table, whole silhouette padded on transparent background. Broad calm dark colored wood planes, sparse long grainwise strokes, no floor or shadow cloud. Output a true alpha PNG cutout, never a painted checkerboard or white background.",
+      "Use case: precise-object-edit.\nAsset type: corrected transparent dark walnut cafe table sprite for the 2D game Blinopek, approval draft.\nInput 1 is the authoritative original kitchen STYLE reference. Input 2 is the original dark walnut TABLE EDIT TARGET. Input 3 is the corrected light table: use its lower, nearly frontal camera, perspective logic and structurally coherent four-corner support arrangement as a GEOMETRY reference only. Input 4 is the cafe ROOM perspective reference, not an output background.\nProduce exactly ONE dark walnut cafe dining table, isolated on actual transparency.\nCorrect the steep overhead perspective of input 2 to a lower standing-counter viewpoint, looking slightly down, modest view of right side. The long front tabletop edge must run nearly horizontally. Rectangular top, subtly rounded corners, dark walnut surface and restrained copper-brown edge wear from input 2. Visible top depth about one fifth to one quarter of total table silhouette height, like input 3. Proportions of a small practical cafe dining table, not a desk, no drawers.\nExactly FOUR slim sturdy rectangular-section legs attached at the physical corners with a sound narrow wooden apron. Two front feet and two rear feet on one coherent ground plane. No central leg, no fifth leg, no floating or detached parts, no intersecting or bent legs. Preserve dark walnut material identity distinct from the light wood table; modestly more refined silhouette.\nMatte gouache/dry oil as in input 1: broad calm dark brown and cool grey-green wood planes, selective long grain strokes of varied sizes and densities, a few muted copper accents on worn edges. Avoid uniformly engraved grain, micro-noise, all-over scratches, shiny varnish, slick 3D, vector cartoon. Soft everyday daylight from upper left. Readable at 320 pixels wide.\nFull silhouette including all feet, generous transparent padding. No floor or cast shadow cloud, no room, no chair, no flowers, no tablecloth, no text, UI, labels, watermark or other objects. True transparent RGBA background, no drawn checkerboard.\n"
     ],
     "source_reference_files": [
       "kitchen-original.png"
     ],
-    "width": 1312,
-    "height": 1199,
+    "width": 1378,
+    "height": 1142,
     "alpha_extrema": [
       0,
       255
     ],
-    "color_mode": "RGBA"
+    "color_mode": "RGBA",
+    "revision": "cafe-tables-v2",
+    "sha256": "7f192fc90e3d278cb3fdfcb9f24a966b095d8d7776af28b185836659b1850b61"
   },
   {
     "id": "chair_premium",

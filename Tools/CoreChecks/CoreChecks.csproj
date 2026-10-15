@@ -10,11 +10,8 @@
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Domain/*.cs" />
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Application/*.cs" />
     <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Infrastructure/LocalDevelopmentGateway.cs" />
-    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/CoreScenarios.cs" />
-    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/AudioScenarios.cs" />
-    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/FreeCookingScenarios.cs" />
-    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/ConcurrentCookingScenarios.cs" />
-    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/ManualServingScenarios.cs" />
+    <!-- Shared scenarios also run through CoreTests in Unity; keep both runners in sync. -->
+    <Compile Include="../../UnityPart/PancakeCooker/Assets/Blinopek/Tests/*Scenarios.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
 </Project>

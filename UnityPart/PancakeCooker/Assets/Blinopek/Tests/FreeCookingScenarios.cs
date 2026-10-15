@@ -39,10 +39,10 @@ namespace Blinopek.Tests
             Do(s, ActionKind.Accept);
             Check(Do(s, ActionKind.ServeOrder), "Cannot serve prepared stock explicitly");
             Check(s.Order.Phase == OrderPhase.Served && s.Order.Finished[0] == first && s.Reviews.Count == 1, "Stock is not served once in preparation order");
-            Check(s.ReadyPancakes.Count == 2 && s.ReadyPancakes[0] == second && s.Pancake == active, "Serving erased extra stock or active cooking");
+            Check(s.ReadyPancakes.Count == 0 && s.Order.Finished.Count == 3 && s.Order.Finished[1] == second && s.Pancake == active, "Serving did not hand over the whole tray or erased active cooking");
             Check(s.Ledger.Products == products && !Do(s, ActionKind.Accept), "Serving spent ingredients or accepted twice");
             Fill(s, recipe); FoldPancake(s, recipe.Shape);
-            Check(s.TrayCount == 3 && s.Reviews.Count == 1, "Cooking after serving duplicated a review");
+            Check(s.TrayCount == 1 && s.Reviews.Count == 1, "Cooking after serving duplicated a review or returned delivered stock");
         }
 
         private static void KeepCancelledCooking()
@@ -111,8 +111,10 @@ namespace Blinopek.Tests
             var store = new MemoryStore { Data = new SavedGame { profile = profile.Copy(), sessionStart = profile.Copy(), seed = 7, rules = rules, commands = commands } };
             var restored = new GameController(store, new LocalDevelopmentGateway(), rules);
             Check(restored.Session.FreeCooking && restored.Session.Balance == legacy.Balance && restored.Session.Pancake.HeatA == 1 && restored.Session.Reviews.Count == 1, "Old history changed during migration");
-            restored.Dispatch(new GameCommand(ActionKind.Tick, restored.Session.Order.PatienceLimit));
+            restored.Dispatch(new GameCommand(ActionKind.Tick, restored.Session.Order.PatienceLimit - restored.Session.Order.WaitTicks));
             Check(restored.Session.Pancake != null && restored.Session.Order.Phase == OrderPhase.Cancelled, "Migration did not preserve new cooking on timeout");
+            restored.Dispatch(new GameCommand(ActionKind.Tick, rules.guestIntervalTicks));
+            Check(restored.Session.Order.Id == 3 && restored.Session.Order.Phase == OrderPhase.Offered && restored.Session.Pancake != null, "Migrated session did not continue to the next guest automatically");
             var again = new GameController(store, new LocalDevelopmentGateway(), rules);
             Check(again.Session.Pancake.HeatA == restored.Session.Pancake.HeatA && again.Session.Balance == restored.Session.Balance && again.Session.Reviews.Count == 2, "Mixed old/new history replays differently");
             Check(store.Data.commands.FindAll(c => c.kind == ActionKind.EnableFreeCooking).Count == 1, "Migration repeated");

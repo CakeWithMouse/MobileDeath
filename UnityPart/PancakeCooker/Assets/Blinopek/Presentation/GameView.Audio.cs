@@ -11,11 +11,11 @@ namespace Blinopek.Presentation
         private Text cookingAlertsLabel;
         private void BuildAudioControls()
         {
-            AudioSlider("MusicVolume", "Музыка", 445, Audio.MusicVolume, Audio.SetMusicVolume);
-            AudioSlider("EffectsVolume", "Эффекты", 510, Audio.EffectsVolume, Audio.SetEffectsVolume);
-            AudioSlider("AmbienceVolume", "Фон кафе", 575, Audio.AmbienceVolume, Audio.SetAmbienceVolume);
-            var alerts = Button("CookingAlerts", pausePanel.transform, "", 495, 665, 610, 52,
-                () => { Audio.SetCookingAlerts(!Audio.CookingAlerts); Audio.PlayUi(SoundCue.Toggle); });
+            AudioSlider("MusicVolume", "Музыка", 495, Audio.MusicVolume, Audio.SetMusicVolume);
+            AudioSlider("EffectsVolume", "Эффекты", 550, Audio.EffectsVolume, Audio.SetEffectsVolume);
+            AudioSlider("AmbienceVolume", "Фон кафе", 605, Audio.AmbienceVolume, Audio.SetAmbienceVolume);
+            var alerts = Button("CookingAlerts", pausePanel.transform, "", 585, 659, 430, 64,
+                () => { Audio.SetCookingAlerts(!Audio.CookingAlerts); Audio.PlayUi(SoundCue.Toggle); }, preserveCaps: true);
             cookingAlertsLabel = alerts.GetComponentInChildren<Text>(); RefreshAudioControls();
         }
         private void AudioSlider(string name, string title, float y, float initial, Action<float> change)
@@ -30,7 +30,7 @@ namespace Blinopek.Presentation
             fill.rectTransform.anchorMin = Vector2.zero; fill.rectTransform.anchorMax = Vector2.one;
             fill.rectTransform.anchoredPosition = Vector2.zero; fill.rectTransform.sizeDelta = Vector2.zero;
             var handleArea = Rect("HandleArea", r, 0, 20, 310, 0);
-            var handle = Art("Handle", handleArea, "ui/button-cream.png", 0, 0, 30, 38, false);
+            var handle = FramedArt("Handle", handleArea, "ui/button-cream.png", 0, 0, 30, 38, 10);
             handle.rectTransform.anchorMin = handle.rectTransform.anchorMax = new Vector2(.5f, .5f);
             handle.rectTransform.anchoredPosition = Vector2.zero;
             var slider = r.gameObject.AddComponent<Slider>(); slider.targetGraphic = handle;

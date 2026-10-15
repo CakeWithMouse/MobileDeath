@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Blinopek.Infrastructure
 {
-    public sealed class FileGameStore : IGameStore
+    public sealed class FileGameStore : IResettableGameStore
     {
         private sealed class SaveVersionException : IOException { public SaveVersionException(string message) : base(message) { } }
         [Serializable] private sealed class Envelope { public string checksum; public string payload; }
@@ -35,10 +35,16 @@ namespace Blinopek.Infrastructure
                 throw new SaveVersionException("Сохранение другой версии или окружения. Его нельзя заменить текущей версией игры.");
             if (game == null || game.profile == null || game.rules == null || game.commands == null)
                 throw new InvalidDataException("Unsupported save format.");
+            // Unity serializes inline null classes as objects with zeroed fields.
+            // Keep an explicit marker for a profile saved before its first new session.
+            if (game.awaitingDay) {
+                if (game.commands.Count != 0 || game.settled) throw new InvalidDataException("Unexpected session in a fresh save.");
+                game.sessionStart = null;
+            }
             game.rules.Validate();
             return game;
         }
-        public void Save(SavedGame game)
+        private string WriteTemporary(SavedGame game)
         {
             string directory = Path.GetDirectoryName(path);
             if (!string.IsNullOrEmpty(directory)) Directory.CreateDirectory(directory);
@@ -46,6 +52,21 @@ namespace Blinopek.Infrastructure
             byte[] bytes = Encoding.UTF8.GetBytes(JsonUtility.ToJson(new Envelope { payload = payload, checksum = Hash(payload) }));
             using (var stream = new FileStream(temp, FileMode.Create, FileAccess.Write, FileShare.None)) { stream.Write(bytes, 0, bytes.Length); stream.Flush(true); }
             Read(temp);
+            return temp;
+        }
+        public void Reset(SavedGame game)
+        {
+            string temp = WriteTemporary(game);
+            // Remove the old fallback before committing, so reset progress cannot reappear.
+            // If this or the atomic replacement fails, the current primary stays untouched.
+            File.Delete(path + ".bak");
+            if (File.Exists(path)) File.Replace(temp, path, null);
+            else File.Move(temp, path);
+            RecoveryNotice = null;
+        }
+        public void Save(SavedGame game)
+        {
+            string temp = WriteTemporary(game);
             if (File.Exists(path))
             {
                 // Never replace a good backup with the corrupt primary after recovery.

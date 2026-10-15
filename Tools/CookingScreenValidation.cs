@@ -128,7 +128,7 @@ public static class CookingScreenValidation
             var store = new MemoryStore { Data = new SavedGame { profile = new Profile { day = 6, tutorialComplete = true, demonstrationSeen = true, coins = 100000, ownedIngredients = 31 }, rules = art.balance } };
             var controller = new GameController(store, new LocalDevelopmentGateway(), art.balance);
             view = new GameObject("Cooking screen validation").AddComponent<GameView>(); view.Initialize(controller, art);
-            Invoke("PlayFromFacade"); view.Command(ActionKind.Accept); Invoke("SwitchKitchen", true);
+            Invoke("PlayFromMainMenu"); view.Command(ActionKind.Accept); Invoke("SwitchKitchen", true);
             canvas = view.GetComponentInChildren<Canvas>(); root = Rect("SafeArea");
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0, 0, -10); camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(.12f, .16f, .13f);

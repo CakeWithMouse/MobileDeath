@@ -65,10 +65,10 @@ Review avatar cropping: use visible bounds rather than full PNG canvas. Circle11
 2026-10-14 — recipe names and main menu cycle
 Recipe names are separate PT Serif text layers: Сладкий треугольник,
 Грибной конверт; the Unity second spread also includes Сладкая трубочка.
-Facade: shop glyph on a cream button, [940,744,120,100], beside play.
-Cycle: level -> result -> facade. The home button on the result returns to
-the facade; only facade play starts the next day or retries the failed day.
-Shop opens from and closes to the facade. Existing purchases are applied
+Main menu: shop glyph on a cream button, [940,744,120,100], beside play.
+Cycle: level -> result -> main menu. The home button on the result returns to
+the main menu; only main menu play starts the next day or retries the failed day.
+Shop opens from and closes to the main menu. Existing purchases are applied
 when the next shift starts. An unfinished shift resumes without resetting.
 Sources, layer layout JSON and PNG previews are updated locally. Heavy SVG
 board exports have been removed from the repository. This revision

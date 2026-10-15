@@ -24,6 +24,12 @@ namespace Blinopek.Domain
         public int patiencePerPancakeTicks = 2200;
         public int clarifyPenaltyTicks = 160;
         public int guestIntervalTicks = 40;
+        // Zero base preserves the timing of older saved command journals.
+        // The arrival interval includes the reaction/departure above.
+        public int guestArrivalBaseTicks;
+        public int guestArrivalMinTicks;
+        public int guestArrivalReductionPerDecorationPointTicks;
+        public int darkTablesDecorationPoints = 10;
         public int maxPancakes = 2;
         public int multiPancakeDay = 2;
         public int rent = 800;
@@ -35,6 +41,8 @@ namespace Blinopek.Domain
         public int ingredientUnlockCost = 1800;
         public int scraperPrice = 200;
         public int patienceUpgradeCost = 2400;
+        public int darkTableUpgradeCost = 18000;
+        // Legacy serialized keys: Honey means the premium currency (жаринки), not Ingredient.Honey.
         public int helperHoneyPrice = 10;
         public int startingCoins = 3000;
         public int startingHoney = 0;
@@ -47,6 +55,13 @@ namespace Blinopek.Domain
         public int maxPortions = 24;
         public BalanceRules Copy() => (BalanceRules)MemberwiseClone();
 
+        public int GetGuestArrivalIntervalTicks(int decorationPoints)
+        {
+            if (guestArrivalBaseTicks == 0) return guestIntervalTicks;
+            long reduction = (long)Math.Max(0, decorationPoints) * guestArrivalReductionPerDecorationPointTicks;
+            return (int)Math.Max(guestArrivalMinTicks, (long)guestArrivalBaseTicks - reduction);
+        }
+
         public void Validate()
         {
             if (readyTicks < 1 || burnTicks <= readyTicks || dayTicks < 1 || patiencePerPancakeTicks < 1 ||
@@ -54,8 +69,11 @@ namespace Blinopek.Domain
                 strokeSpacing > brushRadius || requiredCoveragePercent < 1 || requiredCoveragePercent > 100 ||
                 spreadCoveragePercent < 1 || spreadCoveragePercent > 100 || rent < 0 || basePrice < 0 ||
                 ingredientPrice < 0 || batterStampCost < 0 || spreadStampCost < 0 || portionCost < 0 ||
-                ingredientUnlockCost < 0 || scraperPrice < 0 || patienceUpgradeCost < 0 || helperHoneyPrice < 0 ||
+                ingredientUnlockCost < 0 || scraperPrice < 0 || patienceUpgradeCost < 0 || darkTableUpgradeCost < 0 || helperHoneyPrice < 0 ||
                 startingCoins < 0 || startingHoney < 0 || clarifyPenaltyTicks < 0 || guestIntervalTicks < 0 ||
+                darkTablesDecorationPoints < 0 || guestArrivalBaseTicks < 0 || guestArrivalMinTicks < 0 ||
+                guestArrivalReductionPerDecorationPointTicks < 0 ||
+                (guestArrivalBaseTicks > 0 && (guestArrivalMinTicks < Math.Max(1, guestIntervalTicks) || guestArrivalMinTicks > guestArrivalBaseTicks)) ||
                 refundThreshold < 0 || refundThreshold > 100 || maxPortions < 4 || maxPortions > 64 || portionTolerance < 1)
                 throw new ArgumentException("Invalid gameplay balance configuration.");
         }
@@ -65,18 +83,21 @@ namespace Blinopek.Domain
     public sealed class Profile
     {
         public int day = 1;
-        public int coins = 3000;
-        public int honey;
+        public int coins = 3000; // Златники, stored in hundredths.
+        public int honey; // Жаринки; retain the schema-1 field name for existing saves.
         public int scrapers;
         public int ownedIngredients = 1;
         public int helpersOwned;
         public int helpersEnabled;
         public bool patienceUpgrade;
+        public bool darkTablesUpgrade;
         public bool tutorialComplete;
         public bool demonstrationSeen;
         public int ratingTotal;
         public int ratingCount;
         public Profile Copy() => (Profile)MemberwiseClone();
+        // Installed decorations contribute points; buying food or helpers does not.
+        public int DecorationPoints(BalanceRules rules) => darkTablesUpgrade ? rules.darkTablesDecorationPoints : 0;
         public bool Owns(Ingredient type) => (ownedIngredients & (1 << (int)type)) != 0;
         public bool HelperEnabled(Ingredient type) => (helpersOwned & helpersEnabled & (1 << (int)type)) != 0;
     }
@@ -84,6 +105,7 @@ namespace Blinopek.Domain
     [Serializable]
     public sealed class GameCommand
     {
+        public const int MaxTickCount = 12000;
         public ActionKind kind;
         public int a, b, c, d;
         public GameCommand() { }

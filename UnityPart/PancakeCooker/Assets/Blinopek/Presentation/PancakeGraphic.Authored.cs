@@ -49,14 +49,14 @@ namespace Blinopek.Presentation
                 if (artwork >= 0 && atlas.PoseAlpha(artwork, center) == 0
                     && atlas.PoseAlpha(artwork, new Vector2(x / (float)grid, y / (float)grid)) == 0
                     && atlas.PoseAlpha(artwork, new Vector2((x + 1f) / grid, (y + 1f) / grid)) == 0) continue;
+                var uv = new Rect(x / (float)grid, y / (float)grid, 1f / grid, 1f / grid);
                 FoldSample sample = default; int layer;
                 for (layer = 0; layer < CookingFoldArt.LayerCount(pose); layer++)
                 {
                     sample = CookingFoldArt.Sample(pose, center, layer);
-                    if (Covered(sample.Source)) break;
+                    if (PoseCovered(coverage[0], pose, uv, layer)) break;
                 }
                 if (layer == CookingFoldArt.LayerCount(pose)) continue;
-                var uv = new Rect(x / (float)grid, y / (float)grid, 1f / grid, 1f / grid);
                 float heat = sample.Inside ? motion.HeatB : motion.HeatA;
                 float golden = Mathf.SmoothStep(0, 1, Mathf.InverseLerp(rules.readyTicks * .12f, rules.readyTicks, heat));
                 float burnt = Mathf.SmoothStep(0, 1, Mathf.InverseLerp(Mathf.Lerp(rules.readyTicks, rules.burnTicks, .6f), rules.burnTicks, heat));
@@ -69,8 +69,7 @@ namespace Blinopek.Presentation
                 // The authored skin covers enclosed fillings. Only the original exposed surface,
                 // or a lower layer visible through a real hole, can display them.
                 quad.MappedFilling = true;
-                int mx = Mathf.Clamp((int)(sample.Source.x * 128), 0, 127), my = Mathf.Clamp((int)(sample.Source.y * 128), 0, 127);
-                for (int i = 0; i < 3; i++) if (motion.State.Fillings[i] != null && motion.State.Fillings[i].Mask[mx, my]) AddPoseQuad(quad, 3 + i, opacity);
+                for (int i = 0; i < 3; i++) if (motion.State.Fillings[i] != null && PoseCovered(coverage[i + 1], pose, uv, layer)) AddPoseQuad(quad, 3 + i, opacity, i + 1);
                 for (int i = 3; i < 5; i++) if (motion.State.Fillings[i] != null)
                     foreach (var portion in motion.State.Fillings[i].Portions)
                     {
@@ -80,9 +79,17 @@ namespace Blinopek.Presentation
                     }
             }
         }
-        private bool Covered(Vector2 uv) => motion.State.Batter[Mathf.Clamp((int)(uv.x * 128), 0, 127), Mathf.Clamp((int)(uv.y * 128), 0, 127)];
-        private void AddPoseQuad(Quad q, int tile, float opacity)
-        { q.Tile = atlas.Tiles[tile]; q.Tint.a = opacity; quads.Add(q); }
+        private static bool PoseCovered(SoftCoverage mask, FoldPose pose, Rect uv, int layer)
+        {
+            // Include the feather even when the centre falls just outside a stroke.
+            return mask.Sample(CookingFoldArt.Sample(pose, uv.center, layer).Source) > 0
+                || mask.Sample(CookingFoldArt.Sample(pose, uv.min, layer).Source) > 0
+                || mask.Sample(CookingFoldArt.Sample(pose, uv.max, layer).Source) > 0
+                || mask.Sample(CookingFoldArt.Sample(pose, new Vector2(uv.xMin, uv.yMax), layer).Source) > 0
+                || mask.Sample(CookingFoldArt.Sample(pose, new Vector2(uv.xMax, uv.yMin), layer).Source) > 0;
+        }
+        private void AddPoseQuad(Quad q, int tile, float opacity, int coverageLayer = 0)
+        { q.Tile = atlas.Tiles[tile]; q.Tint.a = opacity; q.CoverageLayer = coverageLayer; quads.Add(q); }
         private void AddAuthoredVertex(VertexHelper vh, Quad q, float x, float y)
         {
             Vector2 point = new Vector2(x, y);
@@ -98,11 +105,12 @@ namespace Blinopek.Presentation
                 point = Vector2.Lerp(point, mapped, q.Incoming ? 1 - q.Warp : q.Warp);
                 point.y += Mathf.Sin(q.Warp * Mathf.PI) * .07f * Mathf.Sin(x * Mathf.PI) * Mathf.Sin(Mathf.Clamp01(vertical) * Mathf.PI);
             }
-            var sampleUv = q.MappedFilling ? CookingFoldArt.Sample(q.Pose, new Vector2(x, y), q.Layer).Source : new Vector2(x, y);
+            var coverageUv = CookingFoldArt.Sample(q.Pose, new Vector2(x, y), q.Layer).Source;
+            var sampleUv = q.MappedFilling ? coverageUv : new Vector2(x, y);
             var uv = new Vector2(q.Tile.x + Mathf.Clamp01((sampleUv.x - q.Source.x) / q.Source.width) * q.Tile.width,
                 q.Tile.y + Mathf.Clamp01((sampleUv.y - q.Source.y) / q.Source.height) * q.Tile.height);
             var rect = rectTransform.rect;
-            vh.AddVert(new Vector3(rect.xMin + point.x * rect.width, rect.yMin + point.y * rect.height), q.Tint, uv);
+            vh.AddVert(new Vector3(rect.xMin + point.x * rect.width, rect.yMin + point.y * rect.height), CoverageTint(q, coverageUv), uv);
         }
     }
 }

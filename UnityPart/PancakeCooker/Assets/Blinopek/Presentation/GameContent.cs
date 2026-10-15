@@ -14,9 +14,12 @@ namespace Blinopek.Presentation
     [CreateAssetMenu(menuName = "Blinopek/Gameplay content")]
     public sealed class GameContent : ScriptableObject
     {
-        public BalanceRules balance = new BalanceRules();
+        public BalanceRules balance = new BalanceRules {
+            guestArrivalBaseTicks = 80, guestArrivalMinTicks = 40, guestArrivalReductionPerDecorationPointTicks = 2
+        };
         public GameAudioLibrary audio;
-        public Font bodyFont, titleFont;
+        public Font bodyFont, titleFont, signboardFont;
+        public Shader signboardShader;
         public Texture2D kitchenBackground, counterBackground, counter, pan, handle, plate, trash, tray;
         public Texture2D stove, assemblyTable;
         public Texture2D raw, ready, burnt;

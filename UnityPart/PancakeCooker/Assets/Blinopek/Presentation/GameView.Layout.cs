@@ -12,23 +12,50 @@ namespace Blinopek.Presentation
     // Coordinates and cropped artwork follow the artist's 1600 x 900 Figma export, node 4199:520.
     public sealed partial class GameView
     {
-        private Text dayText, honeyText, scraperText, resultDay, profitText, orderPrice;
-        private GameObject orderDetails, tutorialPanel, orderHud, facade, counterPatience, orderPayment;
+        private Text dayText, embersText, scraperText, resultDay, profitText, orderPrice;
+        private GameObject orderDetails, tutorialPanel, orderHud, mainMenu, counterPatience, orderPayment;
         private Image kitchenPatienceBar;
         private RawImage sideArtA, sideArtB;
         private RawImage panGuide;
-        private GameObject sideReadyA, sideReadyB;
+        private GameObject sideReadyA, sideReadyB, batterSelection;
         private readonly List<GameObject> ingredientSelections = new List<GameObject>();
         private readonly List<GameObject> helperBadges = new List<GameObject>();
         private readonly List<Text> resultRows = new List<Text>();
         private readonly List<GameObject> shopPages = new List<GameObject>();
         private readonly List<GameObject> recipePages = new List<GameObject>();
-        private bool atFacade;
+        private bool atMainMenu;
+        private Button mainMenuShop;
+        private Text mainMenuPlayLabel;
+        private bool CanOpenShop => atMainMenu && !controller.StorageBlocked && (Session == null || Session.Phase == DayPhase.Result);
+        private readonly List<RawImage> cafeTables = new List<RawImage>();
 
         private RawImage Art(string name, Transform parent, string key, float x, float y, float w, float h, bool preserve = true)
             => Picture(name, parent, art.Find(key), x, y, w, h, preserve);
+        private GameObject CookingSelection(string name, Transform parent, float x, float y, float w, float h)
+        {
+            var selection = Rect(name, parent, x, y, w, h);
+            var badge = Paper("SelectionBadge", selection, w - 25, -15, 38, 38);
+            Art("SelectionCheck", badge.transform, "ui/glyphs/check.png", 8, 8, 22, 22);
+            selection.gameObject.SetActive(false);
+            return selection.gameObject;
+        }
         private RawImage Paper(string name, Transform parent, float x, float y, float w, float h)
-            => Art(name, parent, "ui/panel-cream.png", x, y, w, h, false);
+            => FramedArt(name, parent, "ui/panel-cream.png", x, y, w, h, Mathf.Min(32, h * .2f), .2f);
+        private ButtonPlateGraphic FramedArt(string name, Transform parent, string key, float x, float y, float w, float h, float corner = 0, float border = .35f)
+        {
+            var image = Rect(name, parent, x, y, w, h).gameObject.AddComponent<ButtonPlateGraphic>();
+            image.texture = art.Find(key); image.uvRect = art.Uv(image.texture);
+            image.CornerSize = corner; image.BorderFraction = border; image.raycastTarget = false;
+            return image;
+        }
+        private Image PatienceTrack(string name, string fillName, Transform parent, float x, float y, float w, float h)
+        {
+            var track = FramedArt(name, parent, "ui/patience-track.png", x, y, w, h);
+            // Insets follow the painted aperture at the same uniform scale as the end caps.
+            var fill = Rect(fillName, track.transform, h * .3f, h * .29f, w - h * .6f, h * .43f)
+                .gameObject.AddComponent<PatienceFillGraphic>();
+            fill.color = Green; fill.raycastTarget = false; return fill;
+        }
         private Text PaperLabel(string name, Transform parent, float x, float y, float w, float h, int size)
         {
             var paper = Paper(name + "Paper", parent, x, y, w, h);
@@ -36,11 +63,13 @@ namespace Blinopek.Presentation
             label.alignment = TextAnchor.MiddleCenter;
             return label;
         }
-        private Button IconButton(string name, Transform parent, string key, float x, float y, float w, float h, Action action, bool background = true)
+        private Button IconButton(string name, Transform parent, string key, float x, float y, float w, float h, Action action, bool background = true, bool preserveFrame = false)
         {
             var b = Button(name, parent, "", x, y, w, h, action);
+            if (preserveFrame) ((ButtonPlateGraphic)b.targetGraphic).CornerSize = 24;
             if (!background) b.targetGraphic.color = Color.clear;
-            Art("Icon", b.transform, key, background ? 20 : 0, background ? 12 : 0, background ? w - 40 : w, background ? h - 24 : h);
+            float insetY = preserveFrame ? 20 : 12;
+            Art("Icon", b.transform, key, background ? 20 : 0, background ? insetY : 0, background ? w - 40 : w, background ? h - insetY * 2 : h);
             return b;
         }
         private void Shadow(Transform parent, string key, float x, float y, float w, float h)
@@ -49,11 +78,32 @@ namespace Blinopek.Presentation
         {
             Picture("Room", parent, art.counterBackground, 0, 0, 1600, 900, false);
             Art("Chair", parent, "decor/chair_premium.png", 1025, 414, 160, 280);
-            Art("Table", parent, "decor/table_premium.png", 846, 500, 320, 247);
+            CafeTable("Table", parent, 846, 500, 320);
             Art("Stool", parent, "decor/stool_base.png", 1350, 580, 150, 180);
-            Art("SideTable", parent, "decor/table_base.png", 1270, 440, 270, 230);
+            CafeTable("SideTable", parent, 1270, 440, 270);
             Art("Flowers", parent, "decor/vase_flowers.png", 1000, 391, 100, 130);
             Art("Lamp", parent, "decor/lamp_brass.png", 1140, -38, 165, 240);
+        }
+        private void CafeTable(string name, Transform parent, float x, float y, float width)
+        {
+            var texture = art.Find("decor/table_base.png"); var uv = art.Uv(texture);
+            float height = texture == null ? width : width * texture.height * uv.height / (texture.width * uv.width);
+            cafeTables.Add(Picture(name, parent, texture, x, y, width, height, false));
+        }
+        private void RefreshCafeTables()
+        {
+            var texture = art.Find(controller.Profile.darkTablesUpgrade ? "decor/table_premium.png" : "decor/table_base.png");
+            if (texture == null) return;
+            var uv = art.Uv(texture);
+            foreach (var table in cafeTables)
+            {
+                if (table.texture == texture) continue;
+                var rect = table.rectTransform; float height = rect.sizeDelta.x * texture.height * uv.height / (texture.width * uv.width);
+                // Keep the tabletop's upper-left position fixed when changing sprite proportions.
+                rect.anchoredPosition += new Vector2(0, (rect.sizeDelta.y - height) * .5f);
+                rect.sizeDelta = new Vector2(rect.sizeDelta.x, height);
+                table.texture = texture; table.uvRect = uv;
+            }
         }
         private GameObject Modal(string name)
         {
@@ -63,20 +113,29 @@ namespace Blinopek.Presentation
         }
         private void OpenBook() { book.SetActive(true); controller.SetPause(PauseReason.RecipeBook, true); Audio.PlayUi(SoundCue.BookOpen); }
         private void CloseBook() { book.SetActive(false); controller.SetPause(PauseReason.RecipeBook, false); Audio.PlayUi(SoundCue.BookClose); }
-        private void OpenShop() { shop.transform.SetAsLastSibling(); shop.SetActive(true); dirty = true; }
-        private void ShowFacade()
+        private void OpenShop()
         {
+            if (!CanOpenShop) return;
+            shop.transform.SetAsLastSibling(); shop.SetActive(true); dirty = true;
+        }
+        private void ShowMainMenu()
+        {
+            CloseCafeNameDialog();
             controller.SetPause(PauseReason.Menu, true);
-            ReleasePointer(); HidePortionGhost();
-            atFacade = true; facade.SetActive(true); shop.SetActive(false); pausePanel.SetActive(false);
+            controller.SetPause(PauseReason.RecipeBook, false);
+            ReleasePointer(); HidePortionGhost(); HideReadyGhost();
+            book.SetActive(false); orderDetails.SetActive(false); resetConfirmation.SetActive(false);
+            atMainMenu = true; settingsAtMainMenu = false; mainMenu.SetActive(true); shop.SetActive(false); pausePanel.SetActive(false);
             Audio.PlayUi(SoundCue.Back); dirty = true;
         }
-        private void PlayFromFacade()
+        private void PlayFromMainMenu()
         {
+            if (cafeNameDialog.activeSelf) return;
             if (controller.StorageBlocked) return;
+            controller.SetPause(PauseReason.Menu, false);
             if (Session == null || Session.Phase == DayPhase.Result) StartNextDay();
-            if (Session == null || Session.Phase == DayPhase.Result) return;
-            atFacade = false; facade.SetActive(false); shop.SetActive(false);
+            if (Session == null || Session.Phase == DayPhase.Result) { controller.SetPause(PauseReason.Menu, true); return; }
+            atMainMenu = false; mainMenu.SetActive(false); shop.SetActive(false);
             controller.SetPause(PauseReason.Menu, false); dirty = true;
         }
 
@@ -90,32 +149,33 @@ namespace Blinopek.Presentation
             { var es = new GameObject("CafeInput", typeof(EventSystem), typeof(InputSystemUIInputModule)); es.transform.SetParent(transform); es.GetComponent<InputSystemUIInputModule>().AssignDefaultActions(); }
             counter = Group("Counter"); BuildCounter();
             kitchen = Group("Kitchen"); BuildKitchen();
-            BuildHud(); BuildResults(); BuildShop(); BuildBook(); BuildFacade(); BuildPause();
-            storage = Label("StorageError", root, "", 270, 760, 1060, 38, 20, new Color(.65f, .14f, .1f));
+            BuildHud(); BuildResults(); BuildShop(); BuildBook(); BuildMainMenu(); BuildPause();
+            BuildCafeNameDialog();
+            storage = Label("StorageError", root, "", 270, 850, 1060, 38, 20, new Color(.65f, .14f, .1f));
             ghost = Picture("DraggedPortion", root, art.fillings[3], 0, 0, 70, 60, false); ghost.gameObject.SetActive(false);
             draggedReady = Display(root, "DraggedReadyPancake", 0, 0, 148, 126);
             draggedReady.Root.SetActive(false); displays.Add(draggedReady);
         }
         private void BuildHud()
         {
-            Paper("TimePanel", root, 22, 18, 325, 78);
+            Paper("TimePanel", root, 22, 18, 340, 78);
             Art("Day", root, "ui/day-sun.png", 35, 28, 50, 48);
             dayText = Label("DayNumber", root, "", 91, 28, 50, 51, 30);
-            Art("ClockIcon", root, "ui/clock-day.png", 147, 26, 52, 53);
-            clock = Label("Clock", root, "", 211, 28, 126, 51, 30);
+            clock = Rect("WorkdayClock", root, 226, 21, 72, 72).gameObject.AddComponent<WorkdayClockGraphic>();
+            clock.Show(null);
             Paper("WalletPanel", root, 1040, 18, 400, 78);
             Art("Coin", root, "ui/coin-pancake.png", 1058, 29, 56, 51);
             hud = Label("Wallet", root, "", 1120, 28, 130, 51, 29);
-            Art("Honey", root, "ui/currency-honey.png", 1257, 26, 45, 55);
-            honeyText = Label("HoneyAmount", root, "", 1310, 28, 112, 51, 30);
-            IconButton("Pause", root, "ui/glyphs/pause.png", 1462, 18, 112, 78, () => controller.SetPause(PauseReason.Menu, true));
+            Art("Embers", root, "ui/currency-honey.png", 1257, 26, 45, 55);
+            embersText = Label("EmberAmount", root, "", 1310, 28, 112, 51, 30);
+            IconButton("Pause", root, "ui/glyphs/pause.png", 1462, 18, 112, 78, OpenSettings);
             orderHud = Rect("KitchenOrderHud", root, 402, 18, 591, 78).gameObject;
             var receipt = IconButton("ShowOrder", orderHud.transform, "ui/receipt-order.png", 0, 0, 591, 78, () => orderDetails.SetActive(!orderDetails.activeSelf));
             var receiptPaper = receipt.GetComponent<RawImage>(); receiptPaper.texture = art.Find("ui/panel-cream.png"); receiptPaper.uvRect = art.Uv(receiptPaper.texture);
+            var receiptFrame = (ButtonPlateGraphic)receiptPaper; receiptFrame.CornerSize = 15.6f; receiptFrame.BorderFraction = .2f;
             var icon = receipt.transform.Find("Icon").GetComponent<RectTransform>(); icon.anchoredPosition = new Vector2(42, -39); icon.sizeDelta = new Vector2(40, 52);
             progress = Label("Progress", orderHud.transform, "", 87, 10, 116, 56, 30);
-            Art("OrderPatienceTrack", orderHud.transform, "ui/patience-track.png", 222, 20, 335, 37, false);
-            kitchenPatienceBar = Panel("OrderPatienceFill", orderHud.transform, 249, 31, 281, 12, Green); kitchenPatienceBar.raycastTarget = false;
+            kitchenPatienceBar = PatienceTrack("OrderPatienceTrack", "OrderPatienceFill", orderHud.transform, 222, 20, 335, 37);
             orderDetails = Rect("OrderDetails", root, 402, 110, 591, 180).gameObject;
             Paper("Paper", orderDetails.transform, 0, 0, 591, 180).raycastTarget = true;
             orderStrip = Label("Order", orderDetails.transform, "", 30, 20, 531, 140, 25);
@@ -139,27 +199,30 @@ namespace Blinopek.Presentation
             }
             deliveryCount = PaperLabel("DeliveryCount", deliveryTray, 330, -35, 80, 38, 22);
             var trayArrow = Art("ServeTrayArrow", deliveryTray, "ui/glyphs/arrow-right.png", 186, -36, 48, 38);
-            trayArrow.rectTransform.localRotation = Quaternion.Euler(0, 0, 90); deliveryArrow = trayArrow.gameObject;
+            trayArrow.rectTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(TrayServeDirection.y, TrayServeDirection.x) * Mathf.Rad2Deg); deliveryArrow = trayArrow.gameObject;
+            deliveryHint = PaperLabel("DeliveryHint", counter.transform, 805, 635, 620, 60, 25);
+            deliveryHint.text = "Передвиньте поднос к клиенту";
             Art("CounterPitcher", counter.transform, "decor/pitcher.png", 1444, 658, 112, 183);
-            Art("SpeechBubble", counter.transform, "ui/speech-bubble.png", 620, 145, 825, 285, false);
+            speechBubble = Art("SpeechBubble", counter.transform, "ui/speech-bubble.png", 620, 145, 825, 285).gameObject;
             dialogue = Label("Request", counter.transform, "", 680, 168, 705, 144, 32, Ink, true); dialogue.alignment = TextAnchor.MiddleCenter;
             orderPayment = Rect("OrderPayment", counter.transform, 1238, 316, 145, 42).gameObject;
             orderPrice = Label("OrderPrice", orderPayment.transform, "", 0, 0, 101, 42, 27); orderPrice.alignment = TextAnchor.MiddleRight;
             Art("OrderCoin", orderPayment.transform, "ui/coin-pancake.png", 109, 5, 32, 32);
             reaction = Label("Reaction", counter.transform, "", 680, 168, 705, 180, 24); reaction.alignment = TextAnchor.MiddleCenter;
-            accept = IconButton("AcceptOrder", counter.transform, "ui/glyphs/check.png", 856, 448, 176, 86, () => { if (Command(ActionKind.Accept)) SwitchKitchen(true); });
-            clarify = IconButton("ClarifyOrder", counter.transform, "ui/glyphs/help.png", 1065, 448, 176, 86, () => Command(ActionKind.Clarify));
-            nextGuest = IconButton("NextGuest", counter.transform, "ui/glyphs/arrow-right.png", 930, 448, 260, 86, () => Command(ActionKind.NextGuest));
+            clarify = IconButton("ClarifyOrder", counter.transform, "ui/glyphs/help.png", 945, 448, 176, 86, () => Command(ActionKind.Clarify));
             counterPatience = Rect("CounterPatience", counter.transform, 813, 554, 440, 32).gameObject;
-            Art("PatienceTrack", counterPatience.transform, "ui/patience-track.png", 0, 0, 440, 32, false);
-            patienceBar = Panel("PatienceFill", counterPatience.transform, 29, 12, 379, 8, Green); patienceBar.raycastTarget = false;
+            patienceBar = PatienceTrack("PatienceTrack", "PatienceFill", counterPatience.transform, 0, 0, 440, 32);
             IconButton("RecipeBook", counter.transform, "ui/recipe-book-closed.png", 28, 770, 108, 104, OpenBook, false);
             toKitchen = IconButton("KitchenTab", counter.transform, "ui/glyphs/arrow-right.png", 1448, 795, 120, 80, () => SwitchKitchen(true));
-            serveOrderCounter = Button("ServeOrderCounter", counter.transform, "Отдать заказ", 805, 448, 250, 86, () => Command(ActionKind.ServeOrder));
         }
         private void BuildKitchen()
         {
             Picture("KitchenRoom", kitchen.transform, art.kitchenBackground, 0, 0, 1600, 900, false);
+            var batterSource = Panel("BatterSource", kitchen.transform, 20, 292, 260, 280, Color.clear);
+            var batterInput = batterSource.gameObject.AddComponent<IngredientDrag>(); batterInput.View = this; batterInput.Ingredient = -1;
+            batterSelection = CookingSelection("SelectedBatter", batterSource.transform, 0, 0, 260, 280);
+            var batterLabel = PaperLabel("BatterName", batterSelection.transform, 65, 276, 130, 39, 20);
+            batterLabel.text = "Тесто";
             // The approved overhead background includes the empty dishes and batter jug.
             // Food, ingredients and HUD remain independent interactive layers.
             const float panWidth = 364, panHeight = 310, plateWidth = 372, plateHeight = 298;
@@ -172,6 +235,11 @@ namespace Blinopek.Presentation
             var plateHit = plateSurface.gameObject.AddComponent<Image>(); plateHit.color = Color.clear;
             plateSurface.gameObject.AddComponent<KitchenInputRouter>().View = this;
             assemblyDisplay = Display(plateSurface, "PancakeOnPlate", 0, 0, plateWidth, plateHeight); displays.Add(assemblyDisplay);
+            // The tray is painted into the background; its hit area sits behind the draggable portions.
+            var trayHit = Panel("KitchenTray", kitchen.transform, 1155, 168, 377, 162, Color.clear);
+            kitchenTray = trayHit.gameObject.AddComponent<Button>(); kitchenTray.targetGraphic = trayHit;
+            kitchenTray.transition = Selectable.Transition.None;
+            kitchenTray.onClick.AddListener(BeginServing);
             // Keep full-sized plates and page through larger prepared stocks.
             for (int i = 0; i < 2; i++)
             {
@@ -186,10 +254,11 @@ namespace Blinopek.Presentation
             trayCount = PaperLabel("TrayCount", kitchen.transform, 1180, 119, 335, 42, 22);
             trayPrevious = IconButton("TrayPrevious", kitchen.transform, "ui/glyphs/arrow-left.png", 1127, 116, 50, 48, () => ChangeTrayPage(-1), false);
             trayNext = IconButton("TrayNext", kitchen.transform, "ui/glyphs/arrow-right.png", 1518, 116, 50, 48, () => ChangeTrayPage(1), false);
-            serveOrder = Button("ServeOrder", kitchen.transform, "Отдать заказ", 1190, 337, 330, 58, () => Command(ActionKind.ServeOrder));
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < Recipes.PortionTargets.Length; i++)
             {
-                var p = Recipes.PortionTargets[i]; var marker = Label("PortionGuide", plateSurface, "+", p.X * plateWidth / 1000 - 16, (1000 - p.Y) * plateHeight / 1000 - 16, 32, 32, 29, Green);
+                var p = Recipes.PortionTargets[i]; var marker = Label("PortionGuide", plateSurface, "+", p.X * plateWidth / 1000 - 16, (1000 - p.Y) * plateHeight / 1000 - 24, 32, 48, 29, Green);
+                // PT Sans has a taller line box than the glyph; truncating it hid the whole stencil.
+                marker.verticalOverflow = VerticalWrapMode.Overflow;
                 marker.alignment = TextAnchor.MiddleCenter; portionGuides.Add(marker);
             }
             var positions = new[] { new Rect(1010, 604, 108, 101), new Rect(844, 250, 149, 142), new Rect(1010, 267, 112, 133), new Rect(869, 422, 141, 133), new Rect(879, 584, 116, 104) };
@@ -198,8 +267,8 @@ namespace Blinopek.Presentation
             {
                 var p = positions[i]; var card = Panel("Ingredient" + i, kitchen.transform, p.x, p.y, p.width, p.height, Color.clear); ingredientCards.Add(card);
                 Shadow(card.transform, names[i], 0, 0, p.width, p.height);
-                var ring = Art("SelectedIngredient", card.transform, "kitchen/guide-batter-circle.png", -6, -6, p.width + 12, p.height + 12, false); ring.color = new Color(.39f, .55f, .42f, .85f); ingredientSelections.Add(ring.gameObject);
                 Picture("Container", card.transform, art.containers[i], 0, 0, p.width, p.height);
+                ingredientSelections.Add(CookingSelection("SelectedIngredient", card.transform, 0, 0, p.width, p.height));
                 var badge = Art("HelperBadge", card.transform, "ui/helper-badge.png", p.width - 19, p.height - 15, 27, 27); helperBadges.Add(badge.gameObject);
                 var label = PaperLabel("Name", card.transform, 0, p.height - 20, p.width, 39, 18);
                 label.text = Recipes.IngredientName((Ingredient)i); ingredientLabels.Add(label);
@@ -222,7 +291,7 @@ namespace Blinopek.Presentation
                 int shape = i; string[] forms = { "triangle", "envelope", "roll" };
                 var b = IconButton("Fold" + i, kitchen.transform, "kitchen/fold-" + forms[i] + ".png", 1135 + i * 145, 746, 135, 54, () => Command(ActionKind.BeginFold, shape)); foldButtons.Add(b);
             }
-            foldGuide = PaperLabel("FoldGuide", kitchen.transform, 1130, 333, 430, 68, 22);
+            foldGuide = PaperLabel("FoldGuide", kitchen.transform, 1130, 704, 430, 38, 20);
             finishFold = Button("FinishIncorrectFold", kitchen.transform, "Закончить как есть", 1170, 746, 365, 54, () => Command(ActionKind.FinalizeFold));
             IconButton("CounterTab", kitchen.transform, "ui/glyphs/arrow-left.png", 24, 804, 110, 76, () => SwitchKitchen(false));
             IconButton("KitchenRecipeBook", kitchen.transform, "ui/recipe-book-closed.png", 159, 797, 87, 90, OpenBook, false);
@@ -256,7 +325,7 @@ namespace Blinopek.Presentation
             Art("ProfitCoin", results.transform, "ui/coin-pancake.png", 561, 660, 92, 86);
             profitText = Label("Profit", results.transform, "", 700, 657, 410, 82, 50);
             resultText = Label("ResultMessage", results.transform, "", 425, 750, 760, 36, 22); resultText.alignment = TextAnchor.MiddleCenter;
-            IconButton("ReturnToFacade", results.transform, "ui/glyphs/home.png", 1320, 707, 142, 95, ShowFacade);
+            IconButton("ReturnToMainMenu", results.transform, "ui/glyphs/home.png", 1320, 707, 142, 95, ShowMainMenu);
             results.SetActive(false);
         }
         private void SelectShopPage(int page) { for (int i = 0; i < shopPages.Count; i++) shopPages[i].SetActive(i == page); dirty = true; }
@@ -274,7 +343,7 @@ namespace Blinopek.Presentation
                 for (int i = first; i < Math.Min(5, first + 4); i++)
                 {
                     int type = i; int x = 235 + (i - first) * 295;
-                    Art("Card", page.transform, "ui/card-frame.png", x, 265, 252, 418, false);
+                    FramedArt("Card", page.transform, "ui/card-frame.png", x, 265, 252, 418, 28, .12f);
                     Picture("IngredientArt", page.transform, art.containers[i], x + 36, 320, 180, 160);
                     if (helpers) Art("Helper", page.transform, "ui/helper-badge.png", x + 154, 431, 55, 55);
                     var title = Label("Name", page.transform, Recipes.IngredientName((Ingredient)i), x + 18, 285, 216, 38, 24); title.alignment = TextAnchor.MiddleCenter;
@@ -283,24 +352,36 @@ namespace Blinopek.Presentation
                         () => Buy(helpers ? ((controller.Profile.helpersOwned & (1 << type)) != 0 ? ShopItem.ToggleHelper : ShopItem.Helper) : ShopItem.Ingredient, type));
                     shopRefreshers.Add(() => {
                         bool owned = controller.Profile.Owns((Ingredient)type), hasHelper = (controller.Profile.helpersOwned & (1 << type)) != 0;
-                        price.text = helpers ? (hasHelper ? "Куплен" : art.balance.helperHoneyPrice + " мёда") : (owned ? "Открыто" : Money(art.balance.ingredientUnlockCost));
+                        price.text = helpers ? (hasHelper ? "Куплен" : Embers(art.balance.helperHoneyPrice)) : (owned ? "Открыто" : Money(art.balance.ingredientUnlockCost));
                         buy.GetComponentInChildren<Text>().text = helpers ? (hasHelper ? (controller.Profile.HelperEnabled((Ingredient)type) ? "Выключить" : "Включить") : "Купить") : (owned ? "✓" : "Купить");
-                        buy.interactable = Session.Success && (helpers ? owned && (hasHelper || controller.Profile.honey >= art.balance.helperHoneyPrice) : !owned && controller.Profile.coins >= art.balance.ingredientUnlockCost);
+                        buy.interactable = Session != null && Session.Success && (helpers ? owned && (hasHelper || controller.Profile.honey >= art.balance.helperHoneyPrice) : !owned && controller.Profile.coins >= art.balance.ingredientUnlockCost);
                     });
                 }
                 int other = group % 2 == 0 ? group + 1 : group - 1;
                 IconButton("ShopPageArrow", page.transform, "ui/glyphs/" + (group % 2 == 0 ? "arrow-right" : "arrow-left") + ".png", group % 2 == 0 ? 1275 : 203, 702, 120, 65, () => SelectShopPage(other));
             }
             var upgrades = Rect("ShopUpgrades", shop.transform, 0, 0, 1600, 900).gameObject; shopPages.Add(upgrades);
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
-                bool scraper = i == 0; int x = 480 + i * 340;
-                Art("Card", upgrades.transform, "ui/card-frame.png", x, 265, 252, 418, false);
-                Art("Upgrade", upgrades.transform, scraper ? "kitchen/scraper.png" : "ui/upgrade-patience.png", x + 36, 320, 180, 160);
-                var title = Label("Title", upgrades.transform, scraper ? "Скребок" : "Терпение", x + 18, 285, 216, 38, 24); title.alignment = TextAnchor.MiddleCenter;
-                var price = Label("Price", upgrades.transform, Money(scraper ? art.balance.scraperPrice : art.balance.patienceUpgradeCost), x + 25, 493, 202, 48, 26); price.alignment = TextAnchor.MiddleCenter;
-                var buy = Button(scraper ? "BuyScraper" : "BuyPatience", upgrades.transform, "Купить", x + 25, 559, 202, 65, () => Buy(scraper ? ShopItem.Scraper : ShopItem.Patience));
-                shopRefreshers.Add(() => { buy.interactable = Session.Success && (scraper || !controller.Profile.patienceUpgrade) && controller.Profile.coins >= (scraper ? art.balance.scraperPrice : art.balance.patienceUpgradeCost); buy.GetComponentInChildren<Text>().text = !scraper && controller.Profile.patienceUpgrade ? "Куплено" : "Купить"; });
+                bool scraper = i == 0, tables = i == 2; int x = 310 + i * 340;
+                var item = scraper ? ShopItem.Scraper : tables ? ShopItem.DarkTables : ShopItem.Patience;
+                int cost = scraper ? art.balance.scraperPrice : tables ? art.balance.darkTableUpgradeCost : art.balance.patienceUpgradeCost;
+                FramedArt("Card", upgrades.transform, "ui/card-frame.png", x, 265, 252, 418, 28, .12f);
+                Art("Upgrade", upgrades.transform, scraper ? "kitchen/scraper.png" : tables ? "decor/table_premium.png" : "ui/upgrade-patience.png", x + 36, 320, 180, 160);
+                var title = Label("Title", upgrades.transform, scraper ? "Скребок" : tables ? "Тёмные столы" : "Терпение", x + 18, 285, 216, 38, 24); title.alignment = TextAnchor.MiddleCenter;
+                var price = Label("Price", upgrades.transform, Money(cost), x + 25, 493, 202, 48, 26); price.alignment = TextAnchor.MiddleCenter;
+                var buy = Button("Buy" + item, upgrades.transform, "Купить", x + 25, 559, 202, 65, () => Buy(item));
+                if (tables) {
+                    float before = art.balance.GetGuestArrivalIntervalTicks(0) * .05f;
+                    float after = art.balance.GetGuestArrivalIntervalTicks(art.balance.darkTablesDecorationPoints) * .05f;
+                    var effect = Label("TableGuestInterval", upgrades.transform, "Между гостями: " + before.ToString("0.##") + " → " + after.ToString("0.##") + " с", x + 18, 632, 216, 32, 16);
+                    effect.alignment = TextAnchor.MiddleCenter;
+                }
+                shopRefreshers.Add(() => {
+                    bool owned = !scraper && (tables ? controller.Profile.darkTablesUpgrade : controller.Profile.patienceUpgrade);
+                    buy.interactable = Session != null && Session.Success && !owned && controller.Profile.coins >= cost;
+                    buy.GetComponentInChildren<Text>().text = owned ? "Куплено" : "Купить";
+                });
             }
             IconButton("CloseShop", shop.transform, "ui/glyphs/arrow-left.png", 25, 795, 115, 79, () => shop.SetActive(false));
             SelectShopPage(0); shop.SetActive(false);
@@ -313,49 +394,65 @@ namespace Blinopek.Presentation
         }
         private void BuildBook()
         {
-            book = Modal("RecipeBookPanel"); Art("OpenBook", book.transform, "ui/recipe-book-open.png", 142, 100, 1320, 716, false);
+            book = Modal("RecipeBookPanel");
+            var paper = Art("OpenBook", book.transform, "ui/recipe-book-open.png", 142, 100, 1320, 716).rectTransform;
+            var size = paper.rect.size;
             string[] shapes = { "triangle", "envelope", "roll" };
             string[] names = { "Сладкий\nтреугольник", "Грибной\nконверт", "Сладкая\nтрубочка" };
             for (int page = 0; page < 2; page++)
             {
-                var group = Rect("RecipePage" + page, book.transform, 0, 0, 1600, 900).gameObject; recipePages.Add(group);
+                var group = Rect("RecipePage" + page, paper, 0, 0, size.x, size.y); recipePages.Add(group.gameObject);
+                group.anchorMin = Vector2.zero; group.anchorMax = Vector2.one;
+                group.anchoredPosition = Vector2.zero; group.sizeDelta = Vector2.zero;
                 for (int side = 0; side < 2; side++)
                 {
-                    int shape = page * 2 + side; int x = 260 + side * 620;
+                    int shape = page * 2 + side;
+                    // The painted pages are inset from the cover. Use their centers in the fitted
+                    // artwork, so the whole recipe follows the book instead of screen coordinates.
+                    float center = side == 0 ? .28f : .72f, width = size.x * .36f;
+                    var leaf = Rect("RecipeLeaf" + shape, group, 0, 0, width, size.y);
+                    leaf.anchorMin = leaf.anchorMax = new Vector2(center, .5f);
+                    leaf.anchoredPosition = Vector2.zero;
                     if (shape > 2)
-                    { Label("CookingHelp", group.transform, "Намажьте тесто на круг.\nНачните жарку.\nПереверните готовую сторону.\nПеренесите блин на тарелку.\nДобавьте начинку из заказа.\nВыберите форму и сложите.", x, 245, 420, 330, 28); continue; }
-                    var title = Label("RecipeName", group.transform, names[shape], x, 150, 420, 104, 34, Ink, true); title.alignment = TextAnchor.MiddleCenter;
-                    Art("Fold", group.transform, "kitchen/fold-" + shapes[shape] + ".png", x + 18, 267, 363, 230);
-                    var gesture = Label("Gestures", group.transform, shape == 0 ? "↑   →" : shape == 1 ? "→   ←   ↓   ↑" : "↓   ↓   ↓", x, 510, 420, 55, 34); gesture.alignment = TextAnchor.MiddleCenter;
-                    Picture("Filling1", group.transform, art.containers[shape == 1 ? 4 : 0], x + 30, 576, 130, 118);
-                    Art("Plus", group.transform, "ui/glyphs/plus.png", x + 176, 602, 45, 45);
-                    Picture("Filling2", group.transform, art.containers[shape == 1 ? 3 : 1], x + 245, 576, 130, 118);
+                    { Label("CookingHelp", leaf, "Намажьте тесто на круг.\nНачните жарку.\nПереверните готовую сторону.\nПеренесите блин на тарелку.\nДобавьте начинку из заказа.\nВыберите форму и сложите.", 0, size.y * .2f, width, 330, 28); continue; }
+                    var title = Label("RecipeName", leaf, names[shape], 0, size.y * .07f, width, 104, 34, Ink, true); title.alignment = TextAnchor.MiddleCenter;
+                    Art("Fold", leaf, "kitchen/fold-" + shapes[shape] + ".png", (width - 363) * .5f, size.y * .233f, 363, 230);
+                    var gesture = Label("Gestures", leaf, shape == 0 ? "↑   →" : shape == 1 ? "→   ←   ↓   ↑" : "↓   ↓   ↓", 0, size.y * .573f, width, 55, 34); gesture.alignment = TextAnchor.MiddleCenter;
+                    Picture("Filling1", leaf, art.containers[shape == 1 ? 4 : 0], width * .5f - 175, size.y * .665f, 130, 118);
+                    Art("Plus", leaf, "ui/glyphs/plus.png", (width - 45) * .5f, size.y * .665f + (118 - 45) * .5f, 45, 45);
+                    Picture("Filling2", leaf, art.containers[shape == 1 ? 3 : 1], width * .5f + 45, size.y * .665f, 130, 118);
                 }
             }
-            IconButton("PreviousRecipe", book.transform, "ui/glyphs/arrow-left.png", 203, 726, 120, 70, () => ShowRecipePage(0));
-            IconButton("NextRecipe", book.transform, "ui/glyphs/arrow-right.png", 1282, 726, 120, 70, () => ShowRecipePage(1));
+            IconButton("PreviousRecipe", paper, "ui/glyphs/arrow-left.png", 28, size.y - 90, 120, 70, () => ShowRecipePage(0));
+            IconButton("NextRecipe", paper, "ui/glyphs/arrow-right.png", size.x - 148, size.y - 90, 120, 70, () => ShowRecipePage(1));
             IconButton("CloseBook", book.transform, "ui/glyphs/close.png", 1470, 29, 102, 78, CloseBook);
             ShowRecipePage(0); book.SetActive(false);
         }
-        private void BuildFacade()
+        private void BuildMainMenu()
         {
-            facade = Group("Facade"); Art("FacadeArt", facade.transform, "decor/facade_base.png", 0, 0, 1600, 900, false);
-            IconButton("ContinueShift", facade.transform, "ui/glyphs/play.png", 698, 744, 205, 100, PlayFromFacade);
-            IconButton("FacadeShop", facade.transform, "ui/glyphs/shop.png", 940, 744, 120, 100, OpenShop);
-            facade.SetActive(false);
+            mainMenu = Group("MainMenu"); Art("MainMenuArt", mainMenu.transform, "decor/facade_base.png", 0, 0, 1600, 900, false);
+            BuildSignboard();
+            var play = Button("ContinueShift", mainMenu.transform, "", 610, 744, 380, 100, PlayFromMainMenu);
+            mainMenuPlayLabel = play.GetComponentInChildren<Text>();
+            mainMenuPlayLabel.fontSize = 30;
+            mainMenuShop = IconButton("MainMenuShop", mainMenu.transform, "ui/glyphs/shop.png", 1028, 744, 120, 100, OpenShop);
+            IconButton("MainMenuSettings", mainMenu.transform, "ui/glyphs/pause.png", 452, 744, 120, 100, OpenSettings);
+            mainMenu.SetActive(false);
         }
         private void BuildPause()
         {
-            pausePanel = Modal("PauseMenu"); Paper("Menu", pausePanel.transform, 420, 130, 760, 640);
-            var title = Label("Title", pausePanel.transform, "Пауза", 520, 160, 560, 65, 40, Ink, true); title.alignment = TextAnchor.MiddleCenter;
-            IconButton("Resume", pausePanel.transform, "ui/glyphs/play.png", 510, 250, 139, 114, () => { controller.SetPause(PauseReason.Menu, false); Audio.PlayUi(SoundCue.Back); });
-            var sound = IconButton("Sound", pausePanel.transform, "ui/settings-speaker.png", 730, 250, 139, 114, () => { Audio.SetMuted(!Audio.Muted); Audio.PlayUi(SoundCue.Toggle); });
+            pausePanel = Modal("PauseMenu"); Paper("Menu", pausePanel.transform, 420, 130, 760, 705);
+            var title = Label("Title", pausePanel.transform, "Настройки", 520, 160, 560, 65, 40, Ink, true); title.alignment = TextAnchor.MiddleCenter;
+            IconButton("Resume", pausePanel.transform, "ui/glyphs/play.png", 523, 250, 114, 114, CloseSettings, preserveFrame: true);
+            var sound = IconButton("Sound", pausePanel.transform, "ui/settings-speaker.png", 743, 250, 114, 114, () => { Audio.SetMuted(!Audio.Muted); Audio.PlayUi(SoundCue.Toggle); }, preserveFrame: true);
             soundIcon = sound.transform.Find("Icon").GetComponent<RawImage>();
-            IconButton("ExitToFacade", pausePanel.transform, "ui/glyphs/exit.png", 950, 250, 139, 114, ShowFacade);
+            IconButton("ExitToMainMenu", pausePanel.transform, "ui/glyphs/home.png", 963, 250, 114, 114, ShowMainMenu, preserveFrame: true);
             Label("ResumeHelp", pausePanel.transform, "Продолжить", 490, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
             Label("SoundHelp", pausePanel.transform, "Звук", 710, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
-            Label("ExitHelp", pausePanel.transform, "К фасаду", 930, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
+            Label("ExitHelp", pausePanel.transform, "Главное меню", 930, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
+            restartDay = Button("RestartDay", pausePanel.transform, "Начать день заново", 585, 420, 430, 55, RestartCurrentDay, preserveCaps: true);
             BuildAudioControls();
+            BuildResetControls();
             pausePanel.SetActive(false);
         }
     }

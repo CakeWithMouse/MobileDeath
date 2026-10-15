@@ -24,6 +24,36 @@ namespace Blinopek.Tests
             string root = Path.GetFullPath(Path.Combine("Library", "BlinopekTests")) + Path.DirectorySeparatorChar;
             if (directory.StartsWith(root, StringComparison.OrdinalIgnoreCase)) Directory.Delete(directory, true);
         }
+        [Test] public void DayRestartIsAtomicAndSurvivesFileReload()
+        {
+            var rules = new BalanceRules(); var store = new FileGameStore(file);
+            var game = new GameController(store, new LocalDevelopmentGateway(), rules); game.StartDay(34);
+            game.Dispatch(new GameCommand(ActionKind.Accept));
+            game.Dispatch(new GameCommand(ActionKind.BeginStroke, -1, 500, 500));
+            game.SetPause(PauseReason.Menu, true);
+            var original = game.Session; string before = File.ReadAllText(file);
+            Directory.CreateDirectory(file + ".writing");
+            Assert.That(game.RestartDay(), Is.False);
+            Assert.That(game.Session, Is.SameAs(original)); Assert.That(game.Pauses, Is.EqualTo(PauseReason.Menu));
+            Assert.That(File.ReadAllText(file), Is.EqualTo(before)); Assert.That(game.StorageError, Is.Not.Null);
+            Directory.Delete(file + ".writing");
+            Assert.That(game.RestartDay(), Is.True); Assert.That(game.StorageError, Is.Null);
+            var restored = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules);
+            Assert.That(restored.Session.ElapsedTicks, Is.Zero); Assert.That(restored.Session.Pancake, Is.Null);
+            Assert.That(restored.Session.Order.Phase, Is.EqualTo(OrderPhase.Offered));
+            Assert.That(restored.Session.FreeCooking && restored.Session.ManualServing, Is.True);
+            Assert.That(JsonUtility.ToJson(restored.Profile), Is.EqualTo(JsonUtility.ToJson(original.StartProfile)));
+        }
+
+        [Test] public void JsonRoundTripKeepsTableUpgradeAndLegacyProfilesStartLight()
+        {
+            Assert.That(JsonUtility.FromJson<Profile>("{\"day\":3,\"coins\":3000}").darkTablesUpgrade, Is.False);
+            var store = new FileGameStore(file);
+            store.Save(new SavedGame { profile = new Profile { darkTablesUpgrade = true }, rules = new BalanceRules(), awaitingDay = true });
+            var restored = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), new BalanceRules());
+            Assert.That(restored.StorageBlocked, Is.False);
+            Assert.That(restored.Profile.darkTablesUpgrade, Is.True);
+        }
         [Test] public void JsonRoundTripReplaysOpenStrokeAndEndsPointerCapture()
         {
             var store = new FileGameStore(file); var game = new GameController(store, new LocalDevelopmentGateway(), new BalanceRules());
@@ -57,6 +87,47 @@ namespace Blinopek.Tests
             Assert.That(restored.Session.PanPancake.HeatA, Is.EqualTo(3));
             Assert.That(restored.Session.ReadyPancakes.Count, Is.EqualTo(1));
         }
+        [Test] public void DecorationIntervalSurvivesJsonAndRebalancing()
+        {
+            var rules = new BalanceRules { guestIntervalTicks = 40, guestArrivalBaseTicks = 80, guestArrivalMinTicks = 40, guestArrivalReductionPerDecorationPointTicks = 2, darkTablesDecorationPoints = 10, patiencePerPancakeTicks = 4 };
+            var store = new FileGameStore(file);
+            store.Save(new SavedGame { profile = new Profile { tutorialComplete = true, darkTablesUpgrade = true }, rules = rules, awaitingDay = true });
+            var game = new GameController(store, new LocalDevelopmentGateway(), rules); Assert.That(game.StartDay(7), Is.True);
+            game.Dispatch(new GameCommand(ActionKind.Accept)); game.Dispatch(new GameCommand(ActionKind.Tick, 4));
+            game.Dispatch(new GameCommand(ActionKind.Tick, 45)); game.Save();
+            rules.guestArrivalBaseTicks = 200; rules.darkTablesDecorationPoints = 30;
+            var restored = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules);
+            Assert.That(restored.Session.DecorationPoints, Is.EqualTo(10));
+            Assert.That(restored.Session.GuestArrivalIntervalTicks, Is.EqualTo(60));
+            Assert.That(restored.Session.GuestHasLeft, Is.True);
+            restored.Dispatch(new GameCommand(ActionKind.Tick, 14));
+            Assert.That(restored.Session.Order.Id, Is.EqualTo(1));
+            restored.Dispatch(new GameCommand(ActionKind.Tick, 1));
+            Assert.That(restored.Session.Order.Id, Is.EqualTo(2));
+            var again = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules);
+            Assert.That(again.Session.Order.Id, Is.EqualTo(2));
+            Assert.That(again.Session.Balance, Is.EqualTo(restored.Session.Balance));
+        }
+
+        [Test] public void JsonWithoutDecorationBalanceKeepsLegacyArrivalTiming()
+        {
+            var rules = new BalanceRules { guestIntervalTicks = 20, patiencePerPancakeTicks = 4 };
+            var store = new FileGameStore(file);
+            store.Save(new SavedGame { profile = new Profile { tutorialComplete = true, darkTablesUpgrade = true }, rules = rules, awaitingDay = true });
+            var game = new GameController(store, new LocalDevelopmentGateway(), rules); Assert.That(game.StartDay(7), Is.True);
+            game.Dispatch(new GameCommand(ActionKind.Accept)); game.Dispatch(new GameCommand(ActionKind.Tick, 24)); game.Save();
+            var envelope = JsonUtility.FromJson<Envelope>(File.ReadAllText(file));
+            envelope.payload = envelope.payload.Replace("\"guestArrivalBaseTicks\":0,", "").Replace("\"guestArrivalMinTicks\":0,", "")
+                .Replace("\"guestArrivalReductionPerDecorationPointTicks\":0,", "").Replace("\"darkTablesDecorationPoints\":10,", "");
+            using (var hash = SHA256.Create()) envelope.checksum = Convert.ToBase64String(hash.ComputeHash(Encoding.UTF8.GetBytes(envelope.payload)));
+            File.WriteAllText(file, JsonUtility.ToJson(envelope));
+            var nextRules = new BalanceRules { guestArrivalBaseTicks = 80, guestArrivalMinTicks = 40, guestArrivalReductionPerDecorationPointTicks = 2 };
+            var restored = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), nextRules);
+            Assert.That(restored.Session.GuestArrivalIntervalTicks, Is.EqualTo(20));
+            Assert.That(restored.Session.Order.Id, Is.EqualTo(2));
+            Assert.That(restored.Session.Balance, Is.EqualTo(game.Session.Balance));
+        }
+
         [Test] public void CorruptedPrimaryRecoversBackupAndRetainsCorruptEvidence()
         {
             var store = new FileGameStore(file); var saved = new SavedGame { profile = new Profile(), rules = new BalanceRules() };
