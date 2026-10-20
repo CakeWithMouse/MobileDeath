@@ -45,7 +45,7 @@ namespace Blinopek.Editor
             if (!File.Exists(BootstrapPath))
             {
                 var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, UnityEngine.Application.isBatchMode ? NewSceneMode.Single : NewSceneMode.Additive);
-                var go = new GameObject("AppRoot"); SceneManager.MoveGameObjectToScene(go, scene); go.AddComponent<AppBootstrap>().content = config;
+                var go = new GameObject("AppRoot"); SceneManager.MoveGameObjectToScene(go, scene); go.AddComponent<GameStartup>().content = config;
                 EditorSceneManager.SaveScene(scene, BootstrapPath); if (!UnityEngine.Application.isBatchMode) EditorSceneManager.CloseScene(scene, true);
             }
             if (!File.Exists(CafePath))

@@ -211,11 +211,11 @@ public static class CookingAnimationValidation
         // View integration is checked separately from the asset preview; no user save is opened.
         var store = new MemoryStore { Data = new Blinopek.Application.SavedGame { profile = new Profile { day = 1, tutorialComplete = true, demonstrationSeen = true, ownedIngredients = 31 }, rules = art.balance } };
         var controller = new Blinopek.Application.GameController(store, new Blinopek.Infrastructure.LocalDevelopmentGateway(), art.balance);
-        var go = new GameObject("View lifecycle validation"); var view = go.AddComponent<GameView>(); view.Initialize(controller, art);
-        Check(view.Session != null, "GameView initializes with animated surfaces");
-        typeof(GameView).GetMethod("PlayFromMainMenu", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+        var go = new GameObject("View lifecycle validation"); var view = go.AddComponent<GameSystem>(); view.Initialize(controller, art);
+        Check(view.Session != null, "GameSystem initializes with animated surfaces");
+        typeof(GameSystem).GetMethod("PlayFromMainMenu", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
         Check(view.Command(ActionKind.Accept), "View accepts an order after entering from the main menu");
-        typeof(GameView).GetMethod("SwitchKitchen", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, new object[] { true });
+        typeof(GameSystem).GetMethod("SwitchKitchen", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, new object[] { true });
         Check(view.Command(ActionKind.BeginStroke, -1, 500, 500), "View starts batter after entering the kitchen"); view.Command(ActionKind.EndStroke);
         view.Session.Pancake.Batter.Stamp(500, 500, 500);
         view.Command(ActionKind.FinishBatter); view.Command(ActionKind.Tick, 100); view.Command(ActionKind.Flip); view.Command(ActionKind.Tick, 100); view.Command(ActionKind.MoveToPlate);
@@ -227,7 +227,7 @@ public static class CookingAnimationValidation
         Check(view.Session.Pancake == null && plate.gameObject.activeInHierarchy && plate.Motion.Folding, "Final fold remains on the plate after simulation serves the order");
         Check(!view.Capture(42), "Finished animation cannot accidentally start another pancake");
         controller.SetPause(Blinopek.Application.PauseReason.Menu, true); float pose = plate.Motion.FoldPosition;
-        typeof(GameView).GetMethod("LateUpdate", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+        typeof(GameSystem).GetMethod("LateUpdate", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
         Check(plate.Motion.FoldPosition == pose, "Game pause freezes the final fold before delivery");
         controller.SetPause(Blinopek.Application.PauseReason.Menu, false); Advance(plate.Motion, 2); view.Refresh();
         Check(!plate.gameObject.activeInHierarchy, "Delivery switches screens only after the final fold completes");

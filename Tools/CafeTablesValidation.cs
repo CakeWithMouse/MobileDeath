@@ -18,12 +18,15 @@ public static class CafeTablesValidation
     private static readonly BindingFlags PrivateStatic = BindingFlags.NonPublic | BindingFlags.Static;
     private static string output;
     private static GameContent art;
-    private static GameView view;
+    private static GameSystem view;
     private static Camera camera;
     private static void Check(bool value, string message)
     { if (!value) throw new Exception(message); checks.Add("PASS " + message); }
     private static void Invoke(string method, params object[] args)
-        => typeof(GameView).GetMethod(method, BindingFlags.NonPublic | BindingFlags.Instance).Invoke(view, args);
+    {
+        object target = method == "SelectShopPage" ? (object)view.Scene : view;
+        target.GetType().GetMethod(method, BindingFlags.NonPublic | BindingFlags.Instance).Invoke(target, args);
+    }
     private static void SetRenderField(string name, object value)
         => typeof(CookingScreenValidation).GetField(name, PrivateStatic).SetValue(null, value);
     private static void Render(string name)
@@ -55,7 +58,7 @@ public static class CafeTablesValidation
             var store = new FileGameStore(save);
             store.Save(new SavedGame { profile = new Profile { day = 6, tutorialComplete = true, demonstrationSeen = true, coins = 100000, ownedIngredients = 31 }, rules = art.balance, awaitingDay = true });
             var controller = new GameController(store, new LocalDevelopmentGateway(), art.balance);
-            view = new GameObject("Cafe table validation").AddComponent<GameView>(); view.Initialize(controller, art);
+            view = new GameObject("Cafe table validation").AddComponent<GameSystem>(); view.Initialize(controller, art);
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0, 0, -10); camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(.12f, .16f, .13f);
             Invoke("PlayFromMainMenu"); Tables(false); Render("01-default-light");
@@ -72,7 +75,7 @@ public static class CafeTablesValidation
             UnityEngine.Object.DestroyImmediate(view.gameObject);
             controller = new GameController(new FileGameStore(save), new LocalDevelopmentGateway(), art.balance);
             Check(controller.Profile.darkTablesUpgrade, "Real JSON save reload retains the purchase");
-            view = new GameObject("Reloaded cafe").AddComponent<GameView>(); view.Initialize(controller, art);
+            view = new GameObject("Reloaded cafe").AddComponent<GameSystem>(); view.Initialize(controller, art);
             Invoke("PlayFromMainMenu"); Tables(true); Render("04-upgrade-after-reload");
             File.WriteAllLines(Path.Combine(output, "PASSED.txt"), checks); Debug.Log("CAFE_TABLES_PASSED " + checks.Count);
             EditorApplication.Exit(0);

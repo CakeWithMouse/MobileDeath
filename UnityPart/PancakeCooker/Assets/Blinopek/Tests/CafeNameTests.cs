@@ -19,7 +19,7 @@ namespace Blinopek.Tests
         private BalanceRules rules;
         private GameController game;
         private GameContent content;
-        private GameView view;
+        private GameSystem view;
         [SetUp] public void Setup()
         {
             directory = Path.GetFullPath(Path.Combine("Library", "BlinopekTests", Guid.NewGuid().ToString("N")));
@@ -40,7 +40,7 @@ namespace Blinopek.Tests
         {
             content = ScriptableObject.CreateInstance<GameContent>(); content.balance = rules;
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            view = new GameObject("Cafe name test").AddComponent<GameView>(); view.Initialize(game, content);
+            view = new GameObject("Cafe name test").AddComponent<GameSystem>(); view.Initialize(game, content);
             Canvas.ForceUpdateCanvases();
         }
         private GameObject Find(string name) => view.GetComponentsInChildren<Transform>(true).Single(t => t.name == name).gameObject;

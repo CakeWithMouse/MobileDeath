@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee10e322208a44e4481cc50d8d20dda5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Blinopek.Bootstrap::Blinopek.Bootstrap.AppBootstrap
+  m_EditorClassIdentifier: Blinopek.Bootstrap::Blinopek.Bootstrap.GameStartup
   content: {fileID: 11400000, guid: 75c7e0bd92c88034ca547f68923fad35, type: 2}
 --- !u!4 &1418625745
 Transform:

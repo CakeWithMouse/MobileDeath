@@ -22,14 +22,14 @@ public static class PortionStencilValidation
         public SavedGame Load() => Data;
         public void Save(SavedGame value) { Data = value; }
     }
-    private static GameView view;
+    private static GameSystem view;
     private static Canvas canvas;
     private static RectTransform root;
     private static Camera camera;
     private static string output;
     private static RectTransform Find(string name) => view.GetComponentsInChildren<RectTransform>(true).Single(t => t.name == name);
     private static void Invoke(string name, params object[] args)
-        => typeof(GameView).GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view, args);
+        => typeof(GameSystem).GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view, args);
     private static void Input()
     {
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -78,7 +78,7 @@ public static class PortionStencilValidation
     }
     private static void Advance()
     {
-        var motions = (Dictionary<PancakeState, CookingMotion>)typeof(GameView).GetField("motions", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(view);
+        var motions = (Dictionary<PancakeState, CookingMotion>)typeof(GameScene).GetField("motions", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(view.Scene);
         for (int i = 0; i < 30; i++) foreach (var motion in motions.Values) motion.Advance(.1f);
         view.Refresh();
     }
@@ -93,7 +93,7 @@ public static class PortionStencilValidation
             art.balance.readyTicks = 2; art.balance.burnTicks = 6;
             var store = new MemoryStore { Data = new SavedGame { profile = new Profile {
                 tutorialComplete = true, demonstrationSeen = true, coins = 100000, ownedIngredients = 31, scrapers = 4 } } };
-            view = new GameObject("Portion stencil render").AddComponent<GameView>();
+            view = new GameObject("Portion stencil render").AddComponent<GameSystem>();
             view.Initialize(new GameController(store, new LocalDevelopmentGateway(), art.balance), art);
             Invoke("PlayFromMainMenu"); Invoke("SwitchKitchen", true);
             canvas = view.GetComponentInChildren<Canvas>(); root = Find("SafeArea");

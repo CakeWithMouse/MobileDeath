@@ -17,12 +17,13 @@ namespace Blinopek.Tests
         private sealed class MemoryStore : IGameStore
         {
             public SavedGame Data;
+            public int SaveCount;
             public SavedGame Load() => Data;
-            public void Save(SavedGame data) { Data = data; }
+            public void Save(SavedGame data) { Data = data; SaveCount++; }
         }
         private MemoryStore store;
         private GameContent content;
-        private GameView view;
+        private GameSystem view;
         private GameController game;
 
         [SetUp] public void Setup()
@@ -38,7 +39,7 @@ namespace Blinopek.Tests
         }
         private void BuildView()
         {
-            view = new GameObject("Menu navigation test").AddComponent<GameView>();
+            view = new GameObject("Menu navigation test").AddComponent<GameSystem>();
             view.Initialize(game, content); Canvas.ForceUpdateCanvases();
             Invoke("Update"); Canvas.ForceUpdateCanvases();
         }
@@ -48,7 +49,7 @@ namespace Blinopek.Tests
             if (content != null) Object.DestroyImmediate(content);
         }
         private GameObject Find(string name) => view.GetComponentsInChildren<Transform>(true).Single(t => t.name == name).gameObject;
-        private void Invoke(string method) => typeof(GameView).GetMethod(method, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view, null);
+        private void Invoke(string method) => typeof(GameSystem).GetMethod(method, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view, null);
         private void Click(string name)
         {
             var button = Find(name).GetComponent<Button>();
@@ -110,6 +111,78 @@ namespace Blinopek.Tests
             Assert.That(game.Session.Ledger.Revenue, Is.EqualTo(game.Session.Order.Price));
             Assert.That(store.Data.commands.Count(c => c.kind == ActionKind.Accept), Is.EqualTo(1));
             Assert.That(Find("Counter").activeInHierarchy, Is.True);
+        }
+
+        [Test]
+        public void RenderingSceneDoesNotAcceptOrdersAdvanceTimeOrSave()
+        {
+            // Invoke the real play callback without the test helper's system refresh.
+            Find("ContinueShift").GetComponent<Button>().onClick.Invoke();
+            Assert.That(game.Paused, Is.False);
+            Assert.That(game.Session.Order.Phase, Is.EqualTo(OrderPhase.Offered));
+            var session = game.Session;
+            int commands = store.Data.commands.Count, writes = store.SaveCount;
+            int revision = session.Revision, ticks = session.ElapsedTicks;
+            var pauses = game.Pauses;
+
+            view.Scene.Render();
+            view.Scene.Render();
+
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+            Assert.That(game.Session, Is.SameAs(session));
+            Assert.That(session.Order.Phase, Is.EqualTo(OrderPhase.Offered));
+            Assert.That(session.Revision, Is.EqualTo(revision));
+            Assert.That(session.ElapsedTicks, Is.EqualTo(ticks));
+            Assert.That(store.Data.commands.Count, Is.EqualTo(commands));
+            Assert.That(store.SaveCount, Is.EqualTo(writes));
+            Assert.That(game.Pauses, Is.EqualTo(pauses));
+            Assert.That(view.AtMainMenu, Is.False);
+
+            view.Refresh();
+            view.Refresh();
+            Assert.That(session.Order.Phase, Is.EqualTo(OrderPhase.Accepted));
+            Assert.That(store.Data.commands.Count(c => c.kind == ActionKind.Accept), Is.EqualTo(1));
+        }
+
+        [Test] public void OnlySystemNavigatesBackToCounterAfterServing()
+        {
+            Click("ContinueShift"); Click("KitchenTab");
+            Assert.That(view.InKitchen, Is.True);
+            Assert.That(game.Dispatch(new GameCommand(ActionKind.ServeOrder)), Is.True);
+
+            // Rendering can display the new order state, but cannot choose the next screen.
+            view.Scene.Render(); view.Scene.Render();
+            Assert.That(view.InKitchen, Is.True);
+            Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
+
+            view.Refresh();
+            Assert.That(view.InKitchen, Is.False);
+            Assert.That(Find("Counter").activeInHierarchy, Is.True);
+        }
+
+        [Test] public void ClosingSettingsPreservesFocusPause()
+        {
+            Click("ContinueShift"); Click("Pause");
+            view.SetPause(PauseReason.Focus, true);
+            Click("Resume");
+            Assert.That(view.SettingsOpen, Is.False);
+            Assert.That(game.Pauses, Is.EqualTo(PauseReason.Focus));
+            Assert.That(game.Dispatch(new GameCommand(ActionKind.Tick, 1)), Is.False);
+            view.SetPause(PauseReason.Focus, false);
+            Assert.That(game.Dispatch(new GameCommand(ActionKind.Tick, 1)), Is.True);
+        }
+
+        [Test] public void SystemForwardsAudioEventsAndUnsubscribesWhenDestroyed()
+        {
+            Click("ContinueShift");
+            int before = view.Audio.FeedbackVersion;
+            Assert.That(game.Dispatch(new GameCommand(ActionKind.ServeOrder)), Is.True);
+            Assert.That(view.Audio.FeedbackVersion, Is.GreaterThan(before));
+
+            Object.DestroyImmediate(view.gameObject);
+            // Any remaining audio handler would touch destroyed AudioSources on the next pause.
+            Assert.DoesNotThrow(() => game.SetPause(PauseReason.Menu, true));
+            Assert.DoesNotThrow(() => game.SetPause(PauseReason.Menu, false));
         }
 
         [Test] public void ClosingFacadeSettingsRefreshesOnTheNextFrame()

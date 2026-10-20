@@ -19,18 +19,19 @@ namespace Blinopek.Tests
             public void Save(SavedGame data) { Data = data; }
         }
         private GameContent content;
-        private GameView view;
+        private GameSystem view;
+        private GameController game;
         [SetUp] public void Setup()
         {
             content = ScriptableObject.CreateInstance<GameContent>();
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             content.balance = new BalanceRules { readyTicks = 2, burnTicks = 6, dayTicks = 10000, patiencePerPancakeTicks = 100 };
             var store = new MemoryStore { Data = new SavedGame { profile = new Profile { tutorialComplete = true, demonstrationSeen = true, coins = 10000 } } };
-            var game = new GameController(store, new LocalDevelopmentGateway(), content.balance);
-            view = new GameObject("Free cooking test").AddComponent<GameView>();
+            game = new GameController(store, new LocalDevelopmentGateway(), content.balance);
+            view = new GameObject("Free cooking test").AddComponent<GameSystem>();
             view.Initialize(game, content); Canvas.ForceUpdateCanvases();
             // EditMode has no Update loop to fit the safe area before pointer raycasts.
-            typeof(GameView).GetMethod("Update", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+            typeof(GameSystem).GetMethod("Update", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
             Canvas.ForceUpdateCanvases(); Click("ContinueShift");
         }
         [TearDown] public void Cleanup()
@@ -59,7 +60,7 @@ namespace Blinopek.Tests
             Assert.That(view.OwnsPointer(3), Is.False);
         }
         private void Send(ActionKind kind, int a = 0, int b = 0)
-        { Assert.That(view.Controller.Dispatch(new GameCommand(kind, a, b)), Is.True, kind.ToString()); }
+        { Assert.That(game.Dispatch(new GameCommand(kind, a, b)), Is.True, kind.ToString()); }
         private void SwipePlate(Vector2 delta)
         {
             var surface = Find("PlateSurface"); var rect = surface.GetComponent<RectTransform>();
@@ -164,7 +165,7 @@ namespace Blinopek.Tests
             Send(ActionKind.Tick, view.Session.Rules.dayTicks + view.Session.Rules.guestIntervalTicks);
             content.balance.guestArrivalBaseTicks = 80; content.balance.guestArrivalMinTicks = 40;
             content.balance.guestArrivalReductionPerDecorationPointTicks = 2;
-            Assert.That(view.Controller.StartDay(7), Is.True);
+            Assert.That(game.StartDay(7), Is.True);
             Send(ActionKind.Accept); Send(ActionKind.Tick, view.Session.Order.PatienceLimit);
             Send(ActionKind.Tick, 40); view.Refresh();
             Assert.That(view.Session.GuestHasLeft, Is.True);
@@ -196,9 +197,9 @@ namespace Blinopek.Tests
             Click("KitchenTab");
             for (int i = 0; i < 3; i++)
             {
-                CoreScenarios.Paint(c => Assert.That(view.Controller.Dispatch(c), Is.True), -1);
+                CoreScenarios.Paint(c => Assert.That(game.Dispatch(c), Is.True), -1);
                 Send(ActionKind.FinishBatter); Send(ActionKind.Tick, 2); Send(ActionKind.Flip); Send(ActionKind.Tick, 2); Send(ActionKind.MoveToPlate);
-                CoreScenarios.Paint(c => Assert.That(view.Controller.Dispatch(c), Is.True), 0);
+                CoreScenarios.Paint(c => Assert.That(game.Dispatch(c), Is.True), 0);
                 Send(ActionKind.BeginFold); Send(ActionKind.FoldGesture, 0, 400); Send(ActionKind.FoldGesture, 400, 0);
             }
             view.Refresh();
@@ -224,9 +225,9 @@ namespace Blinopek.Tests
 
         private void PrepareReadyPortion()
         {
-            CoreScenarios.Paint(c => Assert.That(view.Controller.Dispatch(c), Is.True), -1);
+            CoreScenarios.Paint(c => Assert.That(game.Dispatch(c), Is.True), -1);
             Send(ActionKind.FinishBatter); Send(ActionKind.Tick, 2); Send(ActionKind.Flip); Send(ActionKind.Tick, 2); Send(ActionKind.MoveToPlate);
-            CoreScenarios.Paint(c => Assert.That(view.Controller.Dispatch(c), Is.True), 0);
+            CoreScenarios.Paint(c => Assert.That(game.Dispatch(c), Is.True), 0);
             Send(ActionKind.BeginFold); Send(ActionKind.FoldGesture, 0, 400); Send(ActionKind.FoldGesture, 400, 0);
             view.Refresh();
             foreach (var graphic in view.GetComponentsInChildren<PancakeGraphic>(true))
@@ -319,9 +320,9 @@ namespace Blinopek.Tests
         public void TrayTapCannotStartServingWhilePausedOrWithoutAnActiveOrder(string targetName)
         {
             Click("KitchenTab"); PrepareReadyPortion(); var target = Find(targetName);
-            view.Controller.SetPause(PauseReason.Menu, true); view.Refresh(); Tap(target);
+            game.SetPause(PauseReason.Menu, true); view.Refresh(); Tap(target);
             Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
-            view.Controller.SetPause(PauseReason.Menu, false); view.Refresh();
+            game.SetPause(PauseReason.Menu, false); view.Refresh();
             Send(ActionKind.Tick, view.Session.Order.PatienceLimit); view.Refresh(); Tap(target);
             Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Cancelled));
             Assert.That(Find("Kitchen").activeInHierarchy, Is.True);
@@ -481,14 +482,14 @@ namespace Blinopek.Tests
         {
             Click("KitchenTab"); PrepareReadyPortion(); Click("KitchenTray");
             SwipeTray(view.TrayServeDirection * 100, () => {
-                if (pause) view.Controller.SetPause(PauseReason.Menu, true);
+                if (pause) game.SetPause(PauseReason.Menu, true);
                 else Send(ActionKind.Tick, view.Session.Order.PatienceLimit);
                 view.Refresh();
             });
             Assert.That(view.Session.Order.Phase, Is.EqualTo(pause ? OrderPhase.Accepted : OrderPhase.Cancelled));
             Assert.That(view.Session.Order.Phase, Is.Not.EqualTo(OrderPhase.Served));
             if (pause) {
-                view.Controller.SetPause(PauseReason.Menu, false); view.Refresh();
+                game.SetPause(PauseReason.Menu, false); view.Refresh();
                 SwipeTray(view.TrayServeDirection * 100);
                 Assert.That(view.Session.Order.Phase, Is.EqualTo(OrderPhase.Served));
             }

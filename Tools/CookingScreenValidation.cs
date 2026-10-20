@@ -26,14 +26,14 @@ public static class CookingScreenValidation
     private static readonly List<string> checks = new List<string>();
     private static string output;
     private static GameContent art;
-    private static GameView view;
+    private static GameSystem view;
     private static Camera camera;
     private static Canvas canvas;
     private static RectTransform root;
     private static void Check(bool value, string message)
     { if (!value) throw new Exception(message); checks.Add("PASS " + message); }
     private static void Invoke(string method, params object[] args)
-        => typeof(GameView).GetMethod(method, BindingFlags.NonPublic | BindingFlags.Instance).Invoke(view, args);
+        => typeof(GameSystem).GetMethod(method, BindingFlags.NonPublic | BindingFlags.Instance).Invoke(view, args);
     private static RectTransform Rect(string name)
         => view.GetComponentsInChildren<RectTransform>(true).Single(x => x.name == name);
     private static Texture2D Load(string path)
@@ -96,7 +96,7 @@ public static class CookingScreenValidation
     }
     private static void Advance(float seconds)
     {
-        var motions = (Dictionary<PancakeState, CookingMotion>)typeof(GameView).GetField("motions", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(view);
+        var motions = (Dictionary<PancakeState, CookingMotion>)typeof(GameScene).GetField("motions", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(view.Scene);
         while (seconds > 0) { float step = Mathf.Min(seconds, .05f); foreach (var motion in motions.Values) motion.Advance(step); seconds -= step; }
         view.Refresh();
     }
@@ -127,7 +127,7 @@ public static class CookingScreenValidation
             art = Artwork(Environment.GetEnvironmentVariable("BLINOPEK_ANIMATION_ART"));
             var store = new MemoryStore { Data = new SavedGame { profile = new Profile { day = 6, tutorialComplete = true, demonstrationSeen = true, coins = 100000, ownedIngredients = 31 }, rules = art.balance } };
             var controller = new GameController(store, new LocalDevelopmentGateway(), art.balance);
-            view = new GameObject("Cooking screen validation").AddComponent<GameView>(); view.Initialize(controller, art);
+            view = new GameObject("Cooking screen validation").AddComponent<GameSystem>(); view.Initialize(controller, art);
             Invoke("PlayFromMainMenu"); view.Command(ActionKind.Accept); Invoke("SwitchKitchen", true);
             canvas = view.GetComponentInChildren<Canvas>(); root = Rect("SafeArea");
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;

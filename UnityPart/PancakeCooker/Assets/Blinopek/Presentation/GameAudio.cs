@@ -9,15 +9,22 @@ namespace Blinopek.Presentation
     // Local presentation only: no sound state is written into the deterministic gameplay save.
     public sealed class GameAudio : MonoBehaviour
     {
-        private const string Pref = "Blinopek.Audio.";
-        private GameController controller;
-        private GameAudioLibrary library;
+        // 1) Владеет объектом.
+        // Создаёт источники звука и обработчик звуковой обратной связи.
         private AudioFeedback feedback;
         private AudioSource ui, fry, gesture, ambience, dayMusic, menuMusic;
+        private AudioSource[] voices;
+
+        // 2) Общается через API.
+        // Читает модель; события контроллера передаёт GameSystem, который владеет подписками.
+        private IGameState state;
+        private GameAudioLibrary library;
+
+        // 3) Внутренние поля и объекты класса.
+        private const string Pref = "Blinopek.Audio.";
         private readonly List<Pending> pending = new List<Pending>();
         private readonly Dictionary<SoundCue, int> variants = new Dictionary<SoundCue, int>();
         private readonly Dictionary<SoundCue, int> played = new Dictionary<SoundCue, int>();
-        private AudioSource[] voices;
         private readonly float[] voiceGains = new float[8];
         private bool kitchen, mainMenu, worldPaused, suspended, settingsDirty, persistSettings;
         private float clock, gestureUntil, changedAt, lastError = -10;
@@ -35,9 +42,9 @@ namespace Blinopek.Presentation
 
         private struct Pending { public SoundCue Cue; public float At; }
 
-        public void Initialize(GameController game, GameAudioLibrary content)
+        public void Initialize(IGameState game, GameAudioLibrary content)
         {
-            controller = game; library = content; feedback = new AudioFeedback(game.Session);
+            state = game; library = content; feedback = new AudioFeedback(game.Session);
             persistSettings = Array.IndexOf(Environment.GetCommandLineArgs(), "-blinopekSmoke") < 0;
             if (persistSettings)
             {
@@ -52,8 +59,6 @@ namespace Blinopek.Presentation
             ambience = Source("Audio Cafe", true); dayMusic = Source("Audio Day Music", true); menuMusic = Source("Audio Menu Music", true);
             voices = new AudioSource[8];
             for (int i = 0; i < voices.Length; i++) voices[i] = Source("Audio Effect " + i);
-            controller.CommandApplied += OnCommand; controller.DayStarted += OnDay;
-            controller.PurchaseApplied += OnPurchase; controller.Changed += SyncPause;
             if (library == null) Debug.LogWarning("Blinopek audio library is missing. Run Prepare gameplay scenes.");
             SyncPause();
         }
@@ -81,11 +86,11 @@ namespace Blinopek.Presentation
             PlayerPrefs.SetFloat(Pref + "Ambience", AmbienceVolume); PlayerPrefs.SetInt(Pref + "Muted", Muted ? 1 : 0);
             PlayerPrefs.SetInt(Pref + "CookingAlerts", CookingAlerts ? 1 : 0); PlayerPrefs.Save(); settingsDirty = false;
         }
-        private void SyncPause()
+        internal void SyncPause()
         {
             bool wasPaused = worldPaused, wasSuspended = suspended;
-            worldPaused = controller.Paused;
-            suspended = (controller.Pauses & (PauseReason.Focus | PauseReason.Background)) != 0;
+            worldPaused = state.Paused;
+            suspended = (state.Pauses & (PauseReason.Focus | PauseReason.Background)) != 0;
             if (worldPaused && !wasPaused) StopWorld();
             if (suspended && !wasSuspended)
             {
@@ -99,16 +104,16 @@ namespace Blinopek.Presentation
             fry.Stop(); gesture.Stop(); fry.volume = gesture.volume = 0;
             foreach (var voice in voices) voice.Stop();
         }
-        private void OnDay()
+        internal void OnDay()
         {
-            StopWorld(); feedback.Reset(controller.Session);
+            StopWorld(); feedback.Reset(state.Session);
             Queue(SoundCue.DayOpen); Queue(SoundCue.GuestEnter, .7f);
         }
-        private void OnPurchase(ShopItem item)
+        internal void OnPurchase(ShopItem item)
         { PlayUi(item == ShopItem.ToggleHelper ? SoundCue.Toggle : SoundCue.Purchase); }
-        private void OnCommand(GameCommand command)
+        internal void OnCommand(GameCommand command)
         {
-            foreach (var signal in feedback.AfterCommand(controller.Session, command))
+            foreach (var signal in feedback.AfterCommand(state.Session, command))
             {
                 if (signal.Cue == SoundCue.Ready && !CookingAlerts) continue;
                 Queue(signal.Cue, signal.Delay);
@@ -169,7 +174,7 @@ namespace Blinopek.Presentation
         }
         private void Update()
         {
-            if (controller == null || library == null) return;
+            if (state == null || library == null) return;
             if (settingsDirty && Time.unscaledTime - changedAt > .4f) SavePreferences();
             if (suspended) return;
             float dt = Mathf.Min(Time.unscaledDeltaTime, .25f);
@@ -184,7 +189,7 @@ namespace Blinopek.Presentation
             }
             ui.volume = Muted ? 0 : EffectsVolume;
             for (int i = 0; i < voices.Length; i++) voices[i].volume = Muted ? 0 : voiceGains[i] * EffectsVolume;
-            var s = controller.Session; var p = s?.PanPancake;
+            var s = state.Session; var p = s?.PanPancake;
             bool frying = p != null && (p.Stage == PancakeStage.SideA || p.Stage == PancakeStage.SideB) && s.CanCook;
             float world = Muted || worldPaused ? 0 : EffectsVolume;
             Loop(fry, library.frying, frying ? world * (kitchen ? .6f : .22f) : 0, 2.5f, dt);
@@ -204,9 +209,6 @@ namespace Blinopek.Presentation
         private void OnDestroy()
         {
             SavePreferences();
-            if (controller == null) return;
-            controller.CommandApplied -= OnCommand; controller.DayStarted -= OnDay;
-            controller.PurchaseApplied -= OnPurchase; controller.Changed -= SyncPause;
         }
     }
 }

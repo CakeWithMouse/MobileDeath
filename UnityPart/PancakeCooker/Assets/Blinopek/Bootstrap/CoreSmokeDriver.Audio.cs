@@ -13,21 +13,21 @@ namespace Blinopek.Bootstrap
     {
         private IEnumerator VerifyGestureAudio()
         {
-            View.Command(ActionKind.BeginStroke, -1, 500, 500); yield return new WaitForSecondsRealtime(.07f);
-            Check(View.Audio.GestureActive, "Accepted batter gesture starts its loop");
+            System.Command(ActionKind.BeginStroke, -1, 500, 500); yield return new WaitForSecondsRealtime(.07f);
+            Check(System.Audio.GestureActive, "Accepted batter gesture starts its loop");
             yield return new WaitForSecondsRealtime(.4f);
-            Check(!View.Audio.GestureActive, "Stationary finger stops gesture sound");
-            View.Command(ActionKind.Stroke, 700, 500); yield return new WaitForSecondsRealtime(.07f);
-            Check(View.Audio.GestureActive, "Moving held finger resumes gesture sound");
-            View.Command(ActionKind.EndStroke); yield return new WaitForSecondsRealtime(.2f);
-            Check(!View.Audio.GestureActive, "Releasing finger ends gesture sound");
+            Check(!System.Audio.GestureActive, "Stationary finger stops gesture sound");
+            System.Command(ActionKind.Stroke, 700, 500); yield return new WaitForSecondsRealtime(.07f);
+            Check(System.Audio.GestureActive, "Moving held finger resumes gesture sound");
+            System.Command(ActionKind.EndStroke); yield return new WaitForSecondsRealtime(.2f);
+            Check(!System.Audio.GestureActive, "Releasing finger ends gesture sound");
         }
         private IEnumerator VerifyAudio()
         {
-            Check(View.Audio.HasLibrary, "Game audio library is linked");
+            Check(System.Audio.HasLibrary, "Game audio library is linked");
             Check(FindObjectsByType<AudioListener>().Length == 1, "One audio listener");
             yield return new WaitForSecondsRealtime(.3f);
-            Check(View.Audio.FryingActive, "Cooking plays frying loop");
+            Check(System.Audio.FryingActive, "Cooking plays frying loop");
             var samples = new float[1024]; float peak = 0;
             for (int attempt = 0; attempt < 8; attempt++) {
                 AudioListener.GetOutputData(samples, 0); foreach (float sample in samples) peak = Mathf.Max(peak, Mathf.Abs(sample));
@@ -35,31 +35,31 @@ namespace Blinopek.Bootstrap
             }
             Check(peak > .00001f, "Unity audio output contains a non-silent mix");
             Click("KitchenRecipeBook"); yield return null;
-            Check(!View.Audio.FryingActive && View.Audio.PlayedCount(SoundCue.BookOpen) == 1, "Recipe book stops cooking loop and plays page opening");
+            Check(!System.Audio.FryingActive && System.Audio.PlayedCount(SoundCue.BookOpen) == 1, "Recipe book stops cooking loop and plays page opening");
             Click("CloseBook"); yield return new WaitForSecondsRealtime(.2f);
-            Check(View.Audio.FryingActive, "Closing recipe book resumes cooking loop");
+            Check(System.Audio.FryingActive, "Closing recipe book resumes cooking loop");
             Click("Pause"); yield return null;
-            Check(!View.Audio.FryingActive, "Pause stops cooking audio");
+            Check(!System.Audio.FryingActive, "Pause stops cooking audio");
             var slider = GameObject.Find("MusicVolume").GetComponent<Slider>();
             var pointer = new PointerEventData(EventSystem.current) { button = PointerEventData.InputButton.Left, position = Position((RectTransform)slider.transform, .75f, .5f) };
             ExecuteEvents.Execute(slider.gameObject, pointer, ExecuteEvents.pointerDownHandler);
             ExecuteEvents.Execute(slider.gameObject, pointer, ExecuteEvents.pointerUpHandler);
-            Check(View.Audio.MusicVolume > .65f && View.Audio.MusicVolume < .85f, "Music slider responds to pointer input");
-            Click("CookingAlerts"); Check(View.Audio.CookingAlerts, "Readiness cue toggle works");
+            Check(System.Audio.MusicVolume > .65f && System.Audio.MusicVolume < .85f, "Music slider responds to pointer input");
+            Click("CookingAlerts"); Check(System.Audio.CookingAlerts, "Readiness cue toggle works");
             yield return Shot("audio-settings");
-            Click("Sound"); Check(View.Audio.Muted, "Mute button works");
+            Click("Sound"); Check(System.Audio.Muted, "Mute button works");
             yield return new WaitForSecondsRealtime(.2f);
-            Check(View.GetComponentsInChildren<AudioSource>().All(s => !s.isPlaying || s.volume == 0), "Mute silences all audio buses");
+            Check(System.GetComponentsInChildren<AudioSource>().All(s => !s.isPlaying || s.volume == 0), "Mute silences all audio buses");
             Click("Sound"); Click("Resume"); yield return new WaitForSecondsRealtime(.2f);
-            Check(!View.Audio.Muted && View.Audio.FryingActive, "Unmute and resume restore cooking sound");
-            View.Controller.SetPause(PauseReason.Background, true); View.Controller.SetPause(PauseReason.Focus, true);
+            Check(!System.Audio.Muted && System.Audio.FryingActive, "Unmute and resume restore cooking sound");
+            System.SetPause(PauseReason.Background, true); System.SetPause(PauseReason.Focus, true);
             yield return null;
-            Check(View.GetComponentsInChildren<AudioSource>().All(s => !s.isPlaying), "Background and focus suspend all sources");
-            View.Controller.SetPause(PauseReason.Background, false); yield return null;
-            Check(!View.Audio.FryingActive, "Remaining focus pause keeps audio suspended");
-            View.Controller.SetPause(PauseReason.Focus, false); yield return new WaitForSecondsRealtime(.2f);
-            Check(View.Audio.FryingActive, "Clearing final pause resumes frying");
-            slider.value = .35f; View.Audio.SetCookingAlerts(false);
+            Check(System.GetComponentsInChildren<AudioSource>().All(s => !s.isPlaying), "Background and focus suspend all sources");
+            System.SetPause(PauseReason.Background, false); yield return null;
+            Check(!System.Audio.FryingActive, "Remaining focus pause keeps audio suspended");
+            System.SetPause(PauseReason.Focus, false); yield return new WaitForSecondsRealtime(.2f);
+            Check(System.Audio.FryingActive, "Clearing final pause resumes frying");
+            slider.value = .35f; System.Audio.SetCookingAlerts(false);
         }
     }
 }

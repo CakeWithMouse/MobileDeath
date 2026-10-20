@@ -5,44 +5,28 @@ using UnityEngine.UI;
 
 namespace Blinopek.Presentation
 {
-    public sealed partial class GameView
+    public sealed partial class GameScene
     {
-        private bool settingsAtMainMenu;
+        // 1) Владеет объектом.
+        // Элементы настроек и подтверждения сброса, созданные GameScene.
         private Button restartDay;
         private GameObject resetConfirmation;
         private Text resetError;
 
-        private void OpenSettings()
-        {
-            settingsAtMainMenu = atMainMenu;
-            pausePanel.transform.SetAsLastSibling();
-            controller.SetPause(PauseReason.Menu, true);
-        }
-        private void CloseSettings()
-        {
-            settingsAtMainMenu = false;
-            if (!atMainMenu) controller.SetPause(PauseReason.Menu, false);
-            dirty = true;
-            Audio.PlayUi(SoundCue.Back);
-        }
-        private void RestartCurrentDay()
-        {
-            if (atMainMenu) return;
-            if (!controller.RestartDay()) { Audio.PlayUi(SoundCue.Error); return; }
-            ReleasePointer(); HidePortionGhost(); HideReadyGhost();
-            motions.Clear(); trayPancakes.Clear(); showKitchen = false;
-            SelectedIngredient = 0; batterSelected = true; selectedReadyId = trayPage = 0;
-            previousPhase = OrderPhase.Offered; tickRemainder = saveTimer = 0;
-            book.SetActive(false); orderDetails.SetActive(false); resetConfirmation.SetActive(false);
-            settingsAtMainMenu = false; pausePanel.SetActive(false); dirty = true;
-        }
+        // 2) Общается через API.
+        // Через system запрашивает паузу, перезапуск и сброс; зависимости объявлены в GameScene.cs.
+
+        // 3) Внутренние поля и объекты класса.
+        // Ошибка сброса хранится в resetError; навигацией и паузами владеет GameSystem.
+        internal void RaiseSettings() => pausePanel.transform.SetAsLastSibling();
+
         private void BuildResetControls()
         {
             var reset = Button("ResetProgress", pausePanel.transform, "Сбросить прогресс", 585, 735, 430, 64, () => {
                 resetError.text = "";
                 resetConfirmation.transform.SetAsLastSibling(); resetConfirmation.SetActive(true);
             }, preserveCaps: true);
-            reset.interactable = controller.CanResetProgress;
+            reset.interactable = state.CanResetProgress;
             var danger = new Color(.65f, .18f, .12f);
             reset.GetComponentInChildren<Text>().color = danger;
             resetConfirmation = Modal("ResetProgressConfirmation");
@@ -60,16 +44,8 @@ namespace Blinopek.Presentation
         }
         private void ConfirmResetProgress()
         {
-            if (!controller.ResetProgress()) {
+            if (!system.ResetProgress())
                 resetError.text = "Не удалось сбросить прогресс. Проверьте свободное место и повторите попытку.";
-                Audio.PlayUi(SoundCue.Error); return;
-            }
-            resetConfirmation.SetActive(false); book.SetActive(false); orderDetails.SetActive(false);
-            ReleasePointer(); HidePortionGhost(); HideReadyGhost();
-            motions.Clear(); trayPancakes.Clear(); showKitchen = false;
-            SelectedIngredient = 0; batterSelected = true; selectedReadyId = trayPage = 0;
-            previousPhase = OrderPhase.Offered; tickRemainder = saveTimer = 0;
-            ShowMainMenu();
         }
     }
 }

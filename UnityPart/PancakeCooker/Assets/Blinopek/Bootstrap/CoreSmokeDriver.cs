@@ -16,7 +16,7 @@ namespace Blinopek.Bootstrap
     // Opt-in QA player smoke test. Requires a separate -blinopekSave path.
     public sealed partial class CoreSmokeDriver : MonoBehaviour
     {
-        public GameView View;
+        public GameSystem System;
         private string output;
         private readonly List<string> assertions = new List<string>();
         private IEnumerator Start()
@@ -42,13 +42,13 @@ namespace Blinopek.Bootstrap
             File.WriteAllLines(Path.Combine(output, "PASSED.txt"), assertions); UnityEngine.Application.Quit(0);
         }
         private void Check(bool pass, string message) { if (!pass) throw new Exception(message); assertions.Add("PASS " + message); }
-        private void Resume() { View.Controller.SetPause(PauseReason.Focus | PauseReason.Background | PauseReason.Menu, false); }
+        private void Resume() { System.SetPause(PauseReason.Focus | PauseReason.Background | PauseReason.Menu, false); }
         private IEnumerator Shot(string name)
         {
-            View.Refresh(); Canvas.ForceUpdateCanvases(); yield return new WaitForEndOfFrame();
+            System.Refresh(); Canvas.ForceUpdateCanvases(); yield return new WaitForEndOfFrame();
             // Hidden Windows players can have no back buffer. Render the actual Canvas into a target
             // through the same URP camera, then restore its normal screen-overlay mode before input.
-            var canvas = View.GetComponentInChildren<Canvas>(); var camera = Camera.main;
+            var canvas = System.GetComponentInChildren<Canvas>(); var camera = Camera.main;
             var mode = canvas.renderMode; var canvasCamera = canvas.worldCamera; float distance = canvas.planeDistance;
             var previousTarget = camera.targetTexture; var previousActive = RenderTexture.active;
             var target = RenderTexture.GetTemporary(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
@@ -78,7 +78,7 @@ namespace Blinopek.Bootstrap
             var go = GameObject.Find(name); Check(go != null, name + " exists");
             var button = go.GetComponent<Button>(); Check(button != null && button.IsInteractable(), name + " is interactable");
             var eventData = new PointerEventData(EventSystem.current) { button = PointerEventData.InputButton.Left };
-            ExecuteEvents.Execute(go, eventData, ExecuteEvents.pointerClickHandler); View.Refresh(); Canvas.ForceUpdateCanvases();
+            ExecuteEvents.Execute(go, eventData, ExecuteEvents.pointerClickHandler); System.Refresh(); Canvas.ForceUpdateCanvases();
         }
         private static Vector2 Position(RectTransform rect, float x, float y)
         { return RectTransformUtility.WorldToScreenPoint(null, rect.TransformPoint(new Vector3((x - .5f) * rect.rect.width, (y - .5f) * rect.rect.height))); }
@@ -89,7 +89,7 @@ namespace Blinopek.Bootstrap
             if (checkHit) { var hits = new List<RaycastResult>(); EventSystem.current.RaycastAll(pointer, hits); Check(hits.Count > 0 && hits[0].gameObject == surface, surfaceName + " receives the pointer through graphics (hit " + (hits.Count > 0 ? hits[0].gameObject.name : "none") + " at " + from + ")"); }
             ExecuteEvents.Execute(surface, pointer, ExecuteEvents.pointerDownHandler);
             pointer.position = to; ExecuteEvents.Execute(surface, pointer, ExecuteEvents.dragHandler); ExecuteEvents.Execute(surface, pointer, ExecuteEvents.pointerUpHandler);
-            View.Refresh(); Canvas.ForceUpdateCanvases();
+            System.Refresh(); Canvas.ForceUpdateCanvases();
         }
         private void Paint(string surfaceName)
         {
@@ -102,80 +102,80 @@ namespace Blinopek.Bootstrap
         }
         private void HandOverTray()
         {
-            Check(View.Session.Order.Phase == OrderPhase.Accepted && View.Session.Order.Report == null, "Serve button waits for the tray gesture");
+            Check(System.Session.Order.Phase == OrderPhase.Accepted && System.Session.Order.Report == null, "Serve button waits for the tray gesture");
             Check(GameObject.Find("Counter") != null && GameObject.Find("Kitchen") == null, "Serve button opens the customer counter");
             var tray = GameObject.Find("DeliveryTray").GetComponent<RectTransform>();
             var parent = (RectTransform)tray.parent;
-            var destination = parent.InverseTransformPoint(tray.position) + (Vector3)(View.TrayServeDirection * 100);
+            var destination = parent.InverseTransformPoint(tray.position) + (Vector3)(System.TrayServeDirection * 100);
             Drag("DeliveryTray", Position(tray, .5f, .5f), RectTransformUtility.WorldToScreenPoint(null, parent.TransformPoint(destination)));
         }
         private IEnumerator Run()
         {
-            View.Controller.SetPause(PauseReason.Focus | PauseReason.Background, false);
-            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Game opens at the main menu with the shift paused");
+            System.SetPause(PauseReason.Focus | PauseReason.Background, false);
+            Check(GameObject.Find("MainMenu") != null && System.State.Paused, "Game opens at the main menu with the shift paused");
             yield return Shot("00-main-menu");
             Click("MainMenuShop"); yield return Shot("00-main-menu-shop"); Click("CloseShop");
-            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Closing shop returns to the paused main menu");
+            Check(GameObject.Find("MainMenu") != null && System.State.Paused, "Closing shop returns to the paused main menu");
             Click("ContinueShift");
-            Check(!View.Controller.Paused && GameObject.Find("MainMenu") == null, "MainMenu play starts the shift");
+            Check(!System.State.Paused && GameObject.Find("MainMenu") == null, "MainMenu play starts the shift");
             yield return Shot("01-counter"); Click("KitchenTab"); yield return Shot("02-kitchen");
             yield return VerifyGestureAudio();
-            Paint("PanSurface"); Check(View.Session.Pancake.Batter.Percent >= 90, "Pointer strokes cover the pan");
-            Click("FinishBatter"); yield return VerifyAudio(); View.Command(ActionKind.Tick, 200); yield return Shot("03-burnt-lesson");
+            Paint("PanSurface"); Check(System.Session.Pancake.Batter.Percent >= 90, "Pointer strokes cover the pan");
+            Click("FinishBatter"); yield return VerifyAudio(); System.Command(ActionKind.Tick, 200); yield return Shot("03-burnt-lesson");
             var pan = GameObject.Find("PanSurface").GetComponent<RectTransform>(); var bin = GameObject.Find("DiscardZone").GetComponent<RectTransform>();
             Drag("PanSurface", Position(pan, .5f, .5f), Position(bin, .5f, .5f));
-            Check(View.Session.Pancake == null && View.Session.DemonstrationSeen, "Dragging to the bin completes demonstration");
-            Paint("PanSurface"); Click("FinishBatter"); View.Command(ActionKind.Tick, 200); View.Refresh();
-            Click("FlipHandle"); View.Command(ActionKind.Tick, 200); View.Refresh(); yield return Shot("04-second-side");
+            Check(System.Session.Pancake == null && System.Session.DemonstrationSeen, "Dragging to the bin completes demonstration");
+            Paint("PanSurface"); Click("FinishBatter"); System.Command(ActionKind.Tick, 200); System.Refresh();
+            Click("FlipHandle"); System.Command(ActionKind.Tick, 200); System.Refresh(); yield return Shot("04-second-side");
             var plate = GameObject.Find("PlateSurface").GetComponent<RectTransform>();
             Drag("PanSurface", Position(pan, .5f, .5f), Position(plate, .5f, .5f));
-            Check(View.Session.Pancake.Stage == PancakeStage.Plate, "Dragging moves a cooked pancake to the plate");
+            Check(System.Session.Pancake.Stage == PancakeStage.Plate, "Dragging moves a cooked pancake to the plate");
             Paint("PlateSurface"); yield return Shot("05-butter"); Click("Fold0");
             Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .51f, .51f));
-            Check(View.Session.Pancake.Folds.Count == 0, "A tap with finger jitter does not fold the pancake");
+            Check(System.Session.Pancake.Folds.Count == 0, "A tap with finger jitter does not fold the pancake");
             Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .5f, .63f));
-            Check(View.Session.Pancake.Folds.Count == 1, "A short swipe from the pancake center folds upward");
+            Check(System.Session.Pancake.Folds.Count == 1, "A short swipe from the pancake center folds upward");
             yield return Shot("06-fold");
             Drag("PlateSurface", Position(plate, .5f, .5f), Position(plate, .58f, .5f));
             yield return new WaitForSecondsRealtime(CookingMotion.FoldSeconds * 2 + .1f);
             Click("KitchenTray");
             yield return null; HandOverTray();
-            Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Pointer-driven tutorial serves a correct order");
+            Check(System.Session.Order.Phase == OrderPhase.Served && System.Session.Order.Report.Total >= 95, "Pointer-driven tutorial serves a correct order");
             yield return new WaitForSecondsRealtime(2);
-            Check(View.Audio.PlayedCount(SoundCue.Serve) == 1 && View.Audio.PlayedCount(SoundCue.Payment) == 1, "Tutorial serving and payment clips play once");
+            Check(System.Audio.PlayedCount(SoundCue.Serve) == 1 && System.Audio.PlayedCount(SoundCue.Payment) == 1, "Tutorial serving and payment clips play once");
             yield return Shot("07-served");
-            View.Command(ActionKind.Tick, View.Session.Rules.dayTicks); View.Refresh();
-            Check(View.Session.Phase == DayPhase.Result && View.Controller.Profile.day == 2, "Day settles and advances"); yield return Shot("08-results");
-            var completedSession = View.Session;
+            System.Command(ActionKind.Tick, System.Session.Rules.dayTicks); System.Refresh();
+            Check(System.Session.Phase == DayPhase.Result && System.State.Profile.day == 2, "Day settles and advances"); yield return Shot("08-results");
+            var completedSession = System.Session;
             Click("ReturnToMainMenu");
-            Check(View.Session == completedSession && View.Session.Phase == DayPhase.Result && View.Controller.Paused, "Result returns to main menu without starting another shift");
+            Check(System.Session == completedSession && System.Session.Phase == DayPhase.Result && System.State.Paused, "Result returns to main menu without starting another shift");
             yield return Shot("08-main-menu-after-results");
             Click("MainMenuShop"); yield return Shot("09-shop");
-            Click("BuyIngredient1"); Check(View.Controller.Profile.Owns(Ingredient.Jam), "Shop unlock persists");
+            Click("BuyIngredient1"); Check(System.State.Profile.Owns(Ingredient.Jam), "Shop unlock persists");
             Click("BuyIngredient3"); Click("UpgradeTab"); Click("BuyScraper");
             Click("CloseShop"); Click("ContinueShift");
-            Check(View.Session.StartProfile.Owns(Ingredient.Jam) && View.Session.StartProfile.day == 2, "Next shift receives purchases");
-            Click("RecipeBook"); int beforePause = View.Session.ElapsedTicks;
-            var names = View.GetComponentsInChildren<Text>();
+            Check(System.Session.StartProfile.Owns(Ingredient.Jam) && System.Session.StartProfile.day == 2, "Next shift receives purchases");
+            Click("RecipeBook"); int beforePause = System.Session.ElapsedTicks;
+            var names = System.GetComponentsInChildren<Text>();
             Check(Array.Exists(names, t => t.name == "RecipeName" && t.text == "Сладкий\nтреугольник") && Array.Exists(names, t => t.name == "RecipeName" && t.text == "Грибной\nконверт"), "First recipe spread has recipe names");
             yield return Shot("recipes-first"); Click("NextRecipe");
-            Check(Array.Exists(View.GetComponentsInChildren<Text>(), t => t.name == "RecipeName" && t.text == "Сладкая\nтрубочка"), "Second recipe spread has a recipe name");
+            Check(Array.Exists(System.GetComponentsInChildren<Text>(), t => t.name == "RecipeName" && t.text == "Сладкая\nтрубочка"), "Second recipe spread has a recipe name");
             yield return Shot("recipes-second");
-            Check(View.Controller.Paused && !View.Command(ActionKind.Tick, 20) && View.Session.ElapsedTicks == beforePause, "Recipe book pauses the real view controller");
-            Click("CloseBook"); Check(!View.Controller.Paused, "Recipe book closes without leaving a pause");
+            Check(System.State.Paused && !System.Command(ActionKind.Tick, 20) && System.Session.ElapsedTicks == beforePause, "Recipe book pauses the real view controller");
+            Click("CloseBook"); Check(!System.State.Paused, "Recipe book closes without leaving a pause");
             Click("KitchenTab"); yield return null; Canvas.ForceUpdateCanvases();
-            int price = View.Session.Order.Price;
-            for (int portion = 0; portion < View.Session.Order.Portions.Count; portion++)
+            int price = System.Session.Order.Price;
+            for (int portion = 0; portion < System.Session.Order.Portions.Count; portion++)
             {
-                var recipe = View.Session.Order.Portions[portion];
-                Paint("PanSurface"); Click("FinishBatter"); View.Command(ActionKind.Tick, View.Session.Rules.readyTicks);
-                Click("FlipHandle"); View.Command(ActionKind.Tick, View.Session.Rules.readyTicks); View.Refresh(); Click("MoveToPlate");
+                var recipe = System.Session.Order.Portions[portion];
+                Paint("PanSurface"); Click("FinishBatter"); System.Command(ActionKind.Tick, System.Session.Rules.readyTicks);
+                Click("FlipHandle"); System.Command(ActionKind.Tick, System.Session.Rules.readyTicks); System.Refresh(); Click("MoveToPlate");
                 yield return null; Canvas.ForceUpdateCanvases(); // Newly visible ingredient graphics enter the raycast registry on the next frame.
                 if (portion == 0) {
                     var curd = GameObject.Find("Ingredient3").GetComponent<RectTransform>();
                     Drag("Ingredient3", Position(curd, .5f, .5f), Position(plate, .32f, .32f));
-                    Check(View.Session.Pancake.Fillings[3]?.Portions.Count == 1, "Ingredient drag places a portion on the plate");
-                    Click("Scraper"); Check(View.Session.Pancake.Fillings[3] == null && View.Session.Scrapers == 0, "Scraper UI removes the selected filling and consumes one tool");
+                    Check(System.Session.Pancake.Fillings[3]?.Portions.Count == 1, "Ingredient drag places a portion on the plate");
+                    Click("Scraper"); Check(System.Session.Pancake.Fillings[3] == null && System.Session.Scrapers == 0, "Scraper UI removes the selected filling and consumes one tool");
                 }
                 for (int ingredient = 0; ingredient < 5; ingredient++) if (recipe.Needs((Ingredient)ingredient)) {
                     var card = GameObject.Find("Ingredient" + ingredient).GetComponent<RectTransform>();
@@ -197,8 +197,8 @@ namespace Blinopek.Bootstrap
             }
             Click("KitchenTray");
             yield return null; HandOverTray();
-            Check(View.Session.Order.Phase == OrderPhase.Served && View.Session.Order.Report.Total >= 95, "Ordinary order serves every requested portion with correct fillings and folds");
-            Check(View.Session.Ledger.Products > 0 && View.Session.Ledger.Revenue == price, "Ordinary cooking spends products and pays acceptance once");
+            Check(System.Session.Order.Phase == OrderPhase.Served && System.Session.Order.Report.Total >= 95, "Ordinary order serves every requested portion with correct fillings and folds");
+            Check(System.Session.Ledger.Products > 0 && System.Session.Ledger.Revenue == price, "Ordinary cooking spends products and pays acceptance once");
             yield return new WaitForSecondsRealtime(3);
             yield return Shot("10-ordinary-served");
         }

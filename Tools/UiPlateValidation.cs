@@ -20,12 +20,12 @@ public static class UiPlateValidation
         public void Save(SavedGame value) { }
         public void Reset(SavedGame value) { }
     }
-    private static GameView view;
+    private static GameSystem view;
     private static Camera camera;
     private static string output;
     private static readonly List<string> checks = new List<string>();
     private static GameObject Find(string name) => view.GetComponentsInChildren<Transform>(true).Single(t => t.name == name).gameObject;
-    private static void Invoke(string name, params object[] args) => typeof(GameView).GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view, args);
+    private static void Invoke(string name, params object[] args) => typeof(GameScene).GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic).Invoke(view.Scene, args);
     private static void Check(bool value, string message) { if (!value) throw new Exception(message); checks.Add(message); }
     private static void Click(string name)
     {
@@ -84,7 +84,7 @@ public static class UiPlateValidation
             art.balance = new BalanceRules { startingCoins = 10000, rent = 0, dayTicks = 2 };
             var game = new GameController(new MemoryStore(), new LocalDevelopmentGateway(), art.balance);
             game.Profile.tutorialComplete = true;
-            view = new GameObject("UI plate validation").AddComponent<GameView>(); view.Initialize(game, art);
+            view = new GameObject("UI plate validation").AddComponent<GameSystem>(); view.Initialize(game, art);
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0, 0, -10); camera.clearFlags = CameraClearFlags.SolidColor;
             if (Environment.GetEnvironmentVariable("BLINOPEK_UI_BOOK_ONLY") == "1") {
@@ -103,7 +103,7 @@ public static class UiPlateValidation
             Click("CancelResetProgress"); Click("Resume"); Click("CafeName"); Render("06-name"); Click("CancelCafeName");
             Click("ContinueShift"); Render("07-counter"); Render("08-counter-mobile", 960, 540);
             Render("09-counter-wide", 1920, 1080); Render("10-counter-tablet", 1280, 960);
-            var fill = typeof(GameView).GetMethod("FillBar", BindingFlags.Static | BindingFlags.NonPublic);
+            var fill = typeof(GameScene).GetMethod("FillBar", BindingFlags.Static | BindingFlags.NonPublic);
             foreach (float amount in new[] { 0f, .02f, .5f, 1f }) {
                 fill.Invoke(null, new object[] { Find("PatienceFill").GetComponent<Image>(), amount });
                 Render("patience-" + Mathf.RoundToInt(amount * 100));

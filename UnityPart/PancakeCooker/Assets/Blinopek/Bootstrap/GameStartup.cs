@@ -9,9 +9,16 @@ using UnityEngine.SceneManagement;
 
 namespace Blinopek.Bootstrap
 {
-    public sealed class AppBootstrap : MonoBehaviour
+    public sealed class GameStartup : MonoBehaviour
     {
+        // 1) Владеет объектом.
+        // Постоянных дочерних сервисов не хранит: создаёт GameController и передаёт его GameSystem.
+
+        // 2) Общается через API.
+        // Готовый ресурс из Unity; GameStartup не создаёт и не уничтожает его.
         public GameContent content;
+
+        // 3) Внутренние поля и объекты класса.
         private string error;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD || BLINOPEK_QA
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -42,10 +49,10 @@ namespace Blinopek.Bootstrap
             catch (Exception ex) { error = ex.ToString(); Debug.LogException(ex); }
             if (controller == null) yield break;
             yield return SceneManager.LoadSceneAsync("Cafe");
-            var view = new GameObject("CafeView").AddComponent<GameView>(); view.Initialize(controller, content);
+            var system = new GameObject("GameSystem").AddComponent<GameSystem>(); system.Initialize(controller, content);
 #if UNITY_EDITOR || DEVELOPMENT_BUILD || BLINOPEK_QA
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "-blinopekSmoke") >= 0)
-                view.gameObject.AddComponent<CoreSmokeDriver>().View = view;
+                system.gameObject.AddComponent<CoreSmokeDriver>().System = system;
 #endif
         }
         private void OnGUI()

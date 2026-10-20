@@ -16,7 +16,7 @@ namespace Blinopek.Tests
     {
         private string directory, file;
         private GameContent content;
-        private GameView view;
+        private GameSystem view;
         private readonly BalanceRules rules = new BalanceRules { startingCoins = 4200, startingHoney = 3 };
 
         [SetUp] public void Setup()
@@ -106,7 +106,7 @@ namespace Blinopek.Tests
         {
             content = ScriptableObject.CreateInstance<GameContent>(); content.balance = rules;
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            view = new GameObject("Progress reset test").AddComponent<GameView>();
+            view = new GameObject("Progress reset test").AddComponent<GameSystem>();
             view.Initialize(game, content); Canvas.ForceUpdateCanvases();
         }
         private GameObject Find(string name) => view.GetComponentsInChildren<Transform>(true).Single(t => t.name == name).gameObject;

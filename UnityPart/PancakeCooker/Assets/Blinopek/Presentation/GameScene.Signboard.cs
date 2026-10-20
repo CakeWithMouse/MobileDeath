@@ -5,20 +5,29 @@ using UnityEngine.UI;
 
 namespace Blinopek.Presentation
 {
-    public sealed partial class GameView
+    public sealed partial class GameScene
     {
+        // 1) Владеет объектом.
+        // Вывеска и элементы диалога, которые создаёт эта часть GameScene.
         private SignboardText cafeNameText;
         private Button renameCafe, saveCafeName;
         private InputField cafeNameInput;
         private GameObject cafeNameDialog;
         private Text cafeNameError, cafeNameCount;
 
+        // 2) Общается через API.
+        // Читает имя из state, проверяет через GameSystem.ValidateCafeName,
+        // сохраняет через system.RenameCafe. Ссылки объявлены в GameScene.cs.
+
+        // 3) Внутренние поля и объекты класса.
+        // Отдельного состояния нет: черновик хранится в cafeNameInput, ошибки — в надписях.
+
         private void BuildSignboard()
         {
             var rect = Rect("CafeName", mainMenu.transform, 280, 46, 1040, 110);
             cafeNameText = rect.gameObject.AddComponent<SignboardText>();
             cafeNameText.font = art.signboardFont != null ? art.signboardFont : art.titleFont;
-            cafeNameText.text = controller.CafeName; cafeNameText.fontSize = 110;
+            cafeNameText.text = state.CafeName; cafeNameText.fontSize = 110;
             cafeNameText.supportRichText = false; cafeNameText.raycastTarget = true;
             cafeNameText.horizontalOverflow = HorizontalWrapMode.Overflow;
             cafeNameText.verticalOverflow = VerticalWrapMode.Overflow;
@@ -41,7 +50,7 @@ namespace Blinopek.Presentation
             inputText.supportRichText = false; inputText.horizontalOverflow = HorizontalWrapMode.Overflow;
             cafeNameInput.textComponent = inputText;
             cafeNameInput.lineType = InputField.LineType.SingleLine;
-            cafeNameInput.characterLimit = GameController.CafeNameMaxLength;
+            cafeNameInput.characterLimit = GameSystem.CafeNameMaxLength;
             cafeNameInput.customCaretColor = true; cafeNameInput.caretColor = Ink;
             cafeNameInput.selectionColor = new Color(.47f, .62f, .49f, .35f);
             cafeNameInput.onValueChanged.AddListener(_ => UpdateCafeNameDraft());
@@ -56,36 +65,36 @@ namespace Blinopek.Presentation
         }
         private void OpenCafeNameDialog()
         {
-            if (!atMainMenu || controller.StorageBlocked || capturedPointer != int.MinValue) return;
-            cafeNameInput.SetTextWithoutNotify(controller.CafeName);
+            if (!atMainMenu || state.StorageBlocked || system.HasCapturedPointer) return;
+            cafeNameInput.SetTextWithoutNotify(state.CafeName);
             UpdateCafeNameDraft(); cafeNameDialog.transform.SetAsLastSibling(); cafeNameDialog.SetActive(true);
             cafeNameInput.Select(); cafeNameInput.ActivateInputField(); Audio.PlayUi(SoundCue.Button);
         }
         private void UpdateCafeNameDraft()
         {
-            bool valid = GameController.ValidateCafeName(cafeNameInput.text, out _, out string error);
-            cafeNameCount.text = cafeNameInput.text.Length + " / " + GameController.CafeNameMaxLength;
-            cafeNameError.text = error ?? ""; saveCafeName.interactable = valid && !controller.StorageBlocked;
+            bool valid = GameSystem.ValidateCafeName(cafeNameInput.text, out _, out string error);
+            cafeNameCount.text = cafeNameInput.text.Length + " / " + GameSystem.CafeNameMaxLength;
+            cafeNameError.text = error ?? ""; saveCafeName.interactable = valid && !state.StorageBlocked;
         }
         private void CloseCafeNameDialog()
         {
             if (cafeNameDialog == null || !cafeNameDialog.activeSelf) return;
             // Hide before deactivation, since InputField may raise onEndEdit synchronously.
-            cafeNameDialog.SetActive(false); dirty = true;
+            cafeNameDialog.SetActive(false); system.Invalidate();
         }
         private void SaveCafeName()
         {
             if (!cafeNameDialog.activeSelf) return;
-            if (!controller.RenameCafe(cafeNameInput.text, out string error)) {
+            if (!system.RenameCafe(cafeNameInput.text, out string error)) {
                 cafeNameError.text = error; Audio.PlayUi(SoundCue.Error); return;
             }
-            cafeNameText.text = controller.CafeName;
+            cafeNameText.text = state.CafeName;
             CloseCafeNameDialog();
         }
         private void RefreshSignboard()
         {
-            if (cafeNameText.text != controller.CafeName) cafeNameText.text = controller.CafeName;
-            renameCafe.interactable = !controller.StorageBlocked;
+            if (cafeNameText.text != state.CafeName) cafeNameText.text = state.CafeName;
+            renameCafe.interactable = !state.StorageBlocked;
         }
     }
 }

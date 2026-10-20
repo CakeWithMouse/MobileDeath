@@ -19,7 +19,7 @@ namespace Blinopek.Tests
             public void Save(SavedGame value) { Data = value; }
         }
         private GameContent content;
-        private GameView view;
+        private GameSystem view;
         private MemoryStore store;
         private RectTransform Plate => Find("PlateSurface").GetComponent<RectTransform>();
         private Text[] Guides => view.GetComponentsInChildren<Text>(true).Where(t => t.name == "PortionGuide").ToArray();
@@ -46,7 +46,7 @@ namespace Blinopek.Tests
             new PortionSpec(1 << type, Fold.Triangle), view.Session.Rules).Composition;
         private void Cook()
         {
-            CoreScenarios.Paint(command => Assert.That(view.Controller.Dispatch(command), Is.True), -1);
+            CoreScenarios.Paint(command => Assert.That(view.Command(command.kind, command.a, command.b, command.c, command.d), Is.True), -1);
             Send(ActionKind.FinishBatter); Send(ActionKind.Tick, 2); Send(ActionKind.Flip);
             Send(ActionKind.Tick, 2); Send(ActionKind.MoveToPlate); Refresh();
         }
@@ -57,9 +57,9 @@ namespace Blinopek.Tests
             content.balance = new BalanceRules { readyTicks = 2, burnTicks = 6, dayTicks = 10000, patiencePerPancakeTicks = 10000 };
             store = new MemoryStore { Data = new SavedGame { profile = new Profile {
                 tutorialComplete = true, demonstrationSeen = true, coins = 10000, ownedIngredients = 31, scrapers = 3 } } };
-            view = new GameObject("Portion stencil tests").AddComponent<GameView>();
+            view = new GameObject("Portion stencil tests").AddComponent<GameSystem>();
             view.Initialize(new GameController(store, new LocalDevelopmentGateway(), content.balance), content);
-            typeof(GameView).GetMethod("Update", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
+            typeof(GameSystem).GetMethod("Update", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);
             Refresh(); Click("ContinueShift"); Click("KitchenTab"); Cook();
         }
         [TearDown] public void Cleanup()
@@ -154,7 +154,7 @@ namespace Blinopek.Tests
         [TestCase(3), TestCase(4)] public void CancelledGestureCannotRestoreGhost(int type)
         {
             var e = Begin(type);
-            var focus = typeof(GameView).GetMethod("OnApplicationFocus", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            var focus = typeof(GameSystem).GetMethod("OnApplicationFocus", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
             focus.Invoke(view, new object[] { false }); focus.Invoke(view, new object[] { true });
             e.position = Screen(Plate);
             ExecuteEvents.Execute(Find("Ingredient" + type), e, ExecuteEvents.dragHandler);

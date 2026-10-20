@@ -15,7 +15,7 @@ using UnityEngine.UI;
 public static class SignboardValidation
 {
     private static readonly List<string> checks = new List<string>();
-    private static GameView view;
+    private static GameSystem view;
     private static Camera camera;
     private static string output;
     private static void Check(bool condition, string message) { if (!condition) throw new Exception(message); checks.Add("PASS " + message); }
@@ -55,7 +55,7 @@ public static class SignboardValidation
             foreach (char c in "БлинопёкЁжик") Check(art.signboardFont.HasCharacter(c), "Font contains " + c);
             string save = Path.Combine(output,"isolated-"+Guid.NewGuid().ToString("N")+".json");
             var game = new GameController(new FileGameStore(save),new LocalDevelopmentGateway(),art.balance);
-            view = new GameObject("Signboard validation").AddComponent<GameView>(); view.Initialize(game,art);
+            view = new GameObject("Signboard validation").AddComponent<GameSystem>(); view.Initialize(game,art);
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0,0,-10); camera.clearFlags = CameraClearFlags.SolidColor;
             Render("01-main-menu","CafeName"); Click("CafeName");
@@ -66,7 +66,7 @@ public static class SignboardValidation
             UnityEngine.Object.DestroyImmediate(view.gameObject);
             game = new GameController(new FileGameStore(save),new LocalDevelopmentGateway(),art.balance);
             Check(game.CafeName == "Мёд и масло","Player name survives actual disk reload");
-            view = new GameObject("Reloaded signboard").AddComponent<GameView>(); view.Initialize(game,art);
+            view = new GameObject("Reloaded signboard").AddComponent<GameSystem>(); view.Initialize(game,art);
             game.RenameCafe("Блинная у тёплого окна",out _); Render("04-long-name","CafeName");
             game.RenameCafe("Блинопёк",out _); Render("05-mobile", "CafeName", 960,540);
             Check(!ShaderUtil.ShaderHasError(art.signboardShader),"Paint shader renders without errors");

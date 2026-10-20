@@ -4,13 +4,21 @@ using Blinopek.Domain;
 
 namespace Blinopek.Application
 {
-    public sealed partial class GameController
+    public sealed partial class GameController : IGameState
     {
+        // 1) Владеет объектом.
+        // Сохранение в памяти и активная смена создаются/заменяются только контроллером.
+        private SavedGame saved;
+        public DaySession Session { get; private set; }
+
+        // 2) Общается через API.
+        // Адаптеры передаёт GameStartup; реализации хранения и сервера контроллеру неизвестны.
         private readonly IGameStore store;
         private readonly IDayGateway gateway;
         private readonly BalanceRules nextRules;
-        private SavedGame saved;
-        public DaySession Session { get; private set; }
+
+        // 3) Внутренние поля и объекты класса.
+        // Состояние пауз/хранения и API чтения текущего профиля.
         public Profile Profile => saved.profile;
         public PauseReason Pauses { get; private set; }
         public bool Paused => Pauses != PauseReason.None;

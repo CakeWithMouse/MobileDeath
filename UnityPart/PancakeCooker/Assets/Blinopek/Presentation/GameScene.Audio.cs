@@ -5,10 +5,19 @@ using UnityEngine.UI;
 
 namespace Blinopek.Presentation
 {
-    public sealed partial class GameView
+    public sealed partial class GameScene
     {
+        // 1) Владеет объектом.
+        // Элементы интерфейса звука; сам GameAudio принадлежит GameSystem.
         private RawImage soundIcon;
         private Text cookingAlertsLabel;
+
+        // 2) Общается через API.
+        // Через Audio читает и меняет настройки звука; ссылка объявлена в GameScene.cs.
+
+        // 3) Внутренние поля и объекты класса.
+        // Отдельной копии настроек нет: значения хранятся в GameAudio.
+
         private void BuildAudioControls()
         {
             AudioSlider("MusicVolume", "Музыка", 495, Audio.MusicVolume, Audio.SetMusicVolume);

@@ -22,15 +22,15 @@ public static class MenuNavigationValidation
     private static readonly List<string> checks = new List<string>();
     private static void Check(bool condition, string message)
     { if (!condition) throw new Exception(message); checks.Add("PASS " + message); }
-    private static Button Button(GameView view, string name)
+    private static Button Button(GameSystem view, string name)
         => view.GetComponentsInChildren<Button>(true).Single(b => b.name == name);
-    private static void Click(GameView view, string name)
+    private static void Click(GameSystem view, string name)
     {
         var b = Button(view, name);
         Check(b.gameObject.activeInHierarchy && b.IsInteractable(), name + " is available");
         b.onClick.Invoke(); view.Refresh(); Canvas.ForceUpdateCanvases();
     }
-    private static bool Visible(GameView view, string name)
+    private static bool Visible(GameSystem view, string name)
         => view.GetComponentsInChildren<Transform>().Any(t => t.name == name);
     private static void Verify(bool failure)
     {
@@ -38,7 +38,7 @@ public static class MenuNavigationValidation
         content.balance = new BalanceRules { startingCoins = 10000, rent = failure ? 50000 : 0, dayTicks = 2 };
         var controller = new GameController(new MemoryStore(), new LocalDevelopmentGateway(), content.balance);
         controller.Profile.tutorialComplete = true;
-        var view = new GameObject("Navigation validation").AddComponent<GameView>();
+        var view = new GameObject("Navigation validation").AddComponent<GameSystem>();
         try
         {
             view.Initialize(controller, content); Canvas.ForceUpdateCanvases();
