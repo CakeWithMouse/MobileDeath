@@ -69,6 +69,10 @@ public static class MenuNavigationValidation
             Check(view.GetComponentsInChildren<Text>().Any(t => t.name == "RecipeName" && t.text == "Сладкая\nтрубочка"), "Second spread has a recipe name");
             Click(view, "CloseBook");
             Check(controller.Dispatch(new GameCommand(ActionKind.Tick, content.balance.dayTicks + Math.Max(1, content.balance.guestIntervalTicks))), "Level finishes after the closing guest leaves"); view.Refresh();
+            // Refresh accepts the offered guest. Closing must wait for that accepted order's patience and departure.
+            for (int i = 0; i < 1000 && view.Session.Phase != DayPhase.Result; i++)
+                controller.Dispatch(new GameCommand(ActionKind.Tick, 20));
+            view.Refresh();
             Check(view.Session.Phase == DayPhase.Result && view.Session.Success != failure && Visible(view, "DayResults") && !Visible(view, "MainMenu"), "Finished level shows the result before the menu");
             int nextDay = controller.Profile.day;
             Click(view, "ReturnToMainMenu");
@@ -100,7 +104,7 @@ public static class MenuNavigationValidation
         catch (Exception ex)
         {
             File.WriteAllText(Path.Combine(folder, "FAILED.txt"), ex.ToString());
-            Debug.LogException(ex); EditorApplication.Exit(1);
+            Debug.LogException(ex); if (UnityEngine.Application.isBatchMode) EditorApplication.Exit(1); else throw;
         }
     }
 }

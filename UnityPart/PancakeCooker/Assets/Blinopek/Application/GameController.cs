@@ -10,6 +10,7 @@ namespace Blinopek.Application
         private readonly IDayGateway gateway;
         private readonly BalanceRules nextRules;
         private SavedGame saved;
+        private bool restorePending;
         public DaySession Session { get; private set; }
         public Profile Profile => saved.profile;
         public PauseReason Pauses { get; private set; }
@@ -23,7 +24,7 @@ namespace Blinopek.Application
         public event Action<GameCommand> CommandApplied;
         public event Action DayStarted;
         public event Action<ShopItem> PurchaseApplied;
-        public GameController(IGameStore store, IDayGateway gateway, BalanceRules rules)
+        public GameController(IGameStore store, IDayGateway gateway, BalanceRules rules, bool deferRestore = false)
         {
             this.store = store;
             this.gateway = gateway;
@@ -49,7 +50,8 @@ namespace Blinopek.Application
                     rules = rules,
                     awaitingDay = true
                 };
-            RestoreSession();
+            restorePending = deferRestore;
+            if (!deferRestore) RestoreSession();
         }
 
         public bool StartDay(int seed)

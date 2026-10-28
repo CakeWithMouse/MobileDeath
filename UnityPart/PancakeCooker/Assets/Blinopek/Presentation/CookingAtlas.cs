@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ namespace Blinopek.Presentation
     // cooking state and filling, in depth order. No custom overlay shader or readable imports.
     public sealed class CookingAtlas : IDisposable
     {
-        public readonly Texture2D Texture;
-        public readonly Rect[] Tiles;
+        public Texture2D Texture { get; private set; }
+        public Rect[] Tiles { get; private set; }
         public readonly float[] PoseAspects = new float[CookingFoldArt.Keys.Length];
         private readonly Color32[][] posePixels = new Color32[CookingFoldArt.Keys.Length][];
         private readonly Vector2Int[] poseSizes = new Vector2Int[CookingFoldArt.Keys.Length];
@@ -29,7 +30,9 @@ namespace Blinopek.Presentation
             int x = Mathf.Clamp(Mathf.RoundToInt(uv.x * (size.x - 1)), 0, size.x - 1), y = Mathf.Clamp(Mathf.RoundToInt(uv.y * (size.y - 1)), 0, size.y - 1);
             return posePixels[pose][y * size.x + x].a / 255f;
         }
-        public CookingAtlas(GameContent art)
+        public CookingAtlas(GameContent art) { var work = Prepare(art); while (work.MoveNext()) { } }
+        public CookingAtlas() { }
+        public IEnumerator Prepare(GameContent art)
         {
             var sources = new Texture[8] { art.raw, art.ready, art.burnt,
                 art.fillings[0], art.fillings[1], art.fillings[2], art.fillings[3], art.fillings[4] };
@@ -49,6 +52,7 @@ namespace Blinopek.Presentation
                         copies[i].ReadPixels(new Rect(0, 0, 512, 512), 0, 0); copies[i].Apply();
                     }
                     finally { RenderTexture.active = previous; RenderTexture.ReleaseTemporary(target); }
+                    yield return null;
                 }
                 foreach (var key in CookingFoldArt.Keys) if (art.Find("kitchen/" + key + ".png") == null) HasFoldArt = false;
                 silhouettes[0] = Silhouette(copies[1].GetPixels32(), 512, 512);
@@ -73,9 +77,13 @@ namespace Blinopek.Presentation
                     silhouettes[pose + 1] = Silhouette(pixels, width, height);
                     // Transfer the existing raw/burnt surface colour into the authored pose. The
                     // painted fold highlights and thickness remain; no golden icon hides bad cooking.
-                    copies.Add(CookingVariant(pixels, width, height, copies[0], copies[1], pose));
-                    copies.Add(ready);
-                    copies.Add(CookingVariant(pixels, width, height, copies[2], copies[1], pose));
+                    int rawIndex = copies.Count;
+                    copies.Add(null); copies.Add(ready); copies.Add(null);
+                    var rawWork = CookingVariant(pixels, width, height, copies[0], copies[1], pose, texture => copies[rawIndex] = texture);
+                    while (rawWork.MoveNext()) yield return rawWork.Current;
+                    var burntWork = CookingVariant(pixels, width, height, copies[2], copies[1], pose, texture => copies[rawIndex + 2] = texture);
+                    while (burntWork.MoveNext()) yield return burntWork.Current;
+                    yield return null;
                 }
                 Texture = new Texture2D(2048, 2048, TextureFormat.RGBA32, false) { name = "Cooking surfaces and authored folds", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
                 Tiles = Texture.PackTextures(copies.ToArray(), 4, 4096, true);
@@ -97,20 +105,24 @@ namespace Blinopek.Presentation
             }
             return columns;
         }
-        private static Texture2D CookingVariant(Color32[] painted, int width, int height, Texture2D surface, Texture2D reference, int poseIndex)
+        private static IEnumerator CookingVariant(Color32[] painted, int width, int height, Texture2D surface, Texture2D reference, int poseIndex, Action<Texture2D> completed)
         {
             var result = new Color32[painted.Length]; var pose = CookingFoldArt.CanonicalPose(poseIndex);
-            for (int y = 0; y < height; y++) for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++)
             {
-                int index = y * width + x; if (painted[index].a == 0) continue;
-                Vector2 uv = CookingFoldArt.Sample(pose, new Vector2((x + .5f) / width, (y + .5f) / height)).Source;
-                var cook = surface.GetPixelBilinear(uv.x, uv.y); var basis = reference.GetPixelBilinear(uv.x, uv.y); Color color = painted[index];
-                color.r = Mathf.Clamp01(color.r * cook.r / Mathf.Max(.12f, basis.r));
-                color.g = Mathf.Clamp01(color.g * cook.g / Mathf.Max(.12f, basis.g));
-                color.b = Mathf.Clamp01(color.b * cook.b / Mathf.Max(.12f, basis.b));
-                result[index] = color;
+                if (y % 16 == 0) yield return null;
+                for (int x = 0; x < width; x++)
+                {
+                    int index = y * width + x; if (painted[index].a == 0) continue;
+                    Vector2 uv = CookingFoldArt.Sample(pose, new Vector2((x + .5f) / width, (y + .5f) / height)).Source;
+                    var cook = surface.GetPixelBilinear(uv.x, uv.y); var basis = reference.GetPixelBilinear(uv.x, uv.y); Color color = painted[index];
+                    color.r = Mathf.Clamp01(color.r * cook.r / Mathf.Max(.12f, basis.r));
+                    color.g = Mathf.Clamp01(color.g * cook.g / Mathf.Max(.12f, basis.g));
+                    color.b = Mathf.Clamp01(color.b * cook.b / Mathf.Max(.12f, basis.b));
+                    result[index] = color;
+                }
             }
-            var texture = new Texture2D(width, height, TextureFormat.RGBA32, false); texture.SetPixels32(result); texture.Apply(); return texture;
+            var texture = new Texture2D(width, height, TextureFormat.RGBA32, false); texture.SetPixels32(result); texture.Apply(); completed(texture);
         }
         private static void Release(UnityEngine.Object value)
         {

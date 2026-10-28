@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "scene": "Cafe",
+  "contentKey": "cafe.default",
+  "unloadUnusedAssets": true,
+  "minimumVisibleSeconds": 1
+}

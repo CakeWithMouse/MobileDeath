@@ -10,6 +10,9 @@ namespace Blinopek.Tests
     public static partial class CoreScenarios
     {
         public static readonly Dictionary<string, Action> Cases = new Dictionary<string, Action> {
+            { "Deferred replay yields and matches synchronous restoration", DeferredLoadingReplay },
+            { "Invalid deferred replay preserves the original save", DeferredLoadingFailure },
+            { "Deferred loading preserves corrupt-storage protection", DeferredLoadingBlockedStorage },
             { "Complete order pays exactly once", CompleteOrder },
             { "First lesson burns, discards and protects retry", SafeTutorial },
             { "Second side is required before filling", CookingGuards },
