@@ -248,6 +248,7 @@ namespace Blinopek.Presentation
             Audio.SetContext(showKitchen, atMainMenu); RefreshAudioControls();
             bool continuingDay = Session != null && Session.Phase != DayPhase.Result;
             restartDay.gameObject.SetActive(!atMainMenu && continuingDay && !controller.StorageBlocked);
+            exitToMainMenu.interactable = !controller.IsNewbie;
             mainMenuPlayLabel.text = continuingDay ? "Продолжить день " + Session.StartProfile.day : "Начать день " + controller.Profile.day;
             mainMenuShop.gameObject.SetActive(CanOpenShop);
             if (!CanOpenShop) shop.SetActive(false);

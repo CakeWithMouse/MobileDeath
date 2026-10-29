@@ -52,6 +52,16 @@ namespace Blinopek.Tests
             Assert.That(game.Session, Is.Null);
             Assert.That(game.StorageBlocked, Is.False); Assert.That(game.StorageError, Is.Null);
         }
+        // A reset player is new again: the newbie shift starts instead of the main menu.
+        private void AssertNewbieShift(GameController game)
+        {
+            var expected = new Profile { coins = rules.startingCoins, honey = rules.startingHoney };
+            Assert.That(JsonUtility.ToJson(game.Profile), Is.EqualTo(JsonUtility.ToJson(expected)));
+            Assert.That(game.IsNewbie && game.Session.IsTutorial && game.Session.StartProfile.day == 1, Is.True);
+            Assert.That(game.Session.FreeCooking && game.Session.ManualServing, Is.True);
+            Assert.That(game.Paused, Is.False); Assert.That(game.StorageError, Is.Null);
+            Assert.That(Find("MainMenu").activeInHierarchy, Is.False); Assert.That(Find("Counter").activeInHierarchy, Is.True);
+        }
         [Test] public void ResetClearsProfileSessionAndOldBackupAcrossReloads()
         {
             var game = ExistingGame();
@@ -130,23 +140,11 @@ namespace Blinopek.Tests
             Click("CancelResetProgress");
             Assert.That(Find("ResetProgressConfirmation").activeSelf, Is.False);
             Assert.That(game.Session, Is.SameAs(session)); Assert.That(game.Profile.day, Is.EqualTo(8));
-            Click("ResetProgress"); Click("ConfirmResetProgress"); AssertFresh(game);
-            Assert.That(Find("MainMenu").activeInHierarchy, Is.True);
+            Click("ResetProgress"); Click("ConfirmResetProgress"); AssertNewbieShift(game);
             Assert.That(Find("PauseMenu").activeSelf || Find("ResetProgressConfirmation").activeSelf, Is.False);
             Assert.That(view.Audio.MusicVolume, Is.EqualTo(music)); Assert.That(view.Audio.EffectsVolume, Is.EqualTo(effects));
             Assert.That(view.Audio.AmbienceVolume, Is.EqualTo(ambience)); Assert.That(view.Audio.Muted, Is.EqualTo(muted));
             Assert.That(view.Audio.CookingAlerts, Is.EqualTo(alerts));
-            Click("MainMenuShop");
-            Assert.That(Find("BuyIngredient1").GetComponent<Button>().interactable, Is.False);
-            Assert.That(Find("BuyIngredient1").GetComponentInChildren<Text>().text, Is.EqualTo("Купить"));
-            Assert.That(Find("ShopBalance").GetComponent<Text>().text, Is.EqualTo("Златники: 42.00 · Жаринки: 3"));
-            Click("CloseShop");
-            Click("MainMenuSettings"); Click("Resume");
-            Assert.That(game.Paused, Is.True, "Closing settings must keep the main menu paused");
-            Click("ContinueShift");
-            Assert.That(game.Session.StartProfile.day, Is.EqualTo(1)); Assert.That(game.Session.IsTutorial, Is.True);
-            Assert.That(game.Session.FreeCooking && game.Session.ManualServing, Is.True);
-            Assert.That(game.Paused, Is.False); Assert.That(Find("Counter").activeInHierarchy, Is.True);
         }
         [Test] public void FailedResetKeepsConfirmationOpenAndCanBeRetried()
         {
@@ -155,14 +153,13 @@ namespace Blinopek.Tests
             Click("ConfirmResetProgress");
             Assert.That(game.Session, Is.SameAs(session)); Assert.That(Find("ResetProgressConfirmation").activeInHierarchy, Is.True);
             Assert.That(Find("ResetError").GetComponent<Text>().text, Is.Not.Empty);
-            Directory.Delete(file + ".writing"); Click("ConfirmResetProgress"); AssertFresh(game);
+            Directory.Delete(file + ".writing"); Click("ConfirmResetProgress"); AssertNewbieShift(game);
         }
         [Test] public void BlockedSaveCanBeResetFromMainMenuSettings()
         {
             File.WriteAllText(file, "broken"); File.WriteAllText(file + ".bak", "broken backup");
             var game = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules); BuildView(game);
-            Click("MainMenuSettings"); Click("ResetProgress"); Click("ConfirmResetProgress"); AssertFresh(game);
-            Click("ContinueShift"); Assert.That(game.Session.IsTutorial, Is.True);
+            Click("MainMenuSettings"); Click("ResetProgress"); Click("ConfirmResetProgress"); AssertNewbieShift(game);
         }
     }
 }

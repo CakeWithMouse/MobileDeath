@@ -26,7 +26,7 @@ namespace Blinopek.Tests
             Directory.CreateDirectory(directory); file = Path.Combine(directory, "name.json");
             rules = new BalanceRules { dayTicks = 2, guestIntervalTicks = 1, rent = 0 };
             game = new GameController(new FileGameStore(file), new LocalDevelopmentGateway(), rules);
-            game.Profile.tutorialComplete = true;
+            game.Profile.tutorialComplete = true; game.Profile.matchesPlayed = 1;
         }
         [TearDown] public void Cleanup()
         {

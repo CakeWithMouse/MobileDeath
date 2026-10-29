@@ -92,7 +92,7 @@ public static class PortionStencilValidation
                 .Invoke(null, new object[] { Environment.GetEnvironmentVariable("BLINOPEK_ANIMATION_ART") });
             art.balance.readyTicks = 2; art.balance.burnTicks = 6;
             var store = new MemoryStore { Data = new SavedGame { profile = new Profile {
-                tutorialComplete = true, demonstrationSeen = true, coins = 100000, ownedIngredients = 31, scrapers = 4 } } };
+                tutorialComplete = true, demonstrationSeen = true, matchesPlayed = 1, coins = 100000, ownedIngredients = 31, scrapers = 4 } } };
             view = new GameObject("Portion stencil render").AddComponent<GameView>();
             view.Initialize(new GameController(store, new LocalDevelopmentGateway(), art.balance), art);
             Invoke("PlayFromMainMenu"); Invoke("SwitchKitchen", true);

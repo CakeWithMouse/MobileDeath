@@ -37,7 +37,7 @@ public static class MenuNavigationValidation
         var content = UnityEngine.Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameContent>("Assets/Blinopek/Content/Gameplay.asset"));
         content.balance = new BalanceRules { startingCoins = 10000, rent = failure ? 50000 : 0, dayTicks = 2 };
         var controller = new GameController(new MemoryStore(), new LocalDevelopmentGateway(), content.balance);
-        controller.Profile.tutorialComplete = true;
+        controller.Profile.tutorialComplete = true; controller.Profile.matchesPlayed = 1;
         var view = new GameObject("Navigation validation").AddComponent<GameView>();
         try
         {

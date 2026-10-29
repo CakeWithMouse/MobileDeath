@@ -17,6 +17,8 @@ namespace Blinopek.Application
         public string StorageError { get; private set; }
         public bool StorageBlocked { get; private set; }
         public bool CanResetProgress => gateway.Environment == "local-development" && store is IResettableGameStore;
+        // Unknown while the save is blocked: the player then needs the menu to reset progress.
+        public bool IsNewbie => !StorageBlocked && NewbieSession.IsRequiredFor(Profile);
 
         public event Action Changed;
         // Live notifications only. Restoring the command log does not replay presentation effects.
@@ -49,6 +51,9 @@ namespace Blinopek.Application
                     rules = rules,
                     awaitingDay = true
                 };
+            // Saves made before the shift counter: every day after the first was a played shift.
+            if (saved.profile.matchesPlayed == 0)
+                saved.profile.matchesPlayed = saved.profile.day - 1;
             RestoreSession();
         }
 
@@ -56,12 +61,13 @@ namespace Blinopek.Application
         {
             if (StorageBlocked || (Session != null && Session.Phase != DayPhase.Result))
                 return false;
+            // The rules are saved with the shift, so a restart replays the newbie shift unchanged.
             saved = new SavedGame
             {
                 profile = Profile.Copy(),
                 sessionStart = Profile.Copy(),
                 seed = seed,
-                rules = nextRules.Copy(),
+                rules = IsNewbie ? NewbieSession.CreateRules(nextRules) : nextRules.Copy(),
                 environment = gateway.Environment,
                 cafeName = CafeName
             };

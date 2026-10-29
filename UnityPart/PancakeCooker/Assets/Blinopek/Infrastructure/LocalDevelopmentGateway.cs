@@ -10,6 +10,7 @@ namespace Blinopek.Infrastructure
         public Profile Settle(DaySession session, Profile current)
         {
             var result = current.Copy();
+            result.matchesPlayed++;
             result.demonstrationSeen |= session.DemonstrationSeen;
             result.tutorialComplete |= session.TutorialCompleted;
             if (!session.Success) return result;

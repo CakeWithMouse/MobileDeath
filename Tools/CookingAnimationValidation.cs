@@ -209,7 +209,7 @@ public static class CookingAnimationValidation
     private static void VerifyViewLifecycle()
     {
         // View integration is checked separately from the asset preview; no user save is opened.
-        var store = new MemoryStore { Data = new Blinopek.Application.SavedGame { profile = new Profile { day = 1, tutorialComplete = true, demonstrationSeen = true, ownedIngredients = 31 }, rules = art.balance } };
+        var store = new MemoryStore { Data = new Blinopek.Application.SavedGame { profile = new Profile { day = 1, tutorialComplete = true, demonstrationSeen = true, matchesPlayed = 1, ownedIngredients = 31 }, rules = art.balance } };
         var controller = new Blinopek.Application.GameController(store, new Blinopek.Infrastructure.LocalDevelopmentGateway(), art.balance);
         var go = new GameObject("View lifecycle validation"); var view = go.AddComponent<GameView>(); view.Initialize(controller, art);
         Check(view.Session != null, "GameView initializes with animated surfaces");

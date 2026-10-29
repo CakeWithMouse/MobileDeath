@@ -83,6 +83,7 @@ namespace Blinopek.Domain
     public sealed class Profile
     {
         public int day = 1;
+        public int matchesPlayed; // Settled shifts, successful or not.
         public int coins = 3000; // Златники, stored in hundredths.
         public int honey; // Жаринки; retain the schema-1 field name for existing saves.
         public int scrapers;

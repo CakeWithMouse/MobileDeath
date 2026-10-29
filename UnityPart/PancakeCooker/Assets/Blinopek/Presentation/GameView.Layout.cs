@@ -24,7 +24,7 @@ namespace Blinopek.Presentation
         private readonly List<GameObject> shopPages = new List<GameObject>();
         private readonly List<GameObject> recipePages = new List<GameObject>();
         private bool atMainMenu;
-        private Button mainMenuShop;
+        private Button mainMenuShop, exitToMainMenu;
         private Text mainMenuPlayLabel;
         private bool CanOpenShop => atMainMenu && !controller.StorageBlocked && (Session == null || Session.Phase == DayPhase.Result);
         private readonly List<RawImage> cafeTables = new List<RawImage>();
@@ -120,6 +120,8 @@ namespace Blinopek.Presentation
         }
         private void ShowMainMenu()
         {
+            // A new player never sees the menu: the newbie shift starts or continues instead.
+            if (controller.IsNewbie) { PlayFromMainMenu(); return; }
             CloseCafeNameDialog();
             controller.SetPause(PauseReason.Menu, true);
             controller.SetPause(PauseReason.RecipeBook, false);
@@ -446,7 +448,7 @@ namespace Blinopek.Presentation
             IconButton("Resume", pausePanel.transform, "ui/glyphs/play.png", 523, 250, 114, 114, CloseSettings, preserveFrame: true);
             var sound = IconButton("Sound", pausePanel.transform, "ui/settings-speaker.png", 743, 250, 114, 114, () => { Audio.SetMuted(!Audio.Muted); Audio.PlayUi(SoundCue.Toggle); }, preserveFrame: true);
             soundIcon = sound.transform.Find("Icon").GetComponent<RawImage>();
-            IconButton("ExitToMainMenu", pausePanel.transform, "ui/glyphs/home.png", 963, 250, 114, 114, ShowMainMenu, preserveFrame: true);
+            exitToMainMenu = IconButton("ExitToMainMenu", pausePanel.transform, "ui/glyphs/home.png", 963, 250, 114, 114, ShowMainMenu, preserveFrame: true);
             Label("ResumeHelp", pausePanel.transform, "Продолжить", 490, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
             Label("SoundHelp", pausePanel.transform, "Звук", 710, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;
             Label("ExitHelp", pausePanel.transform, "Главное меню", 930, 370, 179, 45, 23).alignment = TextAnchor.MiddleCenter;

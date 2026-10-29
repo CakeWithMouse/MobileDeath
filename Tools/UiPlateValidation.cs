@@ -83,7 +83,7 @@ public static class UiPlateValidation
             art.signboardShader = Shader.Find("Blinopek/Signboard Paint");
             art.balance = new BalanceRules { startingCoins = 10000, rent = 0, dayTicks = 2 };
             var game = new GameController(new MemoryStore(), new LocalDevelopmentGateway(), art.balance);
-            game.Profile.tutorialComplete = true;
+            game.Profile.tutorialComplete = true; game.Profile.matchesPlayed = 1;
             view = new GameObject("UI plate validation").AddComponent<GameView>(); view.Initialize(game, art);
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0, 0, -10); camera.clearFlags = CameraClearFlags.SolidColor;

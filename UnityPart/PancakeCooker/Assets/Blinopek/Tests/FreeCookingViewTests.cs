@@ -25,7 +25,7 @@ namespace Blinopek.Tests
             content = ScriptableObject.CreateInstance<GameContent>();
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             content.balance = new BalanceRules { readyTicks = 2, burnTicks = 6, dayTicks = 10000, patiencePerPancakeTicks = 100 };
-            var store = new MemoryStore { Data = new SavedGame { profile = new Profile { tutorialComplete = true, demonstrationSeen = true, coins = 10000 } } };
+            var store = new MemoryStore { Data = new SavedGame { profile = new Profile { tutorialComplete = true, demonstrationSeen = true, matchesPlayed = 1, coins = 10000 } } };
             var game = new GameController(store, new LocalDevelopmentGateway(), content.balance);
             view = new GameObject("Free cooking test").AddComponent<GameView>();
             view.Initialize(game, content); Canvas.ForceUpdateCanvases();

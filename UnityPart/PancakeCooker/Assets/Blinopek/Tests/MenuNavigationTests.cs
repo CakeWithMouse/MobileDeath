@@ -31,7 +31,7 @@ namespace Blinopek.Tests
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             content.balance = new BalanceRules { startingCoins = 10000, rent = 0, dayTicks = 20 };
             store = new MemoryStore { Data = new SavedGame {
-                profile = new Profile { coins = 10000, tutorialComplete = true, demonstrationSeen = true }
+                profile = new Profile { coins = 10000, tutorialComplete = true, demonstrationSeen = true, matchesPlayed = 1 }
             } };
             game = new GameController(store, new LocalDevelopmentGateway(), content.balance);
             BuildView();
@@ -74,6 +74,21 @@ namespace Blinopek.Tests
             Click("ContinueShift");
             Assert.That(game.Session, Is.Not.Null); Assert.That(game.Paused, Is.False);
             AssertShopBlocked();
+        }
+
+        [Test] public void NewPlayerSkipsTheMenuAndCannotLeaveTheNewbieShift()
+        {
+            Object.DestroyImmediate(view.gameObject);
+            store.Data = null; // The very first launch has no save yet.
+            game = new GameController(store, new LocalDevelopmentGateway(), content.balance);
+            BuildView();
+            Assert.That(game.IsNewbie, Is.True);
+            Assert.That(Find("MainMenu").activeInHierarchy, Is.False);
+            Assert.That(game.Session.IsTutorial, Is.True); Assert.That(game.Paused, Is.False);
+            Click("Pause");
+            Assert.That(Find("ExitToMainMenu").GetComponent<Button>().IsInteractable(), Is.False);
+            Invoke("ShowMainMenu");
+            Assert.That(Find("MainMenu").activeInHierarchy, Is.False, "The callback must also keep the menu closed");
         }
 
         [Test] public void ShopIsBlockedDuringLevelPauseAndClosing()

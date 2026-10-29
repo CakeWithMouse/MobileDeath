@@ -68,12 +68,14 @@ namespace Blinopek.Tests
             { "Closing does not wait for the decoration arrival interval", DecorationGuestClosing },
             { "Tick journal batches remain replayable across the command limit", TickJournalBoundary },
             { "Command rejection preserves state and publishes feedback once", CommandRejection },
-            { "Every successful shop action saves and notifies once", ShopNotifications }
+            { "Every successful shop action saves and notifies once", ShopNotifications },
+            { "The first shift is a forgiving newbie session that unlocks the menu", FirstShiftIsNewbieSession },
+            { "Old saves and blocked storage never force the newbie session", NewbieSessionIsNeverForced }
         };
         private sealed class MemoryStore : IGameStore { public SavedGame Data; public int Writes; public SavedGame Load() => Data; public void Save(SavedGame game) { Data = game; Writes++; } }
         private sealed class BrokenStore : IGameStore { public SavedGame Load() => throw new Exception("broken"); public void Save(SavedGame game) => throw new Exception("Must not overwrite"); }
         private static BalanceRules Rules() => new BalanceRules { readyTicks = 2, burnTicks = 6, dayTicks = 2000, patiencePerPancakeTicks = 1000, guestIntervalTicks = 1 };
-        private static Profile Profile(bool tutorial = false) => new Profile { tutorialComplete = !tutorial, demonstrationSeen = !tutorial, coins = 10000, scrapers = 2, ownedIngredients = 31 };
+        private static Profile Profile(bool tutorial = false) => new Profile { tutorialComplete = !tutorial, demonstrationSeen = !tutorial, matchesPlayed = tutorial ? 0 : 1, coins = 10000, scrapers = 2, ownedIngredients = 31 };
         private static DaySession Session(Profile profile = null, BalanceRules rules = null, int seed = 77) => new DaySession(profile ?? Profile(), rules ?? Rules(), seed);
         private static bool Do(DaySession s, ActionKind kind, int a = 0, int b = 0, int c = 0) => s.Execute(new GameCommand(kind, a, b, c));
         private static void Check(bool condition, string message) { if (!condition) throw new InvalidOperationException(message); }

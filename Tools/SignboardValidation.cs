@@ -55,6 +55,7 @@ public static class SignboardValidation
             foreach (char c in "БлинопёкЁжик") Check(art.signboardFont.HasCharacter(c), "Font contains " + c);
             string save = Path.Combine(output,"isolated-"+Guid.NewGuid().ToString("N")+".json");
             var game = new GameController(new FileGameStore(save),new LocalDevelopmentGateway(),art.balance);
+            game.Profile.matchesPlayed = 1;
             view = new GameObject("Signboard validation").AddComponent<GameView>(); view.Initialize(game,art);
             camera = new GameObject("Screenshot camera").AddComponent<Camera>(); camera.orthographic = true;
             camera.transform.position = new Vector3(0,0,-10); camera.clearFlags = CameraClearFlags.SolidColor;

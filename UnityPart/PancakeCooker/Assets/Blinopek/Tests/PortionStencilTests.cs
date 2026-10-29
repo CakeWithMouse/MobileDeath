@@ -56,7 +56,7 @@ namespace Blinopek.Tests
             content.bodyFont = content.titleFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             content.balance = new BalanceRules { readyTicks = 2, burnTicks = 6, dayTicks = 10000, patiencePerPancakeTicks = 10000 };
             store = new MemoryStore { Data = new SavedGame { profile = new Profile {
-                tutorialComplete = true, demonstrationSeen = true, coins = 10000, ownedIngredients = 31, scrapers = 3 } } };
+                tutorialComplete = true, demonstrationSeen = true, matchesPlayed = 1, coins = 10000, ownedIngredients = 31, scrapers = 3 } } };
             view = new GameObject("Portion stencil tests").AddComponent<GameView>();
             view.Initialize(new GameController(store, new LocalDevelopmentGateway(), content.balance), content);
             typeof(GameView).GetMethod("Update", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(view, null);

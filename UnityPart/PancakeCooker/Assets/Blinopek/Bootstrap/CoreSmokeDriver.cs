@@ -112,12 +112,8 @@ namespace Blinopek.Bootstrap
         private IEnumerator Run()
         {
             View.Controller.SetPause(PauseReason.Focus | PauseReason.Background, false);
-            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Game opens at the main menu with the shift paused");
-            yield return Shot("00-main-menu");
-            Click("MainMenuShop"); yield return Shot("00-main-menu-shop"); Click("CloseShop");
-            Check(GameObject.Find("MainMenu") != null && View.Controller.Paused, "Closing shop returns to the paused main menu");
-            Click("ContinueShift");
-            Check(!View.Controller.Paused && GameObject.Find("MainMenu") == null, "MainMenu play starts the shift");
+            Check(View.Controller.IsNewbie && View.Session != null && !View.Controller.Paused && GameObject.Find("MainMenu") == null,
+                "A new player skips the main menu and starts the newbie shift");
             yield return Shot("01-counter"); Click("KitchenTab"); yield return Shot("02-kitchen");
             yield return VerifyGestureAudio();
             Paint("PanSurface"); Check(View.Session.Pancake.Batter.Percent >= 90, "Pointer strokes cover the pan");
@@ -147,6 +143,7 @@ namespace Blinopek.Bootstrap
             View.Command(ActionKind.Tick, View.Session.Rules.dayTicks); View.Refresh();
             Check(View.Session.Phase == DayPhase.Result && View.Controller.Profile.day == 2, "Day settles and advances"); yield return Shot("08-results");
             var completedSession = View.Session;
+            Check(!View.Controller.IsNewbie, "The settled newbie shift unlocks the main menu");
             Click("ReturnToMainMenu");
             Check(View.Session == completedSession && View.Session.Phase == DayPhase.Result && View.Controller.Paused, "Result returns to main menu without starting another shift");
             yield return Shot("08-main-menu-after-results");
