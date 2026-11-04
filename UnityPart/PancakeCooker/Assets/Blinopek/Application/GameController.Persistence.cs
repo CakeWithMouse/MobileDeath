@@ -5,6 +5,31 @@ namespace Blinopek.Application
 {
     public sealed partial class GameController
     {
+        public System.Collections.Generic.IEnumerable<float> RestoreSteps()
+        {
+            if (!restorePending) throw new InvalidOperationException("Deferred restore is not pending.");
+            if (saved.sessionStart != null)
+            {
+                if (saved.schema != 1 || saved.environment != gateway.Environment)
+                    throw new InvalidOperationException("Incompatible save environment or schema.");
+                var restored = new DaySession(saved.sessionStart, saved.rules, saved.seed, false, false);
+                var budget = System.Diagnostics.Stopwatch.StartNew();
+                for (int i = 0; i < saved.commands.Count; i++)
+                {
+                    var command = saved.commands[i];
+                    if (!restored.Execute(command)) throw new InvalidOperationException("Invalid command in saved session: " + command.kind);
+                    if (i % 32 == 0 || budget.ElapsedMilliseconds >= 4)
+                    {
+                        yield return (i + 1f) / saved.commands.Count;
+                        budget.Restart();
+                    }
+                }
+                Session = restored;
+                CompleteRestore();
+            }
+            restorePending = false;
+            yield return 1;
+        }
         private void RestoreSession()
         {
             if (saved.sessionStart != null)
@@ -12,16 +37,20 @@ namespace Blinopek.Application
                 if (saved.schema != 1 || saved.environment != gateway.Environment)
                     throw new InvalidOperationException("Incompatible save environment or schema.");
                 Session = SessionJournal.Replay(saved);
-                if (Session.Phase == DayPhase.Result && !saved.settled)
-                    Settle();
-                else if (Session.Phase != DayPhase.Result)
-                {
-                    Dispatch(new GameCommand(ActionKind.EndStroke));
-                    if (!Session.FreeCooking)
-                        Dispatch(new GameCommand(ActionKind.EnableFreeCooking));
-                    if (!Session.ManualServing)
-                        Dispatch(new GameCommand(ActionKind.EnableManualServing));
-                }
+                CompleteRestore();
+            }
+        }
+        private void CompleteRestore()
+        {
+            if (Session.Phase == DayPhase.Result && !saved.settled)
+                Settle();
+            else if (Session.Phase != DayPhase.Result)
+            {
+                Dispatch(new GameCommand(ActionKind.EndStroke));
+                if (!Session.FreeCooking)
+                    Dispatch(new GameCommand(ActionKind.EnableFreeCooking));
+                if (!Session.ManualServing)
+                    Dispatch(new GameCommand(ActionKind.EnableManualServing));
             }
         }
 

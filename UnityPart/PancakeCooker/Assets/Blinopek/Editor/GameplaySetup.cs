@@ -42,10 +42,19 @@ namespace Blinopek.Editor
             FigmaArtworkSetup.Populate(config);
             AudioSetup.Populate(config);
             EditorUtility.SetDirty(config); AssetDatabase.SaveAssets();
+            Directory.CreateDirectory("Assets/Blinopek/Resources/Loading"); AssetDatabase.Refresh();
+            const string catalogPath = "Assets/Blinopek/Resources/Loading/catalog.asset";
+            var catalog = AssetDatabase.LoadAssetAtPath<LoadingCatalog>(catalogPath);
+            if (catalog == null) { catalog = ScriptableObject.CreateInstance<LoadingCatalog>(); AssetDatabase.CreateAsset(catalog, catalogPath); }
+            var entries = new System.Collections.Generic.List<LoadingResource>(catalog.resources ?? Array.Empty<LoadingResource>());
+            var entry = entries.Find(item => item != null && item.key == "cafe.default");
+            if (entry == null) { entry = new LoadingResource { key = "cafe.default" }; entries.Add(entry); }
+            entry.content = config; catalog.resources = entries.ToArray();
+            EditorUtility.SetDirty(catalog); AssetDatabase.SaveAssets();
             if (!File.Exists(BootstrapPath))
             {
                 var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, UnityEngine.Application.isBatchMode ? NewSceneMode.Single : NewSceneMode.Additive);
-                var go = new GameObject("AppRoot"); SceneManager.MoveGameObjectToScene(go, scene); go.AddComponent<AppBootstrap>().content = config;
+                var go = new GameObject("AppRoot"); SceneManager.MoveGameObjectToScene(go, scene); go.AddComponent<AppBootstrap>();
                 EditorSceneManager.SaveScene(scene, BootstrapPath); if (!UnityEngine.Application.isBatchMode) EditorSceneManager.CloseScene(scene, true);
             }
             if (!File.Exists(CafePath))

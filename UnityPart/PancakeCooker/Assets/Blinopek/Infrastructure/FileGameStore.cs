@@ -14,12 +14,43 @@ namespace Blinopek.Infrastructure
         private readonly string path;
         public string RecoveryNotice { get; private set; }
         public FileGameStore(string path) { this.path = path; }
+        private sealed class FileSnapshot { public string Text; public Exception Error; }
+        private System.Collections.Generic.Dictionary<string, FileSnapshot> prefetched;
+        public System.Threading.Tasks.Task PrefetchAsync()
+        {
+            return System.Threading.Tasks.Task.Run(() =>
+            {
+                var files = new System.Collections.Generic.Dictionary<string, FileSnapshot>();
+                foreach (var file in new[] { path, path + ".bak" })
+                {
+                    var snapshot = new FileSnapshot(); files[file] = snapshot;
+                    try { snapshot.Text = File.ReadAllText(file, Encoding.UTF8); }
+                    catch (IOException ex) { snapshot.Error = ex; }
+                    catch (UnauthorizedAccessException ex) { snapshot.Error = ex; }
+                }
+                prefetched = files;
+            });
+        }
+        private SavedGame ReadInitial(string file)
+        {
+            if (prefetched != null && prefetched.TryGetValue(file, out var snapshot))
+            {
+                if (snapshot.Error != null) throw snapshot.Error;
+                return Parse(snapshot.Text);
+            }
+            return Read(file);
+        }
         public SavedGame Load()
+        {
+            try { return LoadCore(); }
+            finally { prefetched = null; }
+        }
+        private SavedGame LoadCore()
         {
             if (!File.Exists(path) && !File.Exists(path + ".bak")) return null;
             Exception primary;
-            try { return Read(path); } catch (SaveVersionException) { throw; } catch (Exception ex) { primary = ex; }
-            try { var backup = Read(path + ".bak"); RecoveryNotice = "Восстановлена предыдущая целая копия сохранения."; return backup; }
+            try { return ReadInitial(path); } catch (SaveVersionException) { throw; } catch (Exception ex) { primary = ex; }
+            try { var backup = ReadInitial(path + ".bak"); RecoveryNotice = "Восстановлена предыдущая целая копия сохранения."; return backup; }
             catch { throw new IOException("Основная и резервная копии недоступны. Файлы сохранены для восстановления.", primary); }
         }
         private static string Hash(string input)
@@ -28,7 +59,11 @@ namespace Blinopek.Infrastructure
         }
         private static SavedGame Read(string file)
         {
-            var envelope = JsonUtility.FromJson<Envelope>(File.ReadAllText(file, Encoding.UTF8));
+            return Parse(File.ReadAllText(file, Encoding.UTF8));
+        }
+        private static SavedGame Parse(string text)
+        {
+            var envelope = JsonUtility.FromJson<Envelope>(text);
             if (envelope == null || envelope.payload == null || envelope.checksum != Hash(envelope.payload)) throw new InvalidDataException("Checksum mismatch.");
             var game = JsonUtility.FromJson<SavedGame>(envelope.payload);
             if (game != null && (game.schema != 1 || game.environment != "local-development"))

@@ -25,7 +25,8 @@ namespace Blinopek.Presentation
             dirty = true;
             Audio.PlayUi(SoundCue.Back);
         }
-        private void RestartCurrentDay()
+        private void RestartCurrentDay() => Transition(RestartCurrentDayImmediate, "Начинаем смену заново");
+        private void RestartCurrentDayImmediate()
         {
             if (atMainMenu) return;
             if (!controller.RestartDay()) { Audio.PlayUi(SoundCue.Error); return; }
