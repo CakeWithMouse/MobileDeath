@@ -70,14 +70,48 @@ namespace Blinopek.Presentation
             public GameObject Selection;
         }
 
+        public Action<Action, string> LoadingTransition;
+        private bool initialized;
         public void Initialize(GameController game, GameContent content)
         {
+            var work = InitializeAsync(game, content, null);
+            while (work.MoveNext()) { }
+        }
+        public System.Collections.IEnumerator InitializeAsync(GameController game, GameContent content, Action<string, float> stage)
+        {
             controller = game; art = content;
-            cookingAtlas = new CookingAtlas(art);
+            stage?.Invoke("Подготавливаем кухню", 0);
+            cookingAtlas = new CookingAtlas();
+            var atlasWork = cookingAtlas.Prepare(art);
+            int atlasSteps = 0;
+            try { while (atlasWork.MoveNext()) { stage?.Invoke("Подготавливаем кухню", .7f * Mathf.Min(1, ++atlasSteps / (8f + CookingFoldArt.Keys.Length * 65))); yield return atlasWork.Current; } }
+            finally { (atlasWork as IDisposable)?.Dispose(); }
+            stage?.Invoke("Подготавливаем звук", .72f);
             Audio = gameObject.AddComponent<GameAudio>(); Audio.Initialize(game, content.audio);
-            Build(); audioUiReady = true; controller.Changed += Invalidate;
-            ShowMainMenu();
-            Refresh();
+            yield return null;
+            var build = BuildAsync();
+            int screens = 0;
+            while (build.MoveNext()) { stage?.Invoke("Создаём интерфейс", .75f + .2f * Mathf.Min(1, ++screens / 6f)); yield return build.Current; }
+            audioUiReady = true; controller.Changed += Invalidate;
+            ShowMainMenuImmediate();
+            Refresh(); initialized = true;
+        }
+        public void SetLoading(bool value)
+        {
+            enabled = !value;
+            if (canvas != null)
+            {
+                var group = canvas.GetComponent<CanvasGroup>();
+                if (group == null) group = canvas.gameObject.AddComponent<CanvasGroup>();
+                group.interactable = !value;
+                group.blocksRaycasts = !value;
+            }
+            if (value) { ReleasePointer(); HidePortionGhost(); HideReadyGhost(); }
+            tickRemainder = 0;
+        }
+        private void Transition(Action action, string stage)
+        {
+            if (LoadingTransition == null) action(); else LoadingTransition(action, stage);
         }
         private void Invalidate() { dirty = true; }
         private RectTransform Rect(string name, Transform parent, float x, float y, float w, float h)
@@ -423,7 +457,7 @@ namespace Blinopek.Presentation
         }
         private void Update()
         {
-            if (controller == null) return;
+            if (!initialized || controller == null) return;
             var safe = Screen.safeArea; float scale = canvas.scaleFactor;
             root.localScale = Vector3.one * Mathf.Min(safe.width / scale / 1600, safe.height / scale / 900);
             root.anchoredPosition = (safe.center - new Vector2(Screen.width, Screen.height) * .5f) / scale;
@@ -436,7 +470,7 @@ namespace Blinopek.Presentation
         }
         private void LateUpdate()
         {
-            if (controller == null) return;
+            if (!initialized || controller == null) return;
             if (!controller.Paused)
             {
                 foreach (var motion in motions.Values)

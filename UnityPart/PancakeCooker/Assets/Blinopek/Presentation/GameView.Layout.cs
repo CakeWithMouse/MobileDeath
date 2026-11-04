@@ -118,17 +118,20 @@ namespace Blinopek.Presentation
             if (!CanOpenShop) return;
             shop.transform.SetAsLastSibling(); shop.SetActive(true); dirty = true;
         }
-        private void ShowMainMenu()
+        private void ShowMainMenu() => Transition(ShowMainMenuImmediate, "Сохраняем смену и открываем меню");
+        private void ShowMainMenuImmediate()
         {
             CloseCafeNameDialog();
             controller.SetPause(PauseReason.Menu, true);
             controller.SetPause(PauseReason.RecipeBook, false);
             ReleasePointer(); HidePortionGhost(); HideReadyGhost();
             book.SetActive(false); orderDetails.SetActive(false); resetConfirmation.SetActive(false);
+            if (Session != null && Session.Phase == DayPhase.Result) { motions.Clear(); trayPancakes.Clear(); }
             atMainMenu = true; settingsAtMainMenu = false; mainMenu.SetActive(true); shop.SetActive(false); pausePanel.SetActive(false);
             Audio.PlayUi(SoundCue.Back); dirty = true;
         }
-        private void PlayFromMainMenu()
+        private void PlayFromMainMenu() => Transition(PlayFromMainMenuImmediate, "Загружаем смену");
+        private void PlayFromMainMenuImmediate()
         {
             if (cafeNameDialog.activeSelf) return;
             if (controller.StorageBlocked) return;
@@ -139,7 +142,7 @@ namespace Blinopek.Presentation
             controller.SetPause(PauseReason.Menu, false); dirty = true;
         }
 
-        private void Build()
+        private System.Collections.IEnumerator BuildAsync()
         {
             var cg = new GameObject("CafeCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster)); cg.transform.SetParent(transform, false);
             canvas = cg.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -147,9 +150,12 @@ namespace Blinopek.Presentation
             root = Rect("SafeArea", cg.transform, 0, 0, 1600, 900); root.anchorMin = root.anchorMax = new Vector2(.5f, .5f);
             if (FindAnyObjectByType<EventSystem>() == null)
             { var es = new GameObject("CafeInput", typeof(EventSystem), typeof(InputSystemUIInputModule)); es.transform.SetParent(transform); es.GetComponent<InputSystemUIInputModule>().AssignDefaultActions(); }
-            counter = Group("Counter"); BuildCounter();
-            kitchen = Group("Kitchen"); BuildKitchen();
-            BuildHud(); BuildResults(); BuildShop(); BuildBook(); BuildMainMenu(); BuildPause();
+            counter = Group("Counter"); BuildCounter(); yield return null;
+            kitchen = Group("Kitchen"); BuildKitchen(); yield return null;
+            BuildHud(); BuildResults(); yield return null;
+            BuildShop(); yield return null;
+            BuildBook(); yield return null;
+            BuildMainMenu(); BuildPause(); yield return null;
             BuildCafeNameDialog();
             storage = Label("StorageError", root, "", 270, 850, 1060, 38, 20, new Color(.65f, .14f, .1f));
             ghost = Picture("DraggedPortion", root, art.fillings[3], 0, 0, 70, 60, false); ghost.gameObject.SetActive(false);
