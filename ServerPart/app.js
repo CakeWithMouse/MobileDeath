@@ -7,7 +7,7 @@ const asyncRoute = (handler) => (req, res, next) => {
   Promise.resolve(handler(req, res, next)).catch(next);
 };
 
-function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
+function createApp({ store, game = null, sessionTtlSeconds = 86400, logger = console }) {
   const app = express();
   app.disable('x-powered-by');
   app.disable('etag');
@@ -15,7 +15,7 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
     res.set('Cache-Control', 'no-store');
     next();
   });
-  app.use(express.json({ limit: '16kb' }));
+  app.use('/auth', express.json({ limit: '16kb' }));
 
   const fail = (res, status, code, message) => res.status(status).json({ error: { code, message } });
   // MariaDB returns DECIMAL as a string, preserving monetary precision.
@@ -73,6 +73,12 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
 
   // Liveness only: deliberately does not query the database.
   app.get('/health', (req, res) => res.json({ status: 'ok' }));
+  app.get('/ready', asyncRoute(async (req, res) => {
+    if (!game) return fail(res, 503, 'GAME_UNAVAILABLE', 'Game service unavailable');
+    try { await game.repo.ready(); res.json({ status: 'ready' }); }
+    catch { fail(res, 503, 'DATABASE_UNAVAILABLE', 'Game storage unavailable'); }
+  }));
+  if (game) app.use('/v1', require('./Game/routes').createGameRouter(game, authenticated));
 
   app.post('/auth/register', credentials, registrationProfile, asyncRoute(async (req, res) => {
     const { login, password } = req.credentials;
@@ -109,6 +115,8 @@ function createApp({ store, sessionTtlSeconds = 86400, logger = console }) {
   app.use((req, res) => fail(res, 404, 'NOT_FOUND', 'Route not found'));
   app.use((error, req, res, next) => {
     if (res.headersSent) return next(error);
+    if (error.status && error.code && /^[A-Z_]+$/.test(error.code))
+      return fail(res, error.status, error.code, error.code);
     if (error.type === 'entity.parse.failed') {
       return fail(res, 400, 'INVALID_JSON', 'Malformed JSON body');
     }

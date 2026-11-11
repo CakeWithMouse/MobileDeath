@@ -138,6 +138,12 @@ async function migrateUserProfile(connection) {
   console.log('Applied migration 001: email, optional phone and balance.');
 }
 
+async function migrateGame(connection) {
+  const sql = await fsp.readFile(path.join(root, 'ServerPart/migrations/002-game.sql'), 'utf8');
+  for (const statement of sql.split(';').map(value => value.trim()).filter(Boolean)) await connection.query(statement);
+  await connection.query("GRANT SELECT, INSERT, UPDATE, DELETE ON mobiledeath.* TO 'mobiledeath_app'@'127.0.0.1'");
+}
+
 async function setup() {
   if (process.platform !== 'win32' || process.arch !== 'x64') throw new Error('Automatic installation supports Windows x64 only. See docs/DATABASE_SETUP.md.');
   if (!fs.existsSync(stateFile) && fs.existsSync(envFile)) {
@@ -184,6 +190,7 @@ async function setup() {
       await fsp.writeFile(stateFile, JSON.stringify(state, null, 2), { mode: 0o600 });
     }
     await migrateUserProfile(connection);
+    await migrateGame(connection);
     await connection.query('SELECT id, login, password_hash, email, phone, balance FROM users LIMIT 0');
     await connection.query('SELECT token_hash, user_id, expires_at FROM sessions LIMIT 0');
   } finally {
@@ -208,6 +215,7 @@ async function main() {
     try {
       await connection.query('USE mobiledeath');
       await migrateUserProfile(connection);
+    await migrateGame(connection);
       console.log('User profile schema is up to date.');
     } finally { await connection.end(); }
     return;

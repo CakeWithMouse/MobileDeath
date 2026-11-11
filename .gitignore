@@ -168,3 +168,6 @@ node_modules/
 /UnityPart/PancakeCooker/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
 /UnityPart/PancakeCooker/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 /UnityPart/PancakeCooker/[Aa]ssets/[Ss]ceneDependencyCache*
+/ServerPart/SimulationWorker/bin/
+/ServerPart/SimulationWorker/obj/
+!/ServerPart/SimulationWorker/SimulationWorker.csproj

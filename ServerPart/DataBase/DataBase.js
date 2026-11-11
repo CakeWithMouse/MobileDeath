@@ -38,7 +38,7 @@ function createStore(pool) {
 
 function createDatabase(config) {
   const pool = mariadb.createPool(config);
-  return { store: createStore(pool), close: () => pool.end() };
+  return { pool, store: createStore(pool), close: () => pool.end() };
 }
 
 module.exports = { createDatabase, createStore };

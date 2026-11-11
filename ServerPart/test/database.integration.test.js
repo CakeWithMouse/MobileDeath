@@ -1,0 +1,16 @@
+'use strict';
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const mariadb=require('mariadb');const {randomUUID}=require('node:crypto');
+const {SqlGameRepository}=require('../Game/repository');const {GameService}=require('../Game/service');const {SimulationWorker}=require('../Game/worker');const rules=require('../Game/config.json');
+test('real MariaDB: concurrent transactions, rollback, durable replay and idempotency',{skip:process.env.GAME_DB_INTEGRATION!=='1'},async()=>{
+ const state=JSON.parse(fs.readFileSync(path.join(__dirname,'../../.local/database/credentials.json'),'utf8'));const options={host:'127.0.0.1',port:state.port,user:'root',password:state.rootPassword};const admin=await mariadb.createConnection(options);const name='mobiledeath_test_'+Date.now();let pool;
+ try{
+  await admin.query('CREATE DATABASE '+name);await admin.query('USE '+name);
+  for(const file of ['schema.sql','migrations/002-game.sql'])for(const sql of fs.readFileSync(path.join(__dirname,'..',file),'utf8').split(';').map(s=>s.trim()).filter(Boolean))await admin.query(sql);
+  await admin.query('INSERT INTO users(login,password_hash,email) VALUES(?,?,?)',['integration','unused','integration@example.test']);
+  pool=mariadb.createPool({...options,database:name,connectionLimit:5});const repo=new SqlGameRepository(pool);const game=new GameService(repo,rules,new SimulationWorker());await repo.ready();const p=await game.player(1);assert.equal(p.revision,1);
+  const request={operationId:randomUUID(),expectedRevision:1,itemId:'scraper',quantity:1};const receipts=await Promise.all([game.purchase(1,request),game.purchase(1,request)]);assert.deepEqual(receipts[0],receipts[1]);assert.equal(receipts[0].profile.scrapers,1);
+  const outcomes=await Promise.allSettled([game.purchase(1,{...request,operationId:randomUUID(),expectedRevision:2}),game.purchase(1,{...request,operationId:randomUUID(),expectedRevision:2})]);assert.equal(outcomes.filter(x=>x.status==='fulfilled').length,1);
+  const before=await game.player(1);await assert.rejects(repo.transaction(1,async tx=>{tx.player.profile.coins=0;await tx.entry('rollback-probe',-1,0);throw new Error('rollback');}));assert.deepEqual(await game.player(1),before);assert.equal(Number((await pool.query("SELECT COUNT(*) n FROM game_wallet_entries WHERE source_id='rollback-probe'"))[0].n),0);
+  await repo.transaction(1,async tx=>{tx.player.profile.tutorialComplete=true;});const start={operationId:randomUUID(),expectedRevision:3};const day=await game.start(1,start);const commands=[{kind:18,a:0,b:0,c:0,d:0},{kind:20,a:0,b:0,c:0,d:0},{kind:0,a:6000,b:0,c:0,d:0}];await game.batch(1,day.id,0,{generation:1,firstSeq:1,commands});const complete={operationId:randomUUID(),generation:1,finalSeq:3};assert.equal((await game.complete(1,day.id,complete)).state,'settled');const restarted=new GameService(repo,rules,new SimulationWorker());assert.equal((await restarted.complete(1,day.id,complete)).state,'settled');assert.equal(Number((await pool.query('SELECT COUNT(*) n FROM game_wallet_entries WHERE source_id=?',['day:'+day.id]))[0].n),1);
+ }finally{if(pool)await pool.end();if(/^mobiledeath_test_\d+$/.test(name))await admin.query('DROP DATABASE IF EXISTS '+name);await admin.end();}
+});

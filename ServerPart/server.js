@@ -7,7 +7,11 @@ const { createApp } = require('./app');
 function start() {
   const config = loadConfig();
   const database = createDatabase(config.database);
-  const app = createApp({ store: database.store, sessionTtlSeconds: config.sessionTtlSeconds });
+  const { GameService } = require('./Game/service');
+  const { SqlGameRepository } = require('./Game/repository');
+  const { SimulationWorker } = require('./Game/worker');
+  const game = new GameService(new SqlGameRepository(database.pool), require('./Game/config.json'), new SimulationWorker());
+  const app = createApp({ store: database.store, game, sessionTtlSeconds: config.sessionTtlSeconds });
   const server = app.listen(config.port, config.host, () => {
     console.log(`MobileDeath API listening on http://${config.host}:${config.port}`);
   });
