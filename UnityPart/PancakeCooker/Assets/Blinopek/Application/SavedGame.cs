@@ -16,6 +16,9 @@ namespace Blinopek.Application
         public bool settled;
         public bool awaitingDay;
         public string cafeName;
+        public string ownerId, attemptId, pendingKind;
+        public int revision, ackSeq, batchCount, pendingBatchSize;
+        public NetworkOperation pendingOperation;
         public List<GameCommand> commands = new List<GameCommand>();
         internal SavedGame WithCafeName(string value)
         {

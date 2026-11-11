@@ -21,6 +21,7 @@ namespace Blinopek.Bootstrap
         private LoadingConfig config;
         private GameView view;
         private bool busy;
+        private NetworkAccess network;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD || BLINOPEK_QA
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void ConfigureSmokeRun()
@@ -64,23 +65,63 @@ namespace Blinopek.Bootstrap
             if (catalog == null) throw new InvalidOperationException("Не найден каталог ресурсов загрузки.");
             content = catalog.Resolve(config.contentKey);
             string saveFile = Path.Combine(UnityEngine.Application.persistentDataPath, "Blinopek", "local-core-v1.json");
+            bool isolatedValidation = false;
 #if UNITY_EDITOR
             if (!string.IsNullOrEmpty(EditorValidationSavePath))
-            { saveFile = EditorValidationSavePath; EditorValidationSavePath = null; }
+            { saveFile = EditorValidationSavePath; EditorValidationSavePath = null; isolatedValidation = true; }
 #endif
             string[] args = Environment.GetCommandLineArgs();
             if (Array.IndexOf(args, "-blinopekSmoke") >= 0 && Array.IndexOf(args, "-blinopekSave") < 0)
                 throw new InvalidOperationException("Smoke tests require an isolated -blinopekSave path.");
             for (int i = 0; i < args.Length - 1; i++) if (args[i] == "-blinopekSave") saveFile = args[i + 1];
             loading.Report("Читаем сохранение", .3f);
-            var store = new FileGameStore(saveFile);
+            var networkAsset = Resources.Load<TextAsset>("Network/settings");
+            var networkSettings = networkAsset == null ? new NetworkSettings { enabled = false } : JsonUtility.FromJson<NetworkSettings>(networkAsset.text);
+            bool online = !isolatedValidation && networkSettings.enabled && Array.IndexOf(args, "-blinopekSmoke") < 0 && Array.IndexOf(args, "-blinopekLocal") < 0 && Array.IndexOf(args, "-blinopekSave") < 0;
+            if (online)
+            {
+                if (network == null) { network = gameObject.AddComponent<NetworkAccess>(); network.Initialize(networkSettings.baseUrl); }
+                loading.Hide();
+                while (!network.Ready) yield return null;
+                loading.Show("Загружаем профиль");
+                saveFile = Path.Combine(UnityEngine.Application.persistentDataPath, "Blinopek", "online", network.ServerKey, network.OwnerId + ".json");
+            }
+            var store = new FileGameStore(saveFile, online ? "online" : "local-development", online ? network.OwnerId : null);
             var read = store.PrefetchAsync();
             while (!read.IsCompleted) yield return null;
             read.GetAwaiter().GetResult();
             // JSON/Unity APIs and all model publication stay on the Unity thread.
-            var controller = new GameController(store, new LocalDevelopmentGateway(), content.balance, true);
+            if (online)
+            {
+                var cached = store.Load();
+                if (!string.IsNullOrEmpty(network.Api.Token))
+                {
+                    var configsTask = network.Api.Send<ConfigReply>("GET", "/v1/configs");
+                    while (!configsTask.IsCompleted) yield return null;
+                    content = Instantiate(content);
+                    content.balance = configsTask.GetAwaiter().GetResult().rules;
+                    content.balance.Validate();
+                    var playerTask = network.Api.Send<PlayerReply>("GET", "/v1/bootstrap");
+                    while (!playerTask.IsCompleted) yield return null;
+                    var player = playerTask.GetAwaiter().GetResult();
+                    if (cached == null) store.Save(new SavedGame { schema = 2, environment = "online", ownerId = network.OwnerId, profile = player.profile.ToDomain(), revision = player.revision, cafeName = player.cafeName, rules = content.balance.Copy(), awaitingDay = true });
+                }
+                else
+                {
+                    if (cached == null) throw new InvalidOperationException("Нет сохранённой смены. Войдите с подключением к серверу.");
+                    content = Instantiate(content); content.balance = cached.rules.Copy();
+                }
+            }
+            var controller = new GameController(store, online ? (IDayGateway)new OnlineDayGateway() : new LocalDevelopmentGateway(), content.balance, true);
+            if (online) { controller.Connect(network.Api); network.Attach(controller); }
             foreach (float progress in controller.RestoreSteps())
             { loading.Report("Восстанавливаем смену", .32f + .18f * progress); yield return null; }
+            if (online && !string.IsNullOrEmpty(network.Api.Token))
+            {
+                var refresh = controller.RefreshOnline();
+                while (!refresh.IsCompleted) yield return null;
+                refresh.GetAwaiter().GetResult();
+            }
             if (SceneManager.GetActiveScene().name != config.scene)
             {
                 if (!UnityEngine.Application.CanStreamedLevelBeLoaded(config.scene)) throw new InvalidOperationException("Сцена отсутствует в сборке: " + config.scene);

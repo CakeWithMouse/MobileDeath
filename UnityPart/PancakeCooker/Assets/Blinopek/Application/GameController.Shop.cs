@@ -6,6 +6,7 @@ namespace Blinopek.Application
     {
         public bool Buy(ShopItem item, int ingredient = 0)
         {
+            if (IsOnline) { _ = BuyOnline(item, ingredient); return true; }
             if (StorageBlocked || Session == null || Session.Phase != DayPhase.Result || !Session.Success)
                 return false;
             if (ingredient < 0 || ingredient >= 5)

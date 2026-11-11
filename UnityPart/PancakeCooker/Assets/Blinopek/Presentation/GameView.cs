@@ -80,6 +80,7 @@ namespace Blinopek.Presentation
         public System.Collections.IEnumerator InitializeAsync(GameController game, GameContent content, Action<string, float> stage)
         {
             controller = game; art = content;
+            if (controller.IsOnline) controller.OnlineDayReady += PlayFromMainMenuImmediate;
             stage?.Invoke("Подготавливаем кухню", 0);
             cookingAtlas = new CookingAtlas();
             var atlasWork = cookingAtlas.Prepare(art);
@@ -487,6 +488,6 @@ namespace Blinopek.Presentation
         private void OnApplicationPause(bool paused) { ReleasePointer(); HidePortionGhost(); HideReadyGhost(); controller?.SetPause(PauseReason.Background, paused); tickRemainder = 0; }
         private void OnApplicationFocus(bool focused) { if (!focused) { ReleasePointer(); HidePortionGhost(); HideReadyGhost(); } controller?.SetPause(PauseReason.Focus, !focused); tickRemainder = 0; }
         private void OnApplicationQuit() { controller?.Save(); }
-        private void OnDestroy() { cookingAtlas?.Dispose(); if (controller != null) { controller.Changed -= Invalidate; controller.Save(); } }
+        private void OnDestroy() { cookingAtlas?.Dispose(); if (controller != null) { controller.OnlineDayReady -= PlayFromMainMenuImmediate; controller.Changed -= Invalidate; controller.Save(); } }
     }
 }

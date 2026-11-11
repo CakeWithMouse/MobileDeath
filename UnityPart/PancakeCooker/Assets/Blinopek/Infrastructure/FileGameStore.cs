@@ -12,8 +12,9 @@ namespace Blinopek.Infrastructure
         private sealed class SaveVersionException : IOException { public SaveVersionException(string message) : base(message) { } }
         [Serializable] private sealed class Envelope { public string checksum; public string payload; }
         private readonly string path;
+        private readonly string environment, ownerId;
         public string RecoveryNotice { get; private set; }
-        public FileGameStore(string path) { this.path = path; }
+        public FileGameStore(string path, string environment = "local-development", string ownerId = null) { this.path = path; this.environment = environment; this.ownerId = ownerId; }
         private sealed class FileSnapshot { public string Text; public Exception Error; }
         private System.Collections.Generic.Dictionary<string, FileSnapshot> prefetched;
         public System.Threading.Tasks.Task PrefetchAsync()
@@ -57,16 +58,16 @@ namespace Blinopek.Infrastructure
         {
             using (var sha = SHA256.Create()) return Convert.ToBase64String(sha.ComputeHash(Encoding.UTF8.GetBytes(input)));
         }
-        private static SavedGame Read(string file)
+        private SavedGame Read(string file)
         {
             return Parse(File.ReadAllText(file, Encoding.UTF8));
         }
-        private static SavedGame Parse(string text)
+        private SavedGame Parse(string text)
         {
             var envelope = JsonUtility.FromJson<Envelope>(text);
             if (envelope == null || envelope.payload == null || envelope.checksum != Hash(envelope.payload)) throw new InvalidDataException("Checksum mismatch.");
             var game = JsonUtility.FromJson<SavedGame>(envelope.payload);
-            if (game != null && (game.schema != 1 || game.environment != "local-development"))
+            if (game != null && (game.schema != (environment == "online" ? 2 : 1) || game.environment != environment || (environment == "online" && game.ownerId != ownerId)))
                 throw new SaveVersionException("Сохранение другой версии или окружения. Его нельзя заменить текущей версией игры.");
             if (game == null || game.profile == null || game.rules == null || game.commands == null)
                 throw new InvalidDataException("Unsupported save format.");

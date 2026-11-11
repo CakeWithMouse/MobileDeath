@@ -23,6 +23,7 @@ namespace Blinopek.Application
         public bool RenameCafe(string value, out string error)
         {
             if (!ValidateCafeName(value, out string normalized, out error)) return false;
+            if (IsOnline) { _ = RenameOnline(normalized); return true; }
             if (StorageBlocked) { error = "Сохранение недоступно. Название пока нельзя изменить."; return false; }
             // Save a new envelope first: failed writes must not change the visible name.
             var renamed = saved.WithCafeName(normalized);

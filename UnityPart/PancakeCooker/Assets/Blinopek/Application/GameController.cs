@@ -55,13 +55,13 @@ namespace Blinopek.Application
             // Saves made before the shift counter: every day after the first was a played shift.
             if (saved.profile.matchesPlayed == 0)
                 saved.profile.matchesPlayed = saved.profile.day - 1;
-                RestoreSession();
             restorePending = deferRestore;
             if (!deferRestore) RestoreSession();
         }
 
         public bool StartDay(int seed)
         {
+            if (IsOnline) { _ = StartOnline(); return false; }
             if (StorageBlocked || (Session != null && Session.Phase != DayPhase.Result))
                 return false;
             // The rules are saved with the shift, so a restart replays the newbie shift unchanged.
@@ -84,6 +84,7 @@ namespace Blinopek.Application
 
         public bool RestartDay()
         {
+            if (IsOnline) { SetNetworkError("Для нового начала отмените текущую смену через сетевую панель."); return false; }
             if (StorageBlocked || Session == null || Session.Phase == DayPhase.Result)
                 return false;
             var fresh = new SavedGame
@@ -130,7 +131,8 @@ namespace Blinopek.Application
                 return false;
             }
 
-            SessionJournal.Append(saved.commands, command);
+            if (IsOnline) saved.commands.Add(command.Copy());
+            else SessionJournal.Append(saved.commands, command);
             if (Session.Phase == DayPhase.Result && !saved.settled)
                 Settle();
             if (command.kind != ActionKind.Tick && command.kind != ActionKind.Stroke && command.kind != ActionKind.BeginStroke)

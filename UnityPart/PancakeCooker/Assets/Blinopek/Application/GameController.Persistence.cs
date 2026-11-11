@@ -10,7 +10,7 @@ namespace Blinopek.Application
             if (!restorePending) throw new InvalidOperationException("Deferred restore is not pending.");
             if (saved.sessionStart != null)
             {
-                if (saved.schema != 1 || saved.environment != gateway.Environment)
+                if (saved.schema != (IsOnline ? 2 : 1) || saved.environment != gateway.Environment)
                     throw new InvalidOperationException("Incompatible save environment or schema.");
                 var restored = new DaySession(saved.sessionStart, saved.rules, saved.seed, false, false);
                 var budget = System.Diagnostics.Stopwatch.StartNew();
@@ -34,7 +34,7 @@ namespace Blinopek.Application
         {
             if (saved.sessionStart != null)
             {
-                if (saved.schema != 1 || saved.environment != gateway.Environment)
+                if (saved.schema != (IsOnline ? 2 : 1) || saved.environment != gateway.Environment)
                     throw new InvalidOperationException("Incompatible save environment or schema.");
                 Session = SessionJournal.Replay(saved);
                 CompleteRestore();
@@ -56,6 +56,7 @@ namespace Blinopek.Application
 
         private void Settle()
         {
+            if (IsOnline) { Save(); return; }
             saved.profile = gateway.Settle(Session, saved.profile);
             saved.settled = true;
             Save();

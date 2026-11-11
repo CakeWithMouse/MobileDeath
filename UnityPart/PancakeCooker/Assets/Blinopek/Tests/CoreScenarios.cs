@@ -10,6 +10,8 @@ namespace Blinopek.Tests
     public static partial class CoreScenarios
     {
         public static readonly Dictionary<string, Action> Cases = new Dictionary<string, Action> {
+            { "Online journal stays immutable and only server receipts settle", OnlineJournalAndSettlement },
+            { "Rejected online purchase clears pending without changing profile", OnlineRejectedOperation },
             { "Deferred replay yields and matches synchronous restoration", DeferredLoadingReplay },
             { "Invalid deferred replay preserves the original save", DeferredLoadingFailure },
             { "Deferred loading preserves corrupt-storage protection", DeferredLoadingBlockedStorage },
